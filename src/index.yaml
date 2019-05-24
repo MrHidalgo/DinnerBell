@@ -1,0 +1,10 @@
+ProjectTitle: DinnerBell
+
+PageList:
+- file:
+  titleName: Tablet Setting
+  ready: 0
+
+- file: tablet-setting.html
+  titleName: Tablet setting
+  ready: 1
