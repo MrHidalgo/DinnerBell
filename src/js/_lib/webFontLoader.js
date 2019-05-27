@@ -10,23 +10,23 @@ const initWebFontLoader = () => {
 	/**
    * @description
 	 */
-	WebFont.load({
-    google: {
-      families: [
-        'Roboto:100,300,400,500,700,900'
-      ]
-    }
-  });
+	// WebFont.load({
+  //   google: {
+  //     families: [
+  //       'Roboto:100,300,400,500,700,900'
+  //     ]
+  //   }
+  // });
 
 	/**
    * @description
 	 */
-  // const WebFontConfig = {
-  //   custom: {
-  //     families: [
-  //       'Lato:n1,n3,n4,n5,n6,n7,n9'
-  //     ]
-  //   }
-  // };
+  const WebFontConfig = {
+    custom: {
+      families: [
+        'Fort:n1,n2,n3,n4,n5,n7,n8,n9'
+      ]
+    }
+  };
 
 };

@@ -54,22 +54,22 @@ var initWebFontLoader = function initWebFontLoader() {
   /**
     * @description
    */
-  WebFont.load({
-    google: {
-      families: ['Roboto:100,300,400,500,700,900']
-    }
-  });
+  // WebFont.load({
+  //   google: {
+  //     families: [
+  //       'Roboto:100,300,400,500,700,900'
+  //     ]
+  //   }
+  // });
 
   /**
     * @description
    */
-  // const WebFontConfig = {
-  //   custom: {
-  //     families: [
-  //       'Lato:n1,n3,n4,n5,n6,n7,n9'
-  //     ]
-  //   }
-  // };
+  var WebFontConfig = {
+    custom: {
+      families: ['Fort:n1,n2,n3,n4,n5,n7,n8,n9']
+    }
+  };
 };
 
 /**
@@ -88,7 +88,32 @@ $(document).ready(function (ev) {
   * =============================================
   * CALLBACK :: start
   * ============================================= */
+  var initBodyClick = function initBodyClick() {
+    $('body').on('click', function (e) {
+      var className = ".sidebar__nav-drop-link p, .sidebar__nav-setting";
 
+      if (!$(e.target).closest(className).length) {
+        $('.sidebar__nav-drop-more').removeClass('is-show');
+      }
+    });
+  };
+
+  var initSidebarCollapse = function initSidebarCollapse() {
+    $('.sidebar__nav-btn--drop').on('click', function (ev) {
+      var _btn = $(ev.currentTarget),
+          _parent = _btn.closest('.sidebar__nav-btn-node');
+
+      _parent.toggleClass('is-open');
+      _btn.siblings('.sidebar__nav-drop').slideToggle(350);
+    });
+
+    $('.sidebar__nav-drop-link p').on('click', function (ev) {
+      var _menu = $(ev.currentTarget),
+          _parent = _menu.closest('.sidebar__nav-drop-more');
+
+      _parent.addClass('is-show');
+    });
+  };
   /*
   * CALLBACK :: end
   * ============================================= */
@@ -108,6 +133,8 @@ $(document).ready(function (ev) {
 
     // callback
     // ==========================================
+    initBodyClick();
+    initSidebarCollapse();
   };
   initJquery();
 });

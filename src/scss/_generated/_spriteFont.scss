@@ -1,0 +1,86 @@
+@font-face {
+	font-family: "iconFont";
+	src: url('../fonts/iconFont.eot');
+	src: url('../fonts/iconFont.eot?#iefix') format('eot'),
+		url('../fonts/iconFont.woff2') format('woff2'),
+		url('../fonts/iconFont.woff') format('woff'),
+		url('../fonts/iconFont.ttf') format('truetype'),
+		url('../fonts/iconFont.svg#iconFont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconFont", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == bin {
+		$char: "\E001";
+	}
+	@if $filename == copy {
+		$char: "\E002";
+	}
+	@if $filename == corner {
+		$char: "\E003";
+	}
+	@if $filename == fullscreen {
+		$char: "\E004";
+	}
+	@if $filename == menu {
+		$char: "\E005";
+	}
+	@if $filename == settings {
+		$char: "\E006";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-bin {
+	@include icon(bin);
+
+}
+.icon-copy {
+	@include icon(copy);
+
+}
+.icon-corner {
+	@include icon(corner);
+
+}
+.icon-fullscreen {
+	@include icon(fullscreen);
+
+}
+.icon-menu {
+	@include icon(menu);
+
+}
+.icon-settings {
+	@include icon(settings);
+
+}

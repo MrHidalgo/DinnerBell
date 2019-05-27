@@ -1,0 +1,142 @@
+$sprite: (
+  i-customers: (
+    offset-x: 0px,
+    offset-y: -62px,
+    width: 26px,
+    height: 21px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-entertainment: (
+    offset-x: 0px,
+    offset-y: -32px,
+    width: 26px,
+    height: 25px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-inventory: (
+    offset-x: -66px,
+    offset-y: -29px,
+    width: 21px,
+    height: 25px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-menu: (
+    offset-x: -31px,
+    offset-y: -32px,
+    width: 25px,
+    height: 25px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-merchandise: (
+    offset-x: -66px,
+    offset-y: 0px,
+    width: 23px,
+    height: 24px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-orders: (
+    offset-x: 0px,
+    offset-y: 0px,
+    width: 27px,
+    height: 27px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-overview: (
+    offset-x: -32px,
+    offset-y: 0px,
+    width: 29px,
+    height: 24px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+  i-reports: (
+    offset-x: -94px,
+    offset-y: 0px,
+    width: 19px,
+    height: 26px,
+    total-width: 113px,
+    total-height: 83px,
+    image: '../img/sprite.png'
+  ),
+);
+
+@mixin sprite-size($image) {
+  background-size: map-get(map-get($sprite, $image), 'total-width') map-get(map-get($sprite, $image), 'total-height');
+}
+@mixin sprite-width($image) {
+  width: map-get(map-get($sprite, $image), 'width');
+}
+@mixin sprite-height($image) {
+  height: map-get(map-get($sprite, $image), 'height');
+}
+@mixin sprite-position($image) {
+  background-position: map-get(map-get($sprite, $image), 'offset-x') map-get(map-get($sprite, $image), 'offset-y');
+}
+@mixin sprite-image($image) {
+  background-image: url(map-get(map-get($sprite, $image), 'image'));
+}
+@mixin sprite-image-retina($image) {
+  $image-path: map-get(map-get($sprite, $image), 'image');
+  $image-path-retina: str-slice($image-path, 1, str-index($image-path, '.png') - 1) + '@2x.png';
+
+  background-image: url($image-path-retina);
+}
+@mixin sprite($image, $size: true) {
+  @include sprite-image($image);
+  @include sprite-position($image);
+  background-repeat: no-repeat;
+
+  @if $size {
+    @include sprite-width($image);
+    @include sprite-height($image);
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx)
+  {
+    @include sprite-size($image);
+    @include sprite-image-retina($image);
+  }
+}
+
+.i-customers:before {
+  @include sprite(i-customers);
+}
+.i-entertainment:before {
+  @include sprite(i-entertainment);
+}
+.i-inventory:before {
+  @include sprite(i-inventory);
+}
+.i-menu:before {
+  @include sprite(i-menu);
+}
+.i-merchandise:before {
+  @include sprite(i-merchandise);
+}
+.i-orders:before {
+  @include sprite(i-orders);
+}
+.i-overview:before {
+  @include sprite(i-overview);
+}
+.i-reports:before {
+  @include sprite(i-reports);
+}

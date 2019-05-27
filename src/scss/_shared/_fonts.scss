@@ -63,4 +63,13 @@
 /// @include mixinFontFace("SF-Pro-Text", "-Heavy", "../fonts/", 800, otf);
 ///
 /// ===============
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+//@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+@include mixinFontFace("Fort", "-Thin", "../fonts/", 100, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Extralight", "../fonts/", 200, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Light", "../fonts/", 300, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Book", "../fonts/", normal, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Medium", "../fonts/", 500, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Bold", "../fonts/", bold, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Extrabold", "../fonts/", 800, woff2 woff ttf);
+@include mixinFontFace("Fort", "-Black", "../fonts/", 900, woff2 woff ttf);

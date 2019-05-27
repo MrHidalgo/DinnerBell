@@ -1,0 +1,143 @@
+// HEADER sidebar :: START
+
+mixin sidebarNavWDrop(iconName, itemName)
+	.sidebar__nav-btn-node
+		a.sidebar__nav-btn(href="#" class="" title="")
+			div
+				.icon-png-wrapper
+					i.icon-png(class!= iconName)
+			div
+				span!= itemName
+
+section#sidebar.sidebar
+
+	.sidebar__wrapper
+
+		.sidebar__wrapper-top
+
+			.logo.logo--header
+				a.logo__btn(href="/" class="" title="")
+					img.logo__img(src="img/logo.svg" alt="" title="")
+
+		.sidebar__wrapper-middle
+
+			.sidebar__nav
+				+sidebarNavWDrop('i-overview', 'Overview')
+
+				.sidebar__nav-btn-node
+					.sidebar__nav-btn.sidebar__nav-btn--drop
+						div
+							.icon-png-wrapper
+								i.icon-png.i-menu
+						div
+							span!= "Menus"
+							p
+								i.icon-font.icon-corner
+
+					.sidebar__nav-drop
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Breakfast"
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Lunch"
+						.sidebar__nav-drop-more
+							a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+								div
+								div
+									span!= "Dinner"
+									p
+										i.icon-font.icon-menu
+							.sidebar__nav-setting
+								a(href="#" class="" title="")
+									i.icon-font.icon-fullscreen
+								a(href="#" class="" title="")
+									i.icon-font.icon-settings
+								a(href="#" class="" title="")
+									i.icon-font.icon-copy
+								a(href="#" class="" title="")
+									i.icon-font.icon-bin
+
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Business lunch"
+
+						.sidebar__nav-drop-more
+							a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+								div
+								div
+									span!= "Daily Specials"
+									p
+										i.icon-font.icon-menu
+							.sidebar__nav-setting
+								a(href="#" class="" title="")
+									i.icon-font.icon-fullscreen
+								a(href="#" class="" title="")
+									i.icon-font.icon-settings
+								a(href="#" class="" title="")
+									i.icon-font.icon-copy
+								a(href="#" class="" title="")
+									i.icon-font.icon-bin
+
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Wine-list"
+						a.sidebar__nav-btn.sidebar__nav-drop-link.sidebar__nav-btn--add(href="#" class="" title="")
+							div
+							div
+								span!= "Add new section"
+
+				.sidebar__nav-btn-node
+					.sidebar__nav-btn.sidebar__nav-btn--drop
+						div
+							.icon-png-wrapper
+								i.icon-png.i-inventory
+						div
+							span!= "Inventory"
+							p
+								i.icon-font.icon-corner
+
+					.sidebar__nav-drop
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Inventory item"
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Inventory some item"
+						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+							div
+							div
+								span!= "Inventory action item"
+
+				+sidebarNavWDrop('i-reports', 'Reports')
+				+sidebarNavWDrop('i-orders', 'Orders')
+				+sidebarNavWDrop('i-customers', 'Customers')
+				+sidebarNavWDrop('i-merchandise', 'Merchandise')
+				+sidebarNavWDrop('i-entertainment', 'Entertainment')
+
+				.sidebar__nav-btn-node
+					a.sidebar__nav-btn.sidebar__nav-btn--add(href="#" class="" title="")
+						div
+							.icon-png-wrapper
+								i!= "+"
+						div
+							span!= "Add service"
+
+		.sidebar__wrapper-bottom
+
+			.sidebar__menu
+				a.sidebar__menu-link(href="#" class="" title="")!= "Contact us"
+				a.sidebar__menu-link.sidebar__menu-link--mb(href="#" class="" title="")!= "Send feedback"
+				a.sidebar__menu-link(href="#" class="" title="")!= "Terms  of service"
+				a.sidebar__menu-link.sidebar__menu-link--mb(href="#" class="" title="")!= "Privacy policy"
+
+			.copyright
+				p.copyright__text!= "© 2019 DinnerBell"
+
+// HEADER sidebar :: END
