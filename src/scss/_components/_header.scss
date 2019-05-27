@@ -1,5 +1,133 @@
 // HEADER :: START
 
-.header {}
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-left: 288px;
+	padding-right: 21px;
+	background-color: #ffffff;
+
+	&__wrapper {
+		display: flex;
+		min-height: 80px;
+
+		&-left,
+		&-right {
+			width: 50%;
+			min-height: 100%;
+		}
+
+		&-left {
+			display: flex;
+			align-items: center;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
+
+	&__title {
+		color: rgb(177, 151, 101);
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	&__dropdown {
+		position: relative;
+		margin-right: 16px;
+
+		&-toggle {
+			cursor: pointer;
+			position: relative;
+			padding-right: 21px;
+
+			span {
+				color: #70c3f1;
+				font-weight: bold;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: calc(50% + 3px);
+				right: 0;
+				transform: translateY(-50%);
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5px;
+				border-color: #70c3f1 transparent transparent transparent;
+				transform-origin: center;
+				@include transition(top, transform);
+
+				.is-open & {
+					top: calc(50% - 3px);
+					transform: translateY(-50%) rotate3D(1,0,0,-180deg);
+					@include transition(top, transform);
+				}
+			}
+		}
+
+		&-menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			width: auto;
+			padding-top: 10px;
+			padding-bottom: 5px;
+			border-radius: 5px;
+			background-color: #ffffff;
+			box-shadow: 0 5px 10px 0 rgba(#000, 0.1);
+		}
+
+		&-item {
+			white-space: nowrap;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			min-height: 30px;
+			padding-left: 30px;
+			padding-right: 15px;
+			color: #000000;
+			@include transition(color);
+
+			&:hover {
+				color: #70c3f1;
+				@include transition(color);
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		&-btn {
+			display: flex;
+			align-items: flex-start;
+			margin-left: 25px;
+
+			&:hover {
+				.icon-png {
+					opacity: 1;
+					@include transition(opacity);
+				}
+			}
+
+			.icon-png {
+				opacity: 0.9;
+				@include transition(opacity);
+			}
+		}
+	}
+}
 
 // HEADER :: END

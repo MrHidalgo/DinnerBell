@@ -1,10 +1,6 @@
 ProjectTitle: DinnerBell
 
 PageList:
-- file:
-  titleName: Menu Design & Setting (MDS)
-  ready: 0
-
 - file: menu-design-setting-1.html
   titleName: MDS - Base setting
   ready: 1

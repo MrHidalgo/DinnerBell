@@ -1,7 +1,35 @@
 // HEADER :: START
 
 header#header.header
-  .c-grid
-    .header__wrapper
+
+	.header__wrapper
+
+		.header__wrapper-left
+			p.header__title!= "Section title"
+
+		.header__wrapper-right
+
+			.header__dropdown
+				.header__dropdown-toggle
+					span!= "Blue Strawberry"
+				.header__dropdown-menu
+					a.header__dropdown-item(href="#" class="" title="")!= "Company profile"
+					a.header__dropdown-item(href="#" class="" title="")!= "Login & Security"
+					a.header__dropdown-item(href="#" class="" title="")!= "TeamBilling Center"
+					a.header__dropdown-item(href="#" class="" title="")!= "Tablet Settings"
+					a.header__dropdown-item(href="#" class="" title="")!= "Help"
+					a.header__dropdown-item(href="#" class="" title="")!= "Report a bug"
+					a.header__dropdown-item(href="#" class="" title="")!= "Leave feedback"
+					a.header__dropdown-item(href="#" class="" title="")!= "Log Out"
+
+			.header__nav
+				a.header__nav-btn(href="#" class="" title="")
+					i.icon-png.i-setting-1
+				a.header__nav-btn(href="#" class="" title="")
+					i.icon-png.i-qrcode
+				a.header__nav-btn(href="#" class="" title="")
+					i.icon-png.i-team
+				a.header__nav-btn(href="#" class="" title="")
+					i.icon-png.i-notification
 
 // HEADER :: END
