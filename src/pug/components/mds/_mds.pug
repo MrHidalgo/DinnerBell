@@ -1,11 +1,41 @@
 // SECTION mds :: START
 
+-
+	var themeArr = [
+		'Midnight',
+		'Big Sur',
+		'Amsterdam'
+	];
+	var themeImgArr = [
+		'img-mds-theme-midnight',
+		'img-mds-theme-bigsur',
+		'img-mds-theme-amsterdam',
+	];
+
 section#mds.mds
 
 	.mds__title
 		span!= "Base theme"
 		i.icon-font.icon-corner
 
-	.mds__wrapper
+	.mds__theme-wrapper
+		each val, idx in themeArr
+			a.mds__theme(class!= 'mds__theme-' + idx href="#" title="")
+				.mds__theme-top
+					img(src="img/" + themeImgArr[idx] + ".jpg" srcset="img/" + themeImgArr[idx] + "@2x.jpg 2x" alt="" title="")
+					.mds__theme-ind
+						span
+						span
+						span
+						span
+						span
+						span
 
-// SECTION mds :: END
+				.mds__theme-bottom
+					p!= val
+
+	.mds__theme-btn
+		a.c-btn.c-btn--bg(href="#" class="" title="")!= "Use selected theme"
+		a.c-btn.c-btn--bg(href="#" class="" title="")!= "Customize"
+
+// SECTION mds :: E	ND

@@ -39,6 +39,119 @@
 			padding-right: 26px;
 		}
 	}
+
+	&__theme {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 326px;
+		min-height: 272px;
+		margin-right: 24px;
+		border-width: 1px;
+		border-color: rgb(224, 224, 224);
+		border-style: solid;
+		border-radius: 5px;
+		background-color: rgb(246, 244, 244);
+		@include transition(box-shadow);
+
+		&:hover {
+			.mds__theme-top {
+				img {
+					transform: scale(1.1);
+					@include transition(transform);
+				}
+			}
+		}
+
+		&.is-choose {
+			box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+			@include transition(box-shadow);
+
+			.mds__theme-bottom {
+				background-color: #ffffff;
+				@include transition(background-color);
+			}
+		}
+
+		&-top {
+			overflow: hidden;
+			position: relative;
+			flex: 1;
+			background-color: #ffffff;
+
+			img {
+				@extend %imageResCoverAbs;
+				@include transition(transform);
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			align-items: center;
+			height: 55px;
+			padding: 5px 24px;
+			@include transition(background-color);
+
+			p {
+				text-transform: uppercase;
+				color: #000000;
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+
+		&-ind {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			display: flex;
+
+			span {
+				width: 100%;
+				max-width: calc(100% / 6);
+				height: 9px;
+
+				&:nth-of-type(1) {
+					background-color: #171732;
+				}
+				&:nth-of-type(2) {
+					background-color: #24265f;
+				}
+				&:nth-of-type(3) {
+					background-color: #32348e;
+				}
+				&:nth-of-type(4) {
+					background-color: #191d2a;
+				}
+				&:nth-of-type(5) {
+					background-color: #303030;
+				}
+				&:nth-of-type(6) {
+					background-color: #55001b;
+				}
+			}
+		}
+
+		&-btn {
+			display: flex;
+			align-items: center;
+			padding-left: 20px;
+
+			> a {
+				margin-right: 31px;
+			}
+		}
+
+		&-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			padding-left: 20px;
+			padding-bottom: 44px;
+		}
+	}
 }
 
 // SECTION mds :: END

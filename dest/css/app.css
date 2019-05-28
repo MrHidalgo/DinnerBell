@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/* line 14, src/scss/_utilities/_extend.scss */
+.mds__theme-top img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 /* line 155, src/scss/_generated/_spritePNG.scss */
 .i-customers:before {
   background-image: url("../img/sprite.png");
@@ -539,6 +552,46 @@ picture {
   display: -ms-flexbox;
   display: flex;
   line-height: 1;
+}
+
+/* line 24, src/scss/_macros/_btn.scss */
+.c-btn {
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 249px;
+  height: 45px;
+  border: 1px solid #69c0f1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 40, src/scss/_macros/_btn.scss */
+.c-btn--border {
+  background-color: transparent;
+  color: black;
+}
+
+/* line 45, src/scss/_macros/_btn.scss */
+.c-btn--bg {
+  background-color: #69c0f1;
 }
 
 /* line 3, src/scss/_components/_header.scss */
@@ -1284,6 +1337,196 @@ picture {
 .mds__wrapper-left {
   padding-left: 20px;
   padding-right: 26px;
+}
+
+/* line 43, src/scss/_components/mds/_mds.scss */
+.mds__theme {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 326px;
+  min-height: 272px;
+  margin-right: 24px;
+  border-width: 1px;
+  border-color: #e0e0e0;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #f6f4f4;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 60, src/scss/_components/mds/_mds.scss */
+.mds__theme:hover .mds__theme-top img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 67, src/scss/_components/mds/_mds.scss */
+.mds__theme.is-choose {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 71, src/scss/_components/mds/_mds.scss */
+.mds__theme.is-choose .mds__theme-bottom {
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 77, src/scss/_components/mds/_mds.scss */
+.mds__theme-top {
+  overflow: hidden;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #ffffff;
+}
+
+/* line 83, src/scss/_components/mds/_mds.scss */
+.mds__theme-top img {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 89, src/scss/_components/mds/_mds.scss */
+.mds__theme-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 55px;
+  padding: 5px 24px;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 96, src/scss/_components/mds/_mds.scss */
+.mds__theme-bottom p {
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* line 104, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 111, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span {
+  width: 100%;
+  max-width: -webkit-calc(100% / 6);
+  max-width: calc(100% / 6);
+  height: 9px;
+}
+
+/* line 116, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span:nth-of-type(1) {
+  background-color: #171732;
+}
+
+/* line 119, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span:nth-of-type(2) {
+  background-color: #24265f;
+}
+
+/* line 122, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span:nth-of-type(3) {
+  background-color: #32348e;
+}
+
+/* line 125, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span:nth-of-type(4) {
+  background-color: #191d2a;
+}
+
+/* line 128, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span:nth-of-type(5) {
+  background-color: #303030;
+}
+
+/* line 131, src/scss/_components/mds/_mds.scss */
+.mds__theme-ind span:nth-of-type(6) {
+  background-color: #55001b;
+}
+
+/* line 137, src/scss/_components/mds/_mds.scss */
+.mds__theme-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+/* line 142, src/scss/_components/mds/_mds.scss */
+.mds__theme-btn > a {
+  margin-right: 31px;
+}
+
+/* line 147, src/scss/_components/mds/_mds.scss */
+.mds__theme-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 20px;
+  padding-bottom: 44px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
