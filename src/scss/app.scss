@@ -21,7 +21,7 @@
 /// ===============
 @import "_shared/fonts";
 @import "_shared/main-setting-reset";
-@import "_shared/grid";
+//@import "_shared/grid";
 @import "_shared/common";
 //@import "_shared/viewPortChecker";
 //@import "_shared/magnificPopup";
@@ -46,3 +46,5 @@
 @import "_components/header";
 //@import "_components/footer";
 @import "_components/sidebar";
+
+@import "_components/mds/mds";

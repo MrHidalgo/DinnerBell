@@ -1,7 +1,9 @@
 // SECTION sidebar :: START
 
 .sidebar {
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	max-width: 288px;
 	background-color: #ffffff;

@@ -1,0 +1,44 @@
+// SECTION mds :: START
+
+.mds {
+	position: relative;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		padding: 26px 20px 46px;
+
+		&--internal {
+			padding: 36px 0 64px;
+		}
+
+		span {
+			margin-right: 23px;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.icon-font {
+			font-size: 18px;
+			color: #69c0f1;
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: flex-start;
+
+		&-left,
+		&-right {
+			width: 50%;
+		}
+
+		&-left {
+			padding-left: 20px;
+			padding-right: 26px;
+		}
+	}
+}
+
+// SECTION mds :: END
