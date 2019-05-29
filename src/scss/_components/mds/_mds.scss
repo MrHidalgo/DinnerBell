@@ -36,7 +36,8 @@
 		}
 		&--mdsMenuItemPt,
 		&--mdsDetailsPt,
-		&--mdsFeedbackPt {
+		&--mdsFeedbackPt,
+		&--mdsOrderPt {
 			padding-top: 30px;
 		}
 	}
@@ -226,6 +227,10 @@
 				border: none;
 				box-shadow: none;
 			}
+		}
+
+		&--mdslogOutpb {
+			padding-bottom: 64px;
 		}
 
 		&-title {
@@ -492,6 +497,10 @@
 
 			&--last {
 				padding-bottom: 41px;
+			}
+
+			&--mdsOrderPt {
+				padding-bottom: 64px;
 			}
 		}
 

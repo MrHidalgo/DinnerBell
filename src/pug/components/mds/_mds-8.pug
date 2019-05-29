@@ -5,9 +5,21 @@ section#mds.mds
 	.mds__wrapper
 		.mds__wrapper-left
 
-			h2.mds__titleh2.mds__title--internal
+			h2.mds__title.mds__title--internal
 				span!= "Log Out"
 				i.icon-font.icon-corner
+
+			form.c-form(action="" autocomplete='off')
+
+				.mds__screen.mds__screen--mdslogOutpb.mds__screen--nc.mds__screen--wbbs
+					p.mds__screen-title!= "Background image"
+					.mds__screen-row
+						.mds__screen-col.mds__screen-col-0
+							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
+						.mds__screen-col.mds__screen-col-1
+							a(href="#" title='').mds__screen-upload!= "Upload images"
+
+				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
 

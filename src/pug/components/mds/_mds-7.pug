@@ -1,13 +1,57 @@
 // SECTION mds :: START
 
+-
+	var colorTitleArr = [
+		[
+			{
+				title: 'In process',
+				color: '#FFFFF'
+			},
+			{
+				title: 'Pending',
+				color: '#4979c5'
+			},
+			{
+				title: 'Served',
+				color: '#19172f'
+			}
+		],
+	];
+
 section#mds.mds
 
 	.mds__wrapper
 		.mds__wrapper-left
 
-			h2.mds__titleh2.mds__title--internal
+			h2.mds__title.mds__title--internal
 				span!= "My order"
 				i.icon-font.icon-corner
+
+			form.c-form(action="" autocomplete='off')
+
+				.mds__screen.mds__screen--nc.mds__screen--wbbs
+					p.mds__screen-title!= "Background image"
+					.mds__screen-row
+						.mds__screen-col.mds__screen-col-0
+							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
+						.mds__screen-col.mds__screen-col-1
+							a(href="#" title='').mds__screen-upload!= "Upload images"
+
+				p.mds__subtitle.mds__subtitle--mdsOrderPt!= "Label colors"
+
+				each val, idx in colorTitleArr
+					.mds__form-content.mds__form-content--mdsOrderPt
+						each _v, _i in colorTitleArr[idx]
+							.mds__form-color
+								div
+									p!= colorTitleArr[idx][_i].title
+								div
+									.mds__form-color-content
+										a(href="#" class="" title="")
+										input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
+										span(style="background-color:" + colorTitleArr[idx][_i].color)
+
+				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
 
