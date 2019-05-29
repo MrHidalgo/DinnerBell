@@ -18,7 +18,7 @@ PageList:
   ready: 30
 - file: menu-design-setting-5.html
   titleName: MDS - Item details
-  ready: 1
+  ready: 30
 - file: menu-design-setting-6.html
   titleName: MDS - Feedback
   ready: 1

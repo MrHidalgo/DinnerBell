@@ -1417,6 +1417,7 @@ picture {
 
 /* line 3, src/scss/_components/_header.scss */
 .header {
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
@@ -1426,7 +1427,7 @@ picture {
   background-color: #ffffff;
 }
 
-/* line 12, src/scss/_components/_header.scss */
+/* line 13, src/scss/_components/_header.scss */
 .header__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1435,13 +1436,13 @@ picture {
   min-height: 80px;
 }
 
-/* line 16, src/scss/_components/_header.scss */
+/* line 17, src/scss/_components/_header.scss */
 .header__wrapper-left, .header__wrapper-right {
   width: 50%;
   min-height: 100%;
 }
 
-/* line 22, src/scss/_components/_header.scss */
+/* line 23, src/scss/_components/_header.scss */
 .header__wrapper-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1455,7 +1456,7 @@ picture {
   padding-right: 20px;
 }
 
-/* line 29, src/scss/_components/_header.scss */
+/* line 30, src/scss/_components/_header.scss */
 .header__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1471,33 +1472,33 @@ picture {
           justify-content: flex-start;
 }
 
-/* line 36, src/scss/_components/_header.scss */
+/* line 37, src/scss/_components/_header.scss */
 .header__title {
   color: #b19765;
   font-size: 20px;
   font-weight: 500;
 }
 
-/* line 42, src/scss/_components/_header.scss */
+/* line 43, src/scss/_components/_header.scss */
 .header__dropdown {
   position: relative;
   margin-right: 16px;
 }
 
-/* line 46, src/scss/_components/_header.scss */
+/* line 47, src/scss/_components/_header.scss */
 .header__dropdown-toggle {
   cursor: pointer;
   position: relative;
   padding-right: 21px;
 }
 
-/* line 51, src/scss/_components/_header.scss */
+/* line 52, src/scss/_components/_header.scss */
 .header__dropdown-toggle span {
   color: #70c3f1;
   font-weight: bold;
 }
 
-/* line 56, src/scss/_components/_header.scss */
+/* line 57, src/scss/_components/_header.scss */
 .header__dropdown-toggle:before {
   content: '';
   position: absolute;
@@ -1522,7 +1523,7 @@ picture {
   transition: top 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 70, src/scss/_components/_header.scss */
+/* line 71, src/scss/_components/_header.scss */
 .is-open .header__dropdown-toggle:before {
   top: -webkit-calc(50% - 3px);
   top: calc(50% - 3px);
@@ -1536,7 +1537,7 @@ picture {
   transition: top 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 78, src/scss/_components/_header.scss */
+/* line 79, src/scss/_components/_header.scss */
 .header__dropdown-menu {
   display: none;
   position: absolute;
@@ -1552,7 +1553,7 @@ picture {
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 91, src/scss/_components/_header.scss */
+/* line 92, src/scss/_components/_header.scss */
 .header__dropdown-item {
   white-space: nowrap;
   display: -webkit-box;
@@ -1576,7 +1577,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 102, src/scss/_components/_header.scss */
+/* line 103, src/scss/_components/_header.scss */
 .header__dropdown-item:hover {
   color: #70c3f1;
   -webkit-transition: color 0.3s ease-in-out;
@@ -1584,7 +1585,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 109, src/scss/_components/_header.scss */
+/* line 110, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1596,7 +1597,7 @@ picture {
           align-items: center;
 }
 
-/* line 113, src/scss/_components/_header.scss */
+/* line 114, src/scss/_components/_header.scss */
 .header__nav-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1609,7 +1610,7 @@ picture {
   margin-left: 25px;
 }
 
-/* line 119, src/scss/_components/_header.scss */
+/* line 120, src/scss/_components/_header.scss */
 .header__nav-btn:hover .icon-png {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -1617,7 +1618,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 125, src/scss/_components/_header.scss */
+/* line 126, src/scss/_components/_header.scss */
 .header__nav-btn .icon-png {
   opacity: 0.9;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2150,8 +2151,8 @@ picture {
   padding-top: 64px;
 }
 
-/* line 38, src/scss/_components/mds/_mds.scss */
-.mds__subtitle--mdsMenuItemPt {
+/* line 37, src/scss/_components/mds/_mds.scss */
+.mds__subtitle--mdsMenuItemPt, .mds__subtitle--mdsDetailsPt {
   padding-top: 30px;
 }
 
