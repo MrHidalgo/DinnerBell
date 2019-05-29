@@ -2152,11 +2152,11 @@ picture {
 }
 
 /* line 37, src/scss/_components/mds/_mds.scss */
-.mds__subtitle--mdsMenuItemPt, .mds__subtitle--mdsDetailsPt {
+.mds__subtitle--mdsMenuItemPt, .mds__subtitle--mdsDetailsPt, .mds__subtitle--mdsFeedbackPt {
   padding-top: 30px;
 }
 
-/* line 43, src/scss/_components/mds/_mds.scss */
+/* line 44, src/scss/_components/mds/_mds.scss */
 .mds__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2168,13 +2168,13 @@ picture {
           align-items: flex-start;
 }
 
-/* line 47, src/scss/_components/mds/_mds.scss */
+/* line 48, src/scss/_components/mds/_mds.scss */
 .mds__wrapper-left {
   width: 100%;
   max-width: 476px;
 }
 
-/* line 52, src/scss/_components/mds/_mds.scss */
+/* line 53, src/scss/_components/mds/_mds.scss */
 .mds__wrapper-right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2184,13 +2184,13 @@ picture {
   min-width: 1px;
 }
 
-/* line 58, src/scss/_components/mds/_mds.scss */
+/* line 59, src/scss/_components/mds/_mds.scss */
 .mds__wrapper-left {
   padding-left: 20px;
   padding-right: 26px;
 }
 
-/* line 65, src/scss/_components/mds/_mds.scss */
+/* line 66, src/scss/_components/mds/_mds.scss */
 .mds__theme {
   overflow: hidden;
   display: -webkit-box;
@@ -2219,7 +2219,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 82, src/scss/_components/mds/_mds.scss */
+/* line 83, src/scss/_components/mds/_mds.scss */
 .mds__theme:hover .mds__theme-top img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -2231,7 +2231,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 89, src/scss/_components/mds/_mds.scss */
+/* line 90, src/scss/_components/mds/_mds.scss */
 .mds__theme.is-choose {
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
@@ -2242,7 +2242,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 93, src/scss/_components/mds/_mds.scss */
+/* line 94, src/scss/_components/mds/_mds.scss */
 .mds__theme.is-choose .mds__theme-bottom {
   background-color: #ffffff;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -2250,7 +2250,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 99, src/scss/_components/mds/_mds.scss */
+/* line 100, src/scss/_components/mds/_mds.scss */
 .mds__theme-top {
   overflow: hidden;
   position: relative;
@@ -2261,7 +2261,7 @@ picture {
   background-color: #ffffff;
 }
 
-/* line 105, src/scss/_components/mds/_mds.scss */
+/* line 106, src/scss/_components/mds/_mds.scss */
 .mds__theme-top img {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
@@ -2270,7 +2270,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 111, src/scss/_components/mds/_mds.scss */
+/* line 112, src/scss/_components/mds/_mds.scss */
 .mds__theme-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2287,7 +2287,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 118, src/scss/_components/mds/_mds.scss */
+/* line 119, src/scss/_components/mds/_mds.scss */
 .mds__theme-bottom p {
   text-transform: uppercase;
   color: #000000;
@@ -2295,7 +2295,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 126, src/scss/_components/mds/_mds.scss */
+/* line 127, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind {
   position: absolute;
   left: 0;
@@ -2307,7 +2307,7 @@ picture {
   display: flex;
 }
 
-/* line 133, src/scss/_components/mds/_mds.scss */
+/* line 134, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span {
   width: 100%;
   max-width: -webkit-calc(100% / 6);
@@ -2315,37 +2315,37 @@ picture {
   height: 9px;
 }
 
-/* line 138, src/scss/_components/mds/_mds.scss */
+/* line 139, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span:nth-of-type(1) {
   background-color: #171732;
 }
 
-/* line 141, src/scss/_components/mds/_mds.scss */
+/* line 142, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span:nth-of-type(2) {
   background-color: #24265f;
 }
 
-/* line 144, src/scss/_components/mds/_mds.scss */
+/* line 145, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span:nth-of-type(3) {
   background-color: #32348e;
 }
 
-/* line 147, src/scss/_components/mds/_mds.scss */
+/* line 148, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span:nth-of-type(4) {
   background-color: #191d2a;
 }
 
-/* line 150, src/scss/_components/mds/_mds.scss */
+/* line 151, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span:nth-of-type(5) {
   background-color: #303030;
 }
 
-/* line 153, src/scss/_components/mds/_mds.scss */
+/* line 154, src/scss/_components/mds/_mds.scss */
 .mds__theme-ind span:nth-of-type(6) {
   background-color: #55001b;
 }
 
-/* line 159, src/scss/_components/mds/_mds.scss */
+/* line 160, src/scss/_components/mds/_mds.scss */
 .mds__theme-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2358,13 +2358,13 @@ picture {
   padding-left: 20px;
 }
 
-/* line 164, src/scss/_components/mds/_mds.scss */
+/* line 165, src/scss/_components/mds/_mds.scss */
 .mds__theme-btn > a {
   max-width: 249px;
   margin-right: 31px;
 }
 
-/* line 170, src/scss/_components/mds/_mds.scss */
+/* line 171, src/scss/_components/mds/_mds.scss */
 .mds__theme-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2381,14 +2381,14 @@ picture {
   padding-bottom: 44px;
 }
 
-/* line 181, src/scss/_components/mds/_mds.scss */
+/* line 182, src/scss/_components/mds/_mds.scss */
 .mds__screen {
   position: relative;
   padding: 20px 0;
   margin-bottom: 20px;
 }
 
-/* line 187, src/scss/_components/mds/_mds.scss */
+/* line 188, src/scss/_components/mds/_mds.scss */
 .mds__screen:hover:before {
   border-color: rgba(105, 192, 241, 0.25);
   -webkit-transition: border-color 0.3s ease-in-out;
@@ -2396,7 +2396,7 @@ picture {
   transition: border-color 0.3s ease-in-out;
 }
 
-/* line 194, src/scss/_components/mds/_mds.scss */
+/* line 195, src/scss/_components/mds/_mds.scss */
 .mds__screen.is-choose:before {
   border-color: #69c0f1;
   -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
@@ -2408,12 +2408,12 @@ picture {
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 201, src/scss/_components/mds/_mds.scss */
+/* line 202, src/scss/_components/mds/_mds.scss */
 .mds__screen:last-of-type {
   margin-bottom: 64px;
 }
 
-/* line 205, src/scss/_components/mds/_mds.scss */
+/* line 206, src/scss/_components/mds/_mds.scss */
 .mds__screen:before {
   content: '';
   z-index: -1;
@@ -2436,19 +2436,19 @@ picture {
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 221, src/scss/_components/mds/_mds.scss */
+/* line 222, src/scss/_components/mds/_mds.scss */
 .mds__screen--wbbs {
   padding: 0;
 }
 
-/* line 224, src/scss/_components/mds/_mds.scss */
+/* line 225, src/scss/_components/mds/_mds.scss */
 .mds__screen--wbbs:before {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-/* line 230, src/scss/_components/mds/_mds.scss */
+/* line 231, src/scss/_components/mds/_mds.scss */
 .mds__screen-title {
   padding-bottom: 30px;
   color: #000000;
@@ -2456,14 +2456,14 @@ picture {
   font-weight: bold;
 }
 
-/* line 237, src/scss/_components/mds/_mds.scss */
+/* line 238, src/scss/_components/mds/_mds.scss */
 .mds__screen-desc {
   color: #000000;
   font-size: 14px;
   font-weight: 300;
 }
 
-/* line 243, src/scss/_components/mds/_mds.scss */
+/* line 244, src/scss/_components/mds/_mds.scss */
 .mds__screen-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2475,7 +2475,7 @@ picture {
           align-items: center;
 }
 
-/* line 249, src/scss/_components/mds/_mds.scss */
+/* line 250, src/scss/_components/mds/_mds.scss */
 .mds__screen-col-0 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2485,7 +2485,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 255, src/scss/_components/mds/_mds.scss */
+/* line 256, src/scss/_components/mds/_mds.scss */
 .mds__screen-col-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2498,7 +2498,7 @@ picture {
   width: 185px;
 }
 
-/* line 262, src/scss/_components/mds/_mds.scss */
+/* line 263, src/scss/_components/mds/_mds.scss */
 .mds__screen-upload {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2526,7 +2526,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 279, src/scss/_components/mds/_mds.scss */
+/* line 280, src/scss/_components/mds/_mds.scss */
 .mds__screen-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2539,7 +2539,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 287, src/scss/_components/mds/_mds.scss */
+/* line 288, src/scss/_components/mds/_mds.scss */
 .mds__menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2570,7 +2570,7 @@ picture {
   transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 301, src/scss/_components/mds/_mds.scss */
+/* line 302, src/scss/_components/mds/_mds.scss */
 .mds__menu.is-active {
   border: 1px solid #fff;
   background-color: #d0ecfb;
@@ -2584,7 +2584,7 @@ picture {
   transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 309, src/scss/_components/mds/_mds.scss */
+/* line 310, src/scss/_components/mds/_mds.scss */
 .mds__menu-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2601,7 +2601,7 @@ picture {
   padding-bottom: 43px;
 }
 
-/* line 320, src/scss/_components/mds/_mds.scss */
+/* line 321, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2614,12 +2614,12 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 327, src/scss/_components/mds/_mds.scss */
+/* line 328, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-0 {
   width: 150px;
 }
 
-/* line 331, src/scss/_components/mds/_mds.scss */
+/* line 332, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2637,30 +2637,30 @@ picture {
   max-width: 100%;
 }
 
-/* line 339, src/scss/_components/mds/_mds.scss */
+/* line 340, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(1), .mds__fontSize-col-1 > div:nth-of-type(3) {
   width: 40px;
   text-align: center;
 }
 
-/* line 344, src/scss/_components/mds/_mds.scss */
+/* line 345, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(1) span,
 .mds__fontSize-col-1 > div:nth-of-type(1) p, .mds__fontSize-col-1 > div:nth-of-type(3) span,
 .mds__fontSize-col-1 > div:nth-of-type(3) p {
   color: #69c0f1;
 }
 
-/* line 349, src/scss/_components/mds/_mds.scss */
+/* line 350, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(1) span, .mds__fontSize-col-1 > div:nth-of-type(3) span {
   font-size: 14px;
 }
 
-/* line 353, src/scss/_components/mds/_mds.scss */
+/* line 354, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(1) p, .mds__fontSize-col-1 > div:nth-of-type(3) p {
   font-size: 22px;
 }
 
-/* line 358, src/scss/_components/mds/_mds.scss */
+/* line 359, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2679,27 +2679,27 @@ picture {
   max-width: 100%;
 }
 
-/* line 366, src/scss/_components/mds/_mds.scss */
+/* line 367, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) > * {
   width: 100%;
 }
 
-/* line 370, src/scss/_components/mds/_mds.scss */
+/* line 371, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round.irs-with-grid {
   height: 31px;
 }
 
-/* line 374, src/scss/_components/mds/_mds.scss */
+/* line 375, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round .irs-grid-text {
   display: none;
 }
 
-/* line 378, src/scss/_components/mds/_mds.scss */
+/* line 379, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs-grid {
   bottom: -7px;
 }
 
-/* line 382, src/scss/_components/mds/_mds.scss */
+/* line 383, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round .irs-line,
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round .irs-bar {
   top: 17px;
@@ -2712,7 +2712,7 @@ picture {
           border-radius: 0;
 }
 
-/* line 392, src/scss/_components/mds/_mds.scss */
+/* line 393, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round .irs-handle {
   cursor: pointer;
   top: 7px;
@@ -2722,33 +2722,33 @@ picture {
   background-color: #69c0f1;
 }
 
-/* line 401, src/scss/_components/mds/_mds.scss */
+/* line 402, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs-bar.irs-bar--single {
   display: none;
 }
 
-/* line 405, src/scss/_components/mds/_mds.scss */
+/* line 406, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round .irs-grid-pol {
   height: 9px;
   background-color: #69c0f1;
 }
 
-/* line 409, src/scss/_components/mds/_mds.scss */
+/* line 410, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-col-1 > div:nth-of-type(2) .irs--round .irs-grid-pol.small {
   display: none;
 }
 
-/* line 418, src/scss/_components/mds/_mds.scss */
+/* line 419, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-name {
   font-size: 14px;
 }
 
-/* line 422, src/scss/_components/mds/_mds.scss */
+/* line 423, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-input {
   opacity: 0;
 }
 
-/* line 426, src/scss/_components/mds/_mds.scss */
+/* line 427, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2763,16 +2763,91 @@ picture {
 }
 
 /* line 436, src/scss/_components/mds/_mds.scss */
+.mds__indent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+}
+
+/* line 441, src/scss/_components/mds/_mds.scss */
+.mds__indent:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 446, src/scss/_components/mds/_mds.scss */
+.mds__indent > div:nth-of-type(1) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 451, src/scss/_components/mds/_mds.scss */
+.mds__indent > div:nth-of-type(2) {
+  width: 136px;
+}
+
+/* line 455, src/scss/_components/mds/_mds.scss */
+.mds__indent > div p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* line 461, src/scss/_components/mds/_mds.scss */
+.mds__indent > div input {
+  outline: none;
+  position: relative;
+  width: 100%;
+  height: 41px;
+  border-width: 1px;
+  border-color: #cccccc;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0 12px;
+  background-color: #f7f7f7;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* line 480, src/scss/_components/mds/_mds.scss */
+.mds__indent-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 64px;
+}
+
+/* line 490, src/scss/_components/mds/_mds.scss */
 .mds__form-content {
   padding-bottom: 23px;
 }
 
-/* line 439, src/scss/_components/mds/_mds.scss */
+/* line 493, src/scss/_components/mds/_mds.scss */
 .mds__form-content--last {
   padding-bottom: 41px;
 }
 
-/* line 444, src/scss/_components/mds/_mds.scss */
+/* line 498, src/scss/_components/mds/_mds.scss */
 .mds__form-color {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2785,12 +2860,12 @@ picture {
   margin-bottom: 4px;
 }
 
-/* line 449, src/scss/_components/mds/_mds.scss */
+/* line 503, src/scss/_components/mds/_mds.scss */
 .mds__form-color:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 454, src/scss/_components/mds/_mds.scss */
+/* line 508, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2800,19 +2875,19 @@ picture {
   max-width: 100%;
 }
 
-/* line 459, src/scss/_components/mds/_mds.scss */
+/* line 513, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(2) {
   width: 136px;
 }
 
-/* line 463, src/scss/_components/mds/_mds.scss */
+/* line 517, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div p {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 470, src/scss/_components/mds/_mds.scss */
+/* line 524, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content {
   overflow: hidden;
   position: relative;
@@ -2825,7 +2900,7 @@ picture {
           border-radius: 5px;
 }
 
-/* line 480, src/scss/_components/mds/_mds.scss */
+/* line 534, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content .pickr, .mds__form-color-content .pickr button {
   opacity: 0;
   z-index: 2;
@@ -2836,7 +2911,7 @@ picture {
   height: 100%;
 }
 
-/* line 494, src/scss/_components/mds/_mds.scss */
+/* line 548, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content input[type="text"] {
   border: none;
   -webkit-box-shadow: none;
@@ -2855,7 +2930,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 510, src/scss/_components/mds/_mds.scss */
+/* line 564, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content span {
   z-index: 1;
   position: absolute;

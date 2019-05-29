@@ -1,5 +1,31 @@
 // SECTION mds :: START
 
+-
+	var colorTitleArr = [
+		[
+			{
+				title: 'Excellent',
+				color: '#FFFFF'
+			},
+			{
+				title: 'Very good',
+				color: '#4979c5'
+			},
+			{
+				title: 'Good',
+				color: '#19172f'
+			},
+			{
+				title: 'Not good',
+				color: '#FFFFF'
+			},
+			{
+				title: 'Bad',
+				color: '#4979c5'
+			}
+		],
+	];
+
 section#mds.mds
 
 	.mds__wrapper
@@ -8,6 +34,41 @@ section#mds.mds
 			h2.mds__title.mds__title--internal
 				span!= "Feedback"
 				i.icon-font.icon-corner
+
+			form.c-form(action="" autocomplete='off')
+
+				.mds__screen.mds__screen--nc.mds__screen--wbbs
+					p.mds__screen-title!= "Background image"
+					.mds__screen-row
+						.mds__screen-col.mds__screen-col-0
+							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
+						.mds__screen-col.mds__screen-col-1
+							a(href="#" title='').mds__screen-upload!= "Upload images"
+
+				p.mds__subtitle.mds__subtitle--mdsFeedbackPt!= "Label colors"
+
+				each val, idx in colorTitleArr
+					.mds__form-content
+						each _v, _i in colorTitleArr[idx]
+							.mds__form-color
+								div
+									p!= colorTitleArr[idx][_i].title
+								div
+									.mds__form-color-content
+										a(href="#" class="" title="")
+										input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
+										span(style="background-color:" + colorTitleArr[idx][_i].color)
+
+				p.mds__subtitle.mds__subtitle--mdsFeedbackPt!= "Top Margin"
+
+				.mds__indent-wrapper
+					.mds__indent
+						div
+							p!= "Top"
+						div
+							input(type="text" name="" placeholder="")
+
+				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
 
