@@ -1,13 +1,104 @@
 // SECTION mds :: START
 
+-
+	var colorTitleArr = [
+		[
+			{
+				title: 'Spicy',
+				color: '#c13548'
+			},
+			{
+				title: 'Popular',
+				color: '#33a457'
+			},
+			{
+				title: 'Chef’s special',
+				color: '#ebba19'
+			},
+			{
+				title: 'New',
+				color: '#7b7fe7'
+			}
+		],
+	];
+
 section#mds.mds
 
 	.mds__wrapper
 		.mds__wrapper-left
 
-			h2h2.mds__title.mds__title--internal
+			h2.mds__title.mds__title--internal
 				span!= "Menu items"
 				i.icon-font.icon-corner
+
+			form.c-form(action="" autocomplete='off')
+
+				.mds__screen.mds__screen--nc.mds__screen--wbbs
+					p.mds__screen-title!= "Background image"
+					.mds__screen-row
+						.mds__screen-col.mds__screen-col-0
+							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
+						.mds__screen-col.mds__screen-col-1
+							a(href="#" title='').mds__screen-upload!= "Upload images"
+
+				p.mds__subtitle.mds__subtitle--mdsMenuItemPt!= "Font size"
+
+				.mds__fontSize-wrapper
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Section header"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Subsection"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Item title"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
+
+					p.mds__subtitle.mds__subtitle--mdsMenuItemPt!= "Label colors"
+
+					each val, idx in colorTitleArr
+						.mds__form-content
+							each _v, _i in colorTitleArr[idx]
+								.mds__form-color
+									div
+										p!= colorTitleArr[idx][_i].title
+									div
+										.mds__form-color-content
+											a(href="#" class="" title="")
+											input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
+											span(style="background-color:" + colorTitleArr[idx][_i].color)
+
+					p.mds__subtitle.mds__subtitle--mdsMenuItemPt!= "Menu Layout"
+
+					.mds__menu-wrapper
+						a.mds__menu(href="#" class="" title="")!= "List"
+						a.mds__menu(href="#" class="" title="")!= "Thumbnails"
+
+				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
 
