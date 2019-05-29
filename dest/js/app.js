@@ -304,6 +304,37 @@ $(document).ready(function (ev) {
 			});
 		});
 	};
+
+	var initChooseScreen = function initChooseScreen() {
+		$('.mds__screen').not('.mds__screen--nc').on('click', function (ev) {
+			$('.mds__screen').removeClass('is-choose');
+			$(ev.currentTarget).addClass('is-choose');
+		});
+	};
+
+	var initMenuLayout = function initMenuLayout() {
+		$('.mds__menu').on('click', function (ev) {
+			$('.mds__menu').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+		});
+	};
+
+	var initRange = function initRange() {
+		var _input = $('.mds__fontSize-input');
+
+		_input.map(function (idx, val) {
+			$(val).ionRangeSlider({
+				min: 14,
+				max: 22,
+				from: 18,
+				step: 2,
+				grid: true,
+				hide_min_max: true,
+				hide_from_to: true,
+				skin: "round"
+			});
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -329,6 +360,9 @@ $(document).ready(function (ev) {
 		initHeaderDropDown();
 		initChooseTheme();
 		initChooseColor();
+		initChooseScreen();
+		initMenuLayout();
+		initRange();
 	};
 	initJquery();
 });

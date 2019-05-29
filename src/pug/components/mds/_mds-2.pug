@@ -9,6 +9,35 @@ section#mds.mds
 				span!= "Intro screen"
 				i.icon-font.icon-corner
 
+			form.c-form(action="" autocomplete='off')
+
+				.mds__screen-wrapper
+					a.mds__screen(href="#" class="" title="")
+						p.mds__screen-title!= "Static image"
+						.mds__screen-row
+							.mds__screen-col.mds__screen-col-0
+								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
+							.mds__screen-col.mds__screen-col-1
+								.mds__screen-upload!= "Upload images"
+
+					a.mds__screen(href="#" class="" title="")
+						p.mds__screen-title!= "Slideshow"
+						.mds__screen-row
+							.mds__screen-col.mds__screen-col-0
+								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG 5 images maximum"
+							.mds__screen-col.mds__screen-col-1
+								.mds__screen-upload!= "Upload images"
+
+					a.mds__screen(href="#" class="" title="")
+						p.mds__screen-title!= "Video Intro"
+						.mds__screen-row
+							.mds__screen-col.mds__screen-col-0
+								p.mds__screen-desc!= "Video dimensions: 768x1024<br>Supported Formats: AVI, MKV<br>Max file weight: 50 Mb"
+							.mds__screen-col.mds__screen-col-1
+								.mds__screen-upload!= "Upload images"
+
+				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
+
 		.mds__wrapper-right
 
 // SECTION mds :: END

@@ -9,6 +9,61 @@ section#mds.mds
 				span!= "Main menu"
 				i.icon-font.icon-corner
 
+			form.c-form(action="" autocomplete='off')
+
+				.mds__screen.mds__screen--nc.mds__screen--wbbs
+					p.mds__screen-title!= "Background image"
+					.mds__screen-row
+						.mds__screen-col.mds__screen-col-0
+							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
+						.mds__screen-col.mds__screen-col-1
+							a(href="#" title='').mds__screen-upload!= "Upload images"
+
+				p.mds__subtitle.mds__subtitle--mdsMenuPt!= "Menu Layout"
+
+				.mds__menu-wrapper
+					a.mds__menu(href="#" class="" title="")!= "List"
+					a.mds__menu(href="#" class="" title="")!= "Thumbnails"
+
+				p.mds__subtitle!= "Font size"
+
+				.mds__fontSize-wrapper
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "List mode"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Thumbnail mode"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Information"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
+
+				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
+
 		.mds__wrapper-right
 
 // SECTION mds :: END
