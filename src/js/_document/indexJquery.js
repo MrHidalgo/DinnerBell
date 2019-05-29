@@ -70,6 +70,40 @@ $(document).ready((ev) => {
 			$(ev.currentTarget).addClass('is-choose');
 		});
 	};
+
+
+	const initChooseColor = () => {
+		const _colorArr = $('.mds__form-color-content > a');
+
+		_colorArr.map((idx, val) => {
+
+			const _parentNode = $(val).closest('.mds__form-color-content'),
+				_inputNode = _parentNode.find('input[type="text"]'),
+				_spanNode = _parentNode.find('span');
+
+			new Pickr({
+				el: val,
+				components: {
+					preview: true,
+					opacity: true,
+					hue: true,
+					interaction: {
+						hex: true,
+						rgba: true,
+						hsva: true,
+						input: true,
+						clear: false,
+						save: true
+					}
+				}
+			}).on('change', (...args) => {
+				_inputNode.val(args[0].toHEXA().toString());
+				_spanNode.css({
+					'backgroundColor' : args[0].toHEXA().toString()
+				});
+			});
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -88,6 +122,7 @@ $(document).ready((ev) => {
 
     // lib
 		// ==========================================
+		initCustomSelect();
 
     // callback
 		// ==========================================
@@ -95,6 +130,7 @@ $(document).ready((ev) => {
 		initSidebarCollapse();
 		initHeaderDropDown();
 		initChooseTheme();
+		initChooseColor();
   };
   initJquery();
 });

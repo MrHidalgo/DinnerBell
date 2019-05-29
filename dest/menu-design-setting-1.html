@@ -36,7 +36,7 @@
     <header class="header" id="header">
       <div class="header__wrapper">
         <div class="header__wrapper-left">
-          <p class="header__title">Section title</p>
+          <h1 class="header__title">Section title</h1>
         </div>
         <div class="header__wrapper-right">
           <div class="header__dropdown">
@@ -160,7 +160,163 @@
       <section class="mds" id="mds">
         <div class="mds__wrapper">
           <div class="mds__wrapper-left">
-            <div class="mds__title mds__title--internal"><span>Base settings</span><i class="icon-font icon-corner"></i></div>
+            <h2 class="mds__title mds__title--internal"><span>Base settings</span><i class="icon-font icon-corner"></i></h2>
+            <form class="c-form" action="" autocomplete="off">
+              <p class="mds__subtitle">Font set</p>
+              <div class="mds__form-content">
+                <div class="c-form__field c-form__field--select">
+                  <div class="c-form__select-wrapper">
+                    <div class="c-form__select-value"></div>
+                    <select class="c-form__select" id="select_font" name="select_font" select-js="select-js">
+                      <option value="" disabled="disabled" selected="selected" hidden="hidden">Select font</option>
+                      <option value="Fort">Fort</option>
+                      <option value="Lato">Lato</option>
+                      <option value="Open Sans">Open Sans</option>
+                    </select>
+                    <div class="c-form__select-icon"><i></i></div>
+                  </div>
+                  <div class="c-form__notify">
+                  </div>
+                </div>
+              </div>
+              <p class="mds__subtitle">Base color palette</p>
+              <div class="mds__form-content">
+                <div class="mds__form-color">
+                  <div>
+                    <p>Header</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#FFFFFF"><span style="background-color:#FFFFFF"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__form-color">
+                  <div>
+                    <p>Subheader</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#4979c5"><span style="background-color:#4979c5"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__form-color">
+                  <div>
+                    <p>Body</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#19172f"><span style="background-color:#19172f"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mds__form-content">
+                <div class="mds__form-color">
+                  <div>
+                    <p>Navigation bar</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#171732"><span style="background-color:#171732"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__form-color">
+                  <div>
+                    <p>Borders</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#24265f"><span style="background-color:#24265f"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__form-color">
+                  <div>
+                    <p>Select / Highlight</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#32348e"><span style="background-color:#32348e"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mds__form-content">
+                <div class="mds__form-color">
+                  <div>
+                    <p>Go back</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#303030"><span style="background-color:#303030"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__form-color">
+                  <div>
+                    <p>UI Neutral</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#191d2a"><span style="background-color:#191d2a"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__form-color">
+                  <div>
+                    <p>Alert</p>
+                  </div>
+                  <div>
+                    <div class="mds__form-color-content"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#32348e"><span style="background-color:#32348e"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="mds__subtitle">Currency and Price format</p>
+              <div class="mds__form-content mds__form-content--last">
+                <div class="c-form__group c-form__group--two">
+                  <div class="c-form__group-col c-form__group-col-0">
+                    <div class="c-form__field c-form__field--select">
+                      <div class="c-form__select-wrapper">
+                        <div class="c-form__select-value"></div>
+                        <select class="c-form__select" id="select_currency" name="select_currency" select-js="select-js">
+                          <option value="" disabled="disabled" selected="selected" hidden="hidden">Select currency</option>
+                          <option value="USD">USD</option>
+                          <option value="UAH">UAH</option>
+                          <option value="EUR">EUR</option>
+                        </select>
+                        <div class="c-form__select-icon"><i></i></div>
+                      </div>
+                      <div class="c-form__notify">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-form__group-col c-form__group-col-1">
+                    <div class="c-form__field c-form__field--select">
+                      <div class="c-form__select-wrapper">
+                        <div class="c-form__select-value"></div>
+                        <select class="c-form__select" id="select_price_format" name="select_price_format" select-js="select-js">
+                          <option value="" disabled="disabled" selected="selected" hidden="hidden">Price format</option>
+                          <option value="Format 1">Format 1</option>
+                          <option value="Format 2">Format 2</option>
+                          <option value="Format 3">Format 3</option>
+                        </select>
+                        <div class="c-form__select-icon"><i></i></div>
+                      </div>
+                      <div class="c-form__notify">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-form__field c-form__field--btn">
+                <button class="c-form__btn c-btn c-btn--bg" type="submit">Update settings</button>
+              </div>
+            </form>
           </div>
           <div class="mds__wrapper-right"></div>
         </div>

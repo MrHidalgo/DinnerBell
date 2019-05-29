@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 *
@@ -14,6 +14,139 @@
 * ============================
 * ============================
 * */
+
+/**
+ *
+ * @type {{init(): void, change(): void, chooseVal(*): void, focusElem(*): void, blurElem(*): void}}
+ * @private
+ */
+var customSelect = {
+	init: function init() {
+		var _select = document.querySelectorAll('select');
+
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+			for (var _iterator = _select[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var elem = _step.value;
+
+				elem.previousElementSibling.innerHTML = elem.options[elem.selectedIndex].text;
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
+			}
+		}
+	},
+	change: function change() {
+		var _select = document.querySelectorAll('select');
+
+		var _iteratorNormalCompletion2 = true;
+		var _didIteratorError2 = false;
+		var _iteratorError2 = undefined;
+
+		try {
+			for (var _iterator2 = _select[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+				var elem = _step2.value;
+
+				var _selectedOption = elem.options[elem.selectedIndex],
+				    _selectedValue = _selectedOption.value,
+				    _selectedText = _selectedOption.text;
+
+				if (_selectedValue !== '') {
+					this.chooseVal(elem);
+				}
+
+				elem.previousElementSibling.innerHTML = _selectedText;
+				this.blurElem(elem);
+			}
+		} catch (err) {
+			_didIteratorError2 = true;
+			_iteratorError2 = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion2 && _iterator2.return) {
+					_iterator2.return();
+				}
+			} finally {
+				if (_didIteratorError2) {
+					throw _iteratorError2;
+				}
+			}
+		}
+	},
+	chooseVal: function chooseVal(elem) {
+		elem.closest('.c-form__select-wrapper').classList.add('is-choose');
+	},
+	focusElem: function focusElem(elem) {
+		elem.closest('.c-form__select-wrapper').classList.add('is-focus');
+	},
+	blurElem: function blurElem(elem) {
+		elem.closest('.c-form__select-wrapper').classList.remove('is-focus');
+	}
+};
+
+/**
+ * @name initCustomSelect
+ *
+ * @description
+ */
+var initCustomSelect = function initCustomSelect() {
+	var _select = document.querySelectorAll('select');
+
+	customSelect.init();
+
+	var _loop = function _loop(elem) {
+		elem.addEventListener('change', function () {
+			customSelect.change(elem);
+		});
+		elem.addEventListener('focus', function () {
+			customSelect.focusElem(elem);
+		});
+		elem.addEventListener('click', function () {
+			customSelect.focusElem(elem);
+		});
+		elem.addEventListener('blur', function () {
+			customSelect.blurElem(elem);
+		});
+	};
+
+	var _iteratorNormalCompletion3 = true;
+	var _didIteratorError3 = false;
+	var _iteratorError3 = undefined;
+
+	try {
+		for (var _iterator3 = _select[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+			var elem = _step3.value;
+
+			_loop(elem);
+		}
+	} catch (err) {
+		_didIteratorError3 = true;
+		_iteratorError3 = err;
+	} finally {
+		try {
+			if (!_iteratorNormalCompletion3 && _iterator3.return) {
+				_iterator3.return();
+			}
+		} finally {
+			if (_didIteratorError3) {
+				throw _iteratorError3;
+			}
+		}
+	}
+};
 
 /**
  * @name initPreventBehavior
@@ -90,7 +223,7 @@ $(document).ready(function (ev) {
  * ============================================= */
 	var initBodyClick = function initBodyClick() {
 		$('body').on('click', function (e) {
-			var className = "\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t.header__dropdown\n\t\t\t";
+			var className = '\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t.header__dropdown\n\t\t\t';
 
 			if (!$(e.target).closest(className).length) {
 				$('.sidebar__nav-drop-more').removeClass('is-show');
@@ -134,6 +267,43 @@ $(document).ready(function (ev) {
 			$(ev.currentTarget).addClass('is-choose');
 		});
 	};
+
+	var initChooseColor = function initChooseColor() {
+		var _colorArr = $('.mds__form-color-content > a');
+
+		_colorArr.map(function (idx, val) {
+
+			var _parentNode = $(val).closest('.mds__form-color-content'),
+			    _inputNode = _parentNode.find('input[type="text"]'),
+			    _spanNode = _parentNode.find('span');
+
+			new Pickr({
+				el: val,
+				components: {
+					preview: true,
+					opacity: true,
+					hue: true,
+					interaction: {
+						hex: true,
+						rgba: true,
+						hsva: true,
+						input: true,
+						clear: false,
+						save: true
+					}
+				}
+			}).on('change', function () {
+				for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+					args[_key] = arguments[_key];
+				}
+
+				_inputNode.val(args[0].toHEXA().toString());
+				_spanNode.css({
+					'backgroundColor': args[0].toHEXA().toString()
+				});
+			});
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -150,6 +320,7 @@ $(document).ready(function (ev) {
 
 		// lib
 		// ==========================================
+		initCustomSelect();
 
 		// callback
 		// ==========================================
@@ -157,6 +328,7 @@ $(document).ready(function (ev) {
 		initSidebarCollapse();
 		initHeaderDropDown();
 		initChooseTheme();
+		initChooseColor();
 	};
 	initJquery();
 });

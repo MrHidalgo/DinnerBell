@@ -5,7 +5,7 @@
  * @type {{init(): void, change(): void, chooseVal(*): void, focusElem(*): void, blurElem(*): void}}
  * @private
  */
-const _customSelect = {
+const customSelect = {
 	init() {
 		const _select = document.querySelectorAll('select');
 
@@ -49,20 +49,20 @@ const _customSelect = {
 const initCustomSelect = () => {
 	const _select = document.querySelectorAll('select');
 
-	_customSelect.init();
+	customSelect.init();
 
 	for (let elem of _select) {
 		elem.addEventListener('change', () => {
-			_customSelect.change(elem);
+			customSelect.change(elem);
 		});
 		elem.addEventListener('focus', () => {
-			_customSelect.focusElem(elem);
+			customSelect.focusElem(elem);
 		});
 		elem.addEventListener('click', () => {
-			_customSelect.focusElem(elem);
+			customSelect.focusElem(elem);
 		});
 		elem.addEventListener('blur', () => {
-			_customSelect.blurElem(elem);
+			customSelect.blurElem(elem);
 		});
 	}
 };
