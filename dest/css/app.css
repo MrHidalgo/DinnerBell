@@ -2970,22 +2970,82 @@ picture {
   margin-bottom: 64px;
 }
 
-/* line 522, src/scss/_components/mds/_mds.scss */
+/* line 521, src/scss/_components/mds/_mds.scss */
+.mds__upload {
+  margin-bottom: 20px;
+}
+
+/* line 524, src/scss/_components/mds/_mds.scss */
+.mds__upload-title {
+  padding-bottom: 30px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 531, src/scss/_components/mds/_mds.scss */
+.mds__upload-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 20px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+/* line 538, src/scss/_components/mds/_mds.scss */
+.mds__upload-row > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 544, src/scss/_components/mds/_mds.scss */
+.mds__upload-row p {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 20px;
+}
+
+/* line 551, src/scss/_components/mds/_mds.scss */
+.mds__upload-row .icon-font {
+  color: #000000;
+}
+
+/* line 560, src/scss/_components/mds/_mds.scss */
 .mds__form-content {
   padding-bottom: 23px;
 }
 
-/* line 525, src/scss/_components/mds/_mds.scss */
+/* line 563, src/scss/_components/mds/_mds.scss */
 .mds__form-content--last {
   padding-bottom: 41px;
 }
 
-/* line 529, src/scss/_components/mds/_mds.scss */
+/* line 567, src/scss/_components/mds/_mds.scss */
 .mds__form-content--mdsOrderPt {
   padding-bottom: 64px;
 }
 
-/* line 534, src/scss/_components/mds/_mds.scss */
+/* line 572, src/scss/_components/mds/_mds.scss */
 .mds__form-color {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2998,12 +3058,12 @@ picture {
   margin-bottom: 4px;
 }
 
-/* line 539, src/scss/_components/mds/_mds.scss */
+/* line 577, src/scss/_components/mds/_mds.scss */
 .mds__form-color:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 544, src/scss/_components/mds/_mds.scss */
+/* line 582, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -3013,19 +3073,19 @@ picture {
   max-width: 100%;
 }
 
-/* line 549, src/scss/_components/mds/_mds.scss */
+/* line 587, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(2) {
   width: 136px;
 }
 
-/* line 553, src/scss/_components/mds/_mds.scss */
+/* line 591, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div p {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 560, src/scss/_components/mds/_mds.scss */
+/* line 598, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content {
   overflow: hidden;
   position: relative;
@@ -3038,7 +3098,7 @@ picture {
           border-radius: 5px;
 }
 
-/* line 570, src/scss/_components/mds/_mds.scss */
+/* line 608, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content .pickr, .mds__form-color-content .pickr button {
   opacity: 0;
   z-index: 2;
@@ -3049,7 +3109,7 @@ picture {
   height: 100%;
 }
 
-/* line 584, src/scss/_components/mds/_mds.scss */
+/* line 622, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content input[type="text"] {
   border: none;
   -webkit-box-shadow: none;
@@ -3068,7 +3128,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 600, src/scss/_components/mds/_mds.scss */
+/* line 638, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content span {
   z-index: 1;
   position: absolute;
