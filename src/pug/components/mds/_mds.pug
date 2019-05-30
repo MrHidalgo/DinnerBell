@@ -4,9 +4,21 @@
 	var themeArr = [
 		'Midnight',
 		'Big Sur',
-		'Amsterdam'
+		'Amsterdam',
+		'Midnight',
+		'Big Sur',
+		'Amsterdam',
+		'Midnight',
+		'Big Sur',
+		'Amsterdam',
 	];
 	var themeImgArr = [
+		'img-mds-theme-midnight',
+		'img-mds-theme-bigsur',
+		'img-mds-theme-amsterdam',
+		'img-mds-theme-midnight',
+		'img-mds-theme-bigsur',
+		'img-mds-theme-amsterdam',
 		'img-mds-theme-midnight',
 		'img-mds-theme-bigsur',
 		'img-mds-theme-amsterdam',
@@ -23,6 +35,7 @@ section#mds.mds
 			a.mds__theme(class!= 'mds__theme-' + idx href="#" title="")
 				.mds__theme-top
 					img(src="img/" + themeImgArr[idx] + ".jpg" srcset="img/" + themeImgArr[idx] + "@2x.jpg 2x" alt="" title="")
+
 					.mds__theme-ind
 						span
 						span
@@ -31,11 +44,16 @@ section#mds.mds
 						span
 						span
 
+					.mds__theme-btn
+						button(type='button')
+							span!= "Use selected theme"
+							i.icon-font.icon-arrow
+
+						button(type='button')
+							span!= "Customize"
+							i.icon-font.icon-arrow
+
 				.mds__theme-bottom
 					p!= val
-
-	.mds__theme-btn
-		a.c-btn.c-btn--bg(href="#" class="" title="")!= "Use selected theme"
-		a.c-btn.c-btn--bg(href="#" class="" title="")!= "Customize"
 
 // SECTION mds :: E	ND

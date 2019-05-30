@@ -1,14 +1,27 @@
 // HEADER :: START
 
 .header {
-	z-index: 10;
-	position: absolute;
+	z-index: 997;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	padding-left: 288px;
 	padding-right: 21px;
 	background-color: #ffffff;
+	@include transition(box-shadow);
+
+	&--fixed {
+		box-shadow: 0 2px 8px 0 rgba(#000, 0.1);
+		@include transition(box-shadow);
+
+		& + .sidebar {
+			&:after {
+				box-shadow: 2px 0 8px 0 rgba(#000, 0.1);
+				@include transition(box-shadow);
+			}
+		}
+	}
 
 	&__wrapper {
 		display: flex;
@@ -30,7 +43,7 @@
 		&-right {
 			display: flex;
 			align-items: center;
-			justify-content: flex-start;
+			justify-content: flex-end;
 		}
 	}
 

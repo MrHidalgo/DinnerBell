@@ -149,6 +149,23 @@ var initCustomSelect = function initCustomSelect() {
 };
 
 /**
+ * @name initHeaderFixed
+ *
+ * @description Fixing the site header in the scrolling page.
+ */
+var initHeaderFixed = function initHeaderFixed() {
+
+	var countScroll = $(window).scrollTop(),
+	    headerElement = $('.header');
+
+	if (countScroll > 30) {
+		headerElement.addClass("header--fixed");
+	} else {
+		headerElement.removeClass("header--fixed");
+	}
+};
+
+/**
  * @name initPreventBehavior
  *
  * @description
@@ -206,6 +223,25 @@ var initWebFontLoader = function initWebFontLoader() {
 };
 
 /**
+ * @description Window on load.
+ */
+$(window).on("load", function (ev) {
+	initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+$(window).on("resize", function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+$(window).on("scroll", function (ev) {
+	initHeaderFixed();
+});
+
+/**
  * @description Document DOM ready.
  */
 $(document).ready(function (ev) {
@@ -261,12 +297,13 @@ $(document).ready(function (ev) {
 		});
 	};
 
-	var initChooseTheme = function initChooseTheme() {
-		$('.mds__theme').on('click', function (ev) {
-			$('.mds__theme').removeClass('is-choose');
-			$(ev.currentTarget).addClass('is-choose');
-		});
-	};
+	// const initChooseTheme = () => {
+	// 	$('.mds__theme').on('click', (ev) => {
+	// 		$('.mds__theme').removeClass('is-choose');
+	// 		$(ev.currentTarget).addClass('is-choose');
+	// 	});
+	// };
+
 
 	var initChooseColor = function initChooseColor() {
 		var _colorArr = $('.mds__form-color-content > a');
@@ -358,7 +395,7 @@ $(document).ready(function (ev) {
 		initBodyClick();
 		initSidebarCollapse();
 		initHeaderDropDown();
-		initChooseTheme();
+		// initChooseTheme();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();

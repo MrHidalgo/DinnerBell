@@ -27,23 +27,26 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == bin {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == copy {
+	@if $filename == bin {
 		$char: "\E002";
 	}
-	@if $filename == corner {
+	@if $filename == copy {
 		$char: "\E003";
 	}
-	@if $filename == fullscreen {
+	@if $filename == corner {
 		$char: "\E004";
 	}
-	@if $filename == menu {
+	@if $filename == fullscreen {
 		$char: "\E005";
 	}
-	@if $filename == settings {
+	@if $filename == menu {
 		$char: "\E006";
+	}
+	@if $filename == settings {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -60,6 +63,10 @@
 	}
 }
 
+.icon-arrow {
+	@include icon(arrow);
+
+}
 .icon-bin {
 	@include icon(bin);
 

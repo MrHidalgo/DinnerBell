@@ -64,12 +64,12 @@ $(document).ready((ev) => {
 	};
 
 
-	const initChooseTheme = () => {
-		$('.mds__theme').on('click', (ev) => {
-			$('.mds__theme').removeClass('is-choose');
-			$(ev.currentTarget).addClass('is-choose');
-		});
-	};
+	// const initChooseTheme = () => {
+	// 	$('.mds__theme').on('click', (ev) => {
+	// 		$('.mds__theme').removeClass('is-choose');
+	// 		$(ev.currentTarget).addClass('is-choose');
+	// 	});
+	// };
 
 
 	const initChooseColor = () => {
@@ -163,7 +163,7 @@ $(document).ready((ev) => {
 		initBodyClick();
 		initSidebarCollapse();
 		initHeaderDropDown();
-		initChooseTheme();
+		// initChooseTheme();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();

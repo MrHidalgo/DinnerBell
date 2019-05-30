@@ -1,14 +1,39 @@
 // SECTION sidebar :: START
 
 .sidebar {
-	position: absolute;
+	z-index: 998;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	max-width: 288px;
 	background-color: #ffffff;
 
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+	}
+
+	&:before {
+		z-index: 0;
+		top: 0;
+		height: 80px;
+		background-color: #ffffff;
+	}
+
+	&:after {
+		z-index: -1;
+		top: 80px;
+		height: calc(100% - 80px);
+		@include transition(box-shadow);
+	}
+
 	&__wrapper {
+		z-index: 2;
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
@@ -194,6 +219,20 @@
 						visibility: visible;
 						transform: translateX(0);
 						@include transition(opacity, visibility, transform);
+					}
+				}
+
+				.sidebar__nav-drop-link {
+					p {
+						opacity: 0;
+						@include transition(opacity);
+					}
+
+					&:hover {
+						p {
+							opacity: 1;
+							@include transition(opacity);
+						}
 					}
 				}
 			}
