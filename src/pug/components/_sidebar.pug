@@ -9,6 +9,25 @@ mixin sidebarNavWDrop(iconName, itemName)
 			div
 				span!= itemName
 
+mixin sidebarNavSetting(navName)
+	.sidebar__nav-drop-more
+		a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+			div
+				i.icon-font.icon-move
+			div
+				span!= navName
+				p
+					i.icon-font.icon-menu
+		.sidebar__nav-setting
+			a.sidebar__nav-setting--move(href="#" class="" title="")
+				i.icon-font.icon-move
+			a.sidebar__nav-setting--setting(href="#" class="" title="")
+				i.icon-font.icon-settings
+			a.sidebar__nav-setting--copy(href="#" class="" title="")
+				i.icon-font.icon-copy
+			a.sidebar__nav-setting--remove(href="#" class="" title="")
+				i.icon-font.icon-bin
+
 section#sidebar.sidebar
 
 	.sidebar__wrapper
@@ -35,57 +54,12 @@ section#sidebar.sidebar
 								i.icon-font.icon-corner
 
 					.sidebar__nav-drop
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Breakfast"
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Lunch"
-						.sidebar__nav-drop-more
-							a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-								div
-								div
-									span!= "Dinner"
-									p
-										i.icon-font.icon-menu
-							.sidebar__nav-setting
-								a(href="#" class="" title="")
-									i.icon-font.icon-fullscreen
-								a(href="#" class="" title="")
-									i.icon-font.icon-settings
-								a(href="#" class="" title="")
-									i.icon-font.icon-copy
-								a(href="#" class="" title="")
-									i.icon-font.icon-bin
-
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Business lunch"
-
-						.sidebar__nav-drop-more
-							a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-								div
-								div
-									span!= "Daily Specials"
-									p
-										i.icon-font.icon-menu
-							.sidebar__nav-setting
-								a(href="#" class="" title="")
-									i.icon-font.icon-fullscreen
-								a(href="#" class="" title="")
-									i.icon-font.icon-settings
-								a(href="#" class="" title="")
-									i.icon-font.icon-copy
-								a(href="#" class="" title="")
-									i.icon-font.icon-bin
-
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Wine-list"
+						+sidebarNavSetting('Breakfast')
+						+sidebarNavSetting('Lunch')
+						+sidebarNavSetting('Dinner')
+						+sidebarNavSetting('Business lunch')
+						+sidebarNavSetting('Daily Specials')
+						+sidebarNavSetting('Wine-list')
 						a.sidebar__nav-btn.sidebar__nav-drop-link.sidebar__nav-btn--add(href="#" class="" title="")
 							div
 							div
@@ -102,18 +76,9 @@ section#sidebar.sidebar
 								i.icon-font.icon-corner
 
 					.sidebar__nav-drop
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Inventory item"
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Inventory some item"
-						a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
-							div
-							div
-								span!= "Inventory action item"
+						+sidebarNavSetting('Inventory item')
+						+sidebarNavSetting('Inventory item more')
+						+sidebarNavSetting('Inventory item')
 
 				+sidebarNavWDrop('i-reports', 'Reports')
 				+sidebarNavWDrop('i-orders', 'Orders')

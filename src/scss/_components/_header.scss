@@ -6,8 +6,8 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding-left: 288px;
-	padding-right: 21px;
+	padding-left: 20px;
+	padding-right: 20px;
 	background-color: #ffffff;
 	@include transition(box-shadow);
 
@@ -16,8 +16,8 @@
 		@include transition(box-shadow);
 
 		& + .sidebar {
-			&:after {
-				box-shadow: 2px 0 8px 0 rgba(#000, 0.1);
+			.sidebar__wrapper-top {
+				box-shadow: 0 2px 8px 0 rgba(#000, 0.1);
 				@include transition(box-shadow);
 			}
 		}
@@ -26,6 +26,13 @@
 	&__wrapper {
 		display: flex;
 		min-height: 80px;
+
+		&-top {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			max-width: 288px;
+		}
 
 		&-left,
 		&-right {
@@ -36,7 +43,6 @@
 		&-left {
 			display: flex;
 			align-items: center;
-			padding-left: 20px;
 			padding-right: 20px;
 		}
 

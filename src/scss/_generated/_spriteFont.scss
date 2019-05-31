@@ -45,8 +45,11 @@
 	@if $filename == menu {
 		$char: "\E006";
 	}
-	@if $filename == settings {
+	@if $filename == move {
 		$char: "\E007";
+	}
+	@if $filename == settings {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -85,6 +88,10 @@
 }
 .icon-menu {
 	@include icon(menu);
+
+}
+.icon-move {
+	@include icon(move);
 
 }
 .icon-settings {

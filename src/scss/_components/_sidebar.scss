@@ -1,35 +1,15 @@
 // SECTION sidebar :: START
 
 .sidebar {
-	z-index: 998;
+	z-index: 996;
+	overflow-y: auto;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	max-width: 288px;
+	height: 100%;
 	background-color: #ffffff;
-
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		width: 100%;
-	}
-
-	&:before {
-		z-index: 0;
-		top: 0;
-		height: 80px;
-		background-color: #ffffff;
-	}
-
-	&:after {
-		z-index: -1;
-		top: 80px;
-		height: calc(100% - 80px);
-		@include transition(box-shadow);
-	}
 
 	&__wrapper {
 		z-index: 2;
@@ -37,19 +17,21 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		padding-left: 21px;
+		padding-left: 20px;
 		padding-right: 25px;
+		padding-bottom: 20px;
 
 		&-top {
+			opacity: 0;
 			display: flex;
 			align-items: center;
 			min-height: 80px;
 		}
 
 		&-middle {
-			padding-top: 29px;
+			padding-top: 40px;
 			padding-left: 13px;
-			padding-bottom: 86px;
+			padding-bottom: 80px;
 		}
 
 		&-bottom {
@@ -64,10 +46,10 @@
 
 		&-btn {
 			cursor: pointer;
-			overflow: hidden;
 			display: flex;
 			align-items: center;
 			position: relative;
+			width: 100%;
 
 			&:hover {
 				.icon-png {
@@ -133,10 +115,14 @@
 
 			&-node {
 				position: relative;
-				padding-bottom: 16px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				min-height: 40px;
+				margin-bottom: 5px;
 
 				&:last-of-type {
-					padding-bottom: 0;
+					margin-bottom: 0;
 				}
 
 				&.is-open {
@@ -195,15 +181,32 @@
 
 		&-drop {
 			display: none;
-			padding-top: 21px;
-			padding-bottom: 5px;
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
 
 			&-more {
 				position: relative;
 
-				&.is-show {
+				&.is-drag {
 					.sidebar__nav-drop-link {
+						cursor: all-scroll;
+
+						&:before {
+							cursor: all-scroll;
+							opacity: 1;
+							visibility: visible;
+							@include transition(opacity, visibility);
+						}
+
 						> div {
+							.icon-move {
+								z-index: 4;
+								opacity: 1;
+								visibility: visible;
+								@include transition(opacity, visibility);
+							}
+
 							span {
 								z-index: 10;
 								position: relative;
@@ -211,6 +214,17 @@
 								color: #ffffff;
 								font-weight: 500;
 								@include transition(transform, color);
+							}
+						}
+					}
+				}
+
+				&.is-show {
+					.sidebar__nav-drop-link {
+						> div {
+							p {
+								opacity: 1;
+								@include transition(opacity);
 							}
 						}
 					}
@@ -223,6 +237,38 @@
 				}
 
 				.sidebar__nav-drop-link {
+					position: relative;
+
+					> div {
+						.icon-move {
+							opacity: 0;
+							visibility: hidden;
+							z-index: 0;
+							position: absolute;
+							top: 50%;
+							right: 5px;
+							transform: translateY(-50%);
+							color: #ffffff;
+							@include transition(opacity, visibility);
+						}
+					}
+
+					&:before {
+						content: '';
+						z-index: 3;
+						opacity: 0;
+						visibility: hidden;
+						position: absolute;
+						top: 0;
+						left: 10px;
+						width: calc(100% - 3px);
+						height: 100%;
+						border-radius: 20px;
+						background-color: #61bdf0;
+						box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
+						@include transition(opacity, visibility);
+					}
+
 					p {
 						opacity: 0;
 						@include transition(opacity);
@@ -238,7 +284,7 @@
 			}
 
 			&-link {
-				padding-bottom: 16px;
+				min-height: 40px;
 
 				> div {
 					span {
@@ -248,11 +294,11 @@
 				}
 
 				p {
+					z-index: 2;
+					position: relative;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					z-index: 2;
-					position: relative;
 					width: 25px;
 					height: 25px;
 					border-radius: 50%;
@@ -271,30 +317,30 @@
 			opacity: 0;
 			visibility: hidden;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: flex-end;
 			position: absolute;
-			top: -8px;
-			left: 10px;
-			width: calc(100% + 72px);
-			height: 100%;
-			transform: translateX(-100%);
-			padding-right: 22px;
+			bottom: calc(100% + 8px);
+			right: -7px;
+			width: 39px;
+			height: auto;
+			padding: 10px 0;
 			border-radius: 20px;
-			background-color: #61bdf0;
-			box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
+			background-color: rgb(248, 248, 248);
+			box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 			@include transition(opacity, visibility, transform);
 
 			> a {
-				margin-left: 16px;
+				margin-top: 12px;
 
 				&:first-of-type {
-					margin-left: 0;
+					margin-top: 0;
 				}
 			}
 
 			.icon-font {
-				color: #ffffff;
+				color: #61bdf0;
 			}
 		}
 	}

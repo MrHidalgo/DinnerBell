@@ -262,7 +262,7 @@ $(document).ready(function (ev) {
 			var className = '\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t.header__dropdown\n\t\t\t';
 
 			if (!$(e.target).closest(className).length) {
-				$('.sidebar__nav-drop-more').removeClass('is-show');
+				$('.sidebar__nav-drop-more').removeClass('is-show is-drag');
 
 				$('.header__dropdown').removeClass('is-open');
 				$('.header__dropdown-toggle').siblings('.header__dropdown-menu').slideUp(350);
@@ -283,7 +283,16 @@ $(document).ready(function (ev) {
 			var _menu = $(ev.currentTarget),
 			    _parent = _menu.closest('.sidebar__nav-drop-more');
 
+			$('.sidebar__nav-drop-more').removeClass('is-show');
 			_parent.addClass('is-show');
+		});
+
+		$('.sidebar__nav-setting--move').on('click', function (ev) {
+			var _el = $(ev.currentTarget),
+			    _parent = _el.closest('.sidebar__nav-drop-more');
+
+			$('.sidebar__nav-drop-more').removeClass('is-show is-drag');
+			_parent.addClass('is-drag');
 		});
 	};
 

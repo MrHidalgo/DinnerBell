@@ -4,7 +4,7 @@
 .logo {
 	&__btn {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 	}
 
 	&__img {
@@ -12,6 +12,16 @@
 		width: 100%;
 		max-width: 55px;
 		height: 55px;
+	}
+
+	span {
+		position: relative;
+		top: 1px;
+		margin-left: 10px;
+		text-transform: uppercase;
+		line-height: 1;
+		color: rgb(177, 151, 101);
+		font-weight: 800;
 	}
 }
 // logo :: end
