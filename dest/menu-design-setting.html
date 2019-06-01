@@ -32,6 +32,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
+    <div class="overlay"></div>
     <!-- HEADER :: START-->
     <header class="header" id="header">
       <div class="header__wrapper">
@@ -39,6 +40,11 @@
           <div class="logo logo--header"><a class="logo__btn" href="/" title=""><img class="logo__img" src="img/logo.svg" alt="" title=""><span>Dinner Bell</span></a></div>
         </div>
         <div class="header__wrapper-left">
+          <div class="c-hamburger c-hamburger--custom" role="button" hamburger-js="hamburger-js">
+            <div class="c-hamburger__box">
+              <div class="c-hamburger__inner"></div>
+            </div>
+          </div>
           <h1 class="header__title">Section title</h1>
         </div>
         <div class="header__wrapper-right">
@@ -46,16 +52,18 @@
             <div class="header__dropdown-toggle"><span>Blue Strawberry</span></div>
             <div class="header__dropdown-menu"><a class="header__dropdown-item" href="#" title="">Company profile</a><a class="header__dropdown-item" href="#" title="">Login & Security</a><a class="header__dropdown-item" href="#" title="">TeamBilling Center</a><a class="header__dropdown-item" href="#" title="">Tablet Settings</a><a class="header__dropdown-item" href="#" title="">Help</a><a class="header__dropdown-item" href="#" title="">Report a bug</a><a class="header__dropdown-item" href="#" title="">Leave feedback</a><a class="header__dropdown-item" href="#" title="">Log Out</a></div>
           </div>
-          <div class="header__nav"><a class="header__nav-btn" href="#" title=""><i class="icon-png i-setting-1"></i></a><a class="header__nav-btn" href="#" title=""><i class="icon-png i-qrcode"></i></a><a class="header__nav-btn" href="#" title=""><i class="icon-png i-team"></i></a><a class="header__nav-btn" href="#" title=""><i class="icon-png i-notification"></i></a></div>
+          <div class="header__nav"><a class="header__nav-btn header__nav-btn--setting" href="#" title=""><i class="icon-png i-setting-1"></i></a><a class="header__nav-btn header__nav-btn--qrcode" href="#" title=""><i class="icon-png i-qrcode"></i></a><a class="header__nav-btn header__nav-btn--team" href="#" title=""><i class="icon-png i-team"></i></a><a class="header__nav-btn header__nav-btn--notification" href="#" title=""><i class="icon-png i-notification"></i></a></div>
         </div>
       </div>
     </header>
     <!-- HEADER :: END-->
     <!-- HEADER sidebar :: START-->
-    <section class="sidebar" id="sidebar">
+    <section class="sidebar" id="sidebar" mobile-block-js>
       <div class="sidebar__wrapper">
         <div class="sidebar__wrapper-top">
-          <div class="logo logo--header"><a class="logo__btn" href="/" title=""><img class="logo__img" src="img/logo.svg" alt="" title=""></a></div>
+          <!--.logo.logo--header-->
+          <!--	a.logo__btn(href="/" class="" title="")-->
+          <!--		img.logo__img(src="img/logo.svg" alt="" title="")-->
         </div>
         <div class="sidebar__wrapper-middle">
           <div class="sidebar__nav">
@@ -183,6 +191,42 @@
                   <div class="icon-png-wrapper"><i>+</i></div>
                 </div>
                 <div><span>Add service</span></div></a></div>
+            <div class="sidebar__nav-btn-node sidebar__nav-btn-node--strawberry">
+              <div class="sidebar__nav-btn sidebar__nav-btn--drop">
+                <div>
+                  <div class="icon-png-wrapper"><i class="icon-png i-user"></i></div>
+                </div>
+                <div><span>Blue Strawberry</span>
+                  <p><i class="icon-font icon-corner"></i></p>
+                </div>
+              </div>
+              <div class="sidebar__nav-drop">
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Company profile</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Login & Security</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>TeamBilling Center</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Tablet Settings</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Help</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Report a bug</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Leave feedback</span></div></a></div>
+                    <div class="sidebar__nav-drop-more"><a class="sidebar__nav-btn sidebar__nav-drop-link" href="#" title="">
+                        <div></div>
+                        <div><span>Log Out</span></div></a></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="sidebar__wrapper-bottom">
@@ -219,66 +263,6 @@
             <div class="mds__theme-bottom">
               <p>Big Sur</p>
             </div></a><a class="mds__theme mds__theme-2" href="#" title="">
-            <div class="mds__theme-top"><img src="img/img-mds-theme-amsterdam.jpg" srcset="img/img-mds-theme-amsterdam@2x.jpg 2x" alt="" title="">
-              <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mds__theme-btn">
-                <button type="button"><span>Use selected theme</span><i class="icon-font icon-arrow"></i></button>
-                <button type="button"><span>Customize</span><i class="icon-font icon-arrow"></i></button>
-              </div>
-            </div>
-            <div class="mds__theme-bottom">
-              <p>Amsterdam</p>
-            </div></a><a class="mds__theme mds__theme-3" href="#" title="">
-            <div class="mds__theme-top"><img src="img/img-mds-theme-midnight.jpg" srcset="img/img-mds-theme-midnight@2x.jpg 2x" alt="" title="">
-              <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mds__theme-btn">
-                <button type="button"><span>Use selected theme</span><i class="icon-font icon-arrow"></i></button>
-                <button type="button"><span>Customize</span><i class="icon-font icon-arrow"></i></button>
-              </div>
-            </div>
-            <div class="mds__theme-bottom">
-              <p>Midnight</p>
-            </div></a><a class="mds__theme mds__theme-4" href="#" title="">
-            <div class="mds__theme-top"><img src="img/img-mds-theme-bigsur.jpg" srcset="img/img-mds-theme-bigsur@2x.jpg 2x" alt="" title="">
-              <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mds__theme-btn">
-                <button type="button"><span>Use selected theme</span><i class="icon-font icon-arrow"></i></button>
-                <button type="button"><span>Customize</span><i class="icon-font icon-arrow"></i></button>
-              </div>
-            </div>
-            <div class="mds__theme-bottom">
-              <p>Big Sur</p>
-            </div></a><a class="mds__theme mds__theme-5" href="#" title="">
-            <div class="mds__theme-top"><img src="img/img-mds-theme-amsterdam.jpg" srcset="img/img-mds-theme-amsterdam@2x.jpg 2x" alt="" title="">
-              <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mds__theme-btn">
-                <button type="button"><span>Use selected theme</span><i class="icon-font icon-arrow"></i></button>
-                <button type="button"><span>Customize</span><i class="icon-font icon-arrow"></i></button>
-              </div>
-            </div>
-            <div class="mds__theme-bottom">
-              <p>Amsterdam</p>
-            </div></a><a class="mds__theme mds__theme-6" href="#" title="">
-            <div class="mds__theme-top"><img src="img/img-mds-theme-midnight.jpg" srcset="img/img-mds-theme-midnight@2x.jpg 2x" alt="" title="">
-              <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mds__theme-btn">
-                <button type="button"><span>Use selected theme</span><i class="icon-font icon-arrow"></i></button>
-                <button type="button"><span>Customize</span><i class="icon-font icon-arrow"></i></button>
-              </div>
-            </div>
-            <div class="mds__theme-bottom">
-              <p>Midnight</p>
-            </div></a><a class="mds__theme mds__theme-7" href="#" title="">
-            <div class="mds__theme-top"><img src="img/img-mds-theme-bigsur.jpg" srcset="img/img-mds-theme-bigsur@2x.jpg 2x" alt="" title="">
-              <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mds__theme-btn">
-                <button type="button"><span>Use selected theme</span><i class="icon-font icon-arrow"></i></button>
-                <button type="button"><span>Customize</span><i class="icon-font icon-arrow"></i></button>
-              </div>
-            </div>
-            <div class="mds__theme-bottom">
-              <p>Big Sur</p>
-            </div></a><a class="mds__theme mds__theme-8" href="#" title="">
             <div class="mds__theme-top"><img src="img/img-mds-theme-amsterdam.jpg" srcset="img/img-mds-theme-amsterdam@2x.jpg 2x" alt="" title="">
               <div class="mds__theme-ind"><span></span><span></span><span></span><span></span><span></span><span></span></div>
               <div class="mds__theme-btn">

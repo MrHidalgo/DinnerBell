@@ -1,11 +1,11 @@
 $sprite: (
   i-customers: (
-    offset-x: -102px,
-    offset-y: 0px,
+    offset-x: 0px,
+    offset-y: -94px,
     width: 26px,
     height: 21px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-entertainment: (
@@ -13,35 +13,35 @@ $sprite: (
     offset-y: -32px,
     width: 26px,
     height: 25px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-inventory: (
     offset-x: -102px,
-    offset-y: -26px,
+    offset-y: -29px,
     width: 21px,
     height: 25px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-menu: (
-    offset-x: 0px,
+    offset-x: -30px,
     offset-y: -64px,
     width: 25px,
     height: 25px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-merchandise: (
-    offset-x: -60px,
-    offset-y: -64px,
+    offset-x: -102px,
+    offset-y: 0px,
     width: 23px,
     height: 24px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-notification: (
@@ -49,8 +49,8 @@ $sprite: (
     offset-y: -31px,
     width: 28px,
     height: 28px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-orders: (
@@ -58,8 +58,8 @@ $sprite: (
     offset-y: 0px,
     width: 27px,
     height: 27px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-overview: (
@@ -67,26 +67,26 @@ $sprite: (
     offset-y: 0px,
     width: 29px,
     height: 24px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-qrcode: (
-    offset-x: -30px,
+    offset-x: -60px,
     offset-y: -64px,
     width: 25px,
     height: 25px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-reports: (
     offset-x: -102px,
-    offset-y: -56px,
+    offset-y: -59px,
     width: 19px,
     height: 26px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-setting-1: (
@@ -94,8 +94,8 @@ $sprite: (
     offset-y: -29px,
     width: 26px,
     height: 26px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
   i-team: (
@@ -103,8 +103,17 @@ $sprite: (
     offset-y: 0px,
     width: 31px,
     height: 26px,
-    total-width: 128px,
-    total-height: 89px,
+    total-width: 125px,
+    total-height: 115px,
+    image: '../img/sprite.png'
+  ),
+  i-user: (
+    offset-x: 0px,
+    offset-y: -64px,
+    width: 25px,
+    height: 25px,
+    total-width: 125px,
+    total-height: 115px,
     image: '../img/sprite.png'
   ),
 );
@@ -187,4 +196,7 @@ $sprite: (
 }
 .i-team:before {
   @include sprite(i-team);
+}
+.i-user:before {
+  @include sprite(i-user);
 }

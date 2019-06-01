@@ -11,6 +11,8 @@ header#header.header
 					span!= "Dinner Bell"
 
 		.header__wrapper-left
+			+hamburgerCustom()
+
 			h1.header__title!= "Section title"
 
 		.header__wrapper-right
@@ -29,13 +31,13 @@ header#header.header
 					a.header__dropdown-item(href="#" class="" title="")!= "Log Out"
 
 			.header__nav
-				a.header__nav-btn(href="#" class="" title="")
+				a.header__nav-btn.header__nav-btn--setting(href="#" class="" title="")
 					i.icon-png.i-setting-1
-				a.header__nav-btn(href="#" class="" title="")
+				a.header__nav-btn.header__nav-btn--qrcode(href="#" class="" title="")
 					i.icon-png.i-qrcode
-				a.header__nav-btn(href="#" class="" title="")
+				a.header__nav-btn.header__nav-btn--team(href="#" class="" title="")
 					i.icon-png.i-team
-				a.header__nav-btn(href="#" class="" title="")
+				a.header__nav-btn.header__nav-btn--notification(href="#" class="" title="")
 					i.icon-png.i-notification
 
 // HEADER :: END

@@ -73,14 +73,6 @@ $(document).ready((ev) => {
 	};
 
 
-	// const initChooseTheme = () => {
-	// 	$('.mds__theme').on('click', (ev) => {
-	// 		$('.mds__theme').removeClass('is-choose');
-	// 		$(ev.currentTarget).addClass('is-choose');
-	// 	});
-	// };
-
-
 	const initChooseColor = () => {
 		const _colorArr = $('.mds__form-color-content > a');
 
@@ -166,13 +158,13 @@ $(document).ready((ev) => {
     // lib
 		// ==========================================
 		initCustomSelect();
+		initHamburger();
 
     // callback
 		// ==========================================
 		initBodyClick();
 		initSidebarCollapse();
 		initHeaderDropDown();
-		// initChooseTheme();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();

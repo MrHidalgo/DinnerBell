@@ -28,15 +28,22 @@ mixin sidebarNavSetting(navName)
 			a.sidebar__nav-setting--remove(href="#" class="" title="")
 				i.icon-font.icon-bin
 
-section#sidebar.sidebar
+mixin sidebarNavWSetting(navName)
+	.sidebar__nav-drop-more
+		a.sidebar__nav-btn.sidebar__nav-drop-link(href="#" class="" title="")
+			div
+			div
+				span!= navName
+
+section#sidebar.sidebar(mobile-block-js)
 
 	.sidebar__wrapper
 
 		.sidebar__wrapper-top
 
-			.logo.logo--header
-				a.logo__btn(href="/" class="" title="")
-					img.logo__img(src="img/logo.svg" alt="" title="")
+			//.logo.logo--header
+			//	a.logo__btn(href="/" class="" title="")
+			//		img.logo__img(src="img/logo.svg" alt="" title="")
 
 		.sidebar__wrapper-middle
 
@@ -93,6 +100,26 @@ section#sidebar.sidebar
 								i!= "+"
 						div
 							span!= "Add service"
+
+				.sidebar__nav-btn-node.sidebar__nav-btn-node--strawberry
+					.sidebar__nav-btn.sidebar__nav-btn--drop
+						div
+							.icon-png-wrapper
+								i.icon-png.i-user
+						div
+							span!= "Blue Strawberry"
+							p
+								i.icon-font.icon-corner
+
+					.sidebar__nav-drop
+						+sidebarNavWSetting('Company profile')
+						+sidebarNavWSetting('Login & Security')
+						+sidebarNavWSetting('TeamBilling Center')
+						+sidebarNavWSetting('Tablet Settings')
+						+sidebarNavWSetting('Help')
+						+sidebarNavWSetting('Report a bug')
+						+sidebarNavWSetting('Leave feedback')
+						+sidebarNavWSetting('Log Out')
 
 		.sidebar__wrapper-bottom
 

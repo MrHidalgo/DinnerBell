@@ -149,6 +149,32 @@ var initCustomSelect = function initCustomSelect() {
 };
 
 /**
+ * @name initHamburger
+ *
+ * @description Init hamburger logic with animated
+ */
+var initHamburger = function initHamburger() {
+
+	var btn = document.querySelector("[hamburger-js]"),
+	    hideScrollContainer = document.querySelectorAll("html, body"),
+	    mobileContainer = document.querySelector("[mobile-block-js]");
+
+	/**
+   * @description
+  */
+	btn.addEventListener("click", function (ev) {
+		var elem = ev.currentTarget;
+
+		elem.classList.toggle("is-active");
+		mobileContainer.classList.toggle("is-open");
+
+		hideScrollContainer.forEach(function (val, idx) {
+			val.classList.toggle("is-hideScroll");
+		});
+	});
+};
+
+/**
  * @name initHeaderFixed
  *
  * @description Fixing the site header in the scrolling page.
@@ -306,14 +332,6 @@ $(document).ready(function (ev) {
 		});
 	};
 
-	// const initChooseTheme = () => {
-	// 	$('.mds__theme').on('click', (ev) => {
-	// 		$('.mds__theme').removeClass('is-choose');
-	// 		$(ev.currentTarget).addClass('is-choose');
-	// 	});
-	// };
-
-
 	var initChooseColor = function initChooseColor() {
 		var _colorArr = $('.mds__form-color-content > a');
 
@@ -398,13 +416,13 @@ $(document).ready(function (ev) {
 		// lib
 		// ==========================================
 		initCustomSelect();
+		initHamburger();
 
 		// callback
 		// ==========================================
 		initBodyClick();
 		initSidebarCollapse();
 		initHeaderDropDown();
-		// initChooseTheme();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();
