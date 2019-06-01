@@ -7,7 +7,7 @@
  */
 const initSwiper = () => {
 
-  const mySwiper = new Swiper('.swiper-container', {
+  const mySwiper = new Swiper('.swiper-container-intro', {
     // Optional parameters
     wrapperClass: "swiper-wrapper",
     slideClass: "swiper-slide",
@@ -18,6 +18,7 @@ const initSwiper = () => {
     grabCursor: true,
     freeMode: false,
     effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
+		speed: 750,
     // autoplay: {
     //   delay: 5000,
     // },
@@ -28,7 +29,7 @@ const initSwiper = () => {
     //   loadPrevNext: true,
     // },
 
-    // off touch for destop
+    // off touch for desktop
     // touchMoveStopPropagation:false,
     // simulateTouch : false,
     // allowSwipeToNext: true,
@@ -37,23 +38,23 @@ const initSwiper = () => {
 
     slidesPerView: 1,
     spaceBetween: 0,
-    breakpoints: {
-      // when window width is <= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10
-      },
-      // when window width is <= 480px
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      // when window width is <= 640px
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      }
-    },
+    // breakpoints: {
+    //   // when window width is <= 320px
+    //   320: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 10
+    //   },
+    //   // when window width is <= 480px
+    //   480: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 20
+    //   },
+    //   // when window width is <= 640px
+    //   640: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 30
+    //   }
+    // },
 
     // If we need pagination
     pagination: {
@@ -69,20 +70,20 @@ const initSwiper = () => {
     },
 
     // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-
-    on: {
-      "slideChange": function () {
-        console.log("slideChange");
-      },
-    }
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+		//
+    // // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+		//
+    // on: {
+    //   "slideChange": function () {
+    //     console.log("slideChange");
+    //   },
+    // }
   });
 };

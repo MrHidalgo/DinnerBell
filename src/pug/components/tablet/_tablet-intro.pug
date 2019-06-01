@@ -1,0 +1,33 @@
+// SECTION tablet :: START
+
+section#tablet.tablet.tablet--intro
+	.tablet__wrapper
+		.tablet__wrapper-header
+
+		.tablet__wrapper-content
+			div
+				.tablet__wrapper-bg
+					.tablet__logo
+						img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
+
+				.tablet__wrapper-slideshow
+
+					mixin swiperContent()
+						.swiper-slide
+						.swiper-slide
+						.swiper-slide
+
+					+swiper('swiper-container-intro', 'swiperContent', true, false, false)
+
+				.tablet__wrapper-video
+
+					video(autoplay, loop, muted)
+						source(src='media/video-tablet-intro.mp4', type='video/mp4')
+
+					.tablet__logo
+						img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
+
+		.tablet__wrapper-footer
+			a(href="#" class="" title="")!= "Get started!"
+
+// SECTION tablet :: END

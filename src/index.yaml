@@ -3,13 +3,13 @@ ProjectTitle: DinnerBell
 PageList:
 - file: menu-design-setting.html
   titleName: MDS - Base theme
-  ready: 45
+  ready: 75
 - file: menu-design-setting-1.html
   titleName: MDS - Base setting
   ready: 45
 - file: menu-design-setting-2.html
   titleName: MDS - Intro screen
-  ready: 45
+  ready: 75
 - file: menu-design-setting-3.html
   titleName: MDS - Main menu
   ready: 45

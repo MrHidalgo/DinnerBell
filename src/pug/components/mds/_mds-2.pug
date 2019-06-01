@@ -12,7 +12,7 @@ section#mds.mds
 			form.c-form(action="" autocomplete='off')
 
 				.mds__screen-wrapper
-					a.mds__screen(href="#" class="" title="")
+					a.mds__screen.is-choose(href="#" class="" title="" data-name='bg')
 						p.mds__screen-title!= "Static image"
 						.mds__screen-row
 							.mds__screen-col.mds__screen-col-0
@@ -20,7 +20,7 @@ section#mds.mds
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload!= "Upload images"
 
-					a.mds__screen(href="#" class="" title="")
+					a.mds__screen(href="#" class="" title="" data-name='slideshow')
 						p.mds__screen-title!= "Slideshow"
 						.mds__screen-row
 							.mds__screen-col.mds__screen-col-0
@@ -28,7 +28,7 @@ section#mds.mds
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload!= "Upload images"
 
-					a.mds__screen(href="#" class="" title="")
+					a.mds__screen(href="#" class="" title="" data-name='video')
 						p.mds__screen-title!= "Video Intro"
 						.mds__screen-row
 							.mds__screen-col.mds__screen-col-0
@@ -39,5 +39,7 @@ section#mds.mds
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
+
+			include ../tablet/_tablet-intro
 
 // SECTION mds :: END

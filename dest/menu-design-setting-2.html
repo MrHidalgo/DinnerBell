@@ -245,7 +245,7 @@
           <div class="mds__wrapper-left">
             <h2 class="mds__title mds__title--internal"><span>Intro screen</span><i class="icon-font icon-corner"></i></h2>
             <form class="c-form" action="" autocomplete="off">
-              <div class="mds__screen-wrapper"><a class="mds__screen" href="#" title="">
+              <div class="mds__screen-wrapper"><a class="mds__screen is-choose" href="#" title="" data-name="bg">
                   <p class="mds__screen-title">Static image</p>
                   <div class="mds__screen-row">
                     <div class="mds__screen-col mds__screen-col-0">
@@ -254,7 +254,7 @@
                     <div class="mds__screen-col mds__screen-col-1">
                       <div class="mds__screen-upload">Upload images</div>
                     </div>
-                  </div></a><a class="mds__screen" href="#" title="">
+                  </div></a><a class="mds__screen" href="#" title="" data-name="slideshow">
                   <p class="mds__screen-title">Slideshow</p>
                   <div class="mds__screen-row">
                     <div class="mds__screen-col mds__screen-col-0">
@@ -263,7 +263,7 @@
                     <div class="mds__screen-col mds__screen-col-1">
                       <div class="mds__screen-upload">Upload images</div>
                     </div>
-                  </div></a><a class="mds__screen" href="#" title="">
+                  </div></a><a class="mds__screen" href="#" title="" data-name="video">
                   <p class="mds__screen-title">Video Intro</p>
                   <div class="mds__screen-row">
                     <div class="mds__screen-col mds__screen-col-0">
@@ -278,7 +278,39 @@
               </div>
             </form>
           </div>
-          <div class="mds__wrapper-right"></div>
+          <div class="mds__wrapper-right">
+            <!-- SECTION tablet :: START-->
+            <section class="tablet tablet--intro" id="tablet">
+              <div class="tablet__wrapper">
+                <div class="tablet__wrapper-header"></div>
+                <div class="tablet__wrapper-content">
+                  <div>
+                    <div class="tablet__wrapper-bg">
+                      <div class="tablet__logo"><img src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title=""></div>
+                    </div>
+                    <div class="tablet__wrapper-slideshow">
+                      <div class="swiper-container swiper-container-intro">
+                        <div class="swiper-wrapper">
+                                                <div class="swiper-slide"></div>
+                                                <div class="swiper-slide"></div>
+                                                <div class="swiper-slide"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                    <div class="tablet__wrapper-video">
+                      <video autoplay loop muted>
+                        <source src="media/video-tablet-intro.mp4" type="video/mp4">
+                      </video>
+                      <div class="tablet__logo"><img src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title=""></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tablet__wrapper-footer"><a href="#" title="">Get started!</a></div>
+              </div>
+            </section>
+            <!-- SECTION tablet :: END-->
+          </div>
         </div>
       </section>
       <!-- SECTION mds :: END-->

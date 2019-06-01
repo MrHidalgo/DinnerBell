@@ -221,6 +221,94 @@ var initSvg4everybody = function initSvg4everybody() {
 };
 
 /**
+ * @name initSwiper
+ *
+ * @description initialize Swiper
+ */
+var initSwiper = function initSwiper() {
+
+	var mySwiper = new Swiper('.swiper-container-intro', {
+		// Optional parameters
+		wrapperClass: "swiper-wrapper",
+		slideClass: "swiper-slide",
+		direction: 'horizontal', // 'horizontal' or 'vertical'
+		loop: true,
+		watchOverflow: true,
+		normalizeSlideIndex: true,
+		grabCursor: true,
+		freeMode: false,
+		effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
+		speed: 750,
+		// autoplay: {
+		//   delay: 5000,
+		// },
+		// Disable preloading of all images
+		// preloadImages: false,
+		// Enable lazy loading
+		// lazy: {
+		//   loadPrevNext: true,
+		// },
+
+		// off touch for desktop
+		// touchMoveStopPropagation:false,
+		// simulateTouch : false,
+		// allowSwipeToNext: true,
+		// allowSwipeToPrev: true,
+		// allowPageScroll: "auto ",
+
+		slidesPerView: 1,
+		spaceBetween: 0,
+		// breakpoints: {
+		//   // when window width is <= 320px
+		//   320: {
+		//     slidesPerView: 1,
+		//     spaceBetween: 10
+		//   },
+		//   // when window width is <= 480px
+		//   480: {
+		//     slidesPerView: 2,
+		//     spaceBetween: 20
+		//   },
+		//   // when window width is <= 640px
+		//   640: {
+		//     slidesPerView: 3,
+		//     spaceBetween: 30
+		//   }
+		// },
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+			// renderBullet: function (index, className) {
+			//   return `
+			//     <div class="${className}">
+			//       ${index}
+			//     </div>
+			//   `;
+			// }
+		}
+
+		// Navigation arrows
+		// navigation: {
+		//   nextEl: '.swiper-button-next',
+		//   prevEl: '.swiper-button-prev',
+		// },
+		//
+		// // And if we need scrollbar
+		// scrollbar: {
+		//   el: '.swiper-scrollbar',
+		// },
+		//
+		// on: {
+		//   "slideChange": function () {
+		//     console.log("slideChange");
+		//   },
+		// }
+	});
+};
+
+/**
  * @name initWebFontLoader
  *
  * @description Loading fonts regardless of the source, then adds a standard set of events you may use to control the loading experience... for more details => https://github.com/typekit/fvd
@@ -371,8 +459,15 @@ $(document).ready(function (ev) {
 
 	var initChooseScreen = function initChooseScreen() {
 		$('.mds__screen').not('.mds__screen--nc').on('click', function (ev) {
+			var _id = $(ev.currentTarget).data('name');
+
 			$('.mds__screen').removeClass('is-choose');
 			$(ev.currentTarget).addClass('is-choose');
+
+			var _tabletWrapper = $('.tablet--intro .tablet__wrapper-' + _id);
+
+			$('.tablet--intro .tablet__wrapper-content > div > div').hide();
+			_tabletWrapper.css({ 'opacity': 1, 'visibility': 'visible' }).fadeIn(350);
 		});
 	};
 
@@ -417,6 +512,7 @@ $(document).ready(function (ev) {
 		// ==========================================
 		initCustomSelect();
 		initHamburger();
+		initSwiper();
 
 		// callback
 		// ==========================================

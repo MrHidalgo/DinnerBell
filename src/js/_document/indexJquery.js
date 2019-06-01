@@ -109,8 +109,15 @@ $(document).ready((ev) => {
 
 	const initChooseScreen = () => {
 		$('.mds__screen').not('.mds__screen--nc').on('click', (ev) => {
+			const _id = $(ev.currentTarget).data('name');
+
 			$('.mds__screen').removeClass('is-choose');
 			$(ev.currentTarget).addClass('is-choose');
+
+			const _tabletWrapper = $('.tablet--intro .tablet__wrapper-' + _id);
+
+			$('.tablet--intro .tablet__wrapper-content > div > div').hide();
+			_tabletWrapper.css({'opacity':1, 'visibility':'visible' }).fadeIn(350);
 		});
 	};
 
@@ -159,6 +166,7 @@ $(document).ready((ev) => {
 		// ==========================================
 		initCustomSelect();
 		initHamburger();
+		initSwiper();
 
     // callback
 		// ==========================================

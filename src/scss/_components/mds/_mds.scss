@@ -1,7 +1,6 @@
 // SECTION mds :: START
 
 .mds {
-	display: none;
 	position: relative;
 
 	&__title {
@@ -50,16 +49,14 @@
 		&-left {
 			width: 100%;
 			max-width: 476px;
+			padding-right: 20px;
 		}
 
 		&-right {
 			flex: 1;
 			max-width: 100%;
 			min-width: 1px;
-		}
-
-		&-left {
-			padding-right: 20px;
+			padding-top: 15px;
 		}
 	}
 
@@ -74,6 +71,15 @@
 		margin-left: 40px;
 		margin-bottom: 30px;
 		@include transition(box-shadow);
+		@include adaptive(1439) {
+			max-width: calc((100% - 80px) / 2);
+		}
+		@include adaptive(1023) {
+			max-width: calc((100% - 40px) / 1);
+		}
+		@include adaptive(575) {
+			min-height: (220 + 55) * 1px;
+		}
 
 		&:last-of-type {
 			margin-right: 0;
@@ -101,6 +107,7 @@
 			border-width: 1px;
 			border-color: rgb(224, 224, 224);
 			border-style: solid;
+
 
 			img {
 				@extend %imageResCoverAbs;

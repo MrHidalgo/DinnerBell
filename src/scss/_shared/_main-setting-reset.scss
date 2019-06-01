@@ -10,12 +10,14 @@ body {
 
 		.overlay {
 			opacity: 1;
-			@include transition(opacity);
+			visibility: visible;
+			@include transition(opacity, visibility);
 		}
   }
 
 	.overlay {
 		opacity: 0;
+		visibility: hidden;
 		z-index: 995;
 		position: fixed;
 		top: 0;
@@ -23,7 +25,7 @@ body {
 		width: 100%;
 		height: 100%;
 		background-color: rgba(#000, 0.15);
-		@include transition(opacity);
+		@include transition(opacity, visibility);
 	}
 }
 
