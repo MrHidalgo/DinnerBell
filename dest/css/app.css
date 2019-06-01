@@ -1660,7 +1660,7 @@ picture {
   min-height: 100%;
 }
 
-/* line 48, src/scss/_components/_header.scss */
+/* line 47, src/scss/_components/_header.scss */
 .header__wrapper-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1674,19 +1674,31 @@ picture {
   padding-right: 20px;
 }
 
-/* line 54, src/scss/_components/_header.scss */
+@media screen and (max-width: 767px) {
+  /* line 47, src/scss/_components/_header.scss */
+  .header__wrapper-left {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: auto;
+    padding-right: 0;
+  }
+}
+
+/* line 58, src/scss/_components/_header.scss */
 .header__wrapper-left .c-hamburger {
   display: none;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 54, src/scss/_components/_header.scss */
+  /* line 58, src/scss/_components/_header.scss */
   .header__wrapper-left .c-hamburger {
     display: block;
   }
 }
 
-/* line 62, src/scss/_components/_header.scss */
+/* line 66, src/scss/_components/_header.scss */
 .header__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1704,13 +1716,24 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 68, src/scss/_components/_header.scss */
+  /* line 72, src/scss/_components/_header.scss */
   .header__wrapper-right .header__dropdown {
     display: none;
   }
 }
 
-/* line 75, src/scss/_components/_header.scss */
+@media screen and (max-width: 767px) {
+  /* line 66, src/scss/_components/_header.scss */
+  .header__wrapper-right {
+    width: auto;
+  }
+  /* line 80, src/scss/_components/_header.scss */
+  .header__wrapper-right .header__nav-btn--setting {
+    display: none;
+  }
+}
+
+/* line 88, src/scss/_components/_header.scss */
 .header__title {
   color: #B19765;
   font-size: 20px;
@@ -1718,32 +1741,48 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 75, src/scss/_components/_header.scss */
+  /* line 88, src/scss/_components/_header.scss */
   .header__title {
     padding-left: 20px;
   }
 }
 
-/* line 84, src/scss/_components/_header.scss */
+@media screen and (max-width: 767px) {
+  /* line 88, src/scss/_components/_header.scss */
+  .header__title {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 88, src/scss/_components/_header.scss */
+  .header__title {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
+
+/* line 105, src/scss/_components/_header.scss */
 .header__dropdown {
   position: relative;
   margin-right: 16px;
 }
 
-/* line 88, src/scss/_components/_header.scss */
+/* line 109, src/scss/_components/_header.scss */
 .header__dropdown-toggle {
   cursor: pointer;
   position: relative;
   padding-right: 21px;
 }
 
-/* line 93, src/scss/_components/_header.scss */
+/* line 114, src/scss/_components/_header.scss */
 .header__dropdown-toggle span {
   color: #70c3f1;
   font-weight: bold;
 }
 
-/* line 98, src/scss/_components/_header.scss */
+/* line 119, src/scss/_components/_header.scss */
 .header__dropdown-toggle:before {
   content: '';
   position: absolute;
@@ -1768,7 +1807,7 @@ picture {
   transition: top 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 112, src/scss/_components/_header.scss */
+/* line 133, src/scss/_components/_header.scss */
 .is-open .header__dropdown-toggle:before {
   top: -webkit-calc(50% - 3px);
   top: calc(50% - 3px);
@@ -1782,7 +1821,7 @@ picture {
   transition: top 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 120, src/scss/_components/_header.scss */
+/* line 141, src/scss/_components/_header.scss */
 .header__dropdown-menu {
   display: none;
   position: absolute;
@@ -1798,7 +1837,7 @@ picture {
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 133, src/scss/_components/_header.scss */
+/* line 154, src/scss/_components/_header.scss */
 .header__dropdown-item {
   white-space: nowrap;
   display: -webkit-box;
@@ -1822,7 +1861,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 144, src/scss/_components/_header.scss */
+/* line 165, src/scss/_components/_header.scss */
 .header__dropdown-item:hover {
   color: #70c3f1;
   -webkit-transition: color 0.3s ease-in-out;
@@ -1830,7 +1869,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 151, src/scss/_components/_header.scss */
+/* line 172, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1842,7 +1881,7 @@ picture {
           align-items: center;
 }
 
-/* line 155, src/scss/_components/_header.scss */
+/* line 176, src/scss/_components/_header.scss */
 .header__nav-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1855,7 +1894,14 @@ picture {
   margin-left: 25px;
 }
 
-/* line 161, src/scss/_components/_header.scss */
+@media screen and (max-width: 575px) {
+  /* line 176, src/scss/_components/_header.scss */
+  .header__nav-btn {
+    margin-left: 15px;
+  }
+}
+
+/* line 185, src/scss/_components/_header.scss */
 .header__nav-btn:hover .icon-png {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -1863,7 +1909,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 167, src/scss/_components/_header.scss */
+/* line 191, src/scss/_components/_header.scss */
 .header__nav-btn .icon-png {
   opacity: 0.9;
   -webkit-transition: opacity 0.3s ease-in-out;
