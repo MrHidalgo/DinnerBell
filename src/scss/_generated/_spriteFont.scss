@@ -36,35 +36,38 @@
 	@if $filename == bin {
 		$char: "\E003";
 	}
-	@if $filename == cook {
+	@if $filename == close {
 		$char: "\E004";
 	}
-	@if $filename == copy {
+	@if $filename == cook {
 		$char: "\E005";
 	}
-	@if $filename == corner {
+	@if $filename == copy {
 		$char: "\E006";
 	}
-	@if $filename == doc {
+	@if $filename == corner {
 		$char: "\E007";
 	}
-	@if $filename == fullscreen {
+	@if $filename == doc {
 		$char: "\E008";
 	}
-	@if $filename == menu {
+	@if $filename == fullscreen {
 		$char: "\E009";
 	}
-	@if $filename == move {
+	@if $filename == menu {
 		$char: "\E00A";
 	}
-	@if $filename == rate {
+	@if $filename == move {
 		$char: "\E00B";
 	}
-	@if $filename == settings {
+	@if $filename == rate {
 		$char: "\E00C";
 	}
-	@if $filename == user {
+	@if $filename == settings {
 		$char: "\E00D";
+	}
+	@if $filename == user {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -91,6 +94,10 @@
 }
 .icon-bin {
 	@include icon(bin);
+
+}
+.icon-close {
+	@include icon(close);
 
 }
 .icon-cook {

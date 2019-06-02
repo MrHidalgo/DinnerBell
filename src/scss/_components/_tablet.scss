@@ -1233,6 +1233,278 @@
 		}
 	}
 	// feedback :: end
+
+	// my order
+	&--myorder {
+		.tablet {
+			&__wrapper {
+				&-content {
+					position: relative;
+					min-height: calc(1024px - 55px);
+					padding-left: 25px;
+					padding-right: 25px;
+					padding-bottom: 80px;
+				}
+			}
+
+			&__heading {
+				display: flex;
+				align-items: center;
+				width: calc(100% + 50px);
+				min-height: 80px;
+				margin-left: -25px;
+				padding-left: 25px;
+				padding-right: 25px;
+				background-color: #0f102f;
+				border-bottom: 1px solid #1f2161;
+
+				p {
+					color: #ffffff;
+					font-size: 30px;
+					font-weight: 300;
+				}
+			}
+
+			&__new {
+				display: flex;
+				flex-direction: column;
+				padding-top: 30px;
+				padding-bottom: 30px;
+
+				&-header {
+					display: flex;
+					align-items: center;
+					min-height: 55px;
+					padding-left: 25px;
+					padding-right: 25px;
+					background-color: #2e3192;
+
+					p {
+						color: #ffffff;
+						font-size: 20px;
+					}
+				}
+
+				&-body {}
+
+				&-row {
+					min-height: 80px;
+					margin-bottom: 1px;
+					background-color: #191d2a;
+
+					&-0 {
+						display: flex;
+
+						> div {
+							min-height: 100%;
+
+							&:nth-of-type(1) {
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								flex: 1;
+								min-width: 1px;
+								max-width: 100%;
+								padding-left: 25px;
+								padding-right: 25px;
+								border-right: 1px solid #161616;
+
+								i {
+									text-transform: uppercase;
+									color: #1e7ac9;
+									font-size: 14px;
+								}
+
+								p {
+									color: #ffffff;
+									font-size: 22px;
+								}
+
+								span {
+									text-transform: uppercase;
+									color: #1e7ac9;
+									font-size: 22px;
+									font-weight: 300;
+								}
+							}
+
+							&:nth-of-type(2) {
+								width: 50px;
+							}
+
+							a {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								min-height: 100%;
+
+								.icon-font {
+									color: #525663;
+									font-size: 14px;
+								}
+							}
+						}
+					}
+
+					&-1 {
+						display: flex;
+
+						> div {
+							&:nth-of-type(1) {
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								flex: 1;
+								min-width: 1px;
+								max-width: 100%;
+								padding-left: 25px;
+								padding-right: 25px;
+							}
+
+							&:nth-of-type(2) {
+								width: 117px;
+								background-color: #0f102f;
+
+								a {
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									width: 100%;
+									min-height: 100%;
+
+									span {
+										text-transform: uppercase;
+										text-align: center;
+										color: #1e7ac9;
+										font-size: 14px;
+									}
+								}
+							}
+
+							&:nth-of-type(3) {
+								width: 80px;
+								background-color: #2e3192;
+
+								a {
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									width: 100%;
+									min-height: 100%;
+
+									.icon-font {
+										color: #fff;
+										font-size: 14px;
+									}
+								}
+							}
+
+							i {
+								text-transform: uppercase;
+								color: #1e7ac9;
+								font-size: 14px;
+							}
+
+							p {
+								color: #ffffff;
+								font-size: 22px;
+							}
+						}
+					}
+				}
+			}
+
+			&__list {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				min-height: 80px;
+				margin-bottom: 1px;
+				padding-left: 25px;
+				padding-right: 25px;
+
+				@each $className, $bgc, $c in
+					('inprogress', #361a0b, #bf650d),
+					('pending', #303030, #666666),
+					('served', #15200c, #629913)
+				{
+					&--#{$className} {
+						background-color: $bgc;
+
+						span {
+							color: $c;
+						}
+					}
+				}
+
+				> div {
+					i {
+						text-transform: uppercase;
+						color: #1e7ac9;
+						font-size: 14px;
+					}
+
+					p {
+						color: #ffffff;
+						font-size: 22px;
+					}
+
+					span {
+						text-transform: uppercase;
+						font-size: 14px;
+						font-weight: 500;
+					}
+				}
+
+				&-wrapper {
+					display: flex;
+					flex-direction: column;
+					padding-bottom: 30px;
+				}
+			}
+
+			&__order {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				bottom: 80px;
+				left: 0;
+				width: 100%;
+				height: 80px;
+				padding-left: 25px;
+				padding-right: 25px;
+				background-color: #191d2a;
+
+				p,
+				span {
+					color: #ffffff;
+					font-size: 30px;
+				}
+
+				span {
+					font-weight: 300;
+				}
+			}
+
+			&__update {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 80px;
+				background-color: #2e3192;
+				color: #ffffff;
+				font-size: 30px;
+				font-weight: bold;
+			}
+		}
+	}
+	// my order :: end
 }
 
 // SECTION tablet :: END
