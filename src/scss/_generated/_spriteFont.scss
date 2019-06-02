@@ -57,11 +57,14 @@
 	@if $filename == move {
 		$char: "\E00A";
 	}
-	@if $filename == settings {
+	@if $filename == rate {
 		$char: "\E00B";
 	}
-	@if $filename == user {
+	@if $filename == settings {
 		$char: "\E00C";
+	}
+	@if $filename == user {
+		$char: "\E00D";
 	}
 
 	@return $char;
@@ -116,6 +119,10 @@
 }
 .icon-move {
 	@include icon(move);
+
+}
+.icon-rate {
+	@include icon(rate);
 
 }
 .icon-settings {
