@@ -211,7 +211,15 @@ $(document).ready((ev) => {
 			_btn.addClass('is-choose');
 		});
 	};
-	/*
+
+
+	const initTabletMainMenuBlock = () => {
+		$('.tablet--mainMenu .tablet__block').on('click', (ev) => {
+			$('.tablet--mainMenu .tablet__block').removeClass('is-choose');
+			$(ev.currentTarget).addClass('is-choose');
+		});
+	};
+ 	/*
 	* CALLBACK :: end
 	* ============================================= */
 
@@ -247,6 +255,7 @@ $(document).ready((ev) => {
 		initTabletBoxChoose();
 		initTabletCollapse();
 		initTabletMenuItemsView();
+		initTabletMainMenuBlock();
   };
   initJquery();
 });

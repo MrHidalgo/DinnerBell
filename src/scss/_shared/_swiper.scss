@@ -3,6 +3,71 @@
   max-width: 500px;
   height: 300px;
 
+	&-tabletcarousel {
+		max-width: 100%;
+		height: 100%;
+
+		.swiper {
+			&-button {
+				&-next,
+				&-prev {
+					width: 15px;
+					height: 25px;
+					background-size: 15px 25px;
+				}
+				&-next {
+					background-image: url('../img/img-swiper-tablet-next.png');
+				}
+				&-prev {
+					background-image: url('../img/img-swiper-tablet-prev.png');
+				}
+			}
+
+			&-slide {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background-image: url('../img/img-tablet-banner.jpg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(#000, 0.3);
+				}
+
+				&-0 {}
+				&-1 {}
+				&-2 {}
+
+				p,
+				span {
+					z-index: 2;
+					position: relative;
+					color: #ffffff;
+				}
+
+				p {
+					line-height: 1;
+					font-size: 52px;
+					font-weight: bold;
+				}
+
+				span {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
 	&-intro {
 		max-width: 100%;
 		height: calc(1024px - 80px);
