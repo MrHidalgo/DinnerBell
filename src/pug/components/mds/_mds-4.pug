@@ -95,11 +95,13 @@ section#mds.mds
 					p.mds__subtitle.mds__subtitle--mdsMenuItemPt!= "Menu Layout"
 
 					.mds__menu-wrapper
-						a.mds__menu(href="#" class="" title="")!= "List"
-						a.mds__menu(href="#" class="" title="")!= "Thumbnails"
+						a.mds__menu.is-active(href="#" class="" title="" data-name='list')!= "List"
+						a.mds__menu(href="#" class="" title="" data-name='thumb')!= "Thumbnails"
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
+
+			include ../tablet/_tablet-menu-items
 
 // SECTION mds :: END
