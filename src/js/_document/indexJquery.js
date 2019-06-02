@@ -146,6 +146,43 @@ $(document).ready((ev) => {
 			});
 		});
 	};
+
+
+	const initTabletRange = () => {
+		const _input = $('.tablet__range input');
+
+		_input.map((idx, val) => {
+			$(val).ionRangeSlider({
+				min: 1,
+				max: 5,
+				from: 3,
+				step: 1,
+				grid: true,
+				hide_min_max: true,
+				hide_from_to: true,
+				skin: "round"
+			});
+		});
+	};
+
+
+	const initTabletBoxChoose = () => {
+		$('.tablet__box').on('click', (ev) => {
+			$('.tablet__box').removeClass('is-choose');
+			$(ev.currentTarget).addClass('is-choose');
+		});
+	};
+
+
+	const initTabletCollapse = () => {
+		$('.tablet__collapse-header').on('click', (ev) => {
+			const _btn = $(ev.currentTarget),
+				_parent = _btn.closest('.tablet__collapse');
+
+			_parent.toggleClass('is-open');
+			_parent.find('.tablet__collapse-body').slideToggle(400);
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -177,6 +214,10 @@ $(document).ready((ev) => {
 		initChooseScreen();
 		initMenuLayout();
 		initRange();
+
+		initTabletRange();
+		initTabletBoxChoose();
+		initTabletCollapse();
   };
   initJquery();
 });

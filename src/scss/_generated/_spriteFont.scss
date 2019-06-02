@@ -30,26 +30,38 @@
 	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == bin {
+	@if $filename == bell {
 		$char: "\E002";
 	}
-	@if $filename == copy {
+	@if $filename == bin {
 		$char: "\E003";
 	}
-	@if $filename == corner {
+	@if $filename == cook {
 		$char: "\E004";
 	}
-	@if $filename == fullscreen {
+	@if $filename == copy {
 		$char: "\E005";
 	}
-	@if $filename == menu {
+	@if $filename == corner {
 		$char: "\E006";
 	}
-	@if $filename == move {
+	@if $filename == doc {
 		$char: "\E007";
 	}
-	@if $filename == settings {
+	@if $filename == fullscreen {
 		$char: "\E008";
+	}
+	@if $filename == menu {
+		$char: "\E009";
+	}
+	@if $filename == move {
+		$char: "\E00A";
+	}
+	@if $filename == settings {
+		$char: "\E00B";
+	}
+	@if $filename == user {
+		$char: "\E00C";
 	}
 
 	@return $char;
@@ -70,8 +82,16 @@
 	@include icon(arrow);
 
 }
+.icon-bell {
+	@include icon(bell);
+
+}
 .icon-bin {
 	@include icon(bin);
+
+}
+.icon-cook {
+	@include icon(cook);
 
 }
 .icon-copy {
@@ -80,6 +100,10 @@
 }
 .icon-corner {
 	@include icon(corner);
+
+}
+.icon-doc {
+	@include icon(doc);
 
 }
 .icon-fullscreen {
@@ -96,5 +120,9 @@
 }
 .icon-settings {
 	@include icon(settings);
+
+}
+.icon-user {
+	@include icon(user);
 
 }
