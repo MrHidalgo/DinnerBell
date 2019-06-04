@@ -53,6 +53,10 @@
 				flex: 1;
 				width: auto;
 				padding-right: 0;
+
+				.header__title {
+					display: none;
+				}
 			}
 
 			.c-hamburger {
@@ -172,6 +176,47 @@
 	&__nav {
 		display: flex;
 		align-items: center;
+
+		.is-hideScroll & {
+			.header__nav-title {
+				display: none;
+				animation-fill-mode: both;
+				animation-duration: 1s;
+				animation-name: fadeIn;
+			}
+			.header__nav-wrapper {
+				display: flex;
+				animation-fill-mode: both;
+				animation-duration: 1s;
+				animation-name: fadeIn;
+			}
+		}
+
+		&-title {
+			display: none;
+			@include adaptive(767) {
+				display: block;
+				animation-fill-mode: both;
+				animation-duration: 1s;
+				animation-name: fadeIn;
+
+				.header__title {
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					position: relative;
+					top: 1px;
+					max-width: 170px;
+				}
+			}
+		}
+
+		&-wrapper {
+			display: flex;
+			@include adaptive(767) {
+				display: none;
+			}
+		}
 
 		&-btn {
 			display: flex;

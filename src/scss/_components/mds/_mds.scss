@@ -32,6 +32,9 @@
 		color: #000000;
 		font-size: 20px;
 		font-weight: bold;
+		@include adaptive(575) {
+			text-align: center;
+		}
 
 		&--mdsMenuPt {
 			padding-top: 64px;
@@ -163,11 +166,14 @@
 			}
 
 			a {
-				display: flex;
+				display: none;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
 				width: 60px;
+				@include adaptive(1023) {
+					display: flex;
+				}
 
 				p {
 					display: flex;
@@ -418,17 +424,26 @@
 			color: #000000;
 			font-size: 20px;
 			font-weight: bold;
+			@include adaptive(575) {
+				text-align: center;
+			}
 		}
 
 		&-desc {
 			color: #000000;
 			font-size: 14px;
 			font-weight: 300;
+			@include adaptive(575) {
+				text-align: center;
+			}
 		}
 
 		&-row {
 			display: flex;
 			align-items: center;
+			@include adaptive(575) {
+				flex-wrap: wrap;
+			}
 		}
 
 		&-col {
@@ -442,6 +457,10 @@
 				display: flex;
 				justify-content: flex-end;
 				width: 185px;
+				@include adaptive(575) {
+					width: 100%;
+					margin-top: 15px;
+				}
 			}
 		}
 
@@ -460,6 +479,10 @@
 			color: rgb(97, 189, 240);
 			font-size: 16px;
 			font-weight: bold;
+			@include adaptive(575) {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		&-wrapper {
@@ -483,6 +506,11 @@
 		color: #000000;
 		font-size: 16px;
 		@include transition(border, background-color, box-shadow);
+		@include adaptive(575) {
+			max-width: 100%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
 
 		&.is-active {
 			border: 1px solid #fff;
@@ -497,6 +525,9 @@
 			align-items: center;
 			justify-content: space-between;
 			padding-bottom: 43px;
+			@include adaptive(575) {
+				flex-wrap: wrap;
+			}
 		}
 	}
 	// menu :: end
@@ -507,11 +538,18 @@
 			display: flex;
 			align-items: center;
 			padding-bottom: 30px;
+			@include adaptive(575) {
+				flex-wrap: wrap;
+			}
 		}
 
 		&-col {
 			&-0 {
 				width: 150px;
+				@include adaptive(575) {
+					width: 100%;
+					margin-bottom: 5px;
+				}
 			}
 
 			&-1 {
@@ -622,6 +660,9 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 4px;
+		@include adaptive(575) {
+			flex-wrap: wrap;
+		}
 
 		&:last-of-type {
 			margin-bottom: 0;
@@ -635,6 +676,9 @@
 			}
 			&:nth-of-type(2) {
 				width: 136px;
+				@include adaptive(575) {
+					width: 100%;
+				}
 			}
 
 			p {
@@ -679,6 +723,9 @@
 			color: #000000;
 			font-size: 20px;
 			font-weight: bold;
+			@include adaptive(575) {
+				text-align: center;
+			}
 		}
 
 		&-row {
@@ -726,6 +773,9 @@
 			display: flex;
 			align-items: center;
 			margin-bottom: 4px;
+			@include adaptive(575) {
+				flex-wrap: wrap;
+			}
 
 			&:last-of-type {
 				margin-bottom: 0;
@@ -739,6 +789,9 @@
 				}
 				&:nth-of-type(2) {
 					width: 136px;
+					@include adaptive(575) {
+						width: 100%;
+					}
 				}
 
 				p {
