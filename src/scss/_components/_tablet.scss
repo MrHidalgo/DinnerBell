@@ -2,6 +2,12 @@
 
 .tablet {
 	min-height: 1024px;
+	@include adaptive(1023) {
+		overflow-y: auto;
+		min-height: unset;
+		max-height: calc(100vh - 80px);
+		padding: 20px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -217,7 +223,7 @@
 					justify-content: center;
 
 					video {
-						z-index: -1;
+						z-index: 0;
 						position: absolute;
 						top: 0;
 						left: 0;
@@ -225,6 +231,11 @@
 						height: 100%;
 						object-fit: cover;
 						object-position: center;
+					}
+
+					&-cover {
+						z-index: 2;
+						position: relative;
 					}
 				}
 			}

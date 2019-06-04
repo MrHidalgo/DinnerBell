@@ -6,11 +6,6 @@
 	&__title {
 		display: flex;
 		align-items: center;
-		padding: 26px 0 46px;
-
-		&--internal {
-			padding: 36px 0 64px;
-		}
 
 		span {
 			margin-right: 23px;
@@ -50,6 +45,10 @@
 			width: 100%;
 			max-width: 476px;
 			padding-right: 20px;
+			@include adaptive(1023) {
+				max-width: 100%;
+				padding-right: 0;
+			}
 		}
 
 		&-right {
@@ -57,6 +56,106 @@
 			max-width: 100%;
 			min-width: 1px;
 			padding-top: 15px;
+			@include adaptive(1023) {
+				opacity: 0;
+				visibility: hidden;
+				z-index: -1;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding-top: 0;
+				background-color: rgba(#ffffff, 0.95);
+
+				&.is-show {
+					z-index: 999;
+					opacity: 1;
+					visibility: visible;
+					animation-fill-mode: both;
+					animation-duration: 0.5s;
+					animation-name: fadeIn, slideInRight;
+				}
+			}
+		}
+
+		&-header {
+			display: none;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 80px;
+			padding-left: 20px;
+			padding-right: 20px;
+			box-shadow: 0 2px 8px 0 rgba(#000, 0.1);
+			@include transition(box-shadow);
+			@include adaptive(1023) {
+				display: flex;
+			}
+
+			> div {
+				display: flex;
+				align-items: center;
+
+				.icon-eye {
+					margin-right: 10px;
+					font-size: 40px;
+				}
+
+				p {
+					font-size: 28px;
+					font-weight: bold;
+				}
+			}
+
+			a {
+				display: flex;
+				color: #000000;
+				font-size: 20px;
+			}
+		}
+
+		&-heading {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 30px 0 60px;
+
+			h2 {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+			}
+
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: center;
+				width: 60px;
+
+				p {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 60px;
+					height: 60px;
+					border-radius: 50%;
+					background-color: #69c0f1;
+					margin-bottom: 5px;
+
+					.icon-font {
+						color: #ffffff;
+						font-size: 30px;
+					}
+				}
+
+				span {
+					text-transform: uppercase;
+					color: #69c0f1;
+					font-size: 12px;
+					font-weight: bold;
+				}
+			}
 		}
 	}
 

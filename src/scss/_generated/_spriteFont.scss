@@ -51,23 +51,26 @@
 	@if $filename == doc {
 		$char: "\E008";
 	}
-	@if $filename == fullscreen {
+	@if $filename == eye {
 		$char: "\E009";
 	}
-	@if $filename == menu {
+	@if $filename == fullscreen {
 		$char: "\E00A";
 	}
-	@if $filename == move {
+	@if $filename == menu {
 		$char: "\E00B";
 	}
-	@if $filename == rate {
+	@if $filename == move {
 		$char: "\E00C";
 	}
-	@if $filename == settings {
+	@if $filename == rate {
 		$char: "\E00D";
 	}
-	@if $filename == user {
+	@if $filename == settings {
 		$char: "\E00E";
+	}
+	@if $filename == user {
+		$char: "\E00F";
 	}
 
 	@return $char;
@@ -114,6 +117,10 @@
 }
 .icon-doc {
 	@include icon(doc);
+
+}
+.icon-eye {
+	@include icon(eye);
 
 }
 .icon-fullscreen {

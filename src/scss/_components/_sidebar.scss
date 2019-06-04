@@ -10,7 +10,7 @@
 	max-width: 288px;
 	height: 100%;
 	background-color: #ffffff;
-	@include adaptive(1023) {
+	@include adaptive(1279) {
 		opacity: 0;
 		visibility: hidden;
 		transform: translateX(-100%);
@@ -155,7 +155,7 @@
 
 				&--strawberry {
 					display: none;
-					@include adaptive(1023) {
+					@include adaptive(1279) {
 						display: flex;
 					}
 				}

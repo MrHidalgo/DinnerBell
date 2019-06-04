@@ -23,9 +23,14 @@ section#mds.mds
 	.mds__wrapper
 		.mds__wrapper-left
 
-			h2.mds__title.mds__title--internal
-				span!= "My order"
-				i.icon-font.icon-corner
+			.mds__wrapper-heading
+				h2.mds__title.mds__title--internal
+					span!= "My order"
+					i.icon-font.icon-corner
+				a.mds__wrapper-preview(href="#" class="" title="")
+					p
+						i.icon-font.icon-eye
+					span!= "preview"
 
 			form.c-form(action="" autocomplete='off')
 
@@ -54,6 +59,14 @@ section#mds.mds
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
 		.mds__wrapper-right
+
+			.mds__wrapper-header
+				div
+					i.icon-font.icon-eye
+					p!= "Midnight Theme"
+				div
+					a.mds__wrapper-close(href="#" class="" title="")
+						i.icon-font.icon-close
 
 			include ../tablet/_tablet-my-order
 
