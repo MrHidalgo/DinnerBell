@@ -176,6 +176,7 @@
 	&__nav {
 		display: flex;
 		align-items: center;
+		min-height: 100%;
 
 		.is-hideScroll & {
 			.header__nav-title {
@@ -196,9 +197,6 @@
 			display: none;
 			@include adaptive(767) {
 				display: block;
-				animation-fill-mode: both;
-				animation-duration: 1s;
-				animation-name: fadeIn;
 
 				.header__title {
 					overflow: hidden;
