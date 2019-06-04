@@ -12,6 +12,240 @@
      object-position: center;
 }
 
+/* line 164, src/scss/_generated/_spritePNG.scss */
+.i-customers:before {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -94px;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 21px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 164, src/scss/_generated/_spritePNG.scss */
+  .i-customers:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 167, src/scss/_generated/_spritePNG.scss */
+.i-entertainment:before {
+  background-image: url("../img/sprite.png");
+  background-position: -36px -32px;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 167, src/scss/_generated/_spritePNG.scss */
+  .i-entertainment:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 170, src/scss/_generated/_spritePNG.scss */
+.i-inventory:before {
+  background-image: url("../img/sprite.png");
+  background-position: -102px -29px;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 170, src/scss/_generated/_spritePNG.scss */
+  .i-inventory:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 173, src/scss/_generated/_spritePNG.scss */
+.i-menu:before {
+  background-image: url("../img/sprite.png");
+  background-position: -30px -64px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 173, src/scss/_generated/_spritePNG.scss */
+  .i-menu:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 176, src/scss/_generated/_spritePNG.scss */
+.i-merchandise:before {
+  background-image: url("../img/sprite.png");
+  background-position: -102px 0px;
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 24px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 176, src/scss/_generated/_spritePNG.scss */
+  .i-merchandise:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 179, src/scss/_generated/_spritePNG.scss */
+.i-notification:before {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -31px;
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 28px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 179, src/scss/_generated/_spritePNG.scss */
+  .i-notification:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 182, src/scss/_generated/_spritePNG.scss */
+.i-orders:before {
+  background-image: url("../img/sprite.png");
+  background-position: -36px 0px;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 27px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 182, src/scss/_generated/_spritePNG.scss */
+  .i-orders:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 185, src/scss/_generated/_spritePNG.scss */
+.i-overview:before {
+  background-image: url("../img/sprite.png");
+  background-position: -68px 0px;
+  background-repeat: no-repeat;
+  width: 29px;
+  height: 24px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 185, src/scss/_generated/_spritePNG.scss */
+  .i-overview:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 188, src/scss/_generated/_spritePNG.scss */
+.i-qrcode:before {
+  background-image: url("../img/sprite.png");
+  background-position: -60px -64px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 188, src/scss/_generated/_spritePNG.scss */
+  .i-qrcode:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 191, src/scss/_generated/_spritePNG.scss */
+.i-reports:before {
+  background-image: url("../img/sprite.png");
+  background-position: -102px -59px;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 26px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 191, src/scss/_generated/_spritePNG.scss */
+  .i-reports:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 194, src/scss/_generated/_spritePNG.scss */
+.i-setting-1:before {
+  background-image: url("../img/sprite.png");
+  background-position: -68px -29px;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 194, src/scss/_generated/_spritePNG.scss */
+  .i-setting-1:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 197, src/scss/_generated/_spritePNG.scss */
+.i-team:before {
+  background-image: url("../img/sprite.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 26px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 197, src/scss/_generated/_spritePNG.scss */
+  .i-team:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 200, src/scss/_generated/_spritePNG.scss */
+.i-user:before {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -64px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 200, src/scss/_generated/_spritePNG.scss */
+  .i-user:before {
+    -webkit-background-size: 125px 115px;
+            background-size: 125px 115px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
 @font-face {
   font-family: "iconFont";
   src: url("../fonts/iconFont.eot");
@@ -1917,15 +2151,9 @@ picture {
 /* line 182, src/scss/_components/_header.scss */
 .is-hideScroll .header__nav .header__nav-title {
   display: none;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
 }
 
-/* line 188, src/scss/_components/_header.scss */
+/* line 185, src/scss/_components/_header.scss */
 .is-hideScroll .header__nav .header__nav-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1939,15 +2167,21 @@ picture {
           animation-name: fadeIn;
 }
 
-/* line 196, src/scss/_components/_header.scss */
+/* line 193, src/scss/_components/_header.scss */
 .header__nav-title {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 196, src/scss/_components/_header.scss */
+  /* line 193, src/scss/_components/_header.scss */
   .header__nav-title {
     display: block;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
   }
   /* line 201, src/scss/_components/_header.scss */
   .header__nav-title .header__title {
