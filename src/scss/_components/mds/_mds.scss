@@ -11,12 +11,19 @@
 			margin-right: 23px;
 			font-size: 28px;
 			font-weight: bold;
+			@include adaptive(575) {
+				margin-right: 20px;
+				font-size: 24px;
+			}
 		}
 
 		.icon-font {
 			font-size: 18px;
 			color: #69c0f1;
 			transform: rotate(-90deg);
+			@include adaptive(575) {
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -96,14 +103,40 @@
 				display: flex;
 				align-items: center;
 
+				&:nth-of-type(1) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+				}
+				&:nth-of-type(2) {
+					display: flex;
+					justify-content: flex-end;
+					width: 40px;
+				}
+
 				.icon-eye {
 					margin-right: 10px;
 					font-size: 40px;
+					@include adaptive(767) {
+						font-size: 34px;
+					}
+					@include adaptive(575) {
+						font-size: 30px;
+					}
 				}
 
 				p {
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
 					font-size: 28px;
 					font-weight: bold;
+					@include adaptive(767) {
+						font-size: 24px;
+					}
+					@include adaptive(575) {
+						font-size: 20px;
+					}
 				}
 			}
 
@@ -111,6 +144,9 @@
 				display: flex;
 				color: #000000;
 				font-size: 20px;
+				@include adaptive(575) {
+					font-size: 16px;
+				}
 			}
 		}
 
@@ -129,7 +165,7 @@
 			a {
 				display: flex;
 				flex-direction: column;
-				align-items: flex-end;
+				align-items: center;
 				justify-content: center;
 				width: 60px;
 
@@ -142,10 +178,17 @@
 					border-radius: 50%;
 					background-color: #69c0f1;
 					margin-bottom: 5px;
+					@include adaptive(575) {
+						width: 40px;
+						height: 40px;
+					}
 
 					.icon-font {
 						color: #ffffff;
 						font-size: 30px;
+						@include adaptive(575) {
+							font-size: 22px;
+						}
 					}
 				}
 
@@ -154,6 +197,9 @@
 					color: #69c0f1;
 					font-size: 12px;
 					font-weight: bold;
+					@include adaptive(575) {
+						font-size: 10px;
+					}
 				}
 			}
 		}

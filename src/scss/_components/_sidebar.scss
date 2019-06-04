@@ -23,6 +23,9 @@
 			@include transition(opacity, visibility, transform);
 		}
 	}
+	@include adaptive(767) {
+		max-width: 90%;
+	}
 
 	&__wrapper {
 		z-index: 2;
