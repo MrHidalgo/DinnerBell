@@ -145,12 +145,7 @@
 					.sidebar__nav-btn--drop {
 						> div {
 							span {
-								text-shadow:
-									-0.35px -0.35px 0 #000,
-									0.35px -0.35px 0 #000,
-									-0.35px 0.35px 0 #000,
-									0.35px 0.35px 0 #000;
-								@include transition(text-shadow);
+								font-weight: bold;
 							}
 						}
 					}
@@ -187,7 +182,7 @@
 				color: #000000;
 				line-height: 1;
 				font-size: 16px;
-				@include transition(opacity, text-shadow);
+				@include transition(opacity);
 			}
 
 			> div {
