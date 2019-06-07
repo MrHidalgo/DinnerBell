@@ -226,14 +226,14 @@
 
 			&:hover {
 				.icon-png {
-					opacity: 1;
-					@include transition(opacity);
+					filter: grayscale(0);
+					@include transition(filter);
 				}
 			}
 
 			.icon-png {
-				opacity: 0.9;
-				@include transition(opacity);
+				filter: grayscale(1);
+				@include transition(filter);
 			}
 		}
 	}

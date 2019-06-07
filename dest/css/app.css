@@ -2239,18 +2239,24 @@ picture {
 
 /* line 228, src/scss/_components/_header.scss */
 .header__nav-btn:hover .icon-png {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  -o-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 
 /* line 234, src/scss/_components/_header.scss */
 .header__nav-btn .icon-png {
-  opacity: 0.9;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  -o-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 
 /* line 3, src/scss/_components/_sidebar.scss */
@@ -2298,7 +2304,7 @@ picture {
 @media screen and (max-width: 767px) {
   /* line 3, src/scss/_components/_sidebar.scss */
   .sidebar {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -2555,7 +2561,14 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 188, src/scss/_components/_sidebar.scss */
+@media screen and (max-width: 767px) {
+  /* line 173, src/scss/_components/_sidebar.scss */
+  .sidebar__nav-btn span {
+    font-size: 18px;
+  }
+}
+
+/* line 191, src/scss/_components/_sidebar.scss */
 .sidebar__nav-btn > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2563,12 +2576,12 @@ picture {
   display: flex;
 }
 
-/* line 191, src/scss/_components/_sidebar.scss */
+/* line 194, src/scss/_components/_sidebar.scss */
 .sidebar__nav-btn > div:nth-of-type(1) {
   width: 49px;
 }
 
-/* line 195, src/scss/_components/_sidebar.scss */
+/* line 198, src/scss/_components/_sidebar.scss */
 .sidebar__nav-btn > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2587,7 +2600,7 @@ picture {
   max-width: calc(100% - 49px);
 }
 
-/* line 205, src/scss/_components/_sidebar.scss */
+/* line 208, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop {
   display: none;
   width: 100%;
@@ -2595,17 +2608,17 @@ picture {
   padding-bottom: 20px;
 }
 
-/* line 211, src/scss/_components/_sidebar.scss */
+/* line 214, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more {
   position: relative;
 }
 
-/* line 215, src/scss/_components/_sidebar.scss */
+/* line 218, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more.is-drag .sidebar__nav-drop-link {
   cursor: all-scroll;
 }
 
-/* line 218, src/scss/_components/_sidebar.scss */
+/* line 221, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more.is-drag .sidebar__nav-drop-link:before {
   cursor: all-scroll;
   opacity: 1;
@@ -2615,7 +2628,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 226, src/scss/_components/_sidebar.scss */
+/* line 229, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more.is-drag .sidebar__nav-drop-link > div .icon-move {
   z-index: 4;
   opacity: 1;
@@ -2625,7 +2638,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 233, src/scss/_components/_sidebar.scss */
+/* line 236, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more.is-drag .sidebar__nav-drop-link > div span {
   z-index: 10;
   position: relative;
@@ -2641,7 +2654,7 @@ picture {
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 248, src/scss/_components/_sidebar.scss */
+/* line 251, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more.is-show .sidebar__nav-drop-link > div p {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2649,7 +2662,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 254, src/scss/_components/_sidebar.scss */
+/* line 257, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more.is-show .sidebar__nav-setting {
   opacity: 1;
   visibility: visible;
@@ -2663,12 +2676,12 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 262, src/scss/_components/_sidebar.scss */
+/* line 265, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more .sidebar__nav-drop-link {
   position: relative;
 }
 
-/* line 266, src/scss/_components/_sidebar.scss */
+/* line 269, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more .sidebar__nav-drop-link > div .icon-move {
   opacity: 0;
   visibility: hidden;
@@ -2685,7 +2698,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 279, src/scss/_components/_sidebar.scss */
+/* line 282, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more .sidebar__nav-drop-link:before {
   content: '';
   z-index: 3;
@@ -2707,7 +2720,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 295, src/scss/_components/_sidebar.scss */
+/* line 298, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more .sidebar__nav-drop-link p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2715,7 +2728,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 301, src/scss/_components/_sidebar.scss */
+/* line 304, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-more .sidebar__nav-drop-link:hover p {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2723,12 +2736,12 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 309, src/scss/_components/_sidebar.scss */
+/* line 312, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-link {
   min-height: 40px;
 }
 
-/* line 313, src/scss/_components/_sidebar.scss */
+/* line 316, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-link > div span {
   max-width: -webkit-calc(100% - 30px);
   max-width: calc(100% - 30px);
@@ -2739,7 +2752,7 @@ picture {
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 319, src/scss/_components/_sidebar.scss */
+/* line 322, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-link p {
   z-index: 2;
   position: relative;
@@ -2762,13 +2775,13 @@ picture {
   background-color: #f8f8f8;
 }
 
-/* line 330, src/scss/_components/_sidebar.scss */
+/* line 333, src/scss/_components/_sidebar.scss */
 .sidebar__nav-drop-link p .icon-font {
   color: #61bdf0;
   font-size: 11px;
 }
 
-/* line 338, src/scss/_components/_sidebar.scss */
+/* line 341, src/scss/_components/_sidebar.scss */
 .sidebar__nav-setting {
   z-index: 3;
   opacity: 0;
@@ -2809,22 +2822,22 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 357, src/scss/_components/_sidebar.scss */
+/* line 360, src/scss/_components/_sidebar.scss */
 .sidebar__nav-setting > a {
   margin-top: 12px;
 }
 
-/* line 360, src/scss/_components/_sidebar.scss */
+/* line 363, src/scss/_components/_sidebar.scss */
 .sidebar__nav-setting > a:first-of-type {
   margin-top: 0;
 }
 
-/* line 365, src/scss/_components/_sidebar.scss */
+/* line 368, src/scss/_components/_sidebar.scss */
 .sidebar__nav-setting .icon-font {
   color: #61bdf0;
 }
 
-/* line 371, src/scss/_components/_sidebar.scss */
+/* line 374, src/scss/_components/_sidebar.scss */
 .sidebar__menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2841,7 +2854,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 376, src/scss/_components/_sidebar.scss */
+/* line 379, src/scss/_components/_sidebar.scss */
 .sidebar__menu-link {
   overflow: hidden;
   position: relative;
@@ -2853,7 +2866,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 384, src/scss/_components/_sidebar.scss */
+/* line 387, src/scss/_components/_sidebar.scss */
 .sidebar__menu-link:hover {
   color: #000000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2861,7 +2874,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 388, src/scss/_components/_sidebar.scss */
+/* line 391, src/scss/_components/_sidebar.scss */
 .sidebar__menu-link:hover:before {
   -webkit-transform: translateX(-150%);
       -ms-transform: translateX(-150%);
@@ -2873,7 +2886,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 394, src/scss/_components/_sidebar.scss */
+/* line 397, src/scss/_components/_sidebar.scss */
 .sidebar__menu-link:before {
   content: '';
   position: absolute;
@@ -2889,7 +2902,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 404, src/scss/_components/_sidebar.scss */
+/* line 407, src/scss/_components/_sidebar.scss */
 .sidebar__menu-link--mb {
   margin-bottom: 30px;
 }
