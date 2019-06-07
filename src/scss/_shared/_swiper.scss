@@ -59,6 +59,9 @@
 					line-height: 1;
 					font-size: 52px;
 					font-weight: bold;
+					@include adaptive(575) {
+						font-size: 40px;
+					}
 				}
 
 				span {
