@@ -109,7 +109,39 @@
                       <div><i class="icon-font icon-information"></i></div><span>Help</span></a><a href="#" title="">
                       <div><i class="icon-font icon-sign-out"></i></div><span>Sign Out</span></a></div>
                 </div>
-              </div><a class="header__nav-btn header__nav-btn--qrcode" href="#" title=""><i class="icon-png i-qrcode"></i></a><a class="header__nav-btn header__nav-btn--team" href="#" title=""><i class="icon-png i-team"></i></a><a class="header__nav-btn header__nav-btn--notification" href="#" title=""><i class="icon-png i-notification"></i></a>
+              </div>
+              <div class="header__nav-drop header__nav-drop--qrcode" dropdown-js><a class="header__nav-btn header__nav-btn--qrcode" href="#" title="" dropdown-btn-js><i class="icon-png i-qrcode"></i></a>
+                <div dropdown-menu-js>
+                  <div class="header__nav-drop--header">
+                    <p>Access Codes</p>
+                  </div>
+                  <div class="header__nav-drop--body">
+                    <form class="c-form" action="" method="" autocomplete="off">
+                      <div class="c-form__field c-form__field--select">
+                        <div class="c-form__select-wrapper">
+                          <div class="c-form__select-value"></div>
+                          <select class="c-form__select" id="select" name="select" select-js="select-js">
+                            <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your...</option>
+                            <option value="Some option 1">Some option 1</option>
+                            <option value="Some option 2">Some option 2</option>
+                            <option value="Some option 3">Some option 3</option>
+                          </select>
+                          <div class="c-form__select-icon"><i></i></div>
+                        </div>
+                        <div class="c-form__notify">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="header__nav-drop--footer"></div>
+                </div>
+              </div>
+              <div class="header__nav-drop header__nav-drop--team" dropdown-js><a class="header__nav-btn header__nav-btn--team" href="#" title="" dropdown-btn-js><i class="icon-png i-team"></i></a>
+                <div dropdown-menu-js></div>
+              </div>
+              <div class="header__nav-drop header__nav-drop--notification" dropdown-js><a class="header__nav-btn header__nav-btn--notification" href="#" title="" dropdown-btn-js><i class="icon-png i-notification"></i></a>
+                <div dropdown-menu-js></div>
+              </div>
             </div>
           </div>
         </div>

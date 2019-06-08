@@ -99,11 +99,23 @@ header#header.header
 										i.icon-font.icon-sign-out
 									span!= "Sign Out"
 
-					a.header__nav-btn.header__nav-btn--qrcode(href="#" class="" title="")
-						i.icon-png.i-qrcode
-					a.header__nav-btn.header__nav-btn--team(href="#" class="" title="")
-						i.icon-png.i-team
-					a.header__nav-btn.header__nav-btn--notification(href="#" class="" title="")
-						i.icon-png.i-notification
+					div.header__nav-drop.header__nav-drop--qrcode(dropdown-js)
+						a.header__nav-btn.header__nav-btn--qrcode(href="#" class="" title="" dropdown-btn-js)
+							i.icon-png.i-qrcode
+						div(dropdown-menu-js)
+							.header__nav-drop--header
+								p!= "Access Codes"
+							.header__nav-drop--body
+								form.c-form(action='' method='' autocomplete='off')
+									+formSelectCustom(dataFormObj.selectFieldQR)
+							.header__nav-drop--footer
+					div.header__nav-drop.header__nav-drop--team(dropdown-js)
+						a.header__nav-btn.header__nav-btn--team(href="#" class="" title="" dropdown-btn-js)
+							i.icon-png.i-team
+						div(dropdown-menu-js)
+					div.header__nav-drop.header__nav-drop--notification(dropdown-js)
+						a.header__nav-btn.header__nav-btn--notification(href="#" class="" title="" dropdown-btn-js)
+							i.icon-png.i-notification
+						div(dropdown-menu-js)
 
 // HEADER :: END
