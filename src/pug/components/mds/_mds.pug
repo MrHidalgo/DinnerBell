@@ -15,9 +15,20 @@
 section#mds.mds
 
 	.mds__wrapper-heading
-		h2.mds__title
-			span!= "Base theme"
-			i.icon-font.icon-corner
+
+		.mds__title-wrapper
+			.mds__title.mds__title--internal
+				span!= "Base theme"
+				i.icon-font.icon-corner
+			.mds__title-drop
+				a(href="#" class="" title="")!= "Base settings"
+				a(href="#" class="" title="")!= "Intro screen"
+				a(href="#" class="" title="")!= "Main menu"
+				a(href="#" class="" title="")!= "Menu items"
+				a(href="#" class="" title="")!= "Item details"
+				a(href="#" class="" title="")!= "Feedback"
+				a(href="#" class="" title="")!= "My order"
+				a(href="#" class="" title="")!= "Log Out"
 
 	.mds__theme-wrapper
 		each val, idx in themeArr

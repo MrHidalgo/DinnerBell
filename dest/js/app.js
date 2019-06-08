@@ -211,6 +211,39 @@ var initPreventBehavior = function initPreventBehavior() {
 };
 
 /**
+ * @name initScalableBlock
+ *
+ * @description
+ */
+var initScalableBlock = function initScalableBlock(element) {
+	if ($(window).width() < 768) {
+		if (element && $(element).length) {
+			var $el = $(element),
+			    $wrapper = $el.parent();
+
+			var starterData = {
+				size: {
+					width: $wrapper.width(),
+					height: $wrapper.height()
+				}
+			};
+
+			var scale = Math.min(starterData.size.width / $el.outerWidth(), starterData.size.height / $el.outerHeight());
+
+			if (scale > 1) {
+				scale = 1;
+			}
+
+			$el.css({
+				transform: "translate3d(-50%, 0, 0) " + "scale(" + scale + ")"
+			});
+		}
+	} else {
+		$(element).attr('style', '');
+	}
+};
+
+/**
  * @name initSvg4everybody
  *
  * @description SVG for Everybody adds external spritemaps support to otherwise SVG-capable browsers.
@@ -421,12 +454,15 @@ var initWebFontLoader = function initWebFontLoader() {
  */
 $(window).on("load", function (ev) {
 	initHeaderFixed();
+	initScalableBlock('#tablet .tablet__wrapper');
 });
 
 /**
  * @description Window on resize.
  */
-$(window).on("resize", function (ev) {});
+$(window).on("resize", function (ev) {
+	initScalableBlock('#tablet .tablet__wrapper');
+});
 
 /**
  * @description Window on scroll.
@@ -453,13 +489,16 @@ $(document).ready(function (ev) {
  * ============================================= */
 	var initBodyClick = function initBodyClick() {
 		$('body').on('click', function (e) {
-			var className = '\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t.header__dropdown,\n\t\t\t\t.header,\n\t\t\t\t.sidebar\n\t\t\t';
+			var className = '\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t.header__dropdown,\n\t\t\t\t.mds__title-wrapper\t\t\n\t\t\t';
 
 			if (!$(e.target).closest(className).length) {
 				$('.sidebar__nav-drop-more').removeClass('is-show is-drag');
 
 				$('.header__dropdown').removeClass('is-open');
 				$('.header__dropdown-toggle').siblings('.header__dropdown-menu').slideUp(350);
+
+				$('.mds__title-wrapper').removeClass('is-open');
+				$('.mds__title').siblings('.mds__title-drop').slideUp(350);
 			}
 
 			if ($(window).width() <= 1280) {
@@ -507,6 +546,16 @@ $(document).ready(function (ev) {
 
 			_parent.toggleClass('is-open');
 			_btn.siblings('.header__dropdown-menu').slideToggle(350);
+		});
+	};
+
+	var initMDSTitleDropDown = function initMDSTitleDropDown() {
+		$('.mds__title').on('click', function (ev) {
+			var _btn = $(ev.currentTarget),
+			    _parent = _btn.closest('.mds__title-wrapper');
+
+			_parent.toggleClass('is-open');
+			_btn.siblings('.mds__title-drop').slideToggle(350);
 		});
 	};
 
@@ -679,16 +728,16 @@ $(document).ready(function (ev) {
 		// ==========================================
 
 		// lib
-		// ==========================================
 		initCustomSelect();
 		initHamburger();
 		initSwiper();
+		// ==========================================
 
 		// callback
-		// ==========================================
 		initBodyClick();
 		initSidebarCollapse();
 		initHeaderDropDown();
+		initMDSTitleDropDown();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();
@@ -700,6 +749,7 @@ $(document).ready(function (ev) {
 		initTabletMenuItemsView();
 		initTabletMainMenuBlock();
 		initTabletPreview();
+		// ==========================================
 	};
 	initJquery();
 });

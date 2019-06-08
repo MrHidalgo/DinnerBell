@@ -24,9 +24,21 @@ section#mds.mds
 		.mds__wrapper-left
 
 			.mds__wrapper-heading
-				h2.mds__title.mds__title--internal
-					span!= "My order"
-					i.icon-font.icon-corner
+
+				.mds__title-wrapper
+					.mds__title.mds__title--internal
+						span!= "My order"
+						i.icon-font.icon-corner
+					.mds__title-drop
+						a(href="#" class="" title="")!= "Base theme"
+						a(href="#" class="" title="")!= "Base settings"
+						a(href="#" class="" title="")!= "Intro screen"
+						a(href="#" class="" title="")!= "Main menu"
+						a(href="#" class="" title="")!= "Menu items"
+						a(href="#" class="" title="")!= "Item details"
+						a(href="#" class="" title="")!= "Feedback"
+						a(href="#" class="" title="")!= "Log Out"
+
 				a.mds__wrapper-preview(href="#" class="" title="")
 					p
 						i.icon-font.icon-eye
