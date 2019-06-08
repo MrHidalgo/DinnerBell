@@ -67,11 +67,18 @@ $(document).ready((ev) => {
 			const _btn = $(ev.currentTarget),
 				_parent = _btn.closest('[dropdown-js]');
 
-			$('[dropdown-js]').removeClass('is-open');
-			$('[dropdown-menu-js]').slideUp(350);
+			if(!_btn.closest('[dropdown-js]').hasClass('is-open')) {
+				$('[dropdown-js]').removeClass('is-open');
+				$('[dropdown-menu-js]').slideUp(350);
+			} else {
+				_parent.removeClass('is-open');
+				_btn.siblings('[dropdown-menu-js]').slideUp(350);
 
-			_parent.toggleClass('is-open');
-			_btn.siblings('[dropdown-menu-js]').slideToggle(350);
+				return false;
+			}
+
+			_parent.addClass('is-open');
+			_btn.siblings('[dropdown-menu-js]').slideDown(350);
 		});
 	};
 
@@ -235,6 +242,17 @@ $(document).ready((ev) => {
 			$('.mds__wrapper-right').removeClass('is-show');
 		});
 	};
+
+
+	const initDropDownCollapse = () => {
+		$('.header__nav-drop--collapse-head').on('click', (ev) => {
+			const _btn = $(ev.currentTarget),
+				_parent = _btn.closest('.header__nav-drop--collapse');
+
+			_parent.toggleClass('is-open');
+			_btn.siblings('.header__nav-drop--collapse-body').slideToggle(400);
+		});
+	};
  	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -265,6 +283,7 @@ $(document).ready((ev) => {
 		initChooseScreen();
 		initMenuLayout();
 		initRange();
+		initDropDownCollapse();
 
 		initTabletRange();
 		initTabletBoxChoose();

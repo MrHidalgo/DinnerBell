@@ -1,5 +1,29 @@
 // COMMON :: START
 
+// dropdown
+[dropdown-js] {
+	position: relative;
+
+	[dropdown-btn-js] {}
+
+	[dropdown-menu-js] {
+		z-index: 999;
+		display: none;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: calc(100% + 10px);
+		min-width: 200px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		background-color: #ffffff;
+		box-shadow: 0 5px 10px 0 rgba(#000, 0.025);
+	}
+}
+// dropdown :: end
+
 // logo
 .logo {
 	&__btn {

@@ -34,8 +34,71 @@ header#header.header
 				.header__nav-title
 					h1.header__title!= "Section title"
 				.header__nav-wrapper
-					a.header__nav-btn.header__nav-btn--setting(href="#" class="" title="")
-						i.icon-png.i-setting-1
+					div.header__nav-drop.header__nav-drop--setting(dropdown-js)
+						a.header__nav-btn.header__nav-btn--setting(href="#" class="" title="" dropdown-btn-js)
+							i.icon-png.i-setting-1
+						div(dropdown-menu-js)
+							.header__nav-drop--header
+								div
+									div
+										i.icon-png.i-user-1
+								div
+									p!= "Christopher Kelly"
+									span!= "mail@bluestrawberry.com"
+									a(href="#" class="" title="")!= "Edit profile"
+							.header__nav-drop--body
+
+								.header__nav-drop--collapse
+									div.header__nav-drop--collapse-head
+										div
+											i.icon-font.icon-billing
+											span!= "Billing"
+										div
+											i.icon-font.icon-corner
+
+									div.header__nav-drop--collapse-body
+										ul
+											li
+												div
+													p!= "Monthly total:"
+												div
+													span!= "$250"
+											li
+												div
+													p!= "Current Balance:"
+												div
+													span!= "$0"
+											li
+												div
+													p!= "Next Payment:"
+												div
+													span!= "06/27/2019"
+
+								.header__nav-drop--method
+									div
+										p!= "Payment Method:"
+									div
+										span!= "**** 0414"
+										i.icon-png.i-mastercard
+
+								.header__nav-drop--btn
+									a(href="#" class="" title="")!= "Manage billing"
+									a(href="#" class="" title="")!= "Make a payment"
+
+							.header__nav-drop--footer
+								a(href="#" class="" title="")
+									div
+										i.icon-font.icon-unlock
+									span!= "Login & Security"
+								a(href="#" class="" title="")
+									div
+										i.icon-font.icon-information
+									span!= "Help"
+								a(href="#" class="" title="")
+									div
+										i.icon-font.icon-sign-out
+									span!= "Sign Out"
+
 					a.header__nav-btn.header__nav-btn--qrcode(href="#" class="" title="")
 						i.icon-png.i-qrcode
 					a.header__nav-btn.header__nav-btn--team(href="#" class="" title="")

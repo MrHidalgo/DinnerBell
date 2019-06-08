@@ -33,44 +33,59 @@
 	@if $filename == bell {
 		$char: "\E002";
 	}
-	@if $filename == bin {
+	@if $filename == billing {
 		$char: "\E003";
 	}
-	@if $filename == close {
+	@if $filename == bin {
 		$char: "\E004";
 	}
-	@if $filename == cook {
+	@if $filename == close {
 		$char: "\E005";
 	}
-	@if $filename == copy {
+	@if $filename == cook {
 		$char: "\E006";
 	}
-	@if $filename == corner {
+	@if $filename == copy {
 		$char: "\E007";
 	}
-	@if $filename == doc {
+	@if $filename == corner {
 		$char: "\E008";
 	}
-	@if $filename == eye {
+	@if $filename == doc {
 		$char: "\E009";
 	}
-	@if $filename == fullscreen {
+	@if $filename == eye {
 		$char: "\E00A";
 	}
-	@if $filename == menu {
+	@if $filename == fullscreen {
 		$char: "\E00B";
 	}
-	@if $filename == move {
+	@if $filename == information {
 		$char: "\E00C";
 	}
-	@if $filename == rate {
+	@if $filename == menu {
 		$char: "\E00D";
 	}
-	@if $filename == settings {
+	@if $filename == move {
 		$char: "\E00E";
 	}
-	@if $filename == user {
+	@if $filename == padlock {
 		$char: "\E00F";
+	}
+	@if $filename == rate {
+		$char: "\E010";
+	}
+	@if $filename == settings {
+		$char: "\E011";
+	}
+	@if $filename == sign-out {
+		$char: "\E012";
+	}
+	@if $filename == unlock {
+		$char: "\E013";
+	}
+	@if $filename == user {
+		$char: "\E014";
 	}
 
 	@return $char;
@@ -93,6 +108,10 @@
 }
 .icon-bell {
 	@include icon(bell);
+
+}
+.icon-billing {
+	@include icon(billing);
 
 }
 .icon-bin {
@@ -127,6 +146,10 @@
 	@include icon(fullscreen);
 
 }
+.icon-information {
+	@include icon(information);
+
+}
 .icon-menu {
 	@include icon(menu);
 
@@ -135,12 +158,24 @@
 	@include icon(move);
 
 }
+.icon-padlock {
+	@include icon(padlock);
+
+}
 .icon-rate {
 	@include icon(rate);
 
 }
 .icon-settings {
 	@include icon(settings);
+
+}
+.icon-sign-out {
+	@include icon(sign-out);
+
+}
+.icon-unlock {
+	@include icon(unlock);
 
 }
 .icon-user {

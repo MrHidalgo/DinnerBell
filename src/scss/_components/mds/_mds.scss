@@ -38,7 +38,7 @@
 			display: none;
 			position: absolute;
 			left: 0;
-			top: 100%;
+			top: calc(100% + 10px);
 			min-width: 200px;
 			padding-top: 15px;
 			padding-bottom: 15px;
