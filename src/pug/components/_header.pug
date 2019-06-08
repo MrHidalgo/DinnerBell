@@ -165,5 +165,25 @@ header#header.header
 						a.header__nav-btn.header__nav-btn--notification(href="#" class="" title="" dropdown-btn-js)
 							i.icon-png.i-notification
 						div(dropdown-menu-js)
+							.header__nav-drop--header
+								p!= "Notifications"
+							.header__nav-drop--block.header__nav-drop--block-introduc
+								p!= "Introducing Advanced Discounts"
+								span!= "Automatically apply time-specific discounts to items and categories."
+								a(href="#" class="" title="")!= "Create a Discount"
+
+							.header__nav-drop--block.header__nav-drop--block-alert.header__nav-drop--block-alert-in
+								div
+									i.icon-font.icon-alert
+								div
+									p!= "Your trial period for Blue Strawberry is expiring in 5 days"
+									span!= "Click here to learn more about our services or <a href='#'>schedule and demo tour</a>"
+
+							.header__nav-drop--block.header__nav-drop--block-alert.header__nav-drop--block-alert-out
+								div
+									i.icon-font.icon-alert
+								div
+									p!= "Your trial period for Blue Strawberry has expired"
+									span!= "Subscribe to one of our services and continue using your account"
 
 // HEADER :: END
