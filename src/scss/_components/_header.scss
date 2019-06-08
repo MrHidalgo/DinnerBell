@@ -193,6 +193,131 @@
 		}
 
 		&-drop {
+			&--team {
+				[dropdown-menu-js] {
+					min-width: 250px;
+					padding: 0;
+
+					.header__nav-drop {
+						&--header {
+							display: flex;
+							align-items: center;
+							min-height: 43px;
+							padding: 5px 17px;
+							border-bottom: 1px solid #ccc;
+
+							p {
+								font-size: 16px;
+								font-weight: 500;
+							}
+						}
+						&--body {
+							padding: 17px 0;
+
+							ul {
+								display: flex;
+								flex-direction: column;
+
+								li {
+									cursor: pointer;
+									display: flex;
+
+									&.is-online {
+										i {
+											background-color: #9fc54d;
+										}
+									}
+
+									&.is-link {
+										a {
+											align-items: center;
+											color: #61bdf0;
+
+											> div {
+												&:nth-of-type(1) {
+													padding-top: 0 !important;
+												}
+											}
+
+											i {
+												display: flex;
+												align-items: center;
+												justify-content: center;
+												width: 20px;
+												height: 20px;
+												background-color: #61bdf0;
+												color: #ffffff;
+												font-size: 26px;
+											}
+										}
+									}
+
+									a {
+										display: flex;
+										align-items: flex-start;
+										width: 100%;
+										min-height: 52px;
+										padding: 10px 17px;
+										color: #000000;
+										background-color: transparent;
+										@include transition(background-color);
+
+										&:hover {
+											background-color: #f9f9f9;
+											@include transition(background-color);
+										}
+
+										> div {
+											&:nth-of-type(1) {
+												width: 30px;
+												padding-top: 5px;
+											}
+											&:nth-of-type(2) {
+												flex: 1;
+												min-width: 1px;
+												max-width: 100%;
+											}
+
+											i {
+												display: flex;
+												width: 16px;
+												height: 16px;
+												border-radius: 50%;
+												background-color: #ebebeb;
+											}
+
+											p {
+												font-weight: bold;
+											}
+
+											span {
+												color: #999999;
+											}
+										}
+									}
+								}
+							}
+						}
+						&--footer {
+							display: flex;
+							align-items: center;
+							min-height: 43px;
+							padding: 5px 17px;
+							background-color: #f7f7f7;
+							border-top: 1px solid #ccc;
+
+							p {
+								font-size: 16px;
+								font-weight: bold;
+
+								span {
+									color: #61bdf0;
+								}
+							}
+						}
+					}
+				}
+			}
 			&--qrcode {
 				[dropdown-menu-js] {
 					min-width: 335px;
