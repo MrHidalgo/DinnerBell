@@ -25,11 +25,11 @@ section#mds.mds
 
 			.mds__wrapper-heading
 
-				.mds__title-wrapper
-					.mds__title.mds__title--internal
+				.mds__title-wrapper(dropdown-js)
+					.mds__title.mds__title--internal(dropdown-btn-js)
 						span!= "My order"
 						i.icon-font.icon-corner
-					.mds__title-drop
+					.mds__title-drop(dropdown-menu-js)
 						a(href="#" class="" title="")!= "Base theme"
 						a(href="#" class="" title="")!= "Base settings"
 						a(href="#" class="" title="")!= "Intro screen"

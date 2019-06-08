@@ -22,33 +22,14 @@ $(document).ready((ev) => {
 			const className = `
 				.sidebar__nav-drop-link p, 
 				.sidebar__nav-setting, 
-				.header__dropdown,
-				.mds__title-wrapper		
+				[dropdown-js]		
 			`;
 
 			if (!$(e.target).closest(className).length) {
 				$('.sidebar__nav-drop-more').removeClass('is-show is-drag');
 
-				$('.header__dropdown').removeClass('is-open');
-				$('.header__dropdown-toggle').siblings('.header__dropdown-menu').slideUp(350);
-
-				$('.mds__title-wrapper').removeClass('is-open');
-				$('.mds__title').siblings('.mds__title-drop').slideUp(350);
-			}
-
-			if($(window).width() <= 1280) {
-				const className = `		
-					.header,
-					.sidebar,
-					.mds__wrapper-preview,
-					.mds__wrapper-right
-				`;
-
-				if (!$(e.target).closest(className).length) {
-					$('html, body').removeClass('is-hideScroll');
-					$('[hamburger-js]').removeClass('is-active');
-					$('[mobile-block-js]').removeClass('is-open');
-				}
+				$('[dropdown-js]').removeClass('is-open');
+				$('[dropdown-menu-js]').slideUp(350);
 			}
 		});
 	};
@@ -81,24 +62,16 @@ $(document).ready((ev) => {
 	};
 
 
-	const initHeaderDropDown = () => {
-		$('.header__dropdown-toggle').on('click', (ev) => {
+	const initDropDown = () => {
+		$('[dropdown-btn-js]').on('click', (ev) => {
 			const _btn = $(ev.currentTarget),
-				_parent = _btn.closest('.header__dropdown');
+				_parent = _btn.closest('[dropdown-js]');
+
+			$('[dropdown-js]').removeClass('is-open');
+			$('[dropdown-menu-js]').slideUp(350);
 
 			_parent.toggleClass('is-open');
-			_btn.siblings('.header__dropdown-menu').slideToggle(350);
-		});
-	};
-
-
-	const initMDSTitleDropDown = () => {
-		$('.mds__title').on('click', (ev) => {
-			const _btn = $(ev.currentTarget),
-				_parent = _btn.closest('.mds__title-wrapper');
-
-			_parent.toggleClass('is-open');
-			_btn.siblings('.mds__title-drop').slideToggle(350);
+			_btn.siblings('[dropdown-menu-js]').slideToggle(350);
 		});
 	};
 
@@ -287,8 +260,7 @@ $(document).ready((ev) => {
     // callback
 		initBodyClick();
 		initSidebarCollapse();
-		initHeaderDropDown();
-		initMDSTitleDropDown();
+		initDropDown();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();

@@ -489,26 +489,13 @@ $(document).ready(function (ev) {
  * ============================================= */
 	var initBodyClick = function initBodyClick() {
 		$('body').on('click', function (e) {
-			var className = '\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t.header__dropdown,\n\t\t\t\t.mds__title-wrapper\t\t\n\t\t\t';
+			var className = '\n\t\t\t\t.sidebar__nav-drop-link p, \n\t\t\t\t.sidebar__nav-setting, \n\t\t\t\t[dropdown-js]\t\t\n\t\t\t';
 
 			if (!$(e.target).closest(className).length) {
 				$('.sidebar__nav-drop-more').removeClass('is-show is-drag');
 
-				$('.header__dropdown').removeClass('is-open');
-				$('.header__dropdown-toggle').siblings('.header__dropdown-menu').slideUp(350);
-
-				$('.mds__title-wrapper').removeClass('is-open');
-				$('.mds__title').siblings('.mds__title-drop').slideUp(350);
-			}
-
-			if ($(window).width() <= 1280) {
-				var _className = '\t\t\n\t\t\t\t\t.header,\n\t\t\t\t\t.sidebar,\n\t\t\t\t\t.mds__wrapper-preview,\n\t\t\t\t\t.mds__wrapper-right\n\t\t\t\t';
-
-				if (!$(e.target).closest(_className).length) {
-					$('html, body').removeClass('is-hideScroll');
-					$('[hamburger-js]').removeClass('is-active');
-					$('[mobile-block-js]').removeClass('is-open');
-				}
+				$('[dropdown-js]').removeClass('is-open');
+				$('[dropdown-menu-js]').slideUp(350);
 			}
 		});
 	};
@@ -539,23 +526,16 @@ $(document).ready(function (ev) {
 		});
 	};
 
-	var initHeaderDropDown = function initHeaderDropDown() {
-		$('.header__dropdown-toggle').on('click', function (ev) {
+	var initDropDown = function initDropDown() {
+		$('[dropdown-btn-js]').on('click', function (ev) {
 			var _btn = $(ev.currentTarget),
-			    _parent = _btn.closest('.header__dropdown');
+			    _parent = _btn.closest('[dropdown-js]');
+
+			$('[dropdown-js]').removeClass('is-open');
+			$('[dropdown-menu-js]').slideUp(350);
 
 			_parent.toggleClass('is-open');
-			_btn.siblings('.header__dropdown-menu').slideToggle(350);
-		});
-	};
-
-	var initMDSTitleDropDown = function initMDSTitleDropDown() {
-		$('.mds__title').on('click', function (ev) {
-			var _btn = $(ev.currentTarget),
-			    _parent = _btn.closest('.mds__title-wrapper');
-
-			_parent.toggleClass('is-open');
-			_btn.siblings('.mds__title-drop').slideToggle(350);
+			_btn.siblings('[dropdown-menu-js]').slideToggle(350);
 		});
 	};
 
@@ -736,8 +716,7 @@ $(document).ready(function (ev) {
 		// callback
 		initBodyClick();
 		initSidebarCollapse();
-		initHeaderDropDown();
-		initMDSTitleDropDown();
+		initDropDown();
 		initChooseColor();
 		initChooseScreen();
 		initMenuLayout();
