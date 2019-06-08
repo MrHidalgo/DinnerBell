@@ -200,6 +200,10 @@
 					border: none;
 					box-shadow: none;
 					background-color: transparent;
+					@include adaptive(575) {
+						right: -10px;
+						min-width: 300px;
+					}
 
 					.header__nav-drop {
 						display: flex;
@@ -418,6 +422,10 @@
 				[dropdown-menu-js] {
 					min-width: 335px;
 					padding: 0;
+					@include adaptive(575) {
+						right: -100px;
+						min-width: 300px;
+					}
 
 					.header__nav-drop {
 						&--header {
