@@ -3765,6 +3765,7 @@ picture {
   /* line 3, src/scss/_components/_tablet.scss */
   .tablet {
     overflow-y: auto;
+    min-height: auto;
     max-height: -webkit-calc(100vh - 80px);
     max-height: calc(100vh - 80px);
     padding: 20px;
@@ -6398,12 +6399,9 @@ picture {
 
 /* line 109, src/scss/_components/mds/_mds.scss */
 .mds__wrapper-right {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  max-width: 100%;
-  min-width: 1px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 15px;
 }
 
@@ -6943,7 +6941,7 @@ picture {
 /* line 414, src/scss/_components/mds/_mds.scss */
 .mds__screen {
   position: relative;
-  padding: 20px 0;
+  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -6978,9 +6976,8 @@ picture {
   z-index: -1;
   position: absolute;
   top: 0;
-  left: -20px;
-  width: -webkit-calc(100% + 40px);
-  width: calc(100% + 40px);
+  left: 0;
+  width: 100%;
   height: 100%;
   -webkit-border-radius: 5px;
           border-radius: 5px;
