@@ -6184,7 +6184,115 @@ picture {
   padding: 25px;
 }
 
-/* line 1607, src/scss/_components/_tablet.scss */
+/* line 1598, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__block-wrapper.is-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+/* line 1604, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block {
+  max-width: 100%;
+  min-height: auto;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* line 1611, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block > div:nth-of-type(1) {
+  display: none;
+}
+
+/* line 1614, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block > div:nth-of-type(2) {
+  -webkit-box-flex: unset;
+  -webkit-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  min-height: 80px;
+}
+
+/* line 1618, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block > div:nth-of-type(2) p {
+  font-size: 26px;
+}
+
+/* line 1629, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__info {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* line 1637, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__info-title {
+  padding-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #558ce4;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 1646, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__info-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 1654, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__info-link:hover {
+  color: #558ce4;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 1660, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__info-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+/* line 1669, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__info-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 1683, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__wrapper-content {
   position: relative;
   min-height: -webkit-calc(1024px - 55px);
@@ -6192,7 +6300,7 @@ picture {
   padding-bottom: 80px;
 }
 
-/* line 1614, src/scss/_components/_tablet.scss */
+/* line 1690, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__logout {
   position: absolute;
   display: -webkit-box;
