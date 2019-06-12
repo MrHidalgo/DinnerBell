@@ -19,8 +19,7 @@ const initScalableBlock = (element) => {
 			};
 
 			let scale = Math.min(
-				starterData.size.width / $el.outerWidth(),
-				starterData.size.height / $el.outerHeight()
+				starterData.size.width / $el.outerWidth()
 			);
 
 			if (scale > 1){

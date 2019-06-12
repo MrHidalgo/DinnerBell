@@ -228,7 +228,7 @@ var initScalableBlock = function initScalableBlock(element) {
 				}
 			};
 
-			var scale = Math.min(starterData.size.width / $el.outerWidth(), starterData.size.height / $el.outerHeight());
+			var scale = Math.min(starterData.size.width / $el.outerWidth());
 
 			if (scale > 1) {
 				scale = 1;
