@@ -87,11 +87,7 @@ $(document).ready((ev) => {
 		const _colorArr = $('.mds__form-color-content > a');
 
 		_colorArr.map((idx, val) => {
-
-			const _parentNode = $(val).closest('.mds__form-color-content'),
-				_nodeName = _parentNode.data('name'),
-				_inputNode = _parentNode.find('input[type="text"]'),
-				_spanNode = _parentNode.find('span');
+			const _parentNode = $(val).closest('.mds__form-color-content');
 
 			new Pickr({
 				el: val,
@@ -109,14 +105,22 @@ $(document).ready((ev) => {
 					}
 				}
 			}).on('change', (...args) => {
-				_inputNode.val(args[0].toHEXA().toString());
-				_spanNode.css({
-					'backgroundColor' : args[0].toHEXA().toString()
+				let _color = args[0].toHEXA().toString();
+
+				_parentNode.find('input[type="text"]').val(_color);
+				_parentNode.find('span').css({
+					'backgroundColor' : _color
 				});
 
 				if($('.tablet--menuItems').length > 0) {
-					$('[changeColor-' + _nodeName + '-js]').css({
-						'color' : args[0].toHEXA().toString()
+					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
+						'color' : _color
+					});
+				}
+
+				if($('.tablet--feedback').length > 0) {
+					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
+						'color' : _color
 					});
 				}
 			});

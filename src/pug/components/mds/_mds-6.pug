@@ -5,23 +5,28 @@
 		[
 			{
 				title: 'Excellent',
-				color: '#FFFFF'
+				color: '#32ed00',
+				name: 'excellent'
 			},
 			{
 				title: 'Very good',
-				color: '#4979c5'
+				color: '#2b960f',
+				name: 'veryGood'
 			},
 			{
 				title: 'Good',
-				color: '#19172f'
+				color: '#fcb016',
+				name: 'good'
 			},
 			{
 				title: 'Not good',
-				color: '#FFFFF'
+				color: '#bc6226',
+				name: 'notGood'
 			},
 			{
 				title: 'Bad',
-				color: '#4979c5'
+				color: '#c31010',
+				name: 'bad'
 			}
 		],
 	];
@@ -71,7 +76,7 @@ section#mds.mds
 								div
 									p!= colorTitleArr[idx][_i].title
 								div
-									.mds__form-color-content
+									.mds__form-color-content(data-name!= colorTitleArr[idx][_i].name)
 										a(href="#" class="" title="")
 										input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
 										span(style="background-color:" + colorTitleArr[idx][_i].color)
