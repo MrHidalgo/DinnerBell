@@ -815,6 +815,36 @@ $(document).ready(function (ev) {
 		});
 	};
 
+	var initTabletPreviewSelectFonts = function initTabletPreviewSelectFonts() {
+		$('[select-font-js]').on('change', function (ev) {
+			var _elem = $(ev.currentTarget),
+			    _elemOption = _elem.find('option:selected');
+
+			var _tabletNode = $('#tablet'),
+			    _tabletLinkTag = _tabletNode.find('link'),
+			    _tabletStyleTag = _tabletNode.find('style');
+
+			var _styleStr = '#tablet { font-family: "' + _elemOption.val() + '", sans-serif; }';
+
+			if (_tabletLinkTag.length !== 0) {
+
+				_tabletLinkTag.attr('href', _elemOption.data('google-api'));
+				_tabletStyleTag.text(_styleStr);
+			} else {
+
+				var _link = document.createElement('link'),
+				    _style = document.createElement('style');
+
+				_link.href = _elemOption.data('google-api');
+
+				_style.innerHTML = _styleStr;
+
+				_tabletNode[0].prepend(_link);
+				_tabletNode[0].prepend(_style);
+			}
+		});
+	};
+
 	var initDropDownCollapse = function initDropDownCollapse() {
 		$('.header__nav-drop--collapse-head').on('click', function (ev) {
 			var _btn = $(ev.currentTarget),
@@ -860,6 +890,7 @@ $(document).ready(function (ev) {
 		initTabletMenuItemsView();
 		initTabletMainMenuBlock();
 		initTabletPreview();
+		initTabletPreviewSelectFonts();
 		// ==========================================
 	};
 	initJquery();
