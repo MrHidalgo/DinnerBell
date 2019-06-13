@@ -89,6 +89,7 @@ $(document).ready((ev) => {
 		_colorArr.map((idx, val) => {
 
 			const _parentNode = $(val).closest('.mds__form-color-content'),
+				_nodeName = _parentNode.data('name'),
 				_inputNode = _parentNode.find('input[type="text"]'),
 				_spanNode = _parentNode.find('span');
 
@@ -112,6 +113,12 @@ $(document).ready((ev) => {
 				_spanNode.css({
 					'backgroundColor' : args[0].toHEXA().toString()
 				});
+
+				if($('.tablet--menuItems').length > 0) {
+					$('[changeColor-' + _nodeName + '-js]').css({
+						'color' : args[0].toHEXA().toString()
+					});
+				}
 			});
 		});
 	};
@@ -397,6 +404,19 @@ $(document).ready((ev) => {
 					'font-size' : (scope.from)
 				});
 			}
+		});
+
+		_input.map((idx, val) => {
+			$(val).ionRangeSlider({
+				min: 14,
+				max: 22,
+				from: 18,
+				step: 2,
+				grid: true,
+				hide_min_max: true,
+				hide_from_to: true,
+				skin: "round"
+			});
 		});
 	};
 
