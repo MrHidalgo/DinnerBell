@@ -36,7 +36,7 @@ section#tablet.tablet.tablet--mainMenu
 
 				+swiper('swiper-container-tabletcarousel', 'swiperContent', false, true, false)
 
-			.tablet__block-wrapper
+			.tablet__block-wrapper.tablet__block-wrapper--thumbnail.is-thumbnail
 				a.tablet__block(href="#" class="" title="")
 					div
 						img(src="img/img-tablet-box.jpg" alt="" title="")
@@ -65,6 +65,26 @@ section#tablet.tablet.tablet--mainMenu
 				a.tablet__block(href="#" class="" title="")
 					div
 						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p!= "Seafood"
+
+			.tablet__block-wrapper.tablet__block-wrapper--list.is-list
+				a.tablet__block(href="#" class="" title="")
+					div
+						p!= "Appetizers"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p!= "Soups & Salads"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p!= "Classic Favorites"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p!= "Taste of Mediterranian"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p!= "Chicken"
+				a.tablet__block(href="#" class="" title="")
 					div
 						p!= "Seafood"
 

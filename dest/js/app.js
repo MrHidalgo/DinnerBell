@@ -720,10 +720,16 @@ $(document).ready(function (ev) {
 			}
 
 			if (_btn.closest('.mds__menu-wrapper--mainMenu')) {
+				var _nodeTablet = $('.tablet.tablet--mainMenu'),
+				    _nodeTabletList = _nodeTablet.find('.tablet__block-wrapper--list'),
+				    _nodeTabletThumbnail = _nodeTablet.find('.tablet__block-wrapper--thumbnail');
+
 				if (_btnId === 'list') {
-					$('.tablet.tablet--mainMenu').find('.tablet__block-wrapper').addClass('is-list');
+					_nodeTabletList.fadeIn(400);
+					_nodeTabletThumbnail.hide();
 				} else {
-					$('.tablet.tablet--mainMenu').find('.tablet__block-wrapper').removeClass('is-list');
+					_nodeTabletThumbnail.fadeIn(400);
+					_nodeTabletList.hide();
 				}
 			}
 		});
@@ -732,17 +738,52 @@ $(document).ready(function (ev) {
 	var initRange = function initRange() {
 		var _input = $('.mds__fontSize-input');
 
-		_input.map(function (idx, val) {
-			$(val).ionRangeSlider({
-				min: 14,
-				max: 22,
-				from: 18,
-				step: 2,
-				grid: true,
-				hide_min_max: true,
-				hide_from_to: true,
-				skin: "round"
-			});
+		$('[changeFont-list-js]').ionRangeSlider({
+			min: 24,
+			max: 28,
+			from: 26,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__block-wrapper--list').find('p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-thumbnail-js]').ionRangeSlider({
+			min: 16,
+			max: 20,
+			from: 18,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__block-wrapper--thumbnail').find('p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-information-js]').ionRangeSlider({
+			min: 22,
+			max: 26,
+			from: 24,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__info-link').css({
+					'font-size': scope.from
+				});
+			}
 		});
 	};
 
@@ -847,10 +888,7 @@ $(document).ready(function (ev) {
 
 	var initTabletPreviewSelectCurrency = function initTabletPreviewSelectCurrency() {
 		$('[select-currency-js]').on('change', function (ev) {
-			var _elem = $(ev.currentTarget),
-			    _elemOption = _elem.find('option:selected');
-
-			$('[currency-sign-js]').text(_elemOption.val());
+			$('[currency-sign-js]').text($(ev.currentTarget).find('option:selected').val());
 		});
 	};
 

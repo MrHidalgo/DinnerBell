@@ -1610,7 +1610,8 @@
 					justify-content: space-between;
 					padding: 25px;
 
-					&.is-list {
+					&--list {
+						display: none;
 						flex-direction: column;
 						padding: 0;
 						margin-bottom: 0;
@@ -1623,16 +1624,14 @@
 								padding: 0;
 
 								> div {
-									&:nth-of-type(1) {
-										display: none;
-									}
-									&:nth-of-type(2) {
-										flex: unset;
-										min-height: 80px;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									flex: unset;
+									min-height: 80px;
 
-										p {
-											font-size: 26px;
-										}
+									p {
+										font-size: 26px;
 									}
 								}
 							}

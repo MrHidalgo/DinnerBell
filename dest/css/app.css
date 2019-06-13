@@ -6226,7 +6226,8 @@ picture {
 }
 
 /* line 1613, src/scss/_components/_tablet.scss */
-.tablet--mainMenu .tablet__block-wrapper.is-list {
+.tablet--mainMenu .tablet__block-wrapper--list {
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -6236,8 +6237,8 @@ picture {
   margin-bottom: 0;
 }
 
-/* line 1619, src/scss/_components/_tablet.scss */
-.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block {
+/* line 1620, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__block-wrapper--list .tablet__block {
   max-width: 100%;
   min-height: auto;
   margin-bottom: 0;
@@ -6245,12 +6246,19 @@ picture {
 }
 
 /* line 1626, src/scss/_components/_tablet.scss */
-.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block > div:nth-of-type(1) {
-  display: none;
-}
-
-/* line 1629, src/scss/_components/_tablet.scss */
-.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block > div:nth-of-type(2) {
+.tablet--mainMenu .tablet__block-wrapper--list .tablet__block > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: unset;
   -webkit-flex: unset;
       -ms-flex: unset;
@@ -6259,11 +6267,11 @@ picture {
 }
 
 /* line 1633, src/scss/_components/_tablet.scss */
-.tablet--mainMenu .tablet__block-wrapper.is-list .tablet__block > div:nth-of-type(2) p {
+.tablet--mainMenu .tablet__block-wrapper--list .tablet__block > div p {
   font-size: 26px;
 }
 
-/* line 1644, src/scss/_components/_tablet.scss */
+/* line 1643, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info {
   padding-top: 25px;
   padding-bottom: 50px;
@@ -6273,7 +6281,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 1652, src/scss/_components/_tablet.scss */
+/* line 1651, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-title {
   padding-bottom: 50px;
   text-align: center;
@@ -6283,7 +6291,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 1661, src/scss/_components/_tablet.scss */
+/* line 1660, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6298,7 +6306,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 1669, src/scss/_components/_tablet.scss */
+/* line 1668, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-link:hover {
   color: #558ce4;
   -webkit-transition: color 0.3s ease-in-out;
@@ -6306,7 +6314,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 1675, src/scss/_components/_tablet.scss */
+/* line 1674, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-logo {
   display: block;
   max-width: 100%;
@@ -6316,7 +6324,7 @@ picture {
   margin-top: 50px;
 }
 
-/* line 1684, src/scss/_components/_tablet.scss */
+/* line 1683, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6335,7 +6343,7 @@ picture {
   background-color: #0d0e27;
 }
 
-/* line 1700, src/scss/_components/_tablet.scss */
+/* line 1699, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__wrapper-content {
   position: relative;
   min-height: -webkit-calc(1024px - 55px);
@@ -6343,7 +6351,7 @@ picture {
   padding-bottom: 80px;
 }
 
-/* line 1707, src/scss/_components/_tablet.scss */
+/* line 1706, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__logout {
   position: absolute;
   display: -webkit-box;
