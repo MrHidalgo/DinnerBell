@@ -845,6 +845,15 @@ $(document).ready(function (ev) {
 		});
 	};
 
+	var initTabletPreviewSelectCurrency = function initTabletPreviewSelectCurrency() {
+		$('[select-currency-js]').on('change', function (ev) {
+			var _elem = $(ev.currentTarget),
+			    _elemOption = _elem.find('option:selected');
+
+			$('[currency-sign-js]').text(_elemOption.val());
+		});
+	};
+
 	var initDropDownCollapse = function initDropDownCollapse() {
 		$('.header__nav-drop--collapse-head').on('click', function (ev) {
 			var _btn = $(ev.currentTarget),
@@ -891,6 +900,7 @@ $(document).ready(function (ev) {
 		initTabletMainMenuBlock();
 		initTabletPreview();
 		initTabletPreviewSelectFonts();
+		initTabletPreviewSelectCurrency();
 		// ==========================================
 	};
 	initJquery();

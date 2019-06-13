@@ -467,6 +467,16 @@ $(document).ready((ev) => {
 	};
 
 
+	const initTabletPreviewSelectCurrency = () => {
+		$('[select-currency-js]').on('change', (ev) => {
+			const _elem = $(ev.currentTarget),
+				_elemOption = _elem.find('option:selected');
+
+			$('[currency-sign-js]').text(_elemOption.val());
+		});
+	};
+
+
 	const initDropDownCollapse = () => {
 		$('.header__nav-drop--collapse-head').on('click', (ev) => {
 			const _btn = $(ev.currentTarget),
@@ -515,6 +525,7 @@ $(document).ready((ev) => {
 		initTabletMainMenuBlock();
 		initTabletPreview();
 		initTabletPreviewSelectFonts();
+		initTabletPreviewSelectCurrency();
 		// ==========================================
   };
   initJquery();
