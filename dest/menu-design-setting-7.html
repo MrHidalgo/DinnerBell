@@ -399,12 +399,13 @@
                 <p><i class="icon-font icon-eye"></i></p><span>preview</span></a>
             </div>
             <form class="c-form" action="" autocomplete="off">
-              <div class="mds__upload">
-                <p class="mds__upload-title">Background image</p>
-                <div class="mds__upload-row">
-                  <div>
-                    <p>darktheme_logout.png</p><a href="" title=""><i class="icon-font icon-bin"></i></a>
+              <div class="mds__screen mds__screen--nc mds__screen--wbbs">
+                <p class="mds__screen-title">Background image</p>
+                <div class="mds__screen-row">
+                  <div class="mds__screen-col mds__screen-col-0">
+                    <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG</p>
                   </div>
+                  <div class="mds__screen-col mds__screen-col-1"><a class="mds__screen-upload" href="#" title="">Upload images</a></div>
                 </div>
               </div>
               <p class="mds__subtitle mds__subtitle--mdsOrderPt">Label colors</p>
@@ -414,8 +415,8 @@
                     <p>In process</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#FFFFF"><span style="background-color:#FFFFF"></span>
+                    <div class="mds__form-color-content" data-color="#bf650d" data-name="inProcess"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#bf650d"><span style="background-color:#bf650d"></span>
                     </div>
                   </div>
                 </div>
@@ -424,8 +425,8 @@
                     <p>Pending</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#4979c5"><span style="background-color:#4979c5"></span>
+                    <div class="mds__form-color-content" data-color="#666666" data-name="pending"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#666666"><span style="background-color:#666666"></span>
                     </div>
                   </div>
                 </div>
@@ -434,8 +435,8 @@
                     <p>Served</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#19172f"><span style="background-color:#19172f"></span>
+                    <div class="mds__form-color-content" data-color="#629913" data-name="served"><a href="#" title=""></a>
+                      <input type="text" readonly disabled value="#629913"><span style="background-color:#629913"></span>
                     </div>
                   </div>
                 </div>
@@ -493,19 +494,19 @@
                       <div><i>WINE</i>
                         <p>Cakebread Cellars, Merlot</p>
                       </div>
-                      <div><span>IN PROCESS</span></div>
+                      <div><span changeColor-inProcess-js>IN PROCESS</span></div>
                     </div>
                     <div class="tablet__list tablet__list--pending">
                       <div><i>Cold appetizers</i>
                         <p>Chilled Shellfish Platter</p>
                       </div>
-                      <div><span>PENDING</span></div>
+                      <div><span changeColor-pending-js>PENDING</span></div>
                     </div>
                     <div class="tablet__list tablet__list--served">
                       <div><i>Second course</i>
                         <p>Fresh florida stone crab clams</p>
                       </div>
-                      <div><span>Served</span></div>
+                      <div><span changeColor-served-js>Served</span></div>
                     </div>
                   </div>
                   <div class="tablet__order">

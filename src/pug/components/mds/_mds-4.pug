@@ -108,7 +108,7 @@ section#mds.mds
 									div
 										p!= colorTitleArr[idx][_i].title
 									div
-										.mds__form-color-content(data-name!= colorTitleArr[idx][_i].name)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
 											a(href="#" class="" title="")
 											input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
 											span(style="background-color:" + colorTitleArr[idx][_i].color)

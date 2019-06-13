@@ -490,6 +490,7 @@ $(document).ready(function (ev) {
 
 			new Pickr({
 				el: val,
+				default: _parentNode.data('color'),
 				components: {
 					preview: true,
 					opacity: true,
@@ -522,6 +523,12 @@ $(document).ready(function (ev) {
 				}
 
 				if ($('.tablet--feedback').length > 0) {
+					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
+						'color': _color
+					});
+				}
+
+				if ($('.tablet--myorder').length > 0) {
 					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
 						'color': _color
 					});
