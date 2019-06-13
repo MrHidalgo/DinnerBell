@@ -398,35 +398,51 @@
               </div><a class="mds__wrapper-preview" href="#" title="">
                 <p><i class="icon-font icon-eye"></i></p><span>preview</span></a>
             </div>
-            <form class="c-form" action="" autocomplete="off">
-              <div class="mds__screen-wrapper"><a class="mds__screen is-choose" href="#" title="" data-name="bg">
+            <form class="c-form" action="" autocomplete="off" name="intro_screen">
+              <div class="mds__screen-wrapper">
+                <div class="mds__screen is-choose" choose-screen-btn-js data-name="bg">
                   <p class="mds__screen-title">Static image</p>
                   <div class="mds__screen-row">
                     <div class="mds__screen-col mds__screen-col-0">
                       <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG</p>
                     </div>
                     <div class="mds__screen-col mds__screen-col-1">
-                      <div class="mds__screen-upload">Upload images</div>
+                      <div class="mds__screen-upload" upload-image-js>Upload images
+                        <input type="file" accept=".jpg, .jpeg, .png" name="upload_image">
+                      </div>
                     </div>
-                  </div></a><a class="mds__screen" href="#" title="" data-name="slideshow">
+                  </div>
+                  <div class="mds__upload-row-wrapper" upload-previewFiles-js upload-preview-image-js></div>
+                </div>
+                <div class="mds__screen" choose-screen-btn-js data-name="slideshow">
                   <p class="mds__screen-title">Slideshow</p>
                   <div class="mds__screen-row">
                     <div class="mds__screen-col mds__screen-col-0">
-                      <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG<br>5 images maximum</p>
+                      <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG<br>3 images maximum</p>
                     </div>
                     <div class="mds__screen-col mds__screen-col-1">
-                      <div class="mds__screen-upload">Upload images</div>
+                      <div class="mds__screen-upload" upload-slideshow-js>Upload images
+                        <!--input(type='file' multiple accept=".jpg, .jpeg, .png" name='upload_slideshow')-->
+                      </div>
                     </div>
-                  </div></a><a class="mds__screen" href="#" title="" data-name="video">
+                  </div>
+                  <div class="mds__upload-row-wrapper" upload-previewFiles-js upload-preview-slideshow-js></div>
+                </div>
+                <div class="mds__screen" choose-screen-btn-js data-name="video">
                   <p class="mds__screen-title">Video Intro</p>
                   <div class="mds__screen-row">
                     <div class="mds__screen-col mds__screen-col-0">
-                      <p class="mds__screen-desc">Video dimensions: 768x1024<br>Supported Formats: AVI, MKV<br>Max file weight: 50 Mb</p>
+                      <p class="mds__screen-desc">Video dimensions: 768x1024<br>Supported Formats: OGG, MP4, WEBM<br>Max file weight: 50 Mb</p>
                     </div>
                     <div class="mds__screen-col mds__screen-col-1">
-                      <div class="mds__screen-upload">Upload images</div>
+                      <div class="mds__screen-upload" upload-video-js>Upload images
+                        <input type="file" accept=".webm, .ogg, .mp4" name="upload_video">
+                      </div>
                     </div>
-                  </div></a></div>
+                  </div>
+                  <div class="mds__upload-row-wrapper" upload-previewFiles-js upload-preview-video-js></div>
+                </div>
+              </div>
               <div class="c-form__field c-form__field--btn">
                 <button class="c-form__btn c-btn c-btn--bg" type="submit">Update settings</button>
               </div>
@@ -440,14 +456,14 @@
               <div><a class="mds__wrapper-close" href="#" title=""><i class="icon-font icon-close"></i></a></div>
             </div>
             <!-- SECTION tablet :: START-->
-            <section class="tablet tablet--intro" id="tablet">
+            <section class="tablet tablet--intro" id="tablet" tablet-introScreen-js>
               <div class="tablet__wrapper">
                 <div class="tablet__wrapper-content">
                   <div>
-                    <div class="tablet__wrapper-bg">
+                    <div class="tablet__wrapper-bg" introScreen-container-js introScreen-bg-js data-intro-name="bg">
                       <div class="tablet__logo"><img src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title=""></div>
                     </div>
-                    <div class="tablet__wrapper-slideshow">
+                    <div class="tablet__wrapper-slideshow" introScreen-container-js introScreen-slideshow-js data-intro-name="slideshow">
                       <div class="swiper-container swiper-container-intro">
                         <div class="swiper-wrapper">
                                                 <div class="swiper-slide"></div>
@@ -457,9 +473,9 @@
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
-                    <div class="tablet__wrapper-video">
+                    <div class="tablet__wrapper-video" introScreen-container-js introScreen-video-js data-intro-name="video">
                       <video autoplay loop muted>
-                        <source src="media/video-tablet-intro.mp4" type="video/mp4">
+                        <source src="" type="">
                       </video>
                       <div class="tablet__wrapper-video-cover">
                         <div class="tablet__logo"><img src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title=""></div>

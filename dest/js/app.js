@@ -260,84 +260,20 @@ var initSvg4everybody = function initSvg4everybody() {
  */
 var initSwiper = function initSwiper() {
 
-	var mySwipertabletIntro = new Swiper('.swiper-container-intro', {
-		// Optional parameters
-		wrapperClass: "swiper-wrapper",
-		slideClass: "swiper-slide",
-		direction: 'horizontal', // 'horizontal' or 'vertical'
-		loop: true,
+	var mySwiperTabletIntro = new Swiper('.swiper-container-intro', {
+		loop: false,
 		watchOverflow: true,
 		normalizeSlideIndex: true,
 		grabCursor: true,
 		freeMode: false,
 		effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
 		speed: 750,
-		// autoplay: {
-		//   delay: 5000,
-		// },
-		// Disable preloading of all images
-		// preloadImages: false,
-		// Enable lazy loading
-		// lazy: {
-		//   loadPrevNext: true,
-		// },
-
-		// off touch for desktop
-		// touchMoveStopPropagation:false,
-		// simulateTouch : false,
-		// allowSwipeToNext: true,
-		// allowSwipeToPrev: true,
-		// allowPageScroll: "auto ",
-
 		slidesPerView: 1,
 		spaceBetween: 0,
-		// breakpoints: {
-		//   // when window width is <= 320px
-		//   320: {
-		//     slidesPerView: 1,
-		//     spaceBetween: 10
-		//   },
-		//   // when window width is <= 480px
-		//   480: {
-		//     slidesPerView: 2,
-		//     spaceBetween: 20
-		//   },
-		//   // when window width is <= 640px
-		//   640: {
-		//     slidesPerView: 3,
-		//     spaceBetween: 30
-		//   }
-		// },
-
-		// If we need pagination
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true
-			// renderBullet: function (index, className) {
-			//   return `
-			//     <div class="${className}">
-			//       ${index}
-			//     </div>
-			//   `;
-			// }
 		}
-
-		// Navigation arrows
-		// navigation: {
-		//   nextEl: '.swiper-button-next',
-		//   prevEl: '.swiper-button-prev',
-		// },
-		//
-		// // And if we need scrollbar
-		// scrollbar: {
-		//   el: '.swiper-scrollbar',
-		// },
-		//
-		// on: {
-		//   "slideChange": function () {
-		//     console.log("slideChange");
-		//   },
-		// }
 	});
 
 	var mySwiperTabletCarousel = new Swiper('.swiper-container-tabletcarousel', {
@@ -584,16 +520,184 @@ $(document).ready(function (ev) {
 	};
 
 	var initChooseScreen = function initChooseScreen() {
-		$('.mds__screen').not('.mds__screen--nc').on('click', function (ev) {
-			var _id = $(ev.currentTarget).data('name');
+		var removeUploadDetails = function removeUploadDetails() {
+			$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', function (ev) {
+				console.log('remove');
+				$(ev.currentTarget).closest('.mds__upload-row').remove();
+			});
+		};
+		removeUploadDetails();
 
-			$('.mds__screen').removeClass('is-choose');
-			$(ev.currentTarget).addClass('is-choose');
+		$('[choose-screen-btn-js]').on('click', function (ev) {
+			var _btn = $(ev.currentTarget),
+			    _btnIDName = _btn.data('name'),
+			    _tabletContainer = $('[introScreen-container-js][data-intro-name="' + _btnIDName + '"]');
 
-			var _tabletWrapper = $('.tablet--intro .tablet__wrapper-' + _id);
+			var _bgImgContainer = $('[introScreen-bg-js]'),
+			    slideImgContainer = $('[introScreen-slideshow-js]'),
+			    videoContainer = $('[introScreen-video-js]');
 
-			$('.tablet--intro .tablet__wrapper-content > div > div').hide();
-			_tabletWrapper.css({ 'opacity': 1, 'visibility': 'visible' }).fadeIn(350);
+			var selectionScreenForPreview = function selectionScreenForPreview(fadeDuration) {
+				$('[choose-screen-btn-js]').removeClass('is-error is-choose');
+				$(ev.currentTarget).addClass('is-choose');
+
+				$('[tablet-introScreen-js] [introScreen-container-js]').hide();
+				_tabletContainer.css({
+					'opacity': 1,
+					'visibility': 'visible'
+				}).fadeIn(fadeDuration);
+			};
+
+			var readFileURL = function readFileURL(input, mode) {
+
+				var _previewTemplate = function _previewTemplate(fileName) {
+					return '\n\t\t\t\t\t\t<div class="mds__upload-row">\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<p>' + fileName + '</p>\n\t\t\t\t\t\t\t\t<a href="#" title="" upload-remove-js>\n\t\t\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>    \t\t\t\t\n\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\n\t\t\t\t\t';
+				};
+
+				var _showDetails = function _showDetails(node, filesArr) {
+					node.prev().hide();
+					node.fadeIn(350).css({ 'display': 'flex' });
+
+					for (var _idx = 0; _idx < filesArr; _idx++) {
+						node.append(_previewTemplate(input.files[_idx].name));
+					}
+				};
+
+				var _hideDetails = function _hideDetails(node) {
+					node.prev().fadeIn(350);
+					node.hide();
+				};
+
+				if (mode === 'static') {
+					var _previewStatic = $(input).closest('.mds__screen').find('[upload-previewFiles-js]');
+
+					if (input.files.length !== 0) {
+						var reader = new FileReader();
+
+						reader.onload = function () {
+							_bgImgContainer.css({
+								'background-image': 'url("' + reader.result + '")'
+							});
+						};
+
+						_showDetails(_previewStatic, input.files.length);
+
+						$('[upload-preview-image-js]').on('click', '[upload-remove-js]', function (ev) {
+							_hideDetails(_previewStatic);
+
+							_bgImgContainer.css({
+								'background-image': 'url("")'
+							});
+						});
+
+						reader.readAsDataURL(input.files[0]);
+					}
+				} else if (mode === 'slideshow') {
+					var _count = 0;
+
+					var _parentNode = $(input).closest('.mds__screen'),
+					    _previewSlideShow = _parentNode.find('[upload-previewFiles-js]');
+
+					if (input.files.length > 3) {
+						_parentNode.addClass('is-error');
+						return false;
+					} else {
+						_parentNode.removeClass('is-error');
+
+						var _loop2 = function _loop2(_idx) {
+							if (input.files[_idx]) {
+								var _reader = new FileReader();
+
+								_reader.onload = function () {
+									var _slide = slideImgContainer.find('.swiper-slide')[_idx];
+
+									$(_slide).css({
+										'background-image': 'url("' + _reader.result + '")'
+									});
+								};
+
+								// _previewSlideShow.fadeIn(350).css({'display':'flex'});
+								//
+								// _previewSlideShow.append(_previewTemplate(input.files[_idx].name));
+								//
+								// reader.readAsDataURL(input.files[_idx]);
+							}
+						};
+
+						for (var _idx = 0; _idx < input.files.length; _idx++) {
+							_loop2(_idx);
+						}
+					}
+				} else if (mode === 'video') {
+					var _parentNode2 = $(input).closest('.mds__screen'),
+					    _previewVideo = _parentNode2.find('[upload-previewFiles-js]');
+
+					if (input.files.length !== 0) {
+						var _reader2 = new FileReader(),
+						    _vd = $(videoContainer).find('video')[0];
+
+						_reader2.onload = function () {
+							$(_vd).find('source').attr('src', _reader2.result);
+
+							_vd.load();
+						};
+
+						_showDetails(_previewVideo, input.files.length);
+
+						$('[upload-preview-video-js]').on('click', '[upload-remove-js]', function (ev) {
+							_hideDetails(_previewVideo);
+
+							$(_vd).find('source').attr('src', '');
+
+							_vd.load();
+						});
+
+						_reader2.readAsDataURL(input.files[0]);
+					}
+				}
+			};
+
+			// REMOVE BUTTON
+			if ($(ev.target).closest('.mds__upload-row-wrapper').length !== 0) {
+				return false;
+			}
+			// STATIC IMAGE
+			else if ($(ev.target).closest('[upload-image-js]').length !== 0) {
+					console.log('STATIC IMAGE');
+
+					$('[upload-image-js] input[type="file"]').on('change', function (ev) {
+						readFileURL(ev.currentTarget, 'static');
+						$(ev.currentTarget).val('');
+					});
+
+					selectionScreenForPreview(0);
+				}
+				// SLIDE SHOW
+				else if ($(ev.target).closest('[upload-slideshow-js]').length !== 0) {
+						console.log('if slideshow');
+
+						$('[upload-slideshow-js] input[type="file"]').on('change', function (ev) {
+							readFileURL(ev.currentTarget, 'slideshow');
+							$(ev.currentTarget).val('');
+						});
+
+						selectionScreenForPreview(0);
+					}
+					// VIDEO PREVIEW
+					else if ($(ev.target).closest('[upload-video-js]').length !== 0) {
+							console.log('VIDEO PREVIEW');
+
+							$('[upload-video-js] input[type="file"]').on('change', function (ev) {
+								readFileURL(ev.currentTarget, 'video');
+								$(ev.currentTarget).val('');
+							});
+
+							selectionScreenForPreview(0);
+						}
+						// SCREEN SELECTION FOR PREVIEW CHANGES
+						else {
+								selectionScreenForPreview(400);
+							}
 		});
 	};
 

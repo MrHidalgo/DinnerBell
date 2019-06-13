@@ -26,32 +26,38 @@ section#mds.mds
 						i.icon-font.icon-eye
 					span!= "preview"
 
-			form.c-form(action="" autocomplete='off')
+			form.c-form(action="" autocomplete='off' name='intro_screen')
 
 				.mds__screen-wrapper
-					a.mds__screen.is-choose(href="#" class="" title="" data-name='bg')
+					.mds__screen.is-choose(choose-screen-btn-js data-name='bg')
 						p.mds__screen-title!= "Static image"
 						.mds__screen-row
 							.mds__screen-col.mds__screen-col-0
 								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
 							.mds__screen-col.mds__screen-col-1
-								.mds__screen-upload!= "Upload images"
+								.mds__screen-upload(upload-image-js)!= "Upload images"
+									input(type='file' accept=".jpg, .jpeg, .png" name='upload_image')
+						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-image-js)
 
-					a.mds__screen(href="#" class="" title="" data-name='slideshow')
+					.mds__screen(choose-screen-btn-js  data-name='slideshow')
 						p.mds__screen-title!= "Slideshow"
 						.mds__screen-row
 							.mds__screen-col.mds__screen-col-0
-								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG<br>5 images maximum"
+								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG<br>3 images maximum"
 							.mds__screen-col.mds__screen-col-1
-								.mds__screen-upload!= "Upload images"
+								.mds__screen-upload(upload-slideshow-js)!= "Upload images"
+									//input(type='file' multiple accept=".jpg, .jpeg, .png" name='upload_slideshow')
+						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-slideshow-js)
 
-					a.mds__screen(href="#" class="" title="" data-name='video')
+					.mds__screen(choose-screen-btn-js data-name='video')
 						p.mds__screen-title!= "Video Intro"
 						.mds__screen-row
 							.mds__screen-col.mds__screen-col-0
-								p.mds__screen-desc!= "Video dimensions: 768x1024<br>Supported Formats: AVI, MKV<br>Max file weight: 50 Mb"
+								p.mds__screen-desc!= "Video dimensions: 768x1024<br>Supported Formats: OGG, MP4, WEBM<br>Max file weight: 50 Mb"
 							.mds__screen-col.mds__screen-col-1
-								.mds__screen-upload!= "Upload images"
+								.mds__screen-upload(upload-video-js)!= "Upload images"
+									input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')
+						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-video-js)
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
