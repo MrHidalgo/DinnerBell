@@ -1,79 +1,79 @@
 // SECTION tablet :: START
 
 section#tablet.tablet.tablet--myorder
-	.tablet__wrapper
-		.tablet__wrapper-header
-			div
-				a(href="#" class="" title="")
-					span
-					span
-					span
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-user
-					span!= "3"
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-doc
-					span!= "0"
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-bell
+	.tablet__header
+		div
+			a(href="#" class="" title="")
+				span
+				span
+				span
+		div
+			a(href="" class="" title="")
+				i.icon-font.icon-user
+				span!= "3"
+		div
+			a(href="" class="" title="")
+				i.icon-font.icon-doc
+				span!= "0"
+		div
+			a(href="" class="" title="")
+				i.icon-font.icon-bell
 
-		.tablet__wrapper-content
-			.tablet__heading
-				p!= "My order"
+	.tablet__content
+		.tablet__heading
+			p!= "My order"
 
-			.tablet__new
-				.tablet__new-header
-					p!= "New Items"
-				.tablet__new-body
-					.tablet__new-row.tablet__new-row-0
-						div
-							div
-								i!= "WINE"
-								p!= "Cakebread Cellars, Merlot"
-							div
-								span!= "$9.00"
-						div
-							a(href="#" class="" title="")
-								i.icon-font.icon-close
-					.tablet__new-row.tablet__new-row-1
-						div
-							i!= "Cold appetizers"
-							p!= "Chilled Shellfish Platter"
-						div
-							a(href="#" class="" title="")
-								span!= "Swipe to<br>delete"
-						div
-							a(href="#" class="" title="")
-								i.icon-font.icon-close
-
-			.tablet__list-wrapper
-				.tablet__list.tablet__list--inprogress
+		.tablet__new
+			.tablet__new-header
+				p!= "New Items"
+			.tablet__new-body
+				.tablet__new-row.tablet__new-row-0
 					div
-						i!= "WINE"
-						p!= "Cakebread Cellars, Merlot"
+						div
+							i!= "WINE"
+							p!= "Cakebread Cellars, Merlot"
+						div
+							span!= "$9.00"
 					div
-						span(changeColor-inProcess-js)!= "IN PROCESS"
-				.tablet__list.tablet__list--pending
+						a(href="#" class="" title="")
+							i.icon-font.icon-close
+				.tablet__new-row.tablet__new-row-1
 					div
 						i!= "Cold appetizers"
 						p!= "Chilled Shellfish Platter"
 					div
-						span(changeColor-pending-js)!= "PENDING"
-				.tablet__list.tablet__list--served
+						a(href="#" class="" title="")
+							span!= "Swipe to<br>delete"
 					div
-						i!= "Second course"
-						p!= "Fresh florida stone crab clams"
-					div
-						span(changeColor-served-js)!= "Served"
+						a(href="#" class="" title="")
+							i.icon-font.icon-close
 
-			.tablet__order
-				p!= "Order total:"
-				span!= "$245.35"
+		.tablet__list-wrapper
+			.tablet__list.tablet__list--inprogress
+				div
+					i!= "WINE"
+					p!= "Cakebread Cellars, Merlot"
+				div
+					span(changeColor-inProcess-js)!= "IN PROCESS"
+			.tablet__list.tablet__list--pending
+				div
+					i!= "Cold appetizers"
+					p!= "Chilled Shellfish Platter"
+				div
+					span(changeColor-pending-js)!= "PENDING"
+			.tablet__list.tablet__list--served
+				div
+					i!= "Second course"
+					p!= "Fresh florida stone crab clams"
+				div
+					span(changeColor-served-js)!= "Served"
 
-			a.tablet__update(href="#" class="" title="")!= "Update my order"
+		.tablet__order
+			p!= "Order total:"
+			span!= "$245.35"
+
+	.tablet__footer
+		a.tablet__update(href="#" class="" title="")!= "Update my order"
 
 
 // SECTION tablet :: END

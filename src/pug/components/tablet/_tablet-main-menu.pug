@@ -1,103 +1,102 @@
 // SECTION tablet :: START
 
 section#tablet.tablet.tablet--mainMenu
-	.tablet__wrapper
-		.tablet__wrapper-header
-			div
-				a(href="#" class="" title="")
-					span
-					span
-					span
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-user
-					span!= "3"
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-doc
-					span!= "0"
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-bell
+	.tablet__header
+		div
+			a(href="#" class="" title="")
+				span
+				span
+				span
+		div
+			a(href="" class="" title="")
+				i.icon-font.icon-user
+				span!= "3"
+		div
+			a(href="" class="" title="")
+				i.icon-font.icon-doc
+				span!= "0"
+		div
+			a(href="" class="" title="")
+				i.icon-font.icon-bell
 
-		.tablet__wrapper-content
+	.tablet__content
 
-			.tablet__carousel
-				mixin swiperContent()
-					.swiper-slide.swiper-slide-0
-						p!= "Breakfast"
-						span!= "Serving 7 am to 11 am"
-					.swiper-slide.swiper-slide-1
-						p!= "Breakfast"
-						span!= "Serving 7 am to 11 am"
-					.swiper-slide.swiper-slide-2
-						p!= "Breakfast"
-						span!= "Serving 7 am to 11 am"
+		.tablet__carousel
+			mixin swiperContent()
+				.swiper-slide.swiper-slide-0
+					p!= "Breakfast"
+					span!= "Serving 7 am to 11 am"
+				.swiper-slide.swiper-slide-1
+					p!= "Breakfast"
+					span!= "Serving 7 am to 11 am"
+				.swiper-slide.swiper-slide-2
+					p!= "Breakfast"
+					span!= "Serving 7 am to 11 am"
 
-				+swiper('swiper-container-tabletcarousel', 'swiperContent', false, true, false)
+			+swiper('swiper-container-tabletcarousel', 'swiperContent', false, true, false)
 
-			.tablet__block-wrapper.tablet__block-wrapper--thumbnail.is-thumbnail
-				a.tablet__block(href="#" class="" title="")
-					div
-						img(src="img/img-tablet-box.jpg" alt="" title="")
-					div
-						p!= "Appetizers"
-				a.tablet__block(href="#" class="" title="")
-					div
-						img(src="img/img-tablet-box.jpg" alt="" title="")
-					div
-						p!= "Soups & Salads"
-				a.tablet__block(href="#" class="" title="")
-					div
-						img(src="img/img-tablet-box.jpg" alt="" title="")
-					div
-						p!= "Classic Favorites"
-				a.tablet__block(href="#" class="" title="")
-					div
-						img(src="img/img-tablet-box.jpg" alt="" title="")
-					div
-						p!= "Taste of Mediterranian"
-				a.tablet__block(href="#" class="" title="")
-					div
-						img(src="img/img-tablet-box.jpg" alt="" title="")
-					div
-						p!= "Chicken"
-				a.tablet__block(href="#" class="" title="")
-					div
-						img(src="img/img-tablet-box.jpg" alt="" title="")
-					div
-						p!= "Seafood"
+		.tablet__block-wrapper.tablet__block-wrapper--thumbnail.is-thumbnail
+			a.tablet__block(href="#" class="" title="")
+				div
+					img(src="img/img-tablet-box.jpg" alt="" title="")
+				div
+					p!= "Appetizers"
+			a.tablet__block(href="#" class="" title="")
+				div
+					img(src="img/img-tablet-box.jpg" alt="" title="")
+				div
+					p!= "Soups & Salads"
+			a.tablet__block(href="#" class="" title="")
+				div
+					img(src="img/img-tablet-box.jpg" alt="" title="")
+				div
+					p!= "Classic Favorites"
+			a.tablet__block(href="#" class="" title="")
+				div
+					img(src="img/img-tablet-box.jpg" alt="" title="")
+				div
+					p!= "Taste of Mediterranian"
+			a.tablet__block(href="#" class="" title="")
+				div
+					img(src="img/img-tablet-box.jpg" alt="" title="")
+				div
+					p!= "Chicken"
+			a.tablet__block(href="#" class="" title="")
+				div
+					img(src="img/img-tablet-box.jpg" alt="" title="")
+				div
+					p!= "Seafood"
 
-			.tablet__block-wrapper.tablet__block-wrapper--list.is-list
-				a.tablet__block(href="#" class="" title="")
-					div
-						p!= "Appetizers"
-				a.tablet__block(href="#" class="" title="")
-					div
-						p!= "Soups & Salads"
-				a.tablet__block(href="#" class="" title="")
-					div
-						p!= "Classic Favorites"
-				a.tablet__block(href="#" class="" title="")
-					div
-						p!= "Taste of Mediterranian"
-				a.tablet__block(href="#" class="" title="")
-					div
-						p!= "Chicken"
-				a.tablet__block(href="#" class="" title="")
-					div
-						p!= "Seafood"
+		.tablet__block-wrapper.tablet__block-wrapper--list.is-list
+			a.tablet__block(href="#" class="" title="")
+				div
+					p!= "Appetizers"
+			a.tablet__block(href="#" class="" title="")
+				div
+					p!= "Soups & Salads"
+			a.tablet__block(href="#" class="" title="")
+				div
+					p!= "Classic Favorites"
+			a.tablet__block(href="#" class="" title="")
+				div
+					p!= "Taste of Mediterranian"
+			a.tablet__block(href="#" class="" title="")
+				div
+					p!= "Chicken"
+			a.tablet__block(href="#" class="" title="")
+				div
+					p!= "Seafood"
 
-			.tablet__info-wrapper
-				p.tablet__info-title!= 'Information'
+		.tablet__info-wrapper
+			p.tablet__info-title!= 'Information'
 
-				a.tablet__info-link(href="#" class="" title="")!= "History & The Team"
-				a.tablet__info-link(href="#" class="" title="")!= "Loyalty program"
-				a.tablet__info-link(href="#" class="" title="")!= "Upcoming events"
+			a.tablet__info-link(href="#" class="" title="")!= "History & The Team"
+			a.tablet__info-link(href="#" class="" title="")!= "Loyalty program"
+			a.tablet__info-link(href="#" class="" title="")!= "Upcoming events"
 
-				img.tablet__info-logo(src="img/img-tablet-sublogo.png" srcset="img/img-tablet-sublogo@2x.png 2x" alt="" title="")
+			img.tablet__info-logo(src="img/img-tablet-sublogo.png" srcset="img/img-tablet-sublogo@2x.png 2x" alt="" title="")
 
-				p.tablet__info!= "powered by dinnerbell"
+			p.tablet__info!= "powered by dinnerbell"
 
 
 
