@@ -84,13 +84,13 @@ $(document).ready((ev) => {
 
 
 	const initChooseColor = () => {
-		const _colorArr = $('.mds__form-color-content > a');
+		const _colorArr = $('.mds__form-color-content > a, [change-color-js] > a');
 
-		_colorArr.map((idx, val) => {
-			const _parentNode = $(val).closest('.mds__form-color-content');
+		for(let el of _colorArr) {
+			const _parentNode = ($(el).closest('[change-color-js]').length === 0) ? $(el).closest('.mds__form-color-content') : $(el).closest('[change-color-js]');
 
 			new Pickr({
-				el: val,
+				el: el,
 				default: _parentNode.data('color'),
 				components: {
 					preview: true,
@@ -112,6 +112,9 @@ $(document).ready((ev) => {
 				_parentNode.find('span').css({
 					'backgroundColor' : _color
 				});
+				_parentNode.css({
+					'backgroundColor' : _color
+				});
 
 				if($('.tablet--menuItems').length > 0) {
 					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
@@ -130,7 +133,74 @@ $(document).ready((ev) => {
 						'color' : _color
 					});
 				}
+
+				if($('.tablet--logout').length > 0) {
+					$('.tablet--logout .tablet__content').css({
+						'background-color' : _color
+					});
+				}
 			});
+		}
+	};
+
+
+	const initTabletPreviewChangeBackgroundImage = () => {
+		const _logoutBGNode =  $('.tablet--logout .tablet__content');
+
+		$('[upload-image-js] input[type="file"]').on('change', (ev) => {
+
+			const _previewTemplate = (fileName) => {
+				return  `
+				<div class="mds__upload-row">
+					<div>
+						<p>${fileName}</p>
+						<a href="#" title="" upload-remove-js>
+							<i class="icon-font icon-bin"></i>
+						</a>
+					</div>    				
+				</div>								
+			`
+			};
+
+			const _showDetails = (node, filesArr) => {
+				node.prev().hide();
+				node.fadeIn(350).css({'display':'flex'});
+
+				for(let _idx = 0; _idx < filesArr; _idx++) {
+					node.append(_previewTemplate(ev.currentTarget.files[_idx].name));
+				}
+			};
+
+			const _hideDetails = (node) => {
+				console.log(`node - ${node}`);
+				node.prev().fadeIn(350);
+				node.hide();
+			};
+
+			if(ev.currentTarget.files.length !== 0) {
+				const reader = new FileReader(),
+					_previewStatic = $(ev.currentTarget).closest('.mds__change-bg').find('[upload-previewFiles-js]');
+
+				reader.onload = () => {
+					_logoutBGNode.css({
+						'background-image' : 'url("' + reader.result + '")'
+					});
+				};
+
+				_showDetails(_previewStatic, ev.currentTarget.files.length);
+
+				$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', (ev) => {
+					_hideDetails(_previewStatic);
+
+					_logoutBGNode.css({
+						'background-image' : 'url("")'
+					});
+				});
+
+				reader.readAsDataURL(ev.currentTarget.files[0]);
+			}
+
+			$(ev.currentTarget).val('');
 		});
 	};
 
@@ -595,6 +665,7 @@ $(document).ready((ev) => {
 		initTabletPreview();
 		initTabletPreviewSelectFonts();
 		initTabletPreviewSelectCurrency();
+		initTabletPreviewChangeBackgroundImage();
 		// ==========================================
   };
   initJquery();

@@ -28,13 +28,22 @@ section#mds.mds
 
 			form.c-form(action="" autocomplete='off')
 
-				.mds__screen.mds__screen--nc.mds__screen--wbbs
-					p.mds__screen-title!= "Background image"
-					.mds__screen-row
-						.mds__screen-col.mds__screen-col-0
-							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
-						.mds__screen-col.mds__screen-col-1
-							a(href="#" title='').mds__screen-upload!= "Upload images"
+				.mds__change
+					p.mds__screen-title!= "Background"
+					.mds__change-wrapper
+						.mds__change-left
+							p.mds__change-title!= "Color"
+							.mds__change-color(change-color-js data-color="#131323")
+								a(href="#" class="" title="")
+
+						.mds__change-right
+							p.mds__change-title!= "Background image"
+							.mds__change-bg
+								.mds__change-upload(upload-image-js)
+									!= "Upload image"
+									input(type='file' accept=".jpg, .jpeg, .png" name='upload_image')
+
+								.mds__upload-row-wrapper(upload-previewFiles-js)
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 

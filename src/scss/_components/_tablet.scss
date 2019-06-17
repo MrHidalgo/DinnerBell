@@ -5,13 +5,6 @@
 	position: relative;
 	width: 600px;
 	height: 1024px;
-	//min-height: 1024px;
-	//@include adaptive(1023) {
-	//	overflow-y: auto;
-	//	min-height: auto;
-	//	max-height: calc(100vh - 80px);
-	//	padding: 20px;
-	//}
 
 	&__header {
 		z-index: 2;
@@ -1683,6 +1676,13 @@
 	// logout
 	&--logout {
 		.tablet {
+			&__content {
+				background-image: url('');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
 			&__logout {
 				display: flex;
 				align-items: center;
