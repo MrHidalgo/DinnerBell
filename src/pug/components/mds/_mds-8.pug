@@ -12,14 +12,14 @@ section#mds.mds
 						span!= "Log Out"
 						i.icon-font.icon-corner
 					.mds__title-drop(dropdown-menu-js)
-						a(href="#" class="" title="")!= "Base theme"
-						a(href="#" class="" title="")!= "Base settings"
-						a(href="#" class="" title="")!= "Intro screen"
-						a(href="#" class="" title="")!= "Main menu"
-						a(href="#" class="" title="")!= "Menu items"
-						a(href="#" class="" title="")!= "Item details"
-						a(href="#" class="" title="")!= "Feedback"
-						a(href="#" class="" title="")!= "My order"
+						a(href="menu-design-setting.html#" class="" title="")!= "Base theme"
+						a(href="menu-design-setting-1.html" class="" title="")!= "Base settings"
+						a(href="menu-design-setting-2.html" class="" title="")!= "Intro screen"
+						a(href="menu-design-setting-3.html" class="" title="")!= "Main menu"
+						a(href="menu-design-setting-4.html" class="" title="")!= "Menu items"
+						a(href="menu-design-setting-5.html" class="" title="")!= "Item details"
+						a(href="menu-design-setting-6.html" class="" title="")!= "Feedback"
+						a(href="menu-design-setting-7.html" class="" title="")!= "My order"
 
 				a.mds__wrapper-preview(href="#" class="" title="")
 					p
@@ -28,22 +28,46 @@ section#mds.mds
 
 			form.c-form(action="" autocomplete='off')
 
-				.mds__change
-					p.mds__screen-title!= "Background"
-					.mds__change-wrapper
-						.mds__change-left
-							p.mds__change-title!= "Color"
-							.mds__change-color(change-color-js data-color="#131323")
+				.mds__upload(upload-file-js)
+					p.mds__upload-title.mds__screen-title!= "Background"
+
+					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--main(upload-main-js)
+						.mds__upload-left
+							p.mds__upload-subtitle!= "Color"
+							.mds__upload-color(change-bg-js data-default-color="#131323")
 								a(href="#" class="" title="")
+								span
 
-						.mds__change-right
-							p.mds__change-title!= "Background image"
-							.mds__change-bg
-								.mds__change-upload(upload-image-js)
-									!= "Upload image"
-									input(type='file' accept=".jpg, .jpeg, .png" name='upload_image')
+						.mds__upload-right
+							p.mds__upload-subtitle!= "Background image"
+							.mds__upload-bg(change-imageParent-js)
+								div(change-img-js)
+									span!= "Upload image"
+									input(type='file' accept=".jpg, .jpeg, .png" name='upload_')
 
-								.mds__upload-row-wrapper(upload-previewFiles-js)
+					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)
+						div
+							.mds__upload-left
+								.mds__upload-preview(upload-preview-js)
+									p!= "image<br>preview"
+
+							.mds__upload-right
+
+								.mds__upload-option
+
+									.mds__upload-radio
+										div
+											label
+												input(type='radio' name='upload_image_size' checked upload-imgFixed-js)
+												span!= "Fixed position"
+										div
+											label
+												input(type='radio' name='upload_image_size' upload-imgRepeat-js)
+												span!= "Repeat / Tile image"
+
+									a.mds__upload-remove(href="#" class="" title="" upload-remove-js)
+										i.icon-font.icon-bin
+										span!= "Remove image"
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 

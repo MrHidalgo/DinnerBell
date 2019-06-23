@@ -143,6 +143,194 @@ $(document).ready((ev) => {
 		}
 	};
 
+	const _additionMethodsUploadFiles = () => {
+		const _additionalOption = $('[upload-additional-js]'),
+			_colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
+			_previewNode = $('[upload-preview-js]'),
+			_fixedImageBtn = $('[upload-imgFixed-js]'),
+			_repeatImageBtn = $('[upload-imgRepeat-js]');
+
+		const _tabletBG = $('[tablet-bg-js]');
+
+		const _defaultOption = {
+			fixed: {
+				'background-repeat' : 'no-repeat',
+				'background-position' : 'center',
+				'background-size' : 'cover',
+			},
+			repeat: {
+				'background-repeat' : 'repeat',
+				'background-position' : 'top left',
+				'background-size' : 'unset',
+			},
+			default: {
+				'background-image' : 'url("")',
+				'background-size' : 'cover',
+				'background-repeat' : 'no-repeat',
+				'background-position' : 'center',
+			}
+		};
+
+		return {
+			showAdditionalUploadImageOption () {
+				console.log(`showAdditionalUploadImageOption`);
+
+				_additionalOption.slideDown(400);
+			},
+			hideAdditionalUploadImageOption () {
+				console.log(`hideAdditionalUploadImageOption`);
+
+				_additionalOption.hide();
+			},
+			addImageOnPreview (file) {
+				console.log(`showImageOnPreview`);
+
+				_previewNode.css({
+					'background-image' : 'url("' + file + '")'
+				}).find("> *").hide();
+
+				_tabletBG.css({
+					'background-image' : 'url("' + file + '")'
+				});
+			},
+			removeImageOnPreview () {
+				console.log(`hideImageOnPreview`);
+
+				_previewNode.css(
+					_defaultOption.default
+				).find("> *").show();
+
+				_tabletBG.css(_defaultOption.default);
+			},
+			showColorPallet () {
+				console.log(`showColorPallet`);
+
+				_colorPallet.css({
+					'opacity' : '1'
+				});
+			},
+			hideColorPallet () {
+				console.log(`hideColorPallet`);
+
+				_colorPallet.css({
+					'opacity' : '0'
+				});
+			},
+			fixedBGOption () {
+				console.log(`fixedBGOption`);
+
+				_fixedImageBtn.on('change', (ev) => {
+					[_previewNode, _tabletBG].map((el,idx) => {
+						el.css(_defaultOption.fixed);
+					});
+				});
+			},
+			repeatBGOption () {
+				console.log(`repeatBGOption`);
+
+				_repeatImageBtn.on('change', (ev) => {
+					[_previewNode, _tabletBG].map((el,idx) => {
+						el.css(_defaultOption.repeat);
+					});
+				});
+			},
+			resetBGOption () {
+				console.log('resetBGOption');
+
+				if($('[upload-imgRepeat-js]').is(':checked')) {
+					$('[upload-imgFixed-js]').prop('checked', true).change();
+				}
+			},
+			removeImage () {
+				console.log(`removeImage`);
+
+				$('[upload-remove-js]').on('click', (ev) => {
+					this.hideAdditionalUploadImageOption();
+					this.showColorPallet();
+					this.removeImageOnPreview();
+					this.resetBGOption();
+
+					ev.stopPropagation();
+				});
+			}
+		}
+	};
+
+
+	const initTPChangeImage = () => {
+		_additionMethodsUploadFiles().removeImage();
+		_additionMethodsUploadFiles().fixedBGOption();
+		_additionMethodsUploadFiles().repeatBGOption();
+
+		$('[change-img-js] input[type="file"]').on('change', (ev) => {
+			console.log(`change upload`);
+
+			const _self = $(ev.currentTarget);
+
+			_additionMethodsUploadFiles().hideColorPallet();
+
+			if(_self[0].files.length !== 0) {
+				const reader = new FileReader();
+
+				reader.onload = () => {
+					const _file = reader.result;
+
+					_additionMethodsUploadFiles().addImageOnPreview(_file);
+				};
+
+				_additionMethodsUploadFiles().showAdditionalUploadImageOption();
+
+				reader.readAsDataURL(_self[0].files[0]);
+			}
+
+			_self.val('');
+		});
+	};
+
+
+	const initTPChangeColor = () => {
+		const _colorNodes = $('[change-bg-js] > a');
+
+		for(let _el of _colorNodes) {
+			const _parentNode = $(_el).closest('[change-bg-js]');
+
+			new Pickr({
+				el: _el,
+				default: _parentNode.data('default-color'),
+				components: {
+					preview: true,
+					opacity: true,
+					hue: true,
+					interaction: {
+						hex: true,
+						rgba: true,
+						hsva: true,
+						input: true,
+						clear: false,
+						save: true
+					}
+				}
+			}).on('change', (...args) => {
+				let _color = args[0].toHEXA().toString();
+
+				const _colorNodeView = _parentNode.find('> span'),
+					_logoutBG = $('.tablet__content');
+
+				_colorNodeView.css({
+					'backgroundColor' : _color
+				});
+
+				// LOGOUT BACKGROUND COLOR
+				if($('.tablet--logout').length > 0) {
+					_logoutBG.css({
+						'backgroundColor' : _color
+					});
+				}
+			});
+
+		}
+	};
+
 
 	const initTabletPreviewChangeBackgroundImage = () => {
 		const _logoutBGNode =  $('.tablet--logout .tablet__content');
@@ -172,7 +360,6 @@ $(document).ready((ev) => {
 			};
 
 			const _hideDetails = (node) => {
-				console.log(`node - ${node}`);
 				node.prev().fadeIn(350);
 				node.hide();
 			};
@@ -666,6 +853,9 @@ $(document).ready((ev) => {
 		initTabletPreviewSelectFonts();
 		initTabletPreviewSelectCurrency();
 		initTabletPreviewChangeBackgroundImage();
+
+		initTPChangeColor();
+		initTPChangeImage();
 		// ==========================================
   };
   initJquery();

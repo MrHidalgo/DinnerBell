@@ -2,9 +2,11 @@
 
 .tablet {
 	overflow: hidden;
+	pointer-events: none;
 	position: relative;
 	width: 600px;
 	height: 1024px;
+	border: 1px solid #efefef;
 
 	&__header {
 		z-index: 2;

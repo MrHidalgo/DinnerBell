@@ -571,6 +571,220 @@ $(document).ready(function (ev) {
 		}
 	};
 
+	var _additionMethodsUploadFiles = function _additionMethodsUploadFiles() {
+		var _additionalOption = $('[upload-additional-js]'),
+		    _colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
+		    _previewNode = $('[upload-preview-js]'),
+		    _fixedImageBtn = $('[upload-imgFixed-js]'),
+		    _repeatImageBtn = $('[upload-imgRepeat-js]');
+
+		var _tabletBG = $('[tablet-bg-js]');
+
+		var _defaultOption = {
+			fixed: {
+				'background-repeat': 'no-repeat',
+				'background-position': 'center',
+				'background-size': 'cover'
+			},
+			repeat: {
+				'background-repeat': 'repeat',
+				'background-position': 'top left',
+				'background-size': 'unset'
+			},
+			default: {
+				'background-image': 'url("")',
+				'background-size': 'cover',
+				'background-repeat': 'no-repeat',
+				'background-position': 'center'
+			}
+		};
+
+		return {
+			showAdditionalUploadImageOption: function showAdditionalUploadImageOption() {
+				console.log('showAdditionalUploadImageOption');
+
+				_additionalOption.slideDown(400);
+			},
+			hideAdditionalUploadImageOption: function hideAdditionalUploadImageOption() {
+				console.log('hideAdditionalUploadImageOption');
+
+				_additionalOption.hide();
+			},
+			addImageOnPreview: function addImageOnPreview(file) {
+				console.log('showImageOnPreview');
+
+				_previewNode.css({
+					'background-image': 'url("' + file + '")'
+				}).find("> *").hide();
+
+				_tabletBG.css({
+					'background-image': 'url("' + file + '")'
+				});
+			},
+			removeImageOnPreview: function removeImageOnPreview() {
+				console.log('hideImageOnPreview');
+
+				_previewNode.css(_defaultOption.default).find("> *").show();
+
+				_tabletBG.css(_defaultOption.default);
+			},
+			showColorPallet: function showColorPallet() {
+				console.log('showColorPallet');
+
+				_colorPallet.css({
+					'opacity': '1'
+				});
+			},
+			hideColorPallet: function hideColorPallet() {
+				console.log('hideColorPallet');
+
+				_colorPallet.css({
+					'opacity': '0'
+				});
+			},
+			fixedBGOption: function fixedBGOption() {
+				console.log('fixedBGOption');
+
+				_fixedImageBtn.on('change', function (ev) {
+					[_previewNode, _tabletBG].map(function (el, idx) {
+						el.css(_defaultOption.fixed);
+					});
+				});
+			},
+			repeatBGOption: function repeatBGOption() {
+				console.log('repeatBGOption');
+
+				_repeatImageBtn.on('change', function (ev) {
+					[_previewNode, _tabletBG].map(function (el, idx) {
+						el.css(_defaultOption.repeat);
+					});
+				});
+			},
+			resetBGOption: function resetBGOption() {
+				console.log('resetBGOption');
+
+				if ($('[upload-imgRepeat-js]').is(':checked')) {
+					$('[upload-imgFixed-js]').prop('checked', true).change();
+				}
+			},
+			removeImage: function removeImage() {
+				var _this = this;
+
+				console.log('removeImage');
+
+				$('[upload-remove-js]').on('click', function (ev) {
+					_this.hideAdditionalUploadImageOption();
+					_this.showColorPallet();
+					_this.removeImageOnPreview();
+					_this.resetBGOption();
+
+					ev.stopPropagation();
+				});
+			}
+		};
+	};
+
+	var initTPChangeImage = function initTPChangeImage() {
+		_additionMethodsUploadFiles().removeImage();
+		_additionMethodsUploadFiles().fixedBGOption();
+		_additionMethodsUploadFiles().repeatBGOption();
+
+		$('[change-img-js] input[type="file"]').on('change', function (ev) {
+			console.log('change upload');
+
+			var _self = $(ev.currentTarget);
+
+			_additionMethodsUploadFiles().hideColorPallet();
+
+			if (_self[0].files.length !== 0) {
+				var reader = new FileReader();
+
+				reader.onload = function () {
+					var _file = reader.result;
+
+					_additionMethodsUploadFiles().addImageOnPreview(_file);
+				};
+
+				_additionMethodsUploadFiles().showAdditionalUploadImageOption();
+
+				reader.readAsDataURL(_self[0].files[0]);
+			}
+
+			_self.val('');
+		});
+	};
+
+	var initTPChangeColor = function initTPChangeColor() {
+		var _colorNodes = $('[change-bg-js] > a');
+
+		var _loop3 = function _loop3(_el) {
+			var _parentNode = $(_el).closest('[change-bg-js]');
+
+			new Pickr({
+				el: _el,
+				default: _parentNode.data('default-color'),
+				components: {
+					preview: true,
+					opacity: true,
+					hue: true,
+					interaction: {
+						hex: true,
+						rgba: true,
+						hsva: true,
+						input: true,
+						clear: false,
+						save: true
+					}
+				}
+			}).on('change', function () {
+				for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+					args[_key2] = arguments[_key2];
+				}
+
+				var _color = args[0].toHEXA().toString();
+
+				var _colorNodeView = _parentNode.find('> span'),
+				    _logoutBG = $('.tablet__content');
+
+				_colorNodeView.css({
+					'backgroundColor': _color
+				});
+
+				// LOGOUT BACKGROUND COLOR
+				if ($('.tablet--logout').length > 0) {
+					_logoutBG.css({
+						'backgroundColor': _color
+					});
+				}
+			});
+		};
+
+		var _iteratorNormalCompletion5 = true;
+		var _didIteratorError5 = false;
+		var _iteratorError5 = undefined;
+
+		try {
+			for (var _iterator5 = _colorNodes[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+				var _el = _step5.value;
+
+				_loop3(_el);
+			}
+		} catch (err) {
+			_didIteratorError5 = true;
+			_iteratorError5 = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion5 && _iterator5.return) {
+					_iterator5.return();
+				}
+			} finally {
+				if (_didIteratorError5) {
+					throw _iteratorError5;
+				}
+			}
+		}
+	};
+
 	var initTabletPreviewChangeBackgroundImage = function initTabletPreviewChangeBackgroundImage() {
 		var _logoutBGNode = $('.tablet--logout .tablet__content');
 
@@ -590,7 +804,6 @@ $(document).ready(function (ev) {
 			};
 
 			var _hideDetails = function _hideDetails(node) {
-				console.log('node - ' + node);
 				node.prev().fadeIn(350);
 				node.hide();
 			};
@@ -707,7 +920,7 @@ $(document).ready(function (ev) {
 					} else {
 						_parentNode2.removeClass('is-error');
 
-						var _loop3 = function _loop3(_idx) {
+						var _loop4 = function _loop4(_idx) {
 							if (input.files[_idx]) {
 								var _reader = new FileReader();
 
@@ -728,7 +941,7 @@ $(document).ready(function (ev) {
 						};
 
 						for (var _idx = 0; _idx < input.files.length; _idx++) {
-							_loop3(_idx);
+							_loop4(_idx);
 						}
 					}
 				} else if (mode === 'video') {
@@ -1056,6 +1269,9 @@ $(document).ready(function (ev) {
 		initTabletPreviewSelectFonts();
 		initTabletPreviewSelectCurrency();
 		initTabletPreviewChangeBackgroundImage();
+
+		initTPChangeColor();
+		initTPChangeImage();
 		// ==========================================
 	};
 	initJquery();

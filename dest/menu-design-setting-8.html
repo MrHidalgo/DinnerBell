@@ -394,25 +394,49 @@
             <div class="mds__wrapper-heading">
               <div class="mds__title-wrapper" dropdown-js>
                 <div class="mds__title mds__title--internal" dropdown-btn-js><span>Log Out</span><i class="icon-font icon-corner"></i></div>
-                <div class="mds__title-drop" dropdown-menu-js><a href="#" title="">Base theme</a><a href="#" title="">Base settings</a><a href="#" title="">Intro screen</a><a href="#" title="">Main menu</a><a href="#" title="">Menu items</a><a href="#" title="">Item details</a><a href="#" title="">Feedback</a><a href="#" title="">My order</a></div>
+                <div class="mds__title-drop" dropdown-menu-js><a href="menu-design-setting.html#" title="">Base theme</a><a href="menu-design-setting-1.html" title="">Base settings</a><a href="menu-design-setting-2.html" title="">Intro screen</a><a href="menu-design-setting-3.html" title="">Main menu</a><a href="menu-design-setting-4.html" title="">Menu items</a><a href="menu-design-setting-5.html" title="">Item details</a><a href="menu-design-setting-6.html" title="">Feedback</a><a href="menu-design-setting-7.html" title="">My order</a></div>
               </div><a class="mds__wrapper-preview" href="#" title="">
                 <p><i class="icon-font icon-eye"></i></p><span>preview</span></a>
             </div>
             <form class="c-form" action="" autocomplete="off">
-              <div class="mds__change">
-                <p class="mds__screen-title">Background</p>
-                <div class="mds__change-wrapper">
-                  <div class="mds__change-left">
-                    <p class="mds__change-title">Color</p>
-                    <div class="mds__change-color" change-color-js data-color="#131323"><a href="#" title=""></a></div>
+              <div class="mds__upload" upload-file-js>
+                <p class="mds__upload-title mds__screen-title">Background</p>
+                <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--main" upload-main-js>
+                  <div class="mds__upload-left">
+                    <p class="mds__upload-subtitle">Color</p>
+                    <div class="mds__upload-color" change-bg-js data-default-color="#131323"><a href="#" title=""></a><span></span></div>
                   </div>
-                  <div class="mds__change-right">
-                    <p class="mds__change-title">Background image</p>
-                    <div class="mds__change-bg">
-                      <div class="mds__change-upload" upload-image-js>Upload image
-                        <input type="file" accept=".jpg, .jpeg, .png" name="upload_image">
+                  <div class="mds__upload-right">
+                    <p class="mds__upload-subtitle">Background image</p>
+                    <div class="mds__upload-bg" change-imageParent-js>
+                      <div change-img-js><span>Upload image</span>
+                        <input type="file" accept=".jpg, .jpeg, .png" name="upload_">
                       </div>
-                      <div class="mds__upload-row-wrapper" upload-previewFiles-js></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--additional" upload-additional-js>
+                  <div>
+                    <div class="mds__upload-left">
+                      <div class="mds__upload-preview" upload-preview-js>
+                        <p>image<br>preview</p>
+                      </div>
+                    </div>
+                    <div class="mds__upload-right">
+                      <div class="mds__upload-option">
+                        <div class="mds__upload-radio">
+                          <div>
+                            <label>
+                              <input type="radio" name="upload_image_size" checked upload-imgFixed-js><span>Fixed position</span>
+                            </label>
+                          </div>
+                          <div>
+                            <label>
+                              <input type="radio" name="upload_image_size" upload-imgRepeat-js><span>Repeat / Tile image</span>
+                            </label>
+                          </div>
+                        </div><a class="mds__upload-remove" href="#" title="" upload-remove-js><i class="icon-font icon-bin"></i><span>Remove image</span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -437,7 +461,7 @@
                 <div><a href="" title=""><i class="icon-font icon-doc"></i><span>0</span></a></div>
                 <div><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
               </div>
-              <div class="tablet__content"></div>
+              <div class="tablet__content" tablet-bg-js></div>
               <div class="tablet__footer"><a class="tablet__logout" href="#" title="">Logout</a></div>
             </section>
             <!-- SECTION tablet :: END-->
