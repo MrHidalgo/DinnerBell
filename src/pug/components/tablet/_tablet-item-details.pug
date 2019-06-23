@@ -22,262 +22,264 @@ section#tablet.tablet.tablet--itemDetails
 	.tablet__content
 		.tablet__banner
 
-		.tablet__heading
-			.tablet__heading--top
-				.tablet__heading--left
-					p!= "Fresh florida stone crab clams"
-				.tablet__heading--right
-					i.icon-font.icon-cook
-			.tablet__heading--bottom
-				span!= "Sushi-grade tuna, avocado, seaweed salad, forbidden rice, dynamite sauce, and honey wasabi aioli"
+		.tablet__content-cover(tablet-bg-js)
 
-		p.tablet__sibtitle!= "Portion size"
+			.tablet__heading
+				.tablet__heading--top
+					.tablet__heading--left
+						p!= "Fresh florida stone crab clams"
+					.tablet__heading--right
+						i.icon-font.icon-cook
+				.tablet__heading--bottom
+					span!= "Sushi-grade tuna, avocado, seaweed salad, forbidden rice, dynamite sauce, and honey wasabi aioli"
 
-		.tablet__radio-group
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Small"
-						span!= "$8"
-						i!= "2-3 oz ∙ 440 cal"
-				div
-					label
-						input(type='radio' name='portion_size' checked)
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Medium"
-						span!= "$12"
-						i!= "3-5 oz ∙ 510 cal"
-				div
-					label
-						input(type='radio' name='portion_size')
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Large"
-						span!= "$18"
-						i!= "5-9 oz ∙ 730 cal"
-				div
-					label
-						input(type='radio' name='portion_size')
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Extra Large"
-						span!= "$20"
-						i!= "9-12 oz ∙ 1230 cal"
-				div
-					label
-						input(type='radio' name='portion_size')
-						span
+			p.tablet__sibtitle!= "Portion size"
 
-		.tablet__range-wrapper
-			.tablet__range
-				div
-					p.tablet__sibtitle!= "Spice level"
-					span!= "Medium"
-				div
-					input(type="text")
-			.tablet__range
-				div
-					p.tablet__sibtitle!= "Temperature"
-					span!= "Rare"
-				div
-					input(type="text")
-
-
-		p.tablet__sibtitle!= "Dressing options"
-
-		.tablet__radio-group
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Italian Dressing"
-						i!= "40 cal"
-				div
-					label
-						input(type='radio' name='dressing_options' checked)
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "LowFat Italian"
-						i!= "20 cal"
-				div
-					label
-						input(type='radio' name='dressing_options')
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Oil & Vinegar"
-						i!= "30 cal"
-				div
-					label
-						input(type='radio' name='dressing_options')
-						span
-
-		p.tablet__sibtitle!= "On the side"
-
-		.tablet__box-wrapper
-			a.tablet__box(href="#" class="" title="")
-				.tablet__box-img
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				.tablet__box-content
-					p!= "Pearl Couscous Salad with Cherries & Arugula"
-					span!= "<i>$6.5</i> ∙ 99 cal"
-
-			a.tablet__box(href="#" class="" title="")
-				.tablet__box-img
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				.tablet__box-content
-					p!= "Garlicky Roasted Broccoli"
-					span!= "<i>$5</i> ∙ 99 cal"
-
-			a.tablet__box(href="#" class="" title="")
-				.tablet__box-img
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				.tablet__box-content
-					p!= "Pearl Couscous Salad with Cherries & Arugula"
-					span!= "<i>$6.5</i> ∙ 99 cal"
-
-			a.tablet__box(href="#" class="" title="")
-				.tablet__box-img
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				.tablet__box-content
-					p!= "Garlicky Roasted Broccoli"
-					span!= "<i>$5</i> ∙ 99 cal"
-
-		p.tablet__sibtitle!= "Beverage"
-
-		.tablet__radio-group
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Green tea"
-				div
-					label
-						input(type='radio' name='beverage' checked)
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Black tea"
-				div
-					label
-						input(type='radio' name='beverage')
-						span
-			.tablet__radio-group-field
-				div
-					p
-						strong!= "Coffee"
-				div
-					label
-						input(type='radio' name='beverage')
-						span
-
-		p.tablet__sibtitle!= "Essentials"
-
-		.tablet__count-group
-			.tablet__count-group-field
-				div
-					p
-						strong!= "Pickled Cherry Peppers"
-						span!= "90cal"
-					p!= "+ $0.79"
-				div
-					a(href="#" class="" title="")
-						span!= "-"
-					span!= "0"
-					a(href="#" class="" title="")
-						span!= "+"
-			.tablet__count-group-field
-				div
-					p
-						strong!= "Beet & Carrot Noodles"
-						span!= "60cal"
-					p!= "+ $0.79"
-				div
-					a(href="#" class="" title="")
-						span!= "-"
-					span!= "0"
-					a(href="#" class="" title="")
-						span!= "+"
-			.tablet__count-group-field
-				div
-					p
-						strong!= "Kelp Noodles"
-						span!= "120cal"
-					p!= "+ $0.79"
-				div
-					a(href="#" class="" title="")
-						span!= "-"
-					span!= "0"
-					a(href="#" class="" title="")
-						span!= "+"
-
-		p.tablet__sibtitle!= "Personal preferences"
-
-		.tablet__ques-group
-			.tablet__ques-group-field
-				div
-					p!= "Would you like your dressing mixed in?"
-				div
-					label
-						input(type='radio' name="personal_preferences_0" checked)
+			.tablet__radio-group
+				.tablet__radio-group-field
+					div
 						p
-							span!= "Yes"
-					label
-						input(type='radio' name="personal_preferences_0")
+							strong!= "Small"
+							span!= "$8"
+							i!= "2-3 oz ∙ 440 cal"
+					div
+						label
+							input(type='radio' name='portion_size' checked)
+							span
+				.tablet__radio-group-field
+					div
 						p
-							span!= "No"
-			.tablet__ques-group-field
-				div
-					p!= "Do you like your salad chopped?"
-				div
-					label
-						input(type='radio' name="personal_preferences_1")
+							strong!= "Medium"
+							span!= "$12"
+							i!= "3-5 oz ∙ 510 cal"
+					div
+						label
+							input(type='radio' name='portion_size')
+							span
+				.tablet__radio-group-field
+					div
 						p
-							span!= "Yes"
-					label
-						input(type='radio' name="personal_preferences_1" checked)
+							strong!= "Large"
+							span!= "$18"
+							i!= "5-9 oz ∙ 730 cal"
+					div
+						label
+							input(type='radio' name='portion_size')
+							span
+				.tablet__radio-group-field
+					div
 						p
-							span!= "No"
+							strong!= "Extra Large"
+							span!= "$20"
+							i!= "9-12 oz ∙ 1230 cal"
+					div
+						label
+							input(type='radio' name='portion_size')
+							span
 
-		.tablet__collapse-wrapper
-			.tablet__collapse.is-open
-				.tablet__collapse-header
-					p!= "Nutritional info"
-					i.icon-font.icon-corner
+			.tablet__range-wrapper
+				.tablet__range
+					div
+						p.tablet__sibtitle!= "Spice level"
+						span!= "Medium"
+					div
+						input(type="text")
+				.tablet__range
+					div
+						p.tablet__sibtitle!= "Temperature"
+						span!= "Rare"
+					div
+						input(type="text")
 
-				.tablet__collapse-body
-					ul
-						li
-							p!= "Calories"
+
+			p.tablet__sibtitle!= "Dressing options"
+
+			.tablet__radio-group
+				.tablet__radio-group-field
+					div
+						p
+							strong!= "Italian Dressing"
+							i!= "40 cal"
+					div
+						label
+							input(type='radio' name='dressing_options' checked)
+							span
+				.tablet__radio-group-field
+					div
+						p
+							strong!= "LowFat Italian"
+							i!= "20 cal"
+					div
+						label
+							input(type='radio' name='dressing_options')
+							span
+				.tablet__radio-group-field
+					div
+						p
+							strong!= "Oil & Vinegar"
+							i!= "30 cal"
+					div
+						label
+							input(type='radio' name='dressing_options')
+							span
+
+			p.tablet__sibtitle!= "On the side"
+
+			.tablet__box-wrapper
+				a.tablet__box.is-choose(href="#" class="" title="")
+					.tablet__box-img
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					.tablet__box-content
+						p!= "Pearl Couscous Salad with Cherries & Arugula"
+						span!= "<i>$6.5</i> ∙ 99 cal"
+
+				a.tablet__box(href="#" class="" title="")
+					.tablet__box-img
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					.tablet__box-content
+						p!= "Garlicky Roasted Broccoli"
+						span!= "<i>$5</i> ∙ 99 cal"
+
+				a.tablet__box(href="#" class="" title="")
+					.tablet__box-img
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					.tablet__box-content
+						p!= "Pearl Couscous Salad with Cherries & Arugula"
+						span!= "<i>$6.5</i> ∙ 99 cal"
+
+				a.tablet__box(href="#" class="" title="")
+					.tablet__box-img
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					.tablet__box-content
+						p!= "Garlicky Roasted Broccoli"
+						span!= "<i>$5</i> ∙ 99 cal"
+
+			p.tablet__sibtitle!= "Beverage"
+
+			.tablet__radio-group
+				.tablet__radio-group-field
+					div
+						p
+							strong!= "Green tea"
+					div
+						label
+							input(type='radio' name='beverage' checked)
+							span
+				.tablet__radio-group-field
+					div
+						p
+							strong!= "Black tea"
+					div
+						label
+							input(type='radio' name='beverage')
+							span
+				.tablet__radio-group-field
+					div
+						p
+							strong!= "Coffee"
+					div
+						label
+							input(type='radio' name='beverage')
+							span
+
+			p.tablet__sibtitle!= "Essentials"
+
+			.tablet__count-group
+				.tablet__count-group-field
+					div
+						p
+							strong!= "Pickled Cherry Peppers"
 							span!= "90cal"
-						li
-							p!= "Fat"
-							span!= "60g"
-						li
-							p!= "Trans Fatty acid"
-							span!= "0g"
+						p!= "+ $0.79"
+					div
+						a(href="#" class="" title="")
+							span!= "-"
+						span!= "0"
+						a(href="#" class="" title="")
+							span!= "+"
+				.tablet__count-group-field
+					div
+						p
+							strong!= "Beet & Carrot Noodles"
+							span!= "60cal"
+						p!= "+ $0.79"
+					div
+						a(href="#" class="" title="")
+							span!= "-"
+						span!= "0"
+						a(href="#" class="" title="")
+							span!= "+"
+				.tablet__count-group-field
+					div
+						p
+							strong!= "Kelp Noodles"
+							span!= "120cal"
+						p!= "+ $0.79"
+					div
+						a(href="#" class="" title="")
+							span!= "-"
+						span!= "0"
+						a(href="#" class="" title="")
+							span!= "+"
 
-		.tablet__quantity
-			div
-				p.tablet__sibtitle!= "Quantity"
-			div
-				a(href="#" class="" title="")
-					span!= "-"
-				span!= "0"
-				a(href="#" class="" title="")
-					span!= "+"
+			p.tablet__sibtitle!= "Personal preferences"
 
-		.tablet__desc
-			p!= "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+			.tablet__ques-group
+				.tablet__ques-group-field
+					div
+						p!= "Would you like your dressing mixed in?"
+					div
+						label
+							input(type='radio' name="personal_preferences_0" checked)
+							p
+								span!= "Yes"
+						label
+							input(type='radio' name="personal_preferences_0")
+							p
+								span!= "No"
+				.tablet__ques-group-field
+					div
+						p!= "Do you like your salad chopped?"
+					div
+						label
+							input(type='radio' name="personal_preferences_1")
+							p
+								span!= "Yes"
+						label
+							input(type='radio' name="personal_preferences_1" checked)
+							p
+								span!= "No"
+
+			.tablet__collapse-wrapper
+				.tablet__collapse.is-open
+					.tablet__collapse-header
+						p!= "Nutritional info"
+						i.icon-font.icon-corner
+
+					.tablet__collapse-body
+						ul
+							li
+								p!= "Calories"
+								span!= "90cal"
+							li
+								p!= "Fat"
+								span!= "60g"
+							li
+								p!= "Trans Fatty acid"
+								span!= "0g"
+
+			.tablet__quantity
+				div
+					p.tablet__sibtitle!= "Quantity"
+				div
+					a(href="#" class="" title="")
+						span!= "-"
+					span!= "0"
+					a(href="#" class="" title="")
+						span!= "+"
+
+			.tablet__desc
+				p!= "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
 
 	.tablet__footer
 		div

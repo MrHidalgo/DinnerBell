@@ -126,6 +126,9 @@ $(document).ready((ev) => {
 					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
 						'color' : _color
 					});
+					$('[changeBgColor-' + _parentNode.data('bg') + '-js]').css({
+						'background-color' : _color
+					});
 				}
 
 				if($('.tablet--myorder').length > 0) {
@@ -682,7 +685,7 @@ $(document).ready((ev) => {
 				min: 14,
 				max: 22,
 				from: 18,
-				step: 2,
+				step: 1,
 				grid: true,
 				hide_min_max: true,
 				hide_from_to: true,
@@ -714,17 +717,6 @@ $(document).ready((ev) => {
 		$('.tablet__box').on('click', (ev) => {
 			$('.tablet__box').removeClass('is-choose');
 			$(ev.currentTarget).addClass('is-choose');
-		});
-	};
-
-
-	const initTabletCollapse = () => {
-		$('.tablet__collapse-header').on('click', (ev) => {
-			const _btn = $(ev.currentTarget),
-				_parent = _btn.closest('.tablet__collapse');
-
-			_parent.toggleClass('is-open');
-			_parent.find('.tablet__collapse-body').slideToggle(400);
 		});
 	};
 
@@ -849,7 +841,6 @@ $(document).ready((ev) => {
 
 		initTabletRange();
 		initTabletBoxChoose();
-		initTabletCollapse();
 		initTabletMenuItemsView();
 		initTabletMainMenuBlock();
 		initTabletPreview();

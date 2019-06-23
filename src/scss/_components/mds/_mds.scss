@@ -73,22 +73,13 @@
 	}
 
 	&__subtitle {
-		padding-bottom: 24px;
+		padding-top: 15px;
+		padding-bottom: 30px;
 		color: #000000;
 		font-size: 20px;
 		font-weight: bold;
 		@include adaptive(575) {
 			text-align: center;
-		}
-
-		&--mdsMenuPt {
-			padding-top: 64px;
-		}
-		&--mdsMenuItemPt,
-		&--mdsDetailsPt,
-		&--mdsFeedbackPt,
-		&--mdsOrderPt {
-			padding-top: 30px;
 		}
 	}
 
@@ -699,7 +690,7 @@
 						}
 
 						.irs-grid {
-							bottom: -7px;
+							bottom: -6px;
 						}
 
 						.irs--round .irs-line,
@@ -726,11 +717,12 @@
 						}
 
 						.irs--round .irs-grid-pol {
-							height: 9px;
+							height: 11px;
 							background-color: #69c0f1;
 
 							&.small {
-								display: none;
+								transform: translateY(3px);
+								height: 5px;
 							}
 						}
 					}
@@ -812,48 +804,6 @@
 		}
 	}
 	// indent :: end
-
-	// upload
-	//&__upload {
-	//	margin-bottom: 20px;
-	//
-	//	&-title {
-	//		padding-bottom: 30px;
-	//		color: #000000;
-	//		font-size: 20px;
-	//		font-weight: bold;
-	//		@include adaptive(575) {
-	//			text-align: center;
-	//		}
-	//	}
-	//
-	//	&-row {
-	//		display: flex;
-	//		flex-direction: column;
-	//		padding: 15px 20px;
-	//		border-radius: 5px;
-	//		background-color: #f7f7f7;
-	//
-	//		> div {
-	//			display: flex;
-	//			align-items: center;
-	//			justify-content: space-between;
-	//		}
-	//
-	//		p {
-	//			overflow: hidden;
-	//			text-overflow: ellipsis;
-	//			white-space: nowrap;
-	//			padding-right: 20px;
-	//		}
-	//
-	//		.icon-font {
-	//			cursor: pointer;
-	//			color: #000000;
-	//		}
-	//	}
-	//}
-	// upload :: end
 
 	// change
 	&__change {
@@ -941,16 +891,11 @@
 	&__upload {
 		display: flex;
 		flex-direction: column;
-		padding-bottom: 60px;
-
-		&--hi {
-			padding-bottom: 30px;
-		}
+		padding-bottom: 30px;
 
 		&-wrapper {
 			display: flex;
 			justify-content: space-between;
-			padding-bottom: 30px;
 
 			&:last-of-type {
 				padding-bottom: 0;
@@ -960,6 +905,7 @@
 
 			&--additional {
 				display: none;
+				padding-top: 30px;
 
 				> div {
 					display: flex;
@@ -1219,7 +1165,7 @@
 	// form
 	&__form {
 		&-content {
-			padding-bottom: 60px;
+			padding-bottom: 30px;
 		}
 
 		&-color {

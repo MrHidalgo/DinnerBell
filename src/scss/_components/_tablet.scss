@@ -2,7 +2,6 @@
 
 .tablet {
 	overflow: hidden;
-	//pointer-events: none;
 	position: relative;
 	width: 600px;
 	height: 1024px;
@@ -10,6 +9,7 @@
 
 	&__header {
 		z-index: 2;
+		pointer-events: none;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -132,10 +132,23 @@
 		height: calc(100% - (55px + 80px));
 		margin-top: 55px;
 		background-color: #161616;
+		background-image: url('');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		&-cover {
+			background-color: #161616;
+			background-image: url('');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
 	}
 
 	&__footer {
 		z-index: 2;
+		pointer-events: none;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -287,6 +300,10 @@
 			&__content {
 				padding-left: 25px;
 				padding-right: 25px;
+
+				* {
+					pointer-events: none;
+				}
 			}
 
 			&__footer {
@@ -1149,6 +1166,12 @@
 	// feedback
 	&--feedback {
 		.tablet {
+			&__content {
+				* {
+					pointer-events: none;
+				}
+			}
+
 			&__banner {
 				position: relative;
 				min-height: 161px;
@@ -1271,6 +1294,10 @@
 			&__content {
 				padding-left: 25px;
 				padding-right: 25px;
+
+				* {
+					pointer-events: none;
+				}
 			}
 
 			&__heading {
@@ -1679,12 +1706,8 @@
 	&--logout {
 		.tablet {
 			&__content {
-				background-image: url('');
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
+				pointer-events: none;
 			}
-
 			&__logout {
 				display: flex;
 				align-items: center;

@@ -399,64 +399,106 @@
                 <p><i class="icon-font icon-eye"></i></p><span>preview</span></a>
             </div>
             <form class="c-form" action="" autocomplete="off">
-              <div class="mds__screen mds__screen--nc mds__screen--wbbs">
-                <p class="mds__screen-title">Background image</p>
-                <div class="mds__screen-row">
-                  <div class="mds__screen-col mds__screen-col-0">
-                    <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG</p>
+              <div class="mds__upload mds__upload--hi" upload-file-js>
+                <p class="mds__upload-title mds__screen-title">Background</p>
+                <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--main" upload-main-js>
+                  <div class="mds__upload-left">
+                    <p class="mds__upload-subtitle">Color</p>
+                    <div class="mds__upload-color" change-bg-js data-default-color="#161616"><a href="#" title=""></a><span></span></div>
                   </div>
-                  <div class="mds__screen-col mds__screen-col-1"><a class="mds__screen-upload" href="#" title="">Upload images</a></div>
+                  <div class="mds__upload-right">
+                    <p class="mds__upload-subtitle">Background image</p>
+                    <div class="mds__upload-bg" change-imageParent-js>
+                      <div change-img-js><span>Upload image</span>
+                        <input type="file" accept=".jpg, .jpeg, .png" name="upload_">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--additional" upload-additional-js>
+                  <div>
+                    <div class="mds__upload-left">
+                      <div class="mds__upload-preview" upload-preview-js>
+                        <p>image<br>preview</p>
+                      </div>
+                    </div>
+                    <div class="mds__upload-right">
+                      <div class="mds__upload-option">
+                        <div class="mds__upload-radio">
+                          <div>
+                            <label>
+                              <input type="radio" name="upload_image_size" checked upload-imgFixed-js><span>Fixed position</span>
+                            </label>
+                          </div>
+                          <div>
+                            <label>
+                              <input type="radio" name="upload_image_size" upload-imgRepeat-js><span>Repeat / Tile image</span>
+                            </label>
+                          </div>
+                        </div><a class="mds__upload-remove" href="#" title="" upload-remove-js><i class="icon-font icon-bin"></i><span>Remove image</span></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p class="mds__subtitle mds__subtitle--mdsFeedbackPt">Label colors</p>
+              <p class="mds__subtitle mds__subtitle--mdsFeedbackPt">Rating colors</p>
               <div class="mds__form-content">
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Excellent</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#32ed00" data-name="excellent"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#32ed00"><span style="background-color:#32ed00"></span>
-                    </div>
+                    <div class="mds__form-color-content" data-color="#32ed00" data-name="excellent"><a href="#" title=""></a><span style="background-color:#32ed00"></span></div>
+                    <div class="mds__form-color-content" data-color="#133208" data-bg="excellent"><a href="#" title=""></a><span style="background-color:#133208"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Very good</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#2b960f" data-name="veryGood"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#2b960f"><span style="background-color:#2b960f"></span>
-                    </div>
+                    <div class="mds__form-color-content" data-color="#2b960f" data-name="veryGood"><a href="#" title=""></a><span style="background-color:#2b960f"></span></div>
+                    <div class="mds__form-color-content" data-color="#0b2717" data-bg="veryGood"><a href="#" title=""></a><span style="background-color:#0b2717"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Good</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#fcb016" data-name="good"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#fcb016"><span style="background-color:#fcb016"></span>
-                    </div>
+                    <div class="mds__form-color-content" data-color="#fcb016" data-name="good"><a href="#" title=""></a><span style="background-color:#fcb016"></span></div>
+                    <div class="mds__form-color-content" data-color="#34260d" data-bg="good"><a href="#" title=""></a><span style="background-color:#34260d"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Not good</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#bc6226" data-name="notGood"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#bc6226"><span style="background-color:#bc6226"></span>
-                    </div>
+                    <div class="mds__form-color-content" data-color="#bc6226" data-name="notGood"><a href="#" title=""></a><span style="background-color:#bc6226"></span></div>
+                    <div class="mds__form-color-content" data-color="#312612" data-bg="notGood"><a href="#" title=""></a><span style="background-color:#312612"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Bad</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#c31010" data-name="bad"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#c31010"><span style="background-color:#c31010"></span>
+                    <div class="mds__form-color-content" data-color="#c31010" data-name="bad"><a href="#" title=""></a><span style="background-color:#c31010"></span></div>
+                    <div class="mds__form-color-content" data-color="#3a0808" data-bg="bad"><a href="#" title=""></a><span style="background-color:#3a0808"></span></div>
+                  </div>
+                </div>
+              </div>
+              <p class="mds__subtitle mds__subtitle--mdsDetailsPt">Font size</p>
+              <div class="mds__fontSize-wrapper">
+                <div class="mds__fontSize-row mds__fontSize-row--full">
+                  <div class="mds__fontSize-col mds__fontSize-col-1">
+                    <div><span>a</span></div>
+                    <div>
+                      <input class="mds__fontSize-input" type="text" name="" value="">
+                    </div>
+                    <div>
+                      <p>a</p>
                     </div>
                   </div>
                 </div>
@@ -464,9 +506,6 @@
               <p class="mds__subtitle mds__subtitle--mdsFeedbackPt">Top Margin</p>
               <div class="mds__indent-wrapper">
                 <div class="mds__indent">
-                  <div>
-                    <p>Top</p>
-                  </div>
                   <div>
                     <input type="text" name="" placeholder="">
                   </div>
@@ -494,51 +533,53 @@
               </div>
               <div class="tablet__content">
                 <div class="tablet__banner"></div>
-                <div class="tablet__rating-wrapper">
-                  <div class="tablet__rating tablet__rating--excellent">
-                    <div class="tablet__rating-top">
-                      <div><i>WINE</i>
-                        <p>Cakebread Cellars, Merlot</p>
+                <div class="tablet__content-cover" tablet-bg-js>
+                  <div class="tablet__rating-wrapper">
+                    <div class="tablet__rating tablet__rating--excellent">
+                      <div class="tablet__rating-top">
+                        <div><i>WINE</i>
+                          <p>Cakebread Cellars, Merlot</p>
+                        </div>
+                        <div><span changeColor-excellent-js>Excellent</span></div>
                       </div>
-                      <div><span changeColor-excellent-js>Excellent</span></div>
+                      <div class="tablet__rating-bottom"><a class="is-choose" href="#" title="" changeBgColor-excellent-js><i class="icon-font icon-rate" changeColor-excellent-js></i></a><a class="is-choose" href="#" title="" changeBgColor-excellent-js><i class="icon-font icon-rate" changeColor-excellent-js></i></a><a class="is-choose" href="#" title="" changeBgColor-excellent-js><i class="icon-font icon-rate" changeColor-excellent-js></i></a><a class="is-choose" href="#" title="" changeBgColor-excellent-js><i class="icon-font icon-rate" changeColor-excellent-js></i></a><a class="is-choose" href="#" title="" changeBgColor-excellent-js><i class="icon-font icon-rate" changeColor-excellent-js></i></a></div>
                     </div>
-                    <div class="tablet__rating-bottom"><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a></div>
-                  </div>
-                  <div class="tablet__rating tablet__rating--verygood">
-                    <div class="tablet__rating-top">
-                      <div><i>Cold appetizers</i>
-                        <p>Chilled Shellfish Platter</p>
+                    <div class="tablet__rating tablet__rating--verygood">
+                      <div class="tablet__rating-top">
+                        <div><i>Cold appetizers</i>
+                          <p>Chilled Shellfish Platter</p>
+                        </div>
+                        <div><span changeColor-veryGood-js>VERY GOOD</span></div>
                       </div>
-                      <div><span changeColor-veryGood-js>VERY GOOD</span></div>
+                      <div class="tablet__rating-bottom"><a class="is-choose" href="#" title="" changeBgColor-veryGood-js><i class="icon-font icon-rate" changeColor-veryGood-js></i></a><a class="is-choose" href="#" title="" changeBgColor-veryGood-js><i class="icon-font icon-rate" changeColor-veryGood-js></i></a><a class="is-choose" href="#" title="" changeBgColor-veryGood-js><i class="icon-font icon-rate" changeColor-veryGood-js></i></a><a class="is-choose" href="#" title="" changeBgColor-veryGood-js><i class="icon-font icon-rate" changeColor-veryGood-js></i></a><a href="#" title="" changeBgColor-veryGood-js><i class="icon-font icon-rate" changeColor-veryGood-js></i></a></div>
                     </div>
-                    <div class="tablet__rating-bottom"><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a></div>
-                  </div>
-                  <div class="tablet__rating tablet__rating--good">
-                    <div class="tablet__rating-top">
-                      <div><i>Second course</i>
-                        <p>Fresh florida stone crab clams</p>
+                    <div class="tablet__rating tablet__rating--good">
+                      <div class="tablet__rating-top">
+                        <div><i>Second course</i>
+                          <p>Fresh florida stone crab clams</p>
+                        </div>
+                        <div><span changeColor-good-js>GOOD</span></div>
                       </div>
-                      <div><span changeColor-good-js>GOOD</span></div>
+                      <div class="tablet__rating-bottom"><a class="is-choose" href="#" title="" changeBgColor-good-js><i class="icon-font icon-rate" changeColor-good-js></i></a><a class="is-choose" href="#" title="" changeBgColor-good-js><i class="icon-font icon-rate" changeColor-good-js></i></a><a class="is-choose" href="#" title="" changeBgColor-good-js><i class="icon-font icon-rate" changeColor-good-js></i></a><a href="#" title="" changeBgColor-good-js><i class="icon-font icon-rate" changeColor-good-js></i></a><a href="#" title="" changeBgColor-good-js><i class="icon-font icon-rate" changeColor-good-js></i></a></div>
                     </div>
-                    <div class="tablet__rating-bottom"><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a></div>
-                  </div>
-                  <div class="tablet__rating tablet__rating--notgood">
-                    <div class="tablet__rating-top">
-                      <div>
-                        <p>Please rate our service efficiency</p>
+                    <div class="tablet__rating tablet__rating--notgood">
+                      <div class="tablet__rating-top">
+                        <div>
+                          <p>Please rate our service efficiency</p>
+                        </div>
+                        <div><span changeColor-notGood-js>NOT GOOD</span></div>
                       </div>
-                      <div><span changeColor-notGood-js>NOT GOOD</span></div>
+                      <div class="tablet__rating-bottom"><a class="is-choose" href="#" title="" changeBgColor-notGood-js><i class="icon-font icon-rate" changeColor-notGood-js></i></a><a class="is-choose" href="#" title="" changeBgColor-notGood-js><i class="icon-font icon-rate" changeColor-notGood-js></i></a><a href="#" title="" changeBgColor-notGood-js><i class="icon-font icon-rate" changeColor-notGood-js></i></a><a href="#" title="" changeBgColor-notGood-js><i class="icon-font icon-rate" changeColor-notGood-js></i></a><a href="#" title="" changeBgColor-notGood-js><i class="icon-font icon-rate" changeColor-notGood-js></i></a></div>
                     </div>
-                    <div class="tablet__rating-bottom"><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a></div>
-                  </div>
-                  <div class="tablet__rating tablet__rating--bad">
-                    <div class="tablet__rating-top">
-                      <div>
-                        <p>Rate your overall experience</p>
+                    <div class="tablet__rating tablet__rating--bad">
+                      <div class="tablet__rating-top">
+                        <div>
+                          <p>Rate your overall experience</p>
+                        </div>
+                        <div><span changeColor-bad-js>bad</span></div>
                       </div>
-                      <div><span changeColor-bad-js>bad</span></div>
+                      <div class="tablet__rating-bottom"><a class="is-choose" href="#" title="" changeBgColor-bad-js><i class="icon-font icon-rate" changeColor-bad-js></i></a><a href="#" title="" changeBgColor-bad-js><i class="icon-font icon-rate" changeColor-bad-js></i></a><a href="#" title="" changeBgColor-bad-js><i class="icon-font icon-rate" changeColor-bad-js></i></a><a href="#" title="" changeBgColor-bad-js><i class="icon-font icon-rate" changeColor-bad-js></i></a><a href="#" title="" changeBgColor-bad-js><i class="icon-font icon-rate" changeColor-bad-js></i></a></div>
                     </div>
-                    <div class="tablet__rating-bottom"><a class="is-choose" href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a><a href="#" title=""><i class="icon-font icon-rate"></i></a></div>
                   </div>
                 </div>
               </div>
