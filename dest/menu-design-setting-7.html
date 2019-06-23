@@ -399,44 +399,88 @@
                 <p><i class="icon-font icon-eye"></i></p><span>preview</span></a>
             </div>
             <form class="c-form" action="" autocomplete="off">
-              <div class="mds__screen mds__screen--nc mds__screen--wbbs">
-                <p class="mds__screen-title">Background image</p>
-                <div class="mds__screen-row">
-                  <div class="mds__screen-col mds__screen-col-0">
-                    <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG</p>
+              <div class="mds__upload mds__upload--hi" upload-file-js>
+                <p class="mds__upload-title mds__screen-title">Background</p>
+                <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--main" upload-main-js>
+                  <div class="mds__upload-left">
+                    <p class="mds__upload-subtitle">Color</p>
+                    <div class="mds__upload-color" change-bg-js data-default-color="#161616"><a href="#" title=""></a><span></span></div>
                   </div>
-                  <div class="mds__screen-col mds__screen-col-1"><a class="mds__screen-upload" href="#" title="">Upload images</a></div>
+                  <div class="mds__upload-right">
+                    <p class="mds__upload-subtitle">Background image</p>
+                    <div class="mds__upload-bg" change-imageParent-js>
+                      <div change-img-js><span>Upload image</span>
+                        <input type="file" accept=".jpg, .jpeg, .png" name="upload_">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--additional" upload-additional-js>
+                  <div>
+                    <div class="mds__upload-left">
+                      <div class="mds__upload-preview" upload-preview-js>
+                        <p>image<br>preview</p>
+                      </div>
+                    </div>
+                    <div class="mds__upload-right">
+                      <div class="mds__upload-option">
+                        <div class="mds__upload-radio">
+                          <div>
+                            <label>
+                              <input type="radio" name="upload_image_size" checked upload-imgFixed-js><span>Fixed position</span>
+                            </label>
+                          </div>
+                          <div>
+                            <label>
+                              <input type="radio" name="upload_image_size" upload-imgRepeat-js><span>Repeat / Tile image</span>
+                            </label>
+                          </div>
+                        </div><a class="mds__upload-remove" href="#" title="" upload-remove-js><i class="icon-font icon-bin"></i><span>Remove image</span></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p class="mds__subtitle mds__subtitle--mdsOrderPt">Label colors</p>
-              <div class="mds__form-content mds__form-content--mdsOrderPt">
-                <div class="mds__form-color">
+              <p class="mds__subtitle mds__subtitle--mdsOrderPt">Item status</p>
+              <div class="mds__form-content">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>In process</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#bf650d" data-name="inProcess"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#bf650d"><span style="background-color:#bf650d"></span>
-                    </div>
+                    <div class="mds__form-color-content" data-color="#bf650d" data-name="inProcess"><a href="#" title=""></a><span style="background-color:#bf650d"></span></div>
+                    <div class="mds__form-color-content" data-color="#361a0b" data-bg="inProcess"><a href="#" title=""></a><span style="background-color:#361a0b"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Pending</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#666666" data-name="pending"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#666666"><span style="background-color:#666666"></span>
-                    </div>
+                    <div class="mds__form-color-content" data-color="#666666" data-name="pending"><a href="#" title=""></a><span style="background-color:#666666"></span></div>
+                    <div class="mds__form-color-content" data-color="#361a0b" data-bg="pending"><a href="#" title=""></a><span style="background-color:#361a0b"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Served</p>
                   </div>
                   <div>
-                    <div class="mds__form-color-content" data-color="#629913" data-name="served"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#629913"><span style="background-color:#629913"></span>
+                    <div class="mds__form-color-content" data-color="#629913" data-name="served"><a href="#" title=""></a><span style="background-color:#629913"></span></div>
+                    <div class="mds__form-color-content" data-color="#15200c" data-bg="served"><a href="#" title=""></a><span style="background-color:#15200c"></span></div>
+                  </div>
+                </div>
+              </div>
+              <p class="mds__subtitle mds__subtitle--mdsDetailsPt">Font size</p>
+              <div class="mds__fontSize-wrapper">
+                <div class="mds__fontSize-row mds__fontSize-row--full">
+                  <div class="mds__fontSize-col mds__fontSize-col-1">
+                    <div><span>a</span></div>
+                    <div>
+                      <input class="mds__fontSize-input" type="text" name="" value="">
+                    </div>
+                    <div>
+                      <p>a</p>
                     </div>
                   </div>
                 </div>
@@ -461,7 +505,7 @@
                 <div><a href="" title=""><i class="icon-font icon-doc"></i><span>0</span></a></div>
                 <div><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
               </div>
-              <div class="tablet__content">
+              <div class="tablet__content" tablet-bg-js>
                 <div class="tablet__heading">
                   <p>My order</p>
                 </div>
@@ -489,19 +533,19 @@
                   </div>
                 </div>
                 <div class="tablet__list-wrapper">
-                  <div class="tablet__list tablet__list--inprogress">
+                  <div class="tablet__list tablet__list--inprogress" changeBgColor-inProcess-js>
                     <div><i>WINE</i>
                       <p>Cakebread Cellars, Merlot</p>
                     </div>
                     <div><span changeColor-inProcess-js>IN PROCESS</span></div>
                   </div>
-                  <div class="tablet__list tablet__list--pending">
+                  <div class="tablet__list tablet__list--pending" changeBgColor-pending-js>
                     <div><i>Cold appetizers</i>
                       <p>Chilled Shellfish Platter</p>
                     </div>
                     <div><span changeColor-pending-js>PENDING</span></div>
                   </div>
-                  <div class="tablet__list tablet__list--served">
+                  <div class="tablet__list tablet__list--served" changeBgColor-served-js>
                     <div><i>Second course</i>
                       <p>Fresh florida stone crab clams</p>
                     </div>

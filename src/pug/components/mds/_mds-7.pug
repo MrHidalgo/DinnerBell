@@ -5,17 +5,20 @@
 		[
 			{
 				title: 'In process',
-				color: '#bf650d',
+				colorVal: '#bf650d',
+				colorBG: '#361a0b',
 				name: 'inProcess'
 			},
 			{
 				title: 'Pending',
-				color: '#666666',
+				colorVal: '#666666',
+				colorBG: '#361a0b',
 				name: 'pending'
 			},
 			{
 				title: 'Served',
-				color: '#629913',
+				colorVal: '#629913',
+				colorBG: '#15200c',
 				name: 'served'
 			}
 		],
@@ -49,27 +52,76 @@ section#mds.mds
 
 			form.c-form(action="" autocomplete='off')
 
-				.mds__screen.mds__screen--nc.mds__screen--wbbs
-					p.mds__screen-title!= "Background image"
-					.mds__screen-row
-						.mds__screen-col.mds__screen-col-0
-							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
-						.mds__screen-col.mds__screen-col-1
-							a(href="#" title='').mds__screen-upload!= "Upload images"
+				.mds__upload.mds__upload--hi(upload-file-js)
+					p.mds__upload-title.mds__screen-title!= "Background"
 
-				p.mds__subtitle.mds__subtitle--mdsOrderPt!= "Label colors"
+					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--main(upload-main-js)
+						.mds__upload-left
+							p.mds__upload-subtitle!= "Color"
+							.mds__upload-color(change-bg-js data-default-color="#161616")
+								a(href="#" class="" title="")
+								span
+
+						.mds__upload-right
+							p.mds__upload-subtitle!= "Background image"
+							.mds__upload-bg(change-imageParent-js)
+								div(change-img-js)
+									span!= "Upload image"
+									input(type='file' accept=".jpg, .jpeg, .png" name='upload_')
+
+					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)
+						div
+							.mds__upload-left
+								.mds__upload-preview(upload-preview-js)
+									p!= "image<br>preview"
+
+							.mds__upload-right
+
+								.mds__upload-option
+
+									.mds__upload-radio
+										div
+											label
+												input(type='radio' name='upload_image_size' checked upload-imgFixed-js)
+												span!= "Fixed position"
+										div
+											label
+												input(type='radio' name='upload_image_size' upload-imgRepeat-js)
+												span!= "Repeat / Tile image"
+
+									a.mds__upload-remove(href="#" class="" title="" upload-remove-js)
+										i.icon-font.icon-bin
+										span!= "Remove image"
+
+				p.mds__subtitle.mds__subtitle--mdsOrderPt!= "Item status"
 
 				each val, idx in colorTitleArr
-					.mds__form-content.mds__form-content--mdsOrderPt
+					.mds__form-content
 						each _v, _i in colorTitleArr[idx]
-							.mds__form-color
+							.mds__form-color.mds__form-color--winput
 								div
 									p!= colorTitleArr[idx][_i].title
 								div
-									.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
+									.mds__form-color-content(data-color!= colorTitleArr[idx][_i].colorVal, data-name!= colorTitleArr[idx][_i].name)
 										a(href="#" class="" title="")
-										input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
-										span(style="background-color:" + colorTitleArr[idx][_i].color)
+										span(style="background-color:" + colorTitleArr[idx][_i].colorVal)
+
+									.mds__form-color-content(data-color!= colorTitleArr[idx][_i].colorBG, data-bg!= colorTitleArr[idx][_i].name)
+										a(href="#" class="" title="")
+										span(style="background-color:" + colorTitleArr[idx][_i].colorBG)
+
+				p.mds__subtitle.mds__subtitle--mdsDetailsPt!= "Font size"
+
+				.mds__fontSize-wrapper
+
+					.mds__fontSize-row.mds__fontSize-row--full
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								input.mds__fontSize-input(type='text', name='', value='')
+							div
+								p!= "a"
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 

@@ -941,7 +941,11 @@
 	&__upload {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 60px;
+		padding-bottom: 60px;
+
+		&--hi {
+			padding-bottom: 30px;
+		}
 
 		&-wrapper {
 			display: flex;
@@ -1215,15 +1219,7 @@
 	// form
 	&__form {
 		&-content {
-			padding-bottom: 23px;
-
-			&--last {
-				padding-bottom: 41px;
-			}
-
-			&--mdsOrderPt {
-				padding-bottom: 64px;
-			}
+			padding-bottom: 60px;
 		}
 
 		&-color {
@@ -1233,6 +1229,24 @@
 			@include adaptive(575) {
 				flex-wrap: wrap;
 				margin-bottom: 20px;
+			}
+
+			&.mds__form-color--winput {
+				> div {
+					&:nth-of-type(2) {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						width: 91px;
+					}
+				}
+
+				.mds__form-color {
+					&-content {
+						width: 43px;
+					}
+				}
+
 			}
 
 			&:last-of-type {

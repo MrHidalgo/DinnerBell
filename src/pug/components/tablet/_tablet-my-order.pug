@@ -19,7 +19,7 @@ section#tablet.tablet.tablet--myorder
 			a(href="" class="" title="")
 				i.icon-font.icon-bell
 
-	.tablet__content
+	.tablet__content(tablet-bg-js)
 		.tablet__heading
 			p!= "My order"
 
@@ -49,19 +49,19 @@ section#tablet.tablet.tablet--myorder
 							i.icon-font.icon-close
 
 		.tablet__list-wrapper
-			.tablet__list.tablet__list--inprogress
+			.tablet__list.tablet__list--inprogress(changeBgColor-inProcess-js)
 				div
 					i!= "WINE"
 					p!= "Cakebread Cellars, Merlot"
 				div
 					span(changeColor-inProcess-js)!= "IN PROCESS"
-			.tablet__list.tablet__list--pending
+			.tablet__list.tablet__list--pending(changeBgColor-pending-js)
 				div
 					i!= "Cold appetizers"
 					p!= "Chilled Shellfish Platter"
 				div
 					span(changeColor-pending-js)!= "PENDING"
-			.tablet__list.tablet__list--served
+			.tablet__list.tablet__list--served(changeBgColor-served-js)
 				div
 					i!= "Second course"
 					p!= "Fresh florida stone crab clams"

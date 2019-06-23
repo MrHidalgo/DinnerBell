@@ -535,6 +535,9 @@ $(document).ready(function (ev) {
 					$('[changeColor-' + _parentNode.data('name') + '-js]').css({
 						'color': _color
 					});
+					$('[changeBgColor-' + _parentNode.data('bg') + '-js]').css({
+						'background-color': _color
+					});
 				}
 
 				if ($('.tablet--logout').length > 0) {
@@ -663,8 +666,8 @@ $(document).ready(function (ev) {
 			resetBGOption: function resetBGOption() {
 				console.log('resetBGOption');
 
-				if ($('[upload-imgRepeat-js]').is(':checked')) {
-					$('[upload-imgFixed-js]').prop('checked', true).change();
+				if (_repeatImageBtn.is(':checked')) {
+					_fixedImageBtn.prop('checked', true).change();
 				}
 			},
 			removeImage: function removeImage() {
@@ -744,15 +747,15 @@ $(document).ready(function (ev) {
 				var _color = args[0].toHEXA().toString();
 
 				var _colorNodeView = _parentNode.find('> span'),
-				    _logoutBG = $('.tablet__content');
+				    _tabletBG = $('[tablet-bg-js]');
 
 				_colorNodeView.css({
 					'backgroundColor': _color
 				});
 
-				// LOGOUT BACKGROUND COLOR
-				if ($('.tablet--logout').length > 0) {
-					_logoutBG.css({
+				// BACKGROUND COLOR
+				if (_tabletBG.length > 0) {
+					_tabletBG.css({
 						'backgroundColor': _color
 					});
 				}
