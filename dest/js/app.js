@@ -1108,6 +1108,70 @@ $(document).ready(function (ev) {
 			}
 		});
 
+		$('[changeFont-itemTitle-js]').ionRangeSlider({
+			min: 26,
+			max: 34,
+			from: 30,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__heading p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-description-js]').ionRangeSlider({
+			min: 14,
+			max: 22,
+			from: 18,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__heading span, .tablet__desc p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-modifierTitle-js]').ionRangeSlider({
+			min: 26,
+			max: 34,
+			from: 30,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__sibtitle').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-modifierText-js]').ionRangeSlider({
+			min: 18,
+			max: 26,
+			from: 22,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__radio-group p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
 		_input.map(function (idx, val) {
 			$(val).ionRangeSlider({
 				min: 14,
