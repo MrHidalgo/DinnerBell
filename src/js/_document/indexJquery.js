@@ -433,7 +433,7 @@ $(document).ready((ev) => {
 
 				const _previewTemplate = (fileName) => {
 					return  `
-						<div class="mds__upload-row">
+						<div class="mds__fileName-row">
 							<div>
 								<p>${fileName}</p>
 								<a href="#" title="" upload-remove-js>
@@ -459,12 +459,19 @@ $(document).ready((ev) => {
 				};
 
 				if(mode === 'static') {
+					console.log(`static`);
+					console.log(input);
+					console.log(input.files);
+
 					const _previewStatic = $(input).closest('.mds__screen').find('[upload-previewFiles-js]');
 
 					if(input.files.length !== 0) {
+						console.log(`if`);
 						const reader = new FileReader();
 
 						reader.onload = () => {
+							console.log(reader.result);
+
 							_bgImgContainer.css({
 								'background-image' : 'url("' + reader.result + '")'
 							});
@@ -520,6 +527,9 @@ $(document).ready((ev) => {
 					const _parentNode = $(input).closest('.mds__screen'),
 						_previewVideo = _parentNode.find('[upload-previewFiles-js]');
 
+					console.log(input);
+					console.log(input.files);
+
 					if (input.files.length !== 0) {
 						const reader = new FileReader(),
 							_vd = $(videoContainer).find('video')[0];
@@ -558,6 +568,7 @@ $(document).ready((ev) => {
 				console.log(`STATIC IMAGE`);
 
 				$('[upload-image-js] input[type="file"]').on('change', (ev) => {
+					console.log(ev.currentTarget);
 					readFileURL(ev.currentTarget, 'static');
 					$(ev.currentTarget).val('');
 				});

@@ -7,6 +7,40 @@
 	height: 1024px;
 	border: 1px solid #efefef;
 
+	&--general {
+		overflow: unset;
+		border: none;
+		height: auto;
+
+		.tablet {
+			&__section {
+				overflow: hidden;
+				position: relative;
+				margin-bottom: 30px;
+				border-width: 1px;
+				border-color: rgb(224, 224, 224);
+				border-style: solid;
+				border-radius: 5px;
+				box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			&__header,
+			&__subheader {
+				position: relative;
+				top: 0;
+			}
+
+			&__content {
+				height: auto;
+				margin-top: 0 !important;
+			}
+		}
+	}
+
 	&__header {
 		z-index: 2;
 		pointer-events: none;
@@ -166,6 +200,102 @@
 		}
 	}
 
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 50%;
+		text-align: center;
+		color: #ffffff;
+		font-size: 26px;
+		font-weight: 300;
+		line-height: 1.1;
+
+		&--alert {
+			background-color: #55001b;
+		}
+		&--confirmation {
+			background-color: #005826;
+		}
+
+		&-wrapper {
+			display: flex;
+			height: 106px;
+		}
+	}
+
+	&__neutral {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-total {
+			width: 100%;
+			height: 80px;
+
+			.tablet__order {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				bottom: 80px;
+				left: 0;
+				width: 100%;
+				height: 80px;
+				padding-left: 25px;
+				padding-right: 25px;
+				background-color: #191d2a;
+
+				p,
+				span {
+					color: #ffffff;
+					font-size: 30px;
+				}
+
+				span {
+					font-weight: 300;
+				}
+			}
+		}
+
+		&-prev,
+		&-confirm {
+			height: 80px;
+		}
+
+		&-prev {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 80px;
+			background-color: #343434;
+
+			.icon-font {
+				transform: rotate(-180deg);
+				font-size: 26px;
+				color: #ffffff;
+			}
+		}
+
+		&-confirm {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+			padding-left: 25px;
+			padding-right: 25px;
+			background-color: #32348e;
+
+			p {
+				color: #ffffff;
+				font-size: 30px;
+				font-weight: bold;
+			}
+		}
+	}
+
 	// intro screen
 	&--intro {
 		.tablet {
@@ -173,6 +303,10 @@
 				position: relative;
 				margin-top: 0;
 				height: calc(100% - 80px);
+
+				* {
+					pointer-events: none;
+				}
 
 				> div {
 					position: absolute;
@@ -1119,7 +1253,7 @@
 				padding-left: 25px;
 				padding-right: 25px;
 				border-bottom: 1px solid #2e3192;
-				background-color: #161616;
+				background-color: transparent;
 				@include transition(background-color);
 
 				&.is-choose {

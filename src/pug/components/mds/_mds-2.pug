@@ -36,7 +36,7 @@ section#mds.mds
 								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload(upload-image-js)!= "Upload images"
-									input(type='file' accept=".jpg, .jpeg, .png" name='upload_image')
+									//input(type='file' accept=".jpg, .jpeg, .png" name='upload_image')
 						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-image-js)
 
 					.mds__screen(choose-screen-btn-js  data-name='slideshow')
@@ -56,7 +56,7 @@ section#mds.mds
 								p.mds__screen-desc!= "Video dimensions: 768x1024<br>Supported Formats: OGG, MP4, WEBM<br>Max file weight: 50 Mb"
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload(upload-video-js)!= "Upload images"
-									input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')
+									//input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')
 						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-video-js)
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')

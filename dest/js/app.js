@@ -873,7 +873,7 @@ $(document).ready(function (ev) {
 			var readFileURL = function readFileURL(input, mode) {
 
 				var _previewTemplate = function _previewTemplate(fileName) {
-					return '\n\t\t\t\t\t\t<div class="mds__upload-row">\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<p>' + fileName + '</p>\n\t\t\t\t\t\t\t\t<a href="#" title="" upload-remove-js>\n\t\t\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>    \t\t\t\t\n\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\n\t\t\t\t\t';
+					return '\n\t\t\t\t\t\t<div class="mds__fileName-row">\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<p>' + fileName + '</p>\n\t\t\t\t\t\t\t\t<a href="#" title="" upload-remove-js>\n\t\t\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>    \t\t\t\t\n\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\n\t\t\t\t\t';
 				};
 
 				var _showDetails = function _showDetails(node, filesArr) {
@@ -891,12 +891,19 @@ $(document).ready(function (ev) {
 				};
 
 				if (mode === 'static') {
+					console.log('static');
+					console.log(input);
+					console.log(input.files);
+
 					var _previewStatic = $(input).closest('.mds__screen').find('[upload-previewFiles-js]');
 
 					if (input.files.length !== 0) {
+						console.log('if');
 						var reader = new FileReader();
 
 						reader.onload = function () {
+							console.log(reader.result);
+
 							_bgImgContainer.css({
 								'background-image': 'url("' + reader.result + '")'
 							});
@@ -954,6 +961,9 @@ $(document).ready(function (ev) {
 					var _parentNode3 = $(input).closest('.mds__screen'),
 					    _previewVideo = _parentNode3.find('[upload-previewFiles-js]');
 
+					console.log(input);
+					console.log(input.files);
+
 					if (input.files.length !== 0) {
 						var _reader2 = new FileReader(),
 						    _vd = $(videoContainer).find('video')[0];
@@ -988,6 +998,7 @@ $(document).ready(function (ev) {
 					console.log('STATIC IMAGE');
 
 					$('[upload-image-js] input[type="file"]').on('change', function (ev) {
+						console.log(ev.currentTarget);
 						readFileURL(ev.currentTarget, 'static');
 						$(ev.currentTarget).val('');
 					});

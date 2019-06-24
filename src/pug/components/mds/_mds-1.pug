@@ -4,44 +4,38 @@
 	var colorTitleArr = [
 		[
 			{
-				title: 'Header',
-				color: '#FFFFFF'
-			},
-			{
-				title: 'Subheader',
-				color: '#4979c5'
-			},
-			{
-				title: 'Body',
-				color: '#19172f'
-			}
-		],
-		[
-			{
 				title: 'Navigation bar',
-				color: '#171732'
+				color: '#ffffff',
+				color1: '#171732',
+				color2: '#252660'
 			},
 			{
 				title: 'Borders',
-				color: '#24265f'
+				color: '#292a55'
 			},
 			{
 				title: 'Select / Highlight',
-				color: '#32348e'
+				color: '#33358e'
 			}
 		],
 		[
 			{
-				title: 'Go back',
-				color: '#303030'
-			},
-			{
 				title: 'UI Neutral',
-				color: '#191d2a'
+				color: '#282d43',
+				color1: '#333333',
+				color2: '#505050'
 			},
 			{
-				title: 'Alert',
+				title: 'Confirmation button',
 				color: '#32348e'
+			},
+			{
+				title: 'Alert dialogue',
+				color: '#55001b'
+			},
+			{
+				title: 'Confirmation dialogue',
+				color: '#005826'
 			}
 		]
 	];
@@ -74,52 +68,107 @@ section#mds.mds
 
 			form.c-form(action="" autocomplete='off')
 
-				p.mds__subtitle!= "Font set"
+				p.mds__subtitle!= "Font settings"
 
-				.mds__form-content
-					.c-form__field.c-form__field--select
+				.mds__form-content.mds__form-content--font
+					.c-form__group.c-form__group--two
+						.c-form__group-col.c-form__group-col-0
+							p!= "Text"
+						.c-form__group-col.c-form__group-col-1
+							.c-form__field.c-form__field--select
 
-						.c-form__select-wrapper
-							.c-form__select-value
+								.c-form__select-wrapper
+									.c-form__select-value
 
-							select.c-form__select(
-								id!= 'select_font'
-								name!= 'select_font'
-								select-js
-								select-font-js
-							)
-								option(value="" selected disabled)!= 'Select font'
-								option(value!= 'Fort')!= 'Fort'
-								option(value!= 'Roboto' data-google-api='https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap;')!= 'Roboto'
-								option(value!= 'Open Sans' data-google-api='https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap;')!= 'Open Sans'
-								option(value!= 'Lato' data-google-api='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap;')!= 'Lato'
-								option(value!= 'Montserrat' data-google-api='https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap;')!= 'Montserrat'
-								option(value!= 'Roboto Condensed' data-google-api='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap;')!= 'Roboto Condensed'
-								option(value!= 'Raleway' data-google-api='https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap;')!= 'Raleway'
-								option(value!= 'PT Sans' data-google-api='https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap;')!= 'PT Sans'
-								option(value!= 'Poppins' data-google-api='https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap;')!= 'Poppins'
-								option(value!= 'Ubuntu' data-google-api='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap;')!= 'Ubuntu'
-								option(value!= 'Open Sans Condensed' data-google-api='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap;')!= 'Open Sans Condensed'
-								option(value!= 'Lora' data-google-api='https://fonts.googleapis.com/css?family=Lora:400,700&display=swap;')!= 'Lora'
-								option(value!= 'Playfair Display' data-google-api='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap;')!= 'Playfair Display'
-								option(value!= 'Muli' data-google-api='https://fonts.googleapis.com/css?family=Muli:400,700&display=swap;')!= 'Muli'
+									select.c-form__select(
+										id!= 'select_font_text'
+										name!= 'select_font_text'
+										select-js
+										select-font-js
+									)
+										option(value="" selected disabled)!= 'Select font'
+										option(value!= 'Fort')!= 'Fort'
+										option(value!= 'Roboto' data-google-api='https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap;')!= 'Roboto'
+										option(value!= 'Open Sans' data-google-api='https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap;')!= 'Open Sans'
+										option(value!= 'Lato' data-google-api='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap;')!= 'Lato'
+										option(value!= 'Montserrat' data-google-api='https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap;')!= 'Montserrat'
+										option(value!= 'Roboto Condensed' data-google-api='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap;')!= 'Roboto Condensed'
+										option(value!= 'Raleway' data-google-api='https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap;')!= 'Raleway'
+										option(value!= 'PT Sans' data-google-api='https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap;')!= 'PT Sans'
+										option(value!= 'Poppins' data-google-api='https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap;')!= 'Poppins'
+										option(value!= 'Ubuntu' data-google-api='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap;')!= 'Ubuntu'
+										option(value!= 'Open Sans Condensed' data-google-api='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap;')!= 'Open Sans Condensed'
+										option(value!= 'Lora' data-google-api='https://fonts.googleapis.com/css?family=Lora:400,700&display=swap;')!= 'Lora'
+										option(value!= 'Playfair Display' data-google-api='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap;')!= 'Playfair Display'
+										option(value!= 'Muli' data-google-api='https://fonts.googleapis.com/css?family=Muli:400,700&display=swap;')!= 'Muli'
 
-							.c-form__select-icon
-								i
+									.c-form__select-icon
+										i
 
-				p.mds__subtitle!= "Base color palette"
+					.c-form__group.c-form__group--two
+						.c-form__group-col.c-form__group-col-0
+							p!= "Numeric"
+						.c-form__group-col.c-form__group-col-1
+							.c-form__field.c-form__field--select
+
+								.c-form__select-wrapper
+									.c-form__select-value
+
+									select.c-form__select(
+										id!= 'select_font_numeric'
+										name!= 'select_font_numeric'
+										select-js
+										select-font-numeric-js
+									)
+										option(value="" selected disabled)!= 'Select font'
+										option(value!= 'Fort')!= 'Fort'
+										option(value!= 'Roboto' data-google-api='https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap;')!= 'Roboto'
+										option(value!= 'Open Sans' data-google-api='https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap;')!= 'Open Sans'
+										option(value!= 'Lato' data-google-api='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap;')!= 'Lato'
+										option(value!= 'Montserrat' data-google-api='https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap;')!= 'Montserrat'
+										option(value!= 'Roboto Condensed' data-google-api='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap;')!= 'Roboto Condensed'
+										option(value!= 'Raleway' data-google-api='https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap;')!= 'Raleway'
+										option(value!= 'PT Sans' data-google-api='https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap;')!= 'PT Sans'
+										option(value!= 'Poppins' data-google-api='https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap;')!= 'Poppins'
+										option(value!= 'Ubuntu' data-google-api='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap;')!= 'Ubuntu'
+										option(value!= 'Open Sans Condensed' data-google-api='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap;')!= 'Open Sans Condensed'
+										option(value!= 'Lora' data-google-api='https://fonts.googleapis.com/css?family=Lora:400,700&display=swap;')!= 'Lora'
+										option(value!= 'Playfair Display' data-google-api='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap;')!= 'Playfair Display'
+										option(value!= 'Muli' data-google-api='https://fonts.googleapis.com/css?family=Muli:400,700&display=swap;')!= 'Muli'
+
+									.c-form__select-icon
+										i
+
+				p.mds__subtitle!= "General UI style"
 
 				each val, idx in colorTitleArr
 					.mds__form-content
 						each _v, _i in colorTitleArr[idx]
-							.mds__form-color
+							.mds__form-color.mds__form-color--winput
 								div
 									p!= colorTitleArr[idx][_i].title
-								div
-									.mds__form-color-content
+								div(class!= ((idx === 0 && _i === 0) || (idx === 1 && _i === 0)) ?'is-three':'is-one')
+									.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
 										a(href="#" class="" title="")
-										input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
 										span(style="background-color:" + colorTitleArr[idx][_i].color)
+
+									if(idx === 0 && _i === 0)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name)
+											a(href="#" class="" title="")
+											span(style="background-color:" + colorTitleArr[idx][_i].color1)
+
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color2, data-name!= colorTitleArr[idx][_i].name)
+											a(href="#" class="" title="")
+											span(style="background-color:" + colorTitleArr[idx][_i].color2)
+
+									if(idx === 1 && _i === 0)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name)
+											a(href="#" class="" title="")
+											span(style="background-color:" + colorTitleArr[idx][_i].color1)
+
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color2, data-name!= colorTitleArr[idx][_i].name)
+											a(href="#" class="" title="")
+											span(style="background-color:" + colorTitleArr[idx][_i].color2)
 
 				p.mds__subtitle!= "Currency and Price format"
 
@@ -163,7 +212,7 @@ section#mds.mds
 					a.mds__wrapper-close(href="#" class="" title="")
 						i.icon-font.icon-close
 
-			include ../tablet/_tablet-menu-items
+			include ../tablet/_tablet-base-setting
 
 
 // SECTION mds :: END

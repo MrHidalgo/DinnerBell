@@ -399,126 +399,131 @@
                 <p><i class="icon-font icon-eye"></i></p><span>preview</span></a>
             </div>
             <form class="c-form" action="" autocomplete="off">
-              <p class="mds__subtitle">Font set</p>
-              <div class="mds__form-content">
-                <div class="c-form__field c-form__field--select">
-                  <div class="c-form__select-wrapper">
-                    <div class="c-form__select-value"></div>
-                    <select class="c-form__select" id="select_font" name="select_font" select-js select-font-js>
-                      <option value="" selected disabled>Select font</option>
-                      <option value="Fort">Fort</option>
-                      <option value="Roboto" data-google-api="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap;">Roboto</option>
-                      <option value="Open Sans" data-google-api="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap;">Open Sans</option>
-                      <option value="Lato" data-google-api="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap;">Lato</option>
-                      <option value="Montserrat" data-google-api="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;display=swap;">Montserrat</option>
-                      <option value="Roboto Condensed" data-google-api="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;display=swap;">Roboto Condensed</option>
-                      <option value="Raleway" data-google-api="https://fonts.googleapis.com/css?family=Raleway:400,500,700&amp;display=swap;">Raleway</option>
-                      <option value="PT Sans" data-google-api="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap;">PT Sans</option>
-                      <option value="Poppins" data-google-api="https://fonts.googleapis.com/css?family=Poppins:400,500,700&amp;display=swap;">Poppins</option>
-                      <option value="Ubuntu" data-google-api="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap;">Ubuntu</option>
-                      <option value="Open Sans Condensed" data-google-api="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;display=swap;">Open Sans Condensed</option>
-                      <option value="Lora" data-google-api="https://fonts.googleapis.com/css?family=Lora:400,700&amp;display=swap;">Lora</option>
-                      <option value="Playfair Display" data-google-api="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;display=swap;">Playfair Display</option>
-                      <option value="Muli" data-google-api="https://fonts.googleapis.com/css?family=Muli:400,700&amp;display=swap;">Muli</option>
-                    </select>
-                    <div class="c-form__select-icon"><i></i></div>
+              <p class="mds__subtitle">Font settings</p>
+              <div class="mds__form-content mds__form-content--font">
+                <div class="c-form__group c-form__group--two">
+                  <div class="c-form__group-col c-form__group-col-0">
+                    <p>Text</p>
+                  </div>
+                  <div class="c-form__group-col c-form__group-col-1">
+                    <div class="c-form__field c-form__field--select">
+                      <div class="c-form__select-wrapper">
+                        <div class="c-form__select-value"></div>
+                        <select class="c-form__select" id="select_font_text" name="select_font_text" select-js select-font-js>
+                          <option value="" selected disabled>Select font</option>
+                          <option value="Fort">Fort</option>
+                          <option value="Roboto" data-google-api="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap;">Roboto</option>
+                          <option value="Open Sans" data-google-api="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap;">Open Sans</option>
+                          <option value="Lato" data-google-api="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap;">Lato</option>
+                          <option value="Montserrat" data-google-api="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;display=swap;">Montserrat</option>
+                          <option value="Roboto Condensed" data-google-api="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;display=swap;">Roboto Condensed</option>
+                          <option value="Raleway" data-google-api="https://fonts.googleapis.com/css?family=Raleway:400,500,700&amp;display=swap;">Raleway</option>
+                          <option value="PT Sans" data-google-api="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap;">PT Sans</option>
+                          <option value="Poppins" data-google-api="https://fonts.googleapis.com/css?family=Poppins:400,500,700&amp;display=swap;">Poppins</option>
+                          <option value="Ubuntu" data-google-api="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap;">Ubuntu</option>
+                          <option value="Open Sans Condensed" data-google-api="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;display=swap;">Open Sans Condensed</option>
+                          <option value="Lora" data-google-api="https://fonts.googleapis.com/css?family=Lora:400,700&amp;display=swap;">Lora</option>
+                          <option value="Playfair Display" data-google-api="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;display=swap;">Playfair Display</option>
+                          <option value="Muli" data-google-api="https://fonts.googleapis.com/css?family=Muli:400,700&amp;display=swap;">Muli</option>
+                        </select>
+                        <div class="c-form__select-icon"><i></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-form__group c-form__group--two">
+                  <div class="c-form__group-col c-form__group-col-0">
+                    <p>Numeric</p>
+                  </div>
+                  <div class="c-form__group-col c-form__group-col-1">
+                    <div class="c-form__field c-form__field--select">
+                      <div class="c-form__select-wrapper">
+                        <div class="c-form__select-value"></div>
+                        <select class="c-form__select" id="select_font_numeric" name="select_font_numeric" select-js select-font-numeric-js>
+                          <option value="" selected disabled>Select font</option>
+                          <option value="Fort">Fort</option>
+                          <option value="Roboto" data-google-api="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap;">Roboto</option>
+                          <option value="Open Sans" data-google-api="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap;">Open Sans</option>
+                          <option value="Lato" data-google-api="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap;">Lato</option>
+                          <option value="Montserrat" data-google-api="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;display=swap;">Montserrat</option>
+                          <option value="Roboto Condensed" data-google-api="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;display=swap;">Roboto Condensed</option>
+                          <option value="Raleway" data-google-api="https://fonts.googleapis.com/css?family=Raleway:400,500,700&amp;display=swap;">Raleway</option>
+                          <option value="PT Sans" data-google-api="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap;">PT Sans</option>
+                          <option value="Poppins" data-google-api="https://fonts.googleapis.com/css?family=Poppins:400,500,700&amp;display=swap;">Poppins</option>
+                          <option value="Ubuntu" data-google-api="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap;">Ubuntu</option>
+                          <option value="Open Sans Condensed" data-google-api="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;display=swap;">Open Sans Condensed</option>
+                          <option value="Lora" data-google-api="https://fonts.googleapis.com/css?family=Lora:400,700&amp;display=swap;">Lora</option>
+                          <option value="Playfair Display" data-google-api="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;display=swap;">Playfair Display</option>
+                          <option value="Muli" data-google-api="https://fonts.googleapis.com/css?family=Muli:400,700&amp;display=swap;">Muli</option>
+                        </select>
+                        <div class="c-form__select-icon"><i></i></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <p class="mds__subtitle">Base color palette</p>
+              <p class="mds__subtitle">General UI style</p>
               <div class="mds__form-content">
-                <div class="mds__form-color">
-                  <div>
-                    <p>Header</p>
-                  </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#FFFFFF"><span style="background-color:#FFFFFF"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mds__form-color">
-                  <div>
-                    <p>Subheader</p>
-                  </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#4979c5"><span style="background-color:#4979c5"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mds__form-color">
-                  <div>
-                    <p>Body</p>
-                  </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#19172f"><span style="background-color:#19172f"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mds__form-content">
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Navigation bar</p>
                   </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#171732"><span style="background-color:#171732"></span>
-                    </div>
+                  <div class="is-three">
+                    <div class="mds__form-color-content" data-color="#ffffff"><a href="#" title=""></a><span style="background-color:#ffffff"></span></div>
+                    <div class="mds__form-color-content" data-color="#171732"><a href="#" title=""></a><span style="background-color:#171732"></span></div>
+                    <div class="mds__form-color-content" data-color="#252660"><a href="#" title=""></a><span style="background-color:#252660"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Borders</p>
                   </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#24265f"><span style="background-color:#24265f"></span>
-                    </div>
+                  <div class="is-one">
+                    <div class="mds__form-color-content" data-color="#292a55"><a href="#" title=""></a><span style="background-color:#292a55"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Select / Highlight</p>
                   </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#32348e"><span style="background-color:#32348e"></span>
-                    </div>
+                  <div class="is-one">
+                    <div class="mds__form-color-content" data-color="#33358e"><a href="#" title=""></a><span style="background-color:#33358e"></span></div>
                   </div>
                 </div>
               </div>
               <div class="mds__form-content">
-                <div class="mds__form-color">
-                  <div>
-                    <p>Go back</p>
-                  </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#303030"><span style="background-color:#303030"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>UI Neutral</p>
                   </div>
-                  <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#191d2a"><span style="background-color:#191d2a"></span>
-                    </div>
+                  <div class="is-three">
+                    <div class="mds__form-color-content" data-color="#282d43"><a href="#" title=""></a><span style="background-color:#282d43"></span></div>
+                    <div class="mds__form-color-content" data-color="#333333"><a href="#" title=""></a><span style="background-color:#333333"></span></div>
+                    <div class="mds__form-color-content" data-color="#505050"><a href="#" title=""></a><span style="background-color:#505050"></span></div>
                   </div>
                 </div>
-                <div class="mds__form-color">
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
-                    <p>Alert</p>
+                    <p>Confirmation button</p>
                   </div>
+                  <div class="is-one">
+                    <div class="mds__form-color-content" data-color="#32348e"><a href="#" title=""></a><span style="background-color:#32348e"></span></div>
+                  </div>
+                </div>
+                <div class="mds__form-color mds__form-color--winput">
                   <div>
-                    <div class="mds__form-color-content"><a href="#" title=""></a>
-                      <input type="text" readonly disabled value="#32348e"><span style="background-color:#32348e"></span>
-                    </div>
+                    <p>Alert dialogue</p>
+                  </div>
+                  <div class="is-one">
+                    <div class="mds__form-color-content" data-color="#55001b"><a href="#" title=""></a><span style="background-color:#55001b"></span></div>
+                  </div>
+                </div>
+                <div class="mds__form-color mds__form-color--winput">
+                  <div>
+                    <p>Confirmation dialogue</p>
+                  </div>
+                  <div class="is-one">
+                    <div class="mds__form-color-content" data-color="#005826"><a href="#" title=""></a><span style="background-color:#005826"></span></div>
                   </div>
                 </div>
               </div>
@@ -572,123 +577,58 @@
               <div><a class="mds__wrapper-close" href="#" title=""><i class="icon-font icon-close"></i></a></div>
             </div>
             <!-- SECTION tablet :: START-->
-            <section class="tablet tablet--menuItems" id="tablet">
-              <div class="tablet__header">
-                <div><a href="#" title=""><span></span><span></span><span></span></a></div>
-                <div><a href="" title=""><i class="icon-font icon-user"></i><span>3</span></a></div>
-                <div><a href="" title=""><i class="icon-font icon-doc"></i><span>0</span></a></div>
-                <div><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
-              </div>
-              <div class="tablet__subheader"><a href="#" title=""><i class="icon-font icon-corner"></i></a>
-                <p sectionHeader-js>Cold Appetizers</p><a href="#" title=""><i class="icon-font icon-corner"></i></a>
-              </div>
-              <div class="tablet__content" tablet-bg-js>
-                <div class="tablet__view tablet__view-thumb">
-                  <div class="tablet__block-wrapper"><a class="tablet__block tablet__block--spicy is-choose" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-spicy-js>Spicy</span>
-                        <p>Fresh florida stone crab clams <i>$18.50</i></p>
-                      </div></a><a class="tablet__block tablet__block--popular" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-popular-js>Popular</span>
-                        <p>Shrimp cocktail <i>$14.40</i></p>
-                      </div></a><a class="tablet__block tablet__block--special" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-chefsSpecial-js>Chef’s Special</span>
-                        <p>Tuna Tartare Tower <i>$17.00</i></p>
-                      </div></a><a class="tablet__block tablet__block--new" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-new-js>New!</span>
-                        <p>King Crab Mac'n'Cheese <i>$18.20</i></p>
-                      </div></a><a class="tablet__block tablet__block--popular" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div>
-                        <p>Crab Fried Rice <i>$14.00</i></p>
-                      </div></a></div>
-                  <p class="tablet__subtitle" subsection-js>Soups</p>
-                  <div class="tablet__block-wrapper"><a class="tablet__block tablet__block--spicy" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-spicy-js>Spicy</span>
-                        <p>Fresh florida stone crab clams <i>$18.50</i></p>
-                      </div></a><a class="tablet__block tablet__block--popular" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-popular-js>Popular</span>
-                        <p>Shrimp cocktail <i>$14.40</i></p>
-                      </div></a><a class="tablet__block tablet__block--special" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-chefsSpecial-js>Chef’s Special</span>
-                        <p>Tuna Tartare Tower <i>$17.00</i></p>
-                      </div></a><a class="tablet__block tablet__block--new" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div><span changeColor-new-js>New!</span>
-                        <p>King Crab Mac'n'Cheese <i>$18.20</i></p>
-                      </div></a><a class="tablet__block tablet__block--popular" href="#" title="">
-                      <div><img src="img/img-tablet-box.jpg" alt="" title=""></div>
-                      <div>
-                        <p>Crab Fried Rice <i>$14.00</i></p>
-                      </div></a></div>
+            <section class="tablet tablet--general tablet--menuItems" id="tablet">
+              <div class="tablet__section tablet__section-0">
+                <div class="tablet__header">
+                  <div><a href="#" title=""><span></span><span></span><span></span></a></div>
+                  <div><a href="" title=""><i class="icon-font icon-user"></i><span>3</span></a></div>
+                  <div><a href="" title=""><i class="icon-font icon-doc"></i><span>0</span></a></div>
+                  <div><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
                 </div>
-                <div class="tablet__view tablet__view-list">
-                  <div class="tablet__btn-wrapper"><a class="tablet__btn tablet__btn--spicy is-choose" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Fresh florida stone crab clams <sup changeColor-spicy-js>Spicy</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Shrimp cocktail <sup changeColor-popular-js>Popular</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Tuna Tartare Tower <sup changeColor-chefsSpecial-js>Chef’s Special</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>King Crab Mac'n'Cheese <sup changeColor-new-js>New!</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Crab Fried Rice</p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>14.00</span></div></a><a class="tablet__btn" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Lobster Mashed Potatoes</p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>25.00</span></div></a><a class="tablet__btn" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Shrimp Cocktail</p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>14.00</span></div></a><a class="tablet__btn" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Tuna Tartare Tower</p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>18.50</span></div></a></div>
-                  <p class="tablet__subtitle" subsection-js>Subsection title</p>
-                  <div class="tablet__btn-wrapper tablet__btn-wrapper--pt"><a class="tablet__btn tablet__btn--spicy" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Fresh florida stone crab clams <sup changeColor-spicy-js>Spicy</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Shrimp cocktail <sup changeColor-popular-js>Popular</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Tuna Tartare Tower <sup changeColor-chefsSpecial-js>Chef’s Special</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>King Crab Mac'n'Cheese <sup changeColor-new-js>New!</sup></p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Crab Fried Rice</p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>14.00</span></div></a><a class="tablet__btn" href="#" title="">
-                      <div>
-                        <p itemTitleMenu-js>Lobster Mashed Potatoes</p>
-                      </div>
-                      <div><span><span currency-sign-js>$</span>25.00</span></div></a></div>
+                <div class="tablet__subheader"><a href="#" title=""><i class="icon-font icon-corner"></i></a>
+                  <p sectionHeader-js>Cold Appetizers</p><a href="#" title=""><i class="icon-font icon-corner"></i></a>
                 </div>
+                <div class="tablet__content">
+                  <div class="tablet__view tablet__view-list">
+                    <div class="tablet__btn-wrapper"><a class="tablet__btn tablet__btn--spicy is-choose" href="#" title="">
+                        <div>
+                          <p itemTitleMenu-js>Fresh florida stone crab clams</p>
+                        </div>
+                        <div><span><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="">
+                        <div>
+                          <p itemTitleMenu-js>Shrimp cocktail</p>
+                        </div>
+                        <div><span><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="">
+                        <div>
+                          <p itemTitleMenu-js>Tuna Tartare Tower</p>
+                        </div>
+                        <div><span><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="">
+                        <div>
+                          <p itemTitleMenu-js>King Crab Mac'n'Cheese</p>
+                        </div>
+                        <div><span><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="">
+                        <div>
+                          <p itemTitleMenu-js>Crab Fried Rice</p>
+                        </div>
+                        <div><span><span currency-sign-js>$</span>14.00</span></div></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tablet__section tablet__section-1">
+                <div class="tablet__neutral">
+                  <div class="tablet__neutral-total">
+                    <div class="tablet__order">
+                      <p>Order total:</p><span>$245.35</span>
+                    </div>
+                  </div>
+                  <div class="tablet__neutral-prev"><i class="icon-font icon-arrow"></i></div>
+                  <div class="tablet__neutral-confirm">
+                    <p>Confirm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tablet__section tablet__section-2">
+                <div class="tablet__button-wrapper"><a class="tablet__button tablet__button--alert" href="#" title="">Alert<br>dialogue</a><a class="tablet__button tablet__button--confirmation" href="#" title="">Confirmation<br>dialogue</a></div>
               </div>
             </section>
             <!-- SECTION tablet :: END-->
