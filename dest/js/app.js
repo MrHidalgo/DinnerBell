@@ -1061,8 +1061,8 @@ $(document).ready(function (ev) {
 		var _input = $('.mds__fontSize-input');
 
 		$('[changeFont-list-js]').ionRangeSlider({
-			min: 24,
-			max: 28,
+			min: 22,
+			max: 30,
 			from: 26,
 			step: 1,
 			grid: true,
@@ -1077,8 +1077,8 @@ $(document).ready(function (ev) {
 		});
 
 		$('[changeFont-thumbnail-js]').ionRangeSlider({
-			min: 16,
-			max: 20,
+			min: 14,
+			max: 22,
 			from: 18,
 			step: 1,
 			grid: true,
@@ -1093,8 +1093,8 @@ $(document).ready(function (ev) {
 		});
 
 		$('[changeFont-information-js]').ionRangeSlider({
-			min: 22,
-			max: 26,
+			min: 20,
+			max: 28,
 			from: 24,
 			step: 1,
 			grid: true,
@@ -1268,6 +1268,12 @@ $(document).ready(function (ev) {
 				}
 
 				if ($('.tablet--itemDetails').length > 0) {
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color': _color
+					});
+				}
+
+				if ($('.tablet--mainMenu').length > 0) {
 					$('[' + _parentNode.data('name') + '-js]').css({
 						'color': _color
 					});

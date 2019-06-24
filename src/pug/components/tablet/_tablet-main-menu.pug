@@ -35,68 +35,70 @@ section#tablet.tablet.tablet--mainMenu
 
 			+swiper('swiper-container-tabletcarousel', 'swiperContent', false, true, false)
 
-		.tablet__block-wrapper.tablet__block-wrapper--thumbnail.is-thumbnail
-			a.tablet__block(href="#" class="" title="")
-				div
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				div
-					p!= "Appetizers"
-			a.tablet__block(href="#" class="" title="")
-				div
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				div
-					p!= "Soups & Salads"
-			a.tablet__block(href="#" class="" title="")
-				div
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				div
-					p!= "Classic Favorites"
-			a.tablet__block(href="#" class="" title="")
-				div
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				div
-					p!= "Taste of Mediterranian"
-			a.tablet__block(href="#" class="" title="")
-				div
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				div
-					p!= "Chicken"
-			a.tablet__block(href="#" class="" title="")
-				div
-					img(src="img/img-tablet-box.jpg" alt="" title="")
-				div
-					p!= "Seafood"
+		.tablet__content-cover(tablet-bg-js)
 
-		.tablet__block-wrapper.tablet__block-wrapper--list.is-list
-			a.tablet__block(href="#" class="" title="")
-				div
-					p!= "Appetizers"
-			a.tablet__block(href="#" class="" title="")
-				div
-					p!= "Soups & Salads"
-			a.tablet__block(href="#" class="" title="")
-				div
-					p!= "Classic Favorites"
-			a.tablet__block(href="#" class="" title="")
-				div
-					p!= "Taste of Mediterranian"
-			a.tablet__block(href="#" class="" title="")
-				div
-					p!= "Chicken"
-			a.tablet__block(href="#" class="" title="")
-				div
-					p!= "Seafood"
+			.tablet__block-wrapper.tablet__block-wrapper--thumbnail.is-thumbnail
+				a.tablet__block(href="#" class="" title="")
+					div
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p(thumbnail-js)!= "Appetizers"
+				a.tablet__block(href="#" class="" title="")
+					div
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p(thumbnail-js)!= "Soups & Salads"
+				a.tablet__block(href="#" class="" title="")
+					div
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p(thumbnail-js)!= "Classic Favorites"
+				a.tablet__block(href="#" class="" title="")
+					div
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p(thumbnail-js)!= "Taste of Mediterranian"
+				a.tablet__block(href="#" class="" title="")
+					div
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p(thumbnail-js)!= "Chicken"
+				a.tablet__block(href="#" class="" title="")
+					div
+						img(src="img/img-tablet-box.jpg" alt="" title="")
+					div
+						p(thumbnail-js)!= "Seafood"
 
-		.tablet__info-wrapper
-			p.tablet__info-title!= 'Information'
+			.tablet__block-wrapper.tablet__block-wrapper--list.is-list
+				a.tablet__block(href="#" class="" title="")
+					div
+						p(list-js)!= "Appetizers"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p(list-js)!= "Soups & Salads"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p(list-js)!= "Classic Favorites"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p(list-js)!= "Taste of Mediterranian"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p(list-js)!= "Chicken"
+				a.tablet__block(href="#" class="" title="")
+					div
+						p(list-js)!= "Seafood"
 
-			a.tablet__info-link(href="#" class="" title="")!= "History & The Team"
-			a.tablet__info-link(href="#" class="" title="")!= "Loyalty program"
-			a.tablet__info-link(href="#" class="" title="")!= "Upcoming events"
+			.tablet__info-wrapper
+				p.tablet__info-title!= 'Information'
 
-			img.tablet__info-logo(src="img/img-tablet-sublogo.png" srcset="img/img-tablet-sublogo@2x.png 2x" alt="" title="")
+				a.tablet__info-link(href="#" class="" title="" information-js)!= "History & The Team"
+				a.tablet__info-link(href="#" class="" title="" information-js)!= "Loyalty program"
+				a.tablet__info-link(href="#" class="" title="" information-js)!= "Upcoming events"
 
-			p.tablet__info!= "powered by dinnerbell"
+				img.tablet__info-logo(src="img/img-tablet-sublogo.png" srcset="img/img-tablet-sublogo@2x.png 2x" alt="" title="")
+
+				p.tablet__info!= "powered by dinnerbell"
 
 
 

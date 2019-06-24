@@ -6137,11 +6137,22 @@ picture {
 }
 
 /* line 1572, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__content {
+  height: -webkit-calc(100% - (55px));
+  height: calc(100% - (55px));
+}
+
+/* line 1576, src/scss/_components/_tablet.scss */
+.tablet--mainMenu .tablet__content-cover * {
+  pointer-events: none;
+}
+
+/* line 1582, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__carousel {
   height: 161px;
 }
 
-/* line 1576, src/scss/_components/_tablet.scss */
+/* line 1586, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6159,13 +6170,13 @@ picture {
   padding: 9px;
   margin-bottom: 25px;
   border: 1px solid #191d2a;
-  background-color: transparent;
+  background-color: #131323;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 1588, src/scss/_components/_tablet.scss */
+/* line 1598, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block.is-choose {
   background-color: #2e3192;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -6173,14 +6184,14 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 1594, src/scss/_components/_tablet.scss */
+/* line 1604, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block > div:nth-of-type(1) {
   overflow: hidden;
   position: relative;
   min-height: 165px;
 }
 
-/* line 1604, src/scss/_components/_tablet.scss */
+/* line 1614, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6201,7 +6212,7 @@ picture {
   padding: 9px 25px;
 }
 
-/* line 1612, src/scss/_components/_tablet.scss */
+/* line 1622, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block > div p {
   text-align: center;
   color: #ffffff;
@@ -6209,7 +6220,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 1619, src/scss/_components/_tablet.scss */
+/* line 1629, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block > div span {
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -6217,7 +6228,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 1627, src/scss/_components/_tablet.scss */
+/* line 1637, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6233,7 +6244,7 @@ picture {
   padding: 25px;
 }
 
-/* line 1633, src/scss/_components/_tablet.scss */
+/* line 1643, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper--list {
   display: none;
   -webkit-box-orient: vertical;
@@ -6245,7 +6256,7 @@ picture {
   margin-bottom: 0;
 }
 
-/* line 1640, src/scss/_components/_tablet.scss */
+/* line 1650, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper--list .tablet__block {
   max-width: 100%;
   min-height: auto;
@@ -6253,7 +6264,7 @@ picture {
   padding: 0;
 }
 
-/* line 1646, src/scss/_components/_tablet.scss */
+/* line 1656, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper--list .tablet__block > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6274,12 +6285,12 @@ picture {
   min-height: 80px;
 }
 
-/* line 1653, src/scss/_components/_tablet.scss */
+/* line 1663, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper--list .tablet__block > div p {
   font-size: 26px;
 }
 
-/* line 1663, src/scss/_components/_tablet.scss */
+/* line 1673, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info {
   padding-top: 25px;
   padding-bottom: 50px;
@@ -6289,7 +6300,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 1671, src/scss/_components/_tablet.scss */
+/* line 1681, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-title {
   padding-bottom: 50px;
   text-align: center;
@@ -6299,7 +6310,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 1680, src/scss/_components/_tablet.scss */
+/* line 1690, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6314,7 +6325,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 1688, src/scss/_components/_tablet.scss */
+/* line 1698, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-link:hover {
   color: #558ce4;
   -webkit-transition: color 0.3s ease-in-out;
@@ -6322,7 +6333,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 1694, src/scss/_components/_tablet.scss */
+/* line 1704, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-logo {
   display: block;
   max-width: 100%;
@@ -6332,7 +6343,7 @@ picture {
   margin-top: 50px;
 }
 
-/* line 1703, src/scss/_components/_tablet.scss */
+/* line 1713, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6351,12 +6362,12 @@ picture {
   background-color: #0d0e27;
 }
 
-/* line 1718, src/scss/_components/_tablet.scss */
+/* line 1728, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__content {
   pointer-events: none;
 }
 
-/* line 1722, src/scss/_components/_tablet.scss */
+/* line 1732, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__logout {
   display: -webkit-box;
   display: -webkit-flex;

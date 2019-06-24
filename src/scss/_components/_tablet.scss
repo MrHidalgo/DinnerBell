@@ -1569,6 +1569,16 @@
 	// main menu
 	&--mainMenu {
 		.tablet {
+			&__content {
+				height: calc(100% - (55px));
+
+				&-cover {
+					* {
+						pointer-events: none;
+					}
+				}
+			}
+
 			&__carousel {
 				height: 161px;
 			}
@@ -1582,7 +1592,7 @@
 				padding: 9px;
 				margin-bottom: 25px;
 				border: 1px solid #191d2a;
-				background-color: transparent;
+				background-color: #131323;
 				@include transition(background-color);
 
 				&.is-choose {

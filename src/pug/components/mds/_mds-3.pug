@@ -28,13 +28,46 @@ section#mds.mds
 
 			form.c-form(action="" autocomplete='off')
 
-				.mds__screen.mds__screen--nc.mds__screen--wbbs
-					p.mds__screen-title!= "Background image"
-					.mds__screen-row
-						.mds__screen-col.mds__screen-col-0
-							p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
-						.mds__screen-col.mds__screen-col-1
-							a(href="#" title='').mds__screen-upload!= "Upload images"
+				.mds__upload.mds__upload--hi(upload-file-js)
+					p.mds__upload-title.mds__screen-title!= "Background"
+
+					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--main(upload-main-js)
+						.mds__upload-left
+							p.mds__upload-subtitle!= "Color"
+							.mds__upload-color(change-bg-js data-default-color="#161616")
+								a(href="#" class="" title="")
+								span
+
+						.mds__upload-right
+							p.mds__upload-subtitle!= "Background image"
+							.mds__upload-bg(change-imageParent-js)
+								div(change-img-js)
+									span!= "Upload image"
+									input(type='file' accept=".jpg, .jpeg, .png" name='upload_')
+
+					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)
+						div
+							.mds__upload-left
+								.mds__upload-preview(upload-preview-js)
+									p!= "image<br>preview"
+
+							.mds__upload-right
+
+								.mds__upload-option
+
+									.mds__upload-radio
+										div
+											label
+												input(type='radio' name='upload_image_size' checked upload-imgFixed-js)
+												span!= "Fixed position"
+										div
+											label
+												input(type='radio' name='upload_image_size' upload-imgRepeat-js)
+												span!= "Repeat / Tile image"
+
+									a.mds__upload-remove(href="#" class="" title="" upload-remove-js)
+										i.icon-font.icon-bin
+										span!= "Remove image"
 
 				p.mds__subtitle.mds__subtitle--mdsMenuPt!= "Menu Layout"
 
@@ -42,7 +75,7 @@ section#mds.mds
 					a.mds__menu(href="#" class="" title="" data-name='list')!= "List"
 					a.mds__menu.is-active(href="#" class="" title="" data-name='thumb')!= "Thumbnails"
 
-				p.mds__subtitle!= "Font size"
+				p.mds__subtitle!= "Font properties"
 
 				.mds__fontSize-wrapper
 
@@ -56,6 +89,8 @@ section#mds.mds
 								input.mds__fontSize-input(type='text', name='', value='' changeFont-list-js)
 							div
 								p!= "a"
+						.mds__fontSize-col.mds__fontSize-col-2(data-name="list")
+							a(href="#" class="" title="")
 
 					.mds__fontSize-row
 						.mds__fontSize-col.mds__fontSize-col-0
@@ -67,6 +102,8 @@ section#mds.mds
 								input.mds__fontSize-input(type='text', name='', value='' changeFont-thumbnail-js)
 							div
 								p!= "a"
+						.mds__fontSize-col.mds__fontSize-col-2(data-name="thumbnail")
+							a(href="#" class="" title="")
 
 					.mds__fontSize-row
 						.mds__fontSize-col.mds__fontSize-col-0
@@ -78,6 +115,8 @@ section#mds.mds
 								input.mds__fontSize-input(type='text', name='', value='' changeFont-information-js)
 							div
 								p!= "a"
+							.mds__fontSize-col.mds__fontSize-col-2(data-name="information")
+								a(href="#" class="" title="")
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 
