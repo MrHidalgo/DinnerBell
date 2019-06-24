@@ -18,13 +18,13 @@ PageList:
   ready: 90
 - file: menu-design-setting-5.html
   titleName: MDS - Item details
-  ready: 90
+  ready: 95
 - file: menu-design-setting-6.html
   titleName: MDS - Feedback
-  ready: 75
+  ready: 80
 - file: menu-design-setting-7.html
   titleName: MDS - My order
-  ready: 75
+  ready: 80
 - file: menu-design-setting-8.html
   titleName: MDS - Log Out
   ready: 95

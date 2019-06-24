@@ -8,5 +8,6 @@
 * - pickr.min.js;
 * - ion.rangeSlider.min.js;
 * - swiper;
+* - nouislider.js;
 *
 * */

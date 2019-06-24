@@ -681,6 +681,48 @@
 							width: 100%;
 						}
 
+						.noUi-horizontal {
+							height: 1px;
+							border: none;
+							border-radius: 0;
+							box-shadow: none;
+							background-color: #69c0f1;
+						}
+
+						.noUi-handle.noUi-handle-lower {
+							outline: none;
+							top: -10px;
+							right: -12px;
+							width: 20px;
+							height: 20px;
+							border-radius: 100%;
+							border-color: #69c0f1;
+							box-shadow: none;
+							background-color: #69c0f1;
+
+							*,
+							&:before,
+							&:after {
+								display: none;
+							}
+						}
+
+						.noUi-value-horizontal {
+							display: none;
+						}
+
+						.noUi-pips-horizontal {
+							top: -5px;
+							height: auto;
+							padding: 0;
+						}
+
+						.noUi-marker-horizontal.noUi-marker {
+							width: 1px;
+							height: 11px;
+							background-color: #69c0f1;
+						}
+
 						.irs--round.irs-with-grid {
 							height: 31px;
 						}
@@ -757,7 +799,7 @@
 		}
 
 		&-name {
-			font-size: 14px;
+			font-size: 16px;
 		}
 
 		&-input {
@@ -804,22 +846,39 @@
 				font-weight: 300;
 			}
 
-			input {
-				outline: none;
-				position: relative;
-				width: 100%;
-				height: 41px;
-				border-width: 1px;
-				border-color: rgb(204, 204, 204);
-				border-style: solid;
-				border-radius: 5px;
+			.noUi-horizontal {
+				height: 1px;
+				border: none;
+				border-radius: 0;
 				box-shadow: none;
-				padding: 0 12px;
-				background-color: #f7f7f7;
-				text-transform: uppercase;
-				color: rgba(0, 0, 0, 0.6);
-				font-size: 14px;
-				font-weight: 300;
+				background-color: #69c0f1;
+			}
+
+			.noUi-handle.noUi-handle-lower {
+				outline: none;
+				top: -10px;
+				right: -12px;
+				width: 20px;
+				height: 20px;
+				border-radius: 100%;
+				border-color: #69c0f1;
+				box-shadow: none;
+				background-color: #69c0f1;
+
+				*,
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+
+			.noUi-marker.noUi-marker-horizontal.noUi-marker-sub,
+			.noUi-value.noUi-value-horizontal.noUi-value-sub {
+				display: none;
+			}
+
+			.noUi-marker-horizontal.noUi-marker {
+				display: none;
 			}
 		}
 
@@ -958,8 +1017,6 @@
 			&:last-of-type {
 				padding-bottom: 0;
 			}
-
-			&--double {}
 
 			&--additional {
 				display: none;

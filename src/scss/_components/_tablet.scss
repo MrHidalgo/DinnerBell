@@ -1316,7 +1316,7 @@
 
 			&__banner {
 				position: relative;
-				min-height: 161px;
+				height: 180px;
 				background-color: #0f102f;
 				border-bottom: 1px solid #1f2161;
 
@@ -1447,9 +1447,7 @@
 			&__heading {
 				display: flex;
 				align-items: center;
-				width: calc(100% + 50px);
 				min-height: 80px;
-				margin-left: -25px;
 				padding-left: 25px;
 				padding-right: 25px;
 				background-color: #0f102f;

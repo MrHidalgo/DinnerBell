@@ -648,6 +648,158 @@ $(document).ready((ev) => {
 	const initRange = () => {
 		const _input = $('.mds__fontSize-input');
 
+		if($('#myOrderFontsize').length > 0) {
+			noUiSlider.create($('#myOrderFontsize')[0], {
+				connect: true,
+				range: {
+					'min': 0,
+					'max': 8
+				},
+				start: [4],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {});
+		}
+
+		if($('#feedbackFontsize').length > 0) {
+			noUiSlider.create($('#feedbackFontsize')[0], {
+				connect: true,
+				range: {
+					'min': 0,
+					'max': 8
+				},
+				start: [4],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {});
+		}
+
+		if($('#itemDetailsFSTitle').length > 0) {
+			noUiSlider.create($('#itemDetailsFSTitle')[0], {
+				connect: true,
+				range: {
+					'min': 26,
+					'max': 34
+				},
+				start: [30],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--itemDetails .tablet__heading p').css({
+					'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+				});
+			});
+		}
+
+		if($('#itemDetailsFSDesc').length > 0) {
+			noUiSlider.create($('#itemDetailsFSDesc')[0], {
+				connect: true,
+				range: {
+					'min': 14,
+					'max': 22
+				},
+				start: [18],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--itemDetails .tablet__heading span, .tablet--itemDetails .tablet__desc p').css({
+					'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+				});
+			});
+		}
+
+		if($('#itemDetailsFSModTitle').length > 0) {
+			noUiSlider.create($('#itemDetailsFSModTitle')[0], {
+				connect: true,
+				range: {
+					'min': 26,
+					'max': 34
+				},
+				start: [30],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--itemDetails .tablet__sibtitle').css({
+					'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+				});
+			});
+		}
+
+		if($('#itemDetailsFSModText').length > 0) {
+			noUiSlider.create($('#itemDetailsFSModText')[0], {
+				connect: true,
+				range: {
+					'min': 18,
+					'max': 26
+				},
+				start: [22],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--itemDetails .tablet__radio-group p').css({
+					'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+				});
+			});
+		}
+
+		if($('#marginFeedback').length > 0) {
+			noUiSlider.create($('#marginFeedback')[0], {
+				connect: true,
+				range: {
+					'min': 0,
+					'max': 200
+				},
+				start: [180],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				const _feedbackBanner = $('.tablet--feedback .tablet__banner');
+
+				_feedbackBanner.css({
+					'height' : parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+
+				if(parseInt(unencoded[handle]).toFixed(0) === '0') {
+					_feedbackBanner.css({
+						'border' : 'none'
+					})
+				} else {
+					_feedbackBanner.css({
+						'border-bottom' : '1px solid #1f2161'
+					})
+				}
+			});
+		}
+
+
 		$('[changeFont-list-js]').ionRangeSlider({
 			min: 22,
 			max: 30,
@@ -691,70 +843,6 @@ $(document).ready((ev) => {
 			skin: "round",
 			onChange: function (scope) {
 				$('.tablet__info-link').css({
-					'font-size' : (scope.from)
-				});
-			}
-		});
-
-		$('[changeFont-itemTitle-js]').ionRangeSlider({
-			min: 26,
-			max: 34,
-			from: 30,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function (scope) {
-				$('.tablet__heading p').css({
-					'font-size' : (scope.from)
-				});
-			}
-		});
-
-		$('[changeFont-description-js]').ionRangeSlider({
-			min: 14,
-			max: 22,
-			from: 18,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function (scope) {
-				$('.tablet__heading span, .tablet__desc p').css({
-					'font-size' : (scope.from)
-				});
-			}
-		});
-
-		$('[changeFont-modifierTitle-js]').ionRangeSlider({
-			min: 26,
-			max: 34,
-			from: 30,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function (scope) {
-				$('.tablet__sibtitle').css({
-					'font-size' : (scope.from)
-				});
-			}
-		});
-
-		$('[changeFont-modifierText-js]').ionRangeSlider({
-			min: 18,
-			max: 26,
-			from: 22,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function (scope) {
-				$('.tablet__radio-group p').css({
 					'font-size' : (scope.from)
 				});
 			}
@@ -822,7 +910,7 @@ $(document).ready((ev) => {
 		});
 
 
-		const _colorFontNodes = $('.mds__fontSize-row  a');
+		const _colorFontNodes = $('.mds__fontSize-row a');
 
 		for(let _el of _colorFontNodes) {
 			const _parentNode = $(_el).closest('.mds__fontSize-col');
@@ -845,6 +933,10 @@ $(document).ready((ev) => {
 				}
 			}).on('change', (...args) => {
 				let _color = args[0].toHEXA().toString();
+
+				_parentNode.css({
+					'backgroundColor' : _color
+				});
 
 				if($('.tablet--menuItems').length > 0) {
 					$('[' + _parentNode.data('name') + '-js]').css({
