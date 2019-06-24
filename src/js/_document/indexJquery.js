@@ -744,6 +744,54 @@ $(document).ready((ev) => {
 			}
 		});
 
+		$('[changeFont-sectionHeader-js]').ionRangeSlider({
+			min: 24,
+			max: 32,
+			from: 28,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function (scope) {
+				$('.tablet__subheader p').css({
+					'font-size' : (scope.from)
+				});
+			}
+		});
+
+		$('[changeFont-subsection-js]').ionRangeSlider({
+			min: 32,
+			max: 40,
+			from: 36,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function (scope) {
+				$('.tablet__subtitle').css({
+					'font-size' : (scope.from)
+				});
+			}
+		});
+
+		$('[changeFont-itemTitleMenu-js]').ionRangeSlider({
+			min: 18,
+			max: 26,
+			from: 22,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function (scope) {
+				$('.tablet__btn p').css({
+					'font-size' : (scope.from)
+				});
+			}
+		});
+
 		_input.map((idx, val) => {
 			$(val).ionRangeSlider({
 				min: 14,
@@ -756,6 +804,44 @@ $(document).ready((ev) => {
 				skin: "round"
 			});
 		});
+
+		const _colorFontNodes = $('.mds__fontSize-row  a');
+
+		for(let _el of _colorFontNodes) {
+			const _parentNode = $(_el).closest('.mds__fontSize-col');
+
+			new Pickr({
+				el: _el,
+				components: {
+					preview: true,
+					opacity: true,
+					hue: true,
+					interaction: {
+						hex: true,
+						rgba: true,
+						hsva: true,
+						input: true,
+						clear: false,
+						save: true
+					}
+				}
+			}).on('change', (...args) => {
+				let _color = args[0].toHEXA().toString();
+
+				if($('.tablet--menuItems').length > 0) {
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color' : _color
+					});
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color' : _color
+					});
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color' : _color
+					});
+				}
+			});
+
+		}
 	};
 
 

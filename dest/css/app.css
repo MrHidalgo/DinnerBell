@@ -7622,35 +7622,31 @@ picture {
   border-style: solid;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  background-color: #ffffff;
 }
 
-/* line 742, src/scss/_components/mds/_mds.scss */
-.mds__fontSize-col-2 input {
-  outline: none;
+/* line 743, src/scss/_components/mds/_mds.scss */
+.mds__fontSize-col-2 .pickr, .mds__fontSize-col-2 .pickr button, .mds__change-color .pickr .mds__fontSize-col-2 button, .mds__upload-color .pickr .mds__fontSize-col-2 button, .mds__form-color-content .pickr .mds__fontSize-col-2 button {
+  opacity: 0;
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-border-radius: 0;
-          border-radius: 0;
-  padding: 5px;
 }
 
-/* line 757, src/scss/_components/mds/_mds.scss */
+/* line 759, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-name {
   font-size: 14px;
 }
 
-/* line 761, src/scss/_components/mds/_mds.scss */
+/* line 763, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-input {
   opacity: 0;
 }
 
-/* line 765, src/scss/_components/mds/_mds.scss */
+/* line 767, src/scss/_components/mds/_mds.scss */
 .mds__fontSize-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7664,7 +7660,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 774, src/scss/_components/mds/_mds.scss */
+/* line 776, src/scss/_components/mds/_mds.scss */
 .mds__indent {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7678,7 +7674,7 @@ picture {
 }
 
 @media screen and (max-width: 575px) {
-  /* line 774, src/scss/_components/mds/_mds.scss */
+  /* line 776, src/scss/_components/mds/_mds.scss */
   .mds__indent {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -7686,12 +7682,12 @@ picture {
   }
 }
 
-/* line 782, src/scss/_components/mds/_mds.scss */
+/* line 784, src/scss/_components/mds/_mds.scss */
 .mds__indent:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 787, src/scss/_components/mds/_mds.scss */
+/* line 789, src/scss/_components/mds/_mds.scss */
 .mds__indent > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -7701,26 +7697,26 @@ picture {
   max-width: 100%;
 }
 
-/* line 792, src/scss/_components/mds/_mds.scss */
+/* line 794, src/scss/_components/mds/_mds.scss */
 .mds__indent > div:nth-of-type(2) {
   width: 136px;
 }
 
 @media screen and (max-width: 575px) {
-  /* line 792, src/scss/_components/mds/_mds.scss */
+  /* line 794, src/scss/_components/mds/_mds.scss */
   .mds__indent > div:nth-of-type(2) {
     width: 100%;
   }
 }
 
-/* line 799, src/scss/_components/mds/_mds.scss */
+/* line 801, src/scss/_components/mds/_mds.scss */
 .mds__indent > div p {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 805, src/scss/_components/mds/_mds.scss */
+/* line 807, src/scss/_components/mds/_mds.scss */
 .mds__indent > div input {
   outline: none;
   position: relative;
@@ -7741,7 +7737,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 824, src/scss/_components/mds/_mds.scss */
+/* line 826, src/scss/_components/mds/_mds.scss */
 .mds__indent-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7755,12 +7751,12 @@ picture {
   margin-bottom: 64px;
 }
 
-/* line 833, src/scss/_components/mds/_mds.scss */
+/* line 835, src/scss/_components/mds/_mds.scss */
 .mds__change {
   margin-bottom: 50px;
 }
 
-/* line 836, src/scss/_components/mds/_mds.scss */
+/* line 838, src/scss/_components/mds/_mds.scss */
 .mds__change-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7772,20 +7768,20 @@ picture {
           justify-content: space-between;
 }
 
-/* line 841, src/scss/_components/mds/_mds.scss */
+/* line 843, src/scss/_components/mds/_mds.scss */
 .mds__change-left, .mds__change-right {
   width: -webkit-calc((100% - 20px) / 2);
   width: calc((100% - 20px) / 2);
 }
 
-/* line 846, src/scss/_components/mds/_mds.scss */
+/* line 848, src/scss/_components/mds/_mds.scss */
 .mds__change-title {
   padding-bottom: 17px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 852, src/scss/_components/mds/_mds.scss */
+/* line 854, src/scss/_components/mds/_mds.scss */
 .mds__change-color {
   overflow: hidden;
   position: relative;
@@ -7798,8 +7794,8 @@ picture {
           border-radius: 5px;
 }
 
-/* line 862, src/scss/_components/mds/_mds.scss */
-.mds__change-color .pickr, .mds__change-color .pickr button, .mds__upload-color .pickr .mds__change-color button, .mds__form-color-content .pickr .mds__change-color button {
+/* line 864, src/scss/_components/mds/_mds.scss */
+.mds__change-color .pickr, .mds__fontSize-col-2 .pickr .mds__change-color button, .mds__change-color .pickr button, .mds__upload-color .pickr .mds__change-color button, .mds__form-color-content .pickr .mds__change-color button {
   opacity: 0;
   z-index: 2;
   position: absolute;
@@ -7809,7 +7805,7 @@ picture {
   height: 100%;
 }
 
-/* line 877, src/scss/_components/mds/_mds.scss */
+/* line 879, src/scss/_components/mds/_mds.scss */
 .mds__change-upload {
   cursor: pointer;
   display: -webkit-box;
@@ -7842,7 +7838,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* line 896, src/scss/_components/mds/_mds.scss */
+/* line 898, src/scss/_components/mds/_mds.scss */
 .mds__change-upload:hover {
   background-color: #61bdf0;
   color: #ffffff;
@@ -7851,7 +7847,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 902, src/scss/_components/mds/_mds.scss */
+/* line 904, src/scss/_components/mds/_mds.scss */
 .mds__change-upload input[type='file'] {
   opacity: 0;
   z-index: 10;
@@ -7863,7 +7859,7 @@ picture {
   height: 100%;
 }
 
-/* line 915, src/scss/_components/mds/_mds.scss */
+/* line 917, src/scss/_components/mds/_mds.scss */
 .mds__upload {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7877,7 +7873,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 920, src/scss/_components/mds/_mds.scss */
+/* line 922, src/scss/_components/mds/_mds.scss */
 .mds__upload-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7889,18 +7885,18 @@ picture {
           justify-content: space-between;
 }
 
-/* line 924, src/scss/_components/mds/_mds.scss */
+/* line 926, src/scss/_components/mds/_mds.scss */
 .mds__upload-wrapper:last-of-type {
   padding-bottom: 0;
 }
 
-/* line 930, src/scss/_components/mds/_mds.scss */
+/* line 932, src/scss/_components/mds/_mds.scss */
 .mds__upload-wrapper--additional {
   display: none;
   padding-top: 30px;
 }
 
-/* line 934, src/scss/_components/mds/_mds.scss */
+/* line 936, src/scss/_components/mds/_mds.scss */
 .mds__upload-wrapper--additional > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7912,33 +7908,33 @@ picture {
           justify-content: space-between;
 }
 
-/* line 941, src/scss/_components/mds/_mds.scss */
+/* line 943, src/scss/_components/mds/_mds.scss */
 .mds__upload-left, .mds__upload-right {
   width: 100%;
   max-width: -webkit-calc((100% - 30px) / 2);
   max-width: calc((100% - 30px) / 2);
 }
 
-/* line 947, src/scss/_components/mds/_mds.scss */
+/* line 949, src/scss/_components/mds/_mds.scss */
 .mds__upload-left {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 953, src/scss/_components/mds/_mds.scss */
+/* line 955, src/scss/_components/mds/_mds.scss */
 .mds__upload-title {
   padding-bottom: 15px;
 }
 
-/* line 957, src/scss/_components/mds/_mds.scss */
+/* line 959, src/scss/_components/mds/_mds.scss */
 .mds__upload-subtitle {
   padding-bottom: 15px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 963, src/scss/_components/mds/_mds.scss */
+/* line 965, src/scss/_components/mds/_mds.scss */
 .mds__upload-color {
   cursor: pointer;
   overflow: hidden;
@@ -7952,8 +7948,8 @@ picture {
   background-color: transparent;
 }
 
-/* line 974, src/scss/_components/mds/_mds.scss */
-.mds__upload-color .pickr, .mds__change-color .pickr .mds__upload-color button, .mds__upload-color .pickr button, .mds__form-color-content .pickr .mds__upload-color button {
+/* line 976, src/scss/_components/mds/_mds.scss */
+.mds__upload-color .pickr, .mds__fontSize-col-2 .pickr .mds__upload-color button, .mds__change-color .pickr .mds__upload-color button, .mds__upload-color .pickr button, .mds__form-color-content .pickr .mds__upload-color button {
   opacity: 0;
   z-index: 2;
   position: absolute;
@@ -7963,7 +7959,7 @@ picture {
   height: 100%;
 }
 
-/* line 988, src/scss/_components/mds/_mds.scss */
+/* line 990, src/scss/_components/mds/_mds.scss */
 .mds__upload-color span {
   position: absolute;
   top: 0;
@@ -7973,7 +7969,7 @@ picture {
   background-color: #131323;
 }
 
-/* line 999, src/scss/_components/mds/_mds.scss */
+/* line 1001, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div {
   position: relative;
   display: -webkit-box;
@@ -8003,7 +7999,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* line 1015, src/scss/_components/mds/_mds.scss */
+/* line 1017, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div:hover {
   background-color: #61BDF0;
   color: #ffffff;
@@ -8012,13 +8008,13 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 1021, src/scss/_components/mds/_mds.scss */
+/* line 1023, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div span {
   position: relative;
   top: 1px;
 }
 
-/* line 1026, src/scss/_components/mds/_mds.scss */
+/* line 1028, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div input[type='file'] {
   opacity: 0;
   z-index: 10;
@@ -8030,7 +8026,7 @@ picture {
   height: 100%;
 }
 
-/* line 1039, src/scss/_components/mds/_mds.scss */
+/* line 1041, src/scss/_components/mds/_mds.scss */
 .mds__upload-preview {
   overflow: hidden;
   display: -webkit-box;
@@ -8057,14 +8053,14 @@ picture {
   background-repeat: no-repeat;
 }
 
-/* line 1053, src/scss/_components/mds/_mds.scss */
+/* line 1055, src/scss/_components/mds/_mds.scss */
 .mds__upload-preview p {
   text-align: center;
   color: #000000;
   font-size: 14px;
 }
 
-/* line 1059, src/scss/_components/mds/_mds.scss */
+/* line 1061, src/scss/_components/mds/_mds.scss */
 .mds__upload-preview img {
   position: absolute;
   top: 0;
@@ -8075,7 +8071,7 @@ picture {
      object-position: center;
 }
 
-/* line 1069, src/scss/_components/mds/_mds.scss */
+/* line 1071, src/scss/_components/mds/_mds.scss */
 .mds__upload-option {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8088,7 +8084,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 1074, src/scss/_components/mds/_mds.scss */
+/* line 1076, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8102,23 +8098,23 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 1079, src/scss/_components/mds/_mds.scss */
+/* line 1081, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio > div {
   margin-bottom: 10px;
 }
 
-/* line 1082, src/scss/_components/mds/_mds.scss */
+/* line 1084, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio > div:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 1087, src/scss/_components/mds/_mds.scss */
+/* line 1089, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label {
   cursor: pointer;
   position: relative;
 }
 
-/* line 1091, src/scss/_components/mds/_mds.scss */
+/* line 1093, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label input {
   opacity: 0;
   position: absolute;
@@ -8128,7 +8124,7 @@ picture {
   height: 0;
 }
 
-/* line 1101, src/scss/_components/mds/_mds.scss */
+/* line 1103, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label input:checked + span:after {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -8141,7 +8137,7 @@ picture {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1110, src/scss/_components/mds/_mds.scss */
+/* line 1112, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -8152,7 +8148,7 @@ picture {
   padding-left: 31px;
 }
 
-/* line 1118, src/scss/_components/mds/_mds.scss */
+/* line 1120, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span:before, .mds__upload-radio label span:after {
   content: '';
   position: absolute;
@@ -8160,7 +8156,7 @@ picture {
           border-radius: 50%;
 }
 
-/* line 1125, src/scss/_components/mds/_mds.scss */
+/* line 1127, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span:before {
   top: 0;
   left: 0;
@@ -8170,7 +8166,7 @@ picture {
   background-color: transparent;
 }
 
-/* line 1134, src/scss/_components/mds/_mds.scss */
+/* line 1136, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span:after {
   opacity: 0;
   top: 3px;
@@ -8191,7 +8187,7 @@ picture {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1149, src/scss/_components/mds/_mds.scss */
+/* line 1151, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove {
   cursor: pointer;
   display: -webkit-box;
@@ -8204,7 +8200,7 @@ picture {
           align-items: center;
 }
 
-/* line 1156, src/scss/_components/mds/_mds.scss */
+/* line 1158, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove:hover span:after {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -8216,13 +8212,13 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1163, src/scss/_components/mds/_mds.scss */
+/* line 1165, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove .icon-font,
 .mds__upload-remove span {
   color: #70c3f1;
 }
 
-/* line 1168, src/scss/_components/mds/_mds.scss */
+/* line 1170, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove span {
   overflow: hidden;
   position: relative;
@@ -8230,7 +8226,7 @@ picture {
   padding-left: 15px;
 }
 
-/* line 1174, src/scss/_components/mds/_mds.scss */
+/* line 1176, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove span:after {
   content: '';
   position: absolute;
@@ -8251,12 +8247,12 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1191, src/scss/_components/mds/_mds.scss */
+/* line 1193, src/scss/_components/mds/_mds.scss */
 .mds__form-content {
   padding-bottom: 30px;
 }
 
-/* line 1195, src/scss/_components/mds/_mds.scss */
+/* line 1197, src/scss/_components/mds/_mds.scss */
 .mds__form-color {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8270,7 +8266,7 @@ picture {
 }
 
 @media screen and (max-width: 575px) {
-  /* line 1195, src/scss/_components/mds/_mds.scss */
+  /* line 1197, src/scss/_components/mds/_mds.scss */
   .mds__form-color {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -8279,7 +8275,7 @@ picture {
   }
 }
 
-/* line 1206, src/scss/_components/mds/_mds.scss */
+/* line 1208, src/scss/_components/mds/_mds.scss */
 .mds__form-color.mds__form-color--winput > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8296,17 +8292,17 @@ picture {
   width: 91px;
 }
 
-/* line 1215, src/scss/_components/mds/_mds.scss */
+/* line 1217, src/scss/_components/mds/_mds.scss */
 .mds__form-color.mds__form-color--winput .mds__form-color-content {
   width: 43px;
 }
 
-/* line 1222, src/scss/_components/mds/_mds.scss */
+/* line 1224, src/scss/_components/mds/_mds.scss */
 .mds__form-color:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 1227, src/scss/_components/mds/_mds.scss */
+/* line 1229, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -8316,26 +8312,26 @@ picture {
   max-width: 100%;
 }
 
-/* line 1232, src/scss/_components/mds/_mds.scss */
+/* line 1234, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(2) {
   width: 136px;
 }
 
 @media screen and (max-width: 575px) {
-  /* line 1232, src/scss/_components/mds/_mds.scss */
+  /* line 1234, src/scss/_components/mds/_mds.scss */
   .mds__form-color > div:nth-of-type(2) {
     width: 100%;
   }
 }
 
-/* line 1239, src/scss/_components/mds/_mds.scss */
+/* line 1241, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div p {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 1246, src/scss/_components/mds/_mds.scss */
+/* line 1248, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content {
   overflow: hidden;
   position: relative;
@@ -8348,8 +8344,8 @@ picture {
           border-radius: 5px;
 }
 
-/* line 1256, src/scss/_components/mds/_mds.scss */
-.mds__form-color-content .pickr, .mds__change-color .pickr .mds__form-color-content button, .mds__upload-color .pickr .mds__form-color-content button, .mds__form-color-content .pickr button {
+/* line 1258, src/scss/_components/mds/_mds.scss */
+.mds__form-color-content .pickr, .mds__fontSize-col-2 .pickr .mds__form-color-content button, .mds__change-color .pickr .mds__form-color-content button, .mds__upload-color .pickr .mds__form-color-content button, .mds__form-color-content .pickr button {
   opacity: 0;
   z-index: 2;
   position: absolute;
@@ -8359,7 +8355,7 @@ picture {
   height: 100%;
 }
 
-/* line 1270, src/scss/_components/mds/_mds.scss */
+/* line 1272, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content input[type="text"] {
   border: none;
   -webkit-box-shadow: none;
@@ -8378,7 +8374,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 1286, src/scss/_components/mds/_mds.scss */
+/* line 1288, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content span {
   z-index: 1;
   position: absolute;

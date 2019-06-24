@@ -1172,6 +1172,54 @@ $(document).ready(function (ev) {
 			}
 		});
 
+		$('[changeFont-sectionHeader-js]').ionRangeSlider({
+			min: 24,
+			max: 32,
+			from: 28,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__subheader p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-subsection-js]').ionRangeSlider({
+			min: 32,
+			max: 40,
+			from: 36,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__subtitle').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
+		$('[changeFont-itemTitleMenu-js]').ionRangeSlider({
+			min: 18,
+			max: 26,
+			from: 22,
+			step: 1,
+			grid: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			skin: "round",
+			onChange: function onChange(scope) {
+				$('.tablet__btn p').css({
+					'font-size': scope.from
+				});
+			}
+		});
+
 		_input.map(function (idx, val) {
 			$(val).ionRangeSlider({
 				min: 14,
@@ -1184,6 +1232,72 @@ $(document).ready(function (ev) {
 				skin: "round"
 			});
 		});
+
+		var _colorFontNodes = $('.mds__fontSize-row  a');
+
+		var _loop5 = function _loop5(_el) {
+			var _parentNode = $(_el).closest('.mds__fontSize-col');
+
+			new Pickr({
+				el: _el,
+				components: {
+					preview: true,
+					opacity: true,
+					hue: true,
+					interaction: {
+						hex: true,
+						rgba: true,
+						hsva: true,
+						input: true,
+						clear: false,
+						save: true
+					}
+				}
+			}).on('change', function () {
+				for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+					args[_key3] = arguments[_key3];
+				}
+
+				var _color = args[0].toHEXA().toString();
+
+				if ($('.tablet--menuItems').length > 0) {
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color': _color
+					});
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color': _color
+					});
+					$('[' + _parentNode.data('name') + '-js]').css({
+						'color': _color
+					});
+				}
+			});
+		};
+
+		var _iteratorNormalCompletion6 = true;
+		var _didIteratorError6 = false;
+		var _iteratorError6 = undefined;
+
+		try {
+			for (var _iterator6 = _colorFontNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+				var _el = _step6.value;
+
+				_loop5(_el);
+			}
+		} catch (err) {
+			_didIteratorError6 = true;
+			_iteratorError6 = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion6 && _iterator6.return) {
+					_iterator6.return();
+				}
+			} finally {
+				if (_didIteratorError6) {
+					throw _iteratorError6;
+				}
+			}
+		}
 	};
 
 	var initTabletRange = function initTabletRange() {
