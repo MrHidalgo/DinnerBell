@@ -805,6 +805,7 @@ $(document).ready((ev) => {
 			});
 		});
 
+
 		const _colorFontNodes = $('.mds__fontSize-row  a');
 
 		for(let _el of _colorFontNodes) {
@@ -812,6 +813,7 @@ $(document).ready((ev) => {
 
 			new Pickr({
 				el: _el,
+				default: '#fff',
 				components: {
 					preview: true,
 					opacity: true,
@@ -832,9 +834,9 @@ $(document).ready((ev) => {
 					$('[' + _parentNode.data('name') + '-js]').css({
 						'color' : _color
 					});
-					$('[' + _parentNode.data('name') + '-js]').css({
-						'color' : _color
-					});
+				}
+
+				if($('.tablet--itemDetails').length > 0) {
 					$('[' + _parentNode.data('name') + '-js]').css({
 						'color' : _color
 					});

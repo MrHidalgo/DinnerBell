@@ -27,19 +27,19 @@ section#tablet.tablet.tablet--itemDetails
 			.tablet__heading
 				.tablet__heading--top
 					.tablet__heading--left
-						p!= "Fresh florida stone crab clams"
+						p(itemTitle-js)!= "Fresh florida stone crab clams"
 					.tablet__heading--right
 						i.icon-font.icon-cook
 				.tablet__heading--bottom
-					span!= "Sushi-grade tuna, avocado, seaweed salad, forbidden rice, dynamite sauce, and honey wasabi aioli"
+					span(description-js)!= "Sushi-grade tuna, avocado, seaweed salad, forbidden rice, dynamite sauce, and honey wasabi aioli"
 
-			p.tablet__sibtitle!= "Portion size"
+			p.tablet__sibtitle(modifierTitle-js)!= "Portion size"
 
 			.tablet__radio-group
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Small"
+							strong(modifierText-js)!= "Small"
 							span!= "$8"
 							i!= "2-3 oz ∙ 440 cal"
 					div
@@ -49,7 +49,7 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Medium"
+							strong(modifierText-js)!= "Medium"
 							span!= "$12"
 							i!= "3-5 oz ∙ 510 cal"
 					div
@@ -59,7 +59,7 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Large"
+							strong(modifierText-js)!= "Large"
 							span!= "$18"
 							i!= "5-9 oz ∙ 730 cal"
 					div
@@ -69,7 +69,7 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Extra Large"
+							strong(modifierText-js)!= "Extra Large"
 							span!= "$20"
 							i!= "9-12 oz ∙ 1230 cal"
 					div
@@ -92,13 +92,13 @@ section#tablet.tablet.tablet--itemDetails
 						input(type="text")
 
 
-			p.tablet__sibtitle!= "Dressing options"
+			p.tablet__sibtitle(modifierTitle-js)!= "Dressing options"
 
 			.tablet__radio-group
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Italian Dressing"
+							strong(modifierText-js)!= "Italian Dressing"
 							i!= "40 cal"
 					div
 						label
@@ -107,7 +107,7 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "LowFat Italian"
+							strong(modifierText-js)!= "LowFat Italian"
 							i!= "20 cal"
 					div
 						label
@@ -116,14 +116,14 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Oil & Vinegar"
+							strong(modifierText-js)!= "Oil & Vinegar"
 							i!= "30 cal"
 					div
 						label
 							input(type='radio' name='dressing_options')
 							span
 
-			p.tablet__sibtitle!= "On the side"
+			p.tablet__sibtitle(modifierTitle-js)!= "On the side"
 
 			.tablet__box-wrapper
 				a.tablet__box.is-choose(href="#" class="" title="")
@@ -154,13 +154,13 @@ section#tablet.tablet.tablet--itemDetails
 						p!= "Garlicky Roasted Broccoli"
 						span!= "<i>$5</i> ∙ 99 cal"
 
-			p.tablet__sibtitle!= "Beverage"
+			p.tablet__sibtitle(modifierTitle-js)!= "Beverage"
 
 			.tablet__radio-group
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Green tea"
+							strong(modifierText-js)!= "Green tea"
 					div
 						label
 							input(type='radio' name='beverage' checked)
@@ -168,7 +168,7 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Black tea"
+							strong(modifierText-js)!= "Black tea"
 					div
 						label
 							input(type='radio' name='beverage')
@@ -176,13 +176,13 @@ section#tablet.tablet.tablet--itemDetails
 				.tablet__radio-group-field
 					div
 						p
-							strong!= "Coffee"
+							strong(modifierText-js)!= "Coffee"
 					div
 						label
 							input(type='radio' name='beverage')
 							span
 
-			p.tablet__sibtitle!= "Essentials"
+			p.tablet__sibtitle(modifierTitle-js)!= "Essentials"
 
 			.tablet__count-group
 				.tablet__count-group-field
@@ -222,7 +222,7 @@ section#tablet.tablet.tablet--itemDetails
 						a(href="#" class="" title="")
 							span!= "+"
 
-			p.tablet__sibtitle!= "Personal preferences"
+			p.tablet__sibtitle(modifierTitle-js)!= "Personal preferences"
 
 			.tablet__ques-group
 				.tablet__ques-group-field
@@ -279,7 +279,7 @@ section#tablet.tablet.tablet--itemDetails
 						span!= "+"
 
 			.tablet__desc
-				p!= "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+				p(description-js)!= "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
 
 	.tablet__footer
 		div

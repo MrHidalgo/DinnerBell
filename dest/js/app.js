@@ -1240,6 +1240,7 @@ $(document).ready(function (ev) {
 
 			new Pickr({
 				el: _el,
+				default: '#fff',
 				components: {
 					preview: true,
 					opacity: true,
@@ -1264,9 +1265,9 @@ $(document).ready(function (ev) {
 					$('[' + _parentNode.data('name') + '-js]').css({
 						'color': _color
 					});
-					$('[' + _parentNode.data('name') + '-js]').css({
-						'color': _color
-					});
+				}
+
+				if ($('.tablet--itemDetails').length > 0) {
 					$('[' + _parentNode.data('name') + '-js]').css({
 						'color': _color
 					});
