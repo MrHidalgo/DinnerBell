@@ -7149,7 +7149,7 @@ picture {
       -ms-flex-align: center;
           align-items: center;
   height: 55px;
-  padding: 5px 24px;
+  padding: 5px 12px;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
