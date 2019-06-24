@@ -152,6 +152,7 @@ $(document).ready((ev) => {
 	const _additionMethodsUploadFiles = () => {
 		const _additionalOption = $('[upload-additional-js]'),
 			_colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
+			_uploadBtn = $('[change-img-js]').closest('.mds__upload-right'),
 			_previewNode = $('[upload-preview-js]'),
 			_fixedImageBtn = $('[upload-imgFixed-js]'),
 			_repeatImageBtn = $('[upload-imgRepeat-js]');
@@ -208,18 +209,22 @@ $(document).ready((ev) => {
 
 				_tabletBG.css(_defaultOption.default);
 			},
-			showColorPallet () {
-				console.log(`showColorPallet`);
+			showColorPalletUploadBtn () {
+				console.log(`showColorPalletUploadBtn`);
 
-				_colorPallet.css({
-					'opacity' : '1'
+				[_colorPallet, _uploadBtn].map((val, idx) => {
+					val.css({
+						'opacity' : '1'
+					});
 				});
 			},
-			hideColorPallet () {
-				console.log(`hideColorPallet`);
+			hideColorPalletUploadBtn () {
+				console.log(`hideColorPalletUploadBtn`);
 
-				_colorPallet.css({
-					'opacity' : '0'
+				[_colorPallet, _uploadBtn].map((val, idx) => {
+					val.css({
+						'opacity' : '0'
+					});
 				});
 			},
 			fixedBGOption () {
@@ -252,7 +257,7 @@ $(document).ready((ev) => {
 
 				$('[upload-remove-js]').on('click', (ev) => {
 					this.hideAdditionalUploadImageOption();
-					this.showColorPallet();
+					this.showColorPalletUploadBtn();
 					this.removeImageOnPreview();
 					this.resetBGOption();
 
@@ -273,7 +278,7 @@ $(document).ready((ev) => {
 
 			const _self = $(ev.currentTarget);
 
-			_additionMethodsUploadFiles().hideColorPallet();
+			_additionMethodsUploadFiles().hideColorPalletUploadBtn();
 
 			if(_self[0].files.length !== 0) {
 				const reader = new FileReader();

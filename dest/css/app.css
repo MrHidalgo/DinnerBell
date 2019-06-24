@@ -8182,25 +8182,25 @@ picture {
 }
 
 /* line 981, src/scss/_components/mds/_mds.scss */
-.mds__upload-left {
+.mds__upload-left, .mds__upload-right {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 987, src/scss/_components/mds/_mds.scss */
+/* line 986, src/scss/_components/mds/_mds.scss */
 .mds__upload-title {
   padding-bottom: 15px;
 }
 
-/* line 991, src/scss/_components/mds/_mds.scss */
+/* line 990, src/scss/_components/mds/_mds.scss */
 .mds__upload-subtitle {
   padding-bottom: 15px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 997, src/scss/_components/mds/_mds.scss */
+/* line 996, src/scss/_components/mds/_mds.scss */
 .mds__upload-color {
   cursor: pointer;
   overflow: hidden;
@@ -8214,7 +8214,7 @@ picture {
   background-color: transparent;
 }
 
-/* line 1008, src/scss/_components/mds/_mds.scss */
+/* line 1007, src/scss/_components/mds/_mds.scss */
 .mds__upload-color .pickr, .mds__fontSize-col-2 .pickr .mds__upload-color button, .mds__change-color .pickr .mds__upload-color button, .mds__upload-color .pickr button, .mds__form-color-content .pickr .mds__upload-color button {
   opacity: 0;
   z-index: 2;
@@ -8225,7 +8225,7 @@ picture {
   height: 100%;
 }
 
-/* line 1022, src/scss/_components/mds/_mds.scss */
+/* line 1021, src/scss/_components/mds/_mds.scss */
 .mds__upload-color span {
   position: absolute;
   top: 0;
@@ -8235,7 +8235,7 @@ picture {
   background-color: #131323;
 }
 
-/* line 1033, src/scss/_components/mds/_mds.scss */
+/* line 1032, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div {
   position: relative;
   display: -webkit-box;
@@ -8265,7 +8265,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* line 1049, src/scss/_components/mds/_mds.scss */
+/* line 1048, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div:hover {
   background-color: #61BDF0;
   color: #ffffff;
@@ -8274,13 +8274,13 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 1055, src/scss/_components/mds/_mds.scss */
+/* line 1054, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div span {
   position: relative;
   top: 1px;
 }
 
-/* line 1060, src/scss/_components/mds/_mds.scss */
+/* line 1059, src/scss/_components/mds/_mds.scss */
 .mds__upload-bg > div input[type='file'] {
   opacity: 0;
   z-index: 10;
@@ -8292,7 +8292,7 @@ picture {
   height: 100%;
 }
 
-/* line 1073, src/scss/_components/mds/_mds.scss */
+/* line 1072, src/scss/_components/mds/_mds.scss */
 .mds__upload-preview {
   overflow: hidden;
   display: -webkit-box;
@@ -8319,14 +8319,14 @@ picture {
   background-repeat: no-repeat;
 }
 
-/* line 1087, src/scss/_components/mds/_mds.scss */
+/* line 1086, src/scss/_components/mds/_mds.scss */
 .mds__upload-preview p {
   text-align: center;
   color: #000000;
   font-size: 14px;
 }
 
-/* line 1093, src/scss/_components/mds/_mds.scss */
+/* line 1092, src/scss/_components/mds/_mds.scss */
 .mds__upload-preview img {
   position: absolute;
   top: 0;
@@ -8337,7 +8337,7 @@ picture {
      object-position: center;
 }
 
-/* line 1103, src/scss/_components/mds/_mds.scss */
+/* line 1102, src/scss/_components/mds/_mds.scss */
 .mds__upload-option {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8350,7 +8350,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 1108, src/scss/_components/mds/_mds.scss */
+/* line 1107, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8364,23 +8364,23 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 1113, src/scss/_components/mds/_mds.scss */
+/* line 1112, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio > div {
   margin-bottom: 10px;
 }
 
-/* line 1116, src/scss/_components/mds/_mds.scss */
+/* line 1115, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio > div:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 1121, src/scss/_components/mds/_mds.scss */
+/* line 1120, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label {
   cursor: pointer;
   position: relative;
 }
 
-/* line 1125, src/scss/_components/mds/_mds.scss */
+/* line 1124, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label input {
   opacity: 0;
   position: absolute;
@@ -8390,7 +8390,7 @@ picture {
   height: 0;
 }
 
-/* line 1135, src/scss/_components/mds/_mds.scss */
+/* line 1134, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label input:checked + span:after {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -8403,7 +8403,7 @@ picture {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1144, src/scss/_components/mds/_mds.scss */
+/* line 1143, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -8414,7 +8414,7 @@ picture {
   padding-left: 31px;
 }
 
-/* line 1152, src/scss/_components/mds/_mds.scss */
+/* line 1151, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span:before, .mds__upload-radio label span:after {
   content: '';
   position: absolute;
@@ -8422,7 +8422,7 @@ picture {
           border-radius: 50%;
 }
 
-/* line 1159, src/scss/_components/mds/_mds.scss */
+/* line 1158, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span:before {
   top: 0;
   left: 0;
@@ -8432,7 +8432,7 @@ picture {
   background-color: transparent;
 }
 
-/* line 1168, src/scss/_components/mds/_mds.scss */
+/* line 1167, src/scss/_components/mds/_mds.scss */
 .mds__upload-radio label span:after {
   opacity: 0;
   top: 3px;
@@ -8453,7 +8453,7 @@ picture {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1183, src/scss/_components/mds/_mds.scss */
+/* line 1182, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove {
   cursor: pointer;
   display: -webkit-box;
@@ -8466,7 +8466,7 @@ picture {
           align-items: center;
 }
 
-/* line 1190, src/scss/_components/mds/_mds.scss */
+/* line 1189, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove:hover span:after {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -8478,13 +8478,13 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1197, src/scss/_components/mds/_mds.scss */
+/* line 1196, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove .icon-font,
 .mds__upload-remove span {
   color: #70c3f1;
 }
 
-/* line 1202, src/scss/_components/mds/_mds.scss */
+/* line 1201, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove span {
   overflow: hidden;
   position: relative;
@@ -8492,7 +8492,7 @@ picture {
   padding-left: 15px;
 }
 
-/* line 1208, src/scss/_components/mds/_mds.scss */
+/* line 1207, src/scss/_components/mds/_mds.scss */
 .mds__upload-remove span:after {
   content: '';
   position: absolute;
@@ -8513,12 +8513,12 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1225, src/scss/_components/mds/_mds.scss */
+/* line 1224, src/scss/_components/mds/_mds.scss */
 .mds__form-content {
   padding-bottom: 30px;
 }
 
-/* line 1229, src/scss/_components/mds/_mds.scss */
+/* line 1228, src/scss/_components/mds/_mds.scss */
 .mds__form-content--font .c-form__group {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -8526,12 +8526,12 @@ picture {
           align-items: center;
 }
 
-/* line 1232, src/scss/_components/mds/_mds.scss */
+/* line 1231, src/scss/_components/mds/_mds.scss */
 .mds__form-content--font .c-form__group p {
   padding-bottom: 20px;
 }
 
-/* line 1239, src/scss/_components/mds/_mds.scss */
+/* line 1238, src/scss/_components/mds/_mds.scss */
 .mds__form-color {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8545,7 +8545,7 @@ picture {
 }
 
 @media screen and (max-width: 575px) {
-  /* line 1239, src/scss/_components/mds/_mds.scss */
+  /* line 1238, src/scss/_components/mds/_mds.scss */
   .mds__form-color {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -8554,7 +8554,7 @@ picture {
   }
 }
 
-/* line 1250, src/scss/_components/mds/_mds.scss */
+/* line 1249, src/scss/_components/mds/_mds.scss */
 .mds__form-color.mds__form-color--winput > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8571,27 +8571,27 @@ picture {
   width: 91px;
 }
 
-/* line 1258, src/scss/_components/mds/_mds.scss */
+/* line 1257, src/scss/_components/mds/_mds.scss */
 .mds__form-color.mds__form-color--winput > div.is-one .mds__form-color-content {
   margin-left: auto;
 }
 
-/* line 1262, src/scss/_components/mds/_mds.scss */
+/* line 1261, src/scss/_components/mds/_mds.scss */
 .mds__form-color.mds__form-color--winput > div.is-three {
   width: 139px;
 }
 
-/* line 1268, src/scss/_components/mds/_mds.scss */
+/* line 1267, src/scss/_components/mds/_mds.scss */
 .mds__form-color.mds__form-color--winput .mds__form-color-content {
   width: 43px;
 }
 
-/* line 1275, src/scss/_components/mds/_mds.scss */
+/* line 1274, src/scss/_components/mds/_mds.scss */
 .mds__form-color:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 1280, src/scss/_components/mds/_mds.scss */
+/* line 1279, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -8601,26 +8601,26 @@ picture {
   max-width: 100%;
 }
 
-/* line 1285, src/scss/_components/mds/_mds.scss */
+/* line 1284, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div:nth-of-type(2) {
   width: 136px;
 }
 
 @media screen and (max-width: 575px) {
-  /* line 1285, src/scss/_components/mds/_mds.scss */
+  /* line 1284, src/scss/_components/mds/_mds.scss */
   .mds__form-color > div:nth-of-type(2) {
     width: 100%;
   }
 }
 
-/* line 1292, src/scss/_components/mds/_mds.scss */
+/* line 1291, src/scss/_components/mds/_mds.scss */
 .mds__form-color > div p {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 1299, src/scss/_components/mds/_mds.scss */
+/* line 1298, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content {
   overflow: hidden;
   position: relative;
@@ -8633,7 +8633,7 @@ picture {
           border-radius: 5px;
 }
 
-/* line 1309, src/scss/_components/mds/_mds.scss */
+/* line 1308, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content .pickr, .mds__fontSize-col-2 .pickr .mds__form-color-content button, .mds__change-color .pickr .mds__form-color-content button, .mds__upload-color .pickr .mds__form-color-content button, .mds__form-color-content .pickr button {
   opacity: 0;
   z-index: 2;
@@ -8644,7 +8644,7 @@ picture {
   height: 100%;
 }
 
-/* line 1323, src/scss/_components/mds/_mds.scss */
+/* line 1322, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content input[type="text"] {
   border: none;
   -webkit-box-shadow: none;
@@ -8663,7 +8663,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 1339, src/scss/_components/mds/_mds.scss */
+/* line 1338, src/scss/_components/mds/_mds.scss */
 .mds__form-color-content span {
   z-index: 1;
   position: absolute;

@@ -580,6 +580,7 @@ $(document).ready(function (ev) {
 	var _additionMethodsUploadFiles = function _additionMethodsUploadFiles() {
 		var _additionalOption = $('[upload-additional-js]'),
 		    _colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
+		    _uploadBtn = $('[change-img-js]').closest('.mds__upload-right'),
 		    _previewNode = $('[upload-preview-js]'),
 		    _fixedImageBtn = $('[upload-imgFixed-js]'),
 		    _repeatImageBtn = $('[upload-imgRepeat-js]');
@@ -634,18 +635,22 @@ $(document).ready(function (ev) {
 
 				_tabletBG.css(_defaultOption.default);
 			},
-			showColorPallet: function showColorPallet() {
-				console.log('showColorPallet');
+			showColorPalletUploadBtn: function showColorPalletUploadBtn() {
+				console.log('showColorPalletUploadBtn');
 
-				_colorPallet.css({
-					'opacity': '1'
+				[_colorPallet, _uploadBtn].map(function (val, idx) {
+					val.css({
+						'opacity': '1'
+					});
 				});
 			},
-			hideColorPallet: function hideColorPallet() {
-				console.log('hideColorPallet');
+			hideColorPalletUploadBtn: function hideColorPalletUploadBtn() {
+				console.log('hideColorPalletUploadBtn');
 
-				_colorPallet.css({
-					'opacity': '0'
+				[_colorPallet, _uploadBtn].map(function (val, idx) {
+					val.css({
+						'opacity': '0'
+					});
 				});
 			},
 			fixedBGOption: function fixedBGOption() {
@@ -680,7 +685,7 @@ $(document).ready(function (ev) {
 
 				$('[upload-remove-js]').on('click', function (ev) {
 					_this.hideAdditionalUploadImageOption();
-					_this.showColorPallet();
+					_this.showColorPalletUploadBtn();
 					_this.removeImageOnPreview();
 					_this.resetBGOption();
 
@@ -700,7 +705,7 @@ $(document).ready(function (ev) {
 
 			var _self = $(ev.currentTarget);
 
-			_additionMethodsUploadFiles().hideColorPallet();
+			_additionMethodsUploadFiles().hideColorPalletUploadBtn();
 
 			if (_self[0].files.length !== 0) {
 				var reader = new FileReader();

@@ -978,11 +978,10 @@
 			max-width: calc((100% - 30px) / 2);
 		}
 
-		&-left {
+		&-left,
+		&-right {
 			@include transition(opacity);
 		}
-
-		&-right {}
 
 		&-title {
 			padding-bottom: 15px;
