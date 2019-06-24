@@ -6461,9 +6461,10 @@ picture {
   min-height: auto;
   margin-bottom: 0;
   padding: 0;
+  background-color: transparent;
 }
 
-/* line 1788, src/scss/_components/_tablet.scss */
+/* line 1789, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper--list .tablet__block > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6484,12 +6485,12 @@ picture {
   min-height: 80px;
 }
 
-/* line 1795, src/scss/_components/_tablet.scss */
+/* line 1796, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__block-wrapper--list .tablet__block > div p {
   font-size: 26px;
 }
 
-/* line 1805, src/scss/_components/_tablet.scss */
+/* line 1806, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info {
   padding-top: 25px;
   padding-bottom: 50px;
@@ -6499,7 +6500,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 1813, src/scss/_components/_tablet.scss */
+/* line 1814, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-title {
   padding-bottom: 50px;
   text-align: center;
@@ -6509,7 +6510,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 1822, src/scss/_components/_tablet.scss */
+/* line 1823, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6524,7 +6525,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 1830, src/scss/_components/_tablet.scss */
+/* line 1831, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-link:hover {
   color: #558ce4;
   -webkit-transition: color 0.3s ease-in-out;
@@ -6532,7 +6533,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 1836, src/scss/_components/_tablet.scss */
+/* line 1837, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-logo {
   display: block;
   max-width: 100%;
@@ -6542,7 +6543,7 @@ picture {
   margin-top: 50px;
 }
 
-/* line 1845, src/scss/_components/_tablet.scss */
+/* line 1846, src/scss/_components/_tablet.scss */
 .tablet--mainMenu .tablet__info-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6561,12 +6562,12 @@ picture {
   background-color: #0d0e27;
 }
 
-/* line 1860, src/scss/_components/_tablet.scss */
+/* line 1861, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__content {
   pointer-events: none;
 }
 
-/* line 1864, src/scss/_components/_tablet.scss */
+/* line 1865, src/scss/_components/_tablet.scss */
 .tablet--logout .tablet__logout {
   display: -webkit-box;
   display: -webkit-flex;

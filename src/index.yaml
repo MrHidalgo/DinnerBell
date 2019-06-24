@@ -12,10 +12,10 @@ PageList:
   ready: 75
 - file: menu-design-setting-3.html
   titleName: MDS - Main menu
-  ready: 90
+  ready: 95
 - file: menu-design-setting-4.html
   titleName: MDS - Menu items
-  ready: 90
+  ready: 95
 - file: menu-design-setting-5.html
   titleName: MDS - Item details
   ready: 95

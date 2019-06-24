@@ -106,7 +106,7 @@ section#mds.mds
 							div
 								span!= "a"
 							div
-								input.mds__fontSize-input(type='text', name='', value='' changeFont-sectionHeader-js)
+								#menuItemsFSSectionHeader
 							div
 								p!= "a"
 						.mds__fontSize-col.mds__fontSize-col-2(data-name='sectionHeader')
@@ -119,7 +119,7 @@ section#mds.mds
 							div
 								span!= "a"
 							div
-								input.mds__fontSize-input(type='text', name='', value='' changeFont-subsection-js)
+								#menuItemsFSSubsection
 							div
 								p!= "a"
 						.mds__fontSize-col.mds__fontSize-col-2(data-name='subsection')
@@ -132,7 +132,7 @@ section#mds.mds
 							div
 								span!= "a"
 							div
-								input.mds__fontSize-input(type='text', name='', value='' changeFont-itemTitleMenu-js)
+								#menuItemsFSItemTitleMenu
 							div
 								p!= "a"
 						.mds__fontSize-col.mds__fontSize-col-2(data-name='itemTitleMenu')
@@ -143,13 +143,12 @@ section#mds.mds
 					each val, idx in colorTitleArr
 						.mds__form-content
 							each _v, _i in colorTitleArr[idx]
-								.mds__form-color
+								.mds__form-color.mds__form-color--winput
 									div
 										p!= colorTitleArr[idx][_i].title
-									div
+									div.is-one
 										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
 											a(href="#" class="" title="")
-											input(type="text" readonly disabled value!= colorTitleArr[idx][_i].color)
 											span(style="background-color:" + colorTitleArr[idx][_i].color)
 
 					p.mds__subtitle.mds__subtitle--mdsMenuItemPt!= "Menu Layout"

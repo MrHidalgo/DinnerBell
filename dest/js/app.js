@@ -1194,6 +1194,132 @@ $(document).ready(function (ev) {
 			});
 		}
 
+		if ($('#menuItemsFSSectionHeader').length > 0) {
+			noUiSlider.create($('#menuItemsFSSectionHeader')[0], {
+				connect: true,
+				range: {
+					'min': 24,
+					'max': 32
+				},
+				start: [28],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--menuItems .tablet__subheader p').css({
+					'font-size': parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+			});
+		}
+
+		if ($('#menuItemsFSSubsection').length > 0) {
+			noUiSlider.create($('#menuItemsFSSubsection')[0], {
+				connect: true,
+				range: {
+					'min': 32,
+					'max': 40
+				},
+				start: [36],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--menuItems .tablet__subtitle').css({
+					'font-size': parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+			});
+		}
+
+		if ($('#menuItemsFSItemTitleMenu').length > 0) {
+			noUiSlider.create($('#menuItemsFSItemTitleMenu')[0], {
+				connect: true,
+				range: {
+					'min': 18,
+					'max': 26
+				},
+				start: [22],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--menuItems .tablet__btn p').css({
+					'font-size': parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+			});
+		}
+
+		if ($('#mainMenuFSList').length > 0) {
+			noUiSlider.create($('#mainMenuFSList')[0], {
+				connect: true,
+				range: {
+					'min': 22,
+					'max': 30
+				},
+				start: [26],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--mainMenu .tablet__block-wrapper--list').find('p').css({
+					'font-size': parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+			});
+		}
+
+		if ($('#mainMenuFSThumbnail').length > 0) {
+			noUiSlider.create($('#mainMenuFSThumbnail')[0], {
+				connect: true,
+				range: {
+					'min': 14,
+					'max': 22
+				},
+				start: [18],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--mainMenu .tablet__block-wrapper--thumbnail').find('p').css({
+					'font-size': parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+			});
+		}
+
+		if ($('#mainMenuFSInformation').length > 0) {
+			noUiSlider.create($('#mainMenuFSInformation')[0], {
+				connect: true,
+				range: {
+					'min': 20,
+					'max': 28
+				},
+				start: [24],
+				step: 1,
+				pips: {
+					mode: 'steps',
+					stepped: true,
+					density: 10
+				}
+			}).on('slide', function (values, handle, unencoded, tap, positions) {
+				$('.tablet--mainMenu .tablet__info-link').css({
+					'font-size': parseInt(unencoded[handle]).toFixed(0) + 'px'
+				});
+			});
+		}
+
 		if ($('#marginFeedback').length > 0) {
 			noUiSlider.create($('#marginFeedback')[0], {
 				connect: true,
@@ -1226,115 +1352,6 @@ $(document).ready(function (ev) {
 				}
 			});
 		}
-
-		$('[changeFont-list-js]').ionRangeSlider({
-			min: 22,
-			max: 30,
-			from: 26,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function onChange(scope) {
-				$('.tablet__block-wrapper--list').find('p').css({
-					'font-size': scope.from
-				});
-			}
-		});
-
-		$('[changeFont-thumbnail-js]').ionRangeSlider({
-			min: 14,
-			max: 22,
-			from: 18,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function onChange(scope) {
-				$('.tablet__block-wrapper--thumbnail').find('p').css({
-					'font-size': scope.from
-				});
-			}
-		});
-
-		$('[changeFont-information-js]').ionRangeSlider({
-			min: 20,
-			max: 28,
-			from: 24,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function onChange(scope) {
-				$('.tablet__info-link').css({
-					'font-size': scope.from
-				});
-			}
-		});
-
-		$('[changeFont-sectionHeader-js]').ionRangeSlider({
-			min: 24,
-			max: 32,
-			from: 28,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function onChange(scope) {
-				$('.tablet__subheader p').css({
-					'font-size': scope.from
-				});
-			}
-		});
-
-		$('[changeFont-subsection-js]').ionRangeSlider({
-			min: 32,
-			max: 40,
-			from: 36,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function onChange(scope) {
-				$('.tablet__subtitle').css({
-					'font-size': scope.from
-				});
-			}
-		});
-
-		$('[changeFont-itemTitleMenu-js]').ionRangeSlider({
-			min: 18,
-			max: 26,
-			from: 22,
-			step: 1,
-			grid: true,
-			hide_min_max: true,
-			hide_from_to: true,
-			skin: "round",
-			onChange: function onChange(scope) {
-				$('.tablet__btn p').css({
-					'font-size': scope.from
-				});
-			}
-		});
-
-		_input.map(function (idx, val) {
-			$(val).ionRangeSlider({
-				min: 14,
-				max: 22,
-				from: 18,
-				step: 1,
-				grid: true,
-				hide_min_max: true,
-				hide_from_to: true,
-				skin: "round"
-			});
-		});
 
 		var _colorFontNodes = $('.mds__fontSize-row a');
 
