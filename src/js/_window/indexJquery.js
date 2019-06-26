@@ -5,7 +5,7 @@
  */
 $(window).on("load", (ev) => {
 	initHeaderFixed();
-	initScalableBlock('#tablet .tablet__wrapper');
+	initScalableBlock('#tablet');
 });
 
 
@@ -13,7 +13,7 @@ $(window).on("load", (ev) => {
  * @description Window on resize.
  */
 $(window).on("resize", (ev) => {
-	initScalableBlock('#tablet .tablet__wrapper');
+	initScalableBlock('#tablet');
 });
 
 

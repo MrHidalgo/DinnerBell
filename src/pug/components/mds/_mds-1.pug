@@ -25,22 +25,29 @@
 				title: 'UI Neutral',
 				color: '#282d43',
 				color1: '#333333',
-				color2: '#505050'
+				name: 'neutral',
+				name1: 'neutral1',
 			},
 			{
 				title: 'Confirmation button',
 				color: '#32348e',
-				name: 'confirm'
+				colorText: '#fff',
+				name: 'confirm',
+				nameText: 'confirmTxt',
 			},
 			{
 				title: 'Alert dialogue',
 				color: '#55001b',
-				name: 'alert'
+				colorText: '#fff',
+				name: 'alert',
+				nameText: 'alertTxt',
 			},
 			{
 				title: 'Confirmation dialogue',
 				color: '#005826',
-				name: 'confirmation'
+				colorText: '#fff',
+				name: 'confirmation',
+				nameText: 'confirmationTxt',
 			}
 		]
 	];
@@ -152,10 +159,15 @@ section#mds.mds
 							.mds__form-color.mds__form-color--winput
 								div
 									p!= colorTitleArr[idx][_i].title
-								div(class!= ((idx === 0 && _i === 0) || (idx === 1 && _i === 0)) ?'is-three':'is-one')
+								div(class!= ((idx === 0 && _i === 0)) ?'is-three': (idx === 1 && _i === 0) ? '': (idx > 0 && _i > 0) ? '':'is-one')
 									.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
 										a(href="#" class="" title="")
 										span(style="background-color:" + colorTitleArr[idx][_i].color)
+
+									if(idx > 0 && _i > 0)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].colorText, data-name!= colorTitleArr[idx][_i].nameText)
+											a(href="#" class="" title="")
+											span(style="background-color:" + colorTitleArr[idx][_i].colorText)
 
 									if(idx === 0 && _i === 0)
 										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name)
@@ -167,13 +179,9 @@ section#mds.mds
 											span(style="background-color:" + colorTitleArr[idx][_i].color2)
 
 									if(idx === 1 && _i === 0)
-										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name1)
 											a(href="#" class="" title="")
 											span(style="background-color:" + colorTitleArr[idx][_i].color1)
-
-										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color2, data-name!= colorTitleArr[idx][_i].name)
-											a(href="#" class="" title="")
-											span(style="background-color:" + colorTitleArr[idx][_i].color2)
 
 				p.mds__subtitle!= "Currency and Price format"
 
@@ -203,7 +211,25 @@ section#mds.mds
 										i
 
 						.c-form__group-col.c-form__group-col-1
-							+formSelectCustom(dataFormObj.selectFieldCustomPriceFormat)
+							.c-form__field.c-form__field--select
+
+								.c-form__select-wrapper
+									.c-form__select-value
+
+									select.c-form__select(
+										id!= 'select_currency_format'
+										name!= 'select_currency_format'
+										select-js
+										select-currencyFormat-js
+									)
+										option(value="" selected disabled)!= 'Price format'
+										option(value!= '$0')!= '$0'
+										option(value!= '$0.00')!= '$0.00'
+										option(value!= '0$')!= '0$'
+										option(value!= '0.00$')!= '0.00$'
+
+									.c-form__select-icon
+										i
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')
 

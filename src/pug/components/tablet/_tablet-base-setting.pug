@@ -1,80 +1,82 @@
 // SECTION tablet :: START
 
-section#tablet.tablet.tablet--general.tablet--menuItems
+.tablet--scroll
+	section#tablet.tablet.tablet--general.tablet--menuItems
 
-	.tablet__section.tablet__section-0
-		.tablet__header
-			div
+		.tablet__section.tablet__section-0
+			.tablet__header
+				div
+					a(href="#" class="" title="")
+						span
+						span
+						span
+				div
+					a(href="" class="" title="")
+						i.icon-font.icon-user
+						span!= "3"
+				div
+					a(href="" class="" title="")
+						i.icon-font.icon-doc
+						span!= "0"
+				div
+					a(href="" class="" title="")
+						i.icon-font.icon-bell
+
+			.tablet__subheader
 				a(href="#" class="" title="")
-					span
-					span
-					span
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-user
-					span!= "3"
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-doc
-					span!= "0"
-			div
-				a(href="" class="" title="")
-					i.icon-font.icon-bell
+					i.icon-font.icon-corner
+				p(sectionHeader-js)!= "Cold Appetizers"
+				a(href="#" class="" title="")
+					i.icon-font.icon-corner
 
-		.tablet__subheader
-			a(href="#" class="" title="")
-				i.icon-font.icon-corner
-			p(sectionHeader-js)!= "Cold Appetizers"
-			a(href="#" class="" title="")
-				i.icon-font.icon-corner
+			.tablet__content
+				.tablet__view.tablet__view-list
 
-		.tablet__content
-			.tablet__view.tablet__view-list
+					.tablet__btn-wrapper
+						a.tablet__btn.tablet__btn--spicy.is-choose(href="#" class="" title="" change-border-js change-highlight-js)
+							div
+								p(itemTitleMenu-js)!= "Fresh florida stone crab clams"
+							div
+								span(numeric-js data-price="18.50")!= "<span currency-sign-js>$</span>18.50"
+						a.tablet__btn.tablet__btn--popular(href="#" class="" title="" change-border-js)
+							div
+								p(itemTitleMenu-js)!= "Shrimp cocktail"
+							div
+								span(numeric-js data-price="14.40")!= "<span currency-sign-js>$</span>14.40"
+						a.tablet__btn.tablet__btn--special(href="#" class="" title="" change-border-js)
+							div
+								p(itemTitleMenu-js)!= "Tuna Tartare Tower"
+							div
+								span(numeric-js data-price="17.00")!= "<span currency-sign-js>$</span>17.00"
+						a.tablet__btn.tablet__btn--new(href="#" class="" title="" change-border-js)
+							div
+								p(itemTitleMenu-js)!= "King Crab Mac'n'Cheese"
+							div
+								span(numeric-js data-price="18.20")!= "<span currency-sign-js>$</span>18.20"
+						a.tablet__btn(href="#" class="" title="" change-border-js)
+							div
+								p(itemTitleMenu-js)!= "Crab Fried Rice"
+							div
+								span(numeric-js data-price="14.00")!= "<span currency-sign-js>$</span>14.00"
 
-				.tablet__btn-wrapper
-					a.tablet__btn.tablet__btn--spicy.is-choose(href="#" class="" title="" change-border-js change-highlight-js)
-						div
-							p(itemTitleMenu-js)!= "Fresh florida stone crab clams"
-						div
-							span(numeric-js)!= "<span currency-sign-js>$</span>18.50"
-					a.tablet__btn.tablet__btn--popular(href="#" class="" title="" change-border-js)
-						div
-							p(itemTitleMenu-js)!= "Shrimp cocktail"
-						div
-							span(numeric-js)!= "<span currency-sign-js>$</span>14.40"
-					a.tablet__btn.tablet__btn--special(href="#" class="" title="" change-border-js)
-						div
-							p(itemTitleMenu-js)!= "Tuna Tartare Tower"
-						div
-							span(numeric-js)!= "<span currency-sign-js>$</span>17.00"
-					a.tablet__btn.tablet__btn--new(href="#" class="" title="" change-border-js)
-						div
-							p(itemTitleMenu-js)!= "King Crab Mac'n'Cheese"
-						div
-							span(numeric-js)!= "<span currency-sign-js>$</span>18.20"
-					a.tablet__btn(href="#" class="" title="" change-border-js)
-						div
-							p(itemTitleMenu-js)!= "Crab Fried Rice"
-						div
-							span(numeric-js)!= "<span currency-sign-js>$</span>14.00"
+		.tablet__section.tablet__section-1
 
-	.tablet__section.tablet__section-1
+			.tablet__neutral
+				.tablet__neutral-total
+					.tablet__order(change-neutral-js)
+						p!= "Order total:"
+						div
+							span(numeric-js data-price="245.35")!= "<span currency-sign-js>$</span>245.35"
+				.tablet__neutral-prev(change-neutral1-js)
+					i.icon-font.icon-arrow
+				.tablet__neutral-confirm(change-confirm-js)
+					p(confirmTxt-js)!= "Confirm"
 
-		.tablet__neutral
-			.tablet__neutral-total
-				.tablet__order
-					p!= "Order total:"
-					div
-						span(numeric-js)!= "<span currency-sign-js>$</span>245.35"
-			.tablet__neutral-prev
-				i.icon-font.icon-arrow
-			.tablet__neutral-confirm(change-confirm-js)
-				p!= "Confirm"
+		.tablet__section.tablet__section-2
 
-	.tablet__section.tablet__section-2
+			.tablet__button-wrapper
+				a.tablet__button.tablet__button--alert(href="#" class="" title="" change-alert-js alertTxt-js)!= "Alert<br>dialogue"
+				a.tablet__button.tablet__button--confirmation(href="#" class="" title="" change-confirmation-js confirmationTxt-js)!= "Confirmation<br>dialogue"
 
-		.tablet__button-wrapper
-			a.tablet__button.tablet__button--alert(href="#" class="" title="" change-alert-js)!= "Alert<br>dialogue"
-			a.tablet__button.tablet__button--confirmation(href="#" class="" title="" change-confirmation-js)!= "Confirmation<br>dialogue"
 
 // SECTION tablet :: END

@@ -390,14 +390,14 @@ var initWebFontLoader = function initWebFontLoader() {
  */
 $(window).on("load", function (ev) {
 	initHeaderFixed();
-	initScalableBlock('#tablet .tablet__wrapper');
+	initScalableBlock('#tablet');
 });
 
 /**
  * @description Window on resize.
  */
 $(window).on("resize", function (ev) {
-	initScalableBlock('#tablet .tablet__wrapper');
+	initScalableBlock('#tablet ');
 });
 
 /**
@@ -554,17 +554,41 @@ $(document).ready(function (ev) {
 						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color': _color
 						});
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
+					}
+					if (_parentNode.data('name') === 'alertTxt') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
 					}
 
 					if (_parentNode.data('name') === 'confirmation') {
 						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color': _color
 						});
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
+					}
+					if (_parentNode.data('name') === 'confirmationTxt') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
 					}
 
 					if (_parentNode.data('name') === 'confirm') {
 						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color': _color
+						});
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
+					}
+					if (_parentNode.data('name') === 'confirmTxt') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
 						});
 					}
 
@@ -576,6 +600,18 @@ $(document).ready(function (ev) {
 
 					if (_parentNode.data('name') === 'highlight') {
 						$('.is-choose[change-' + _parentNode.data('name') + '-js]').css({
+							'background-color': _color
+						});
+					}
+
+					if (_parentNode.data('name') === 'neutral') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'background-color': _color
+						});
+					}
+
+					if (_parentNode.data('name') === 'neutral1') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color': _color
 						});
 					}
@@ -1504,8 +1540,32 @@ $(document).ready(function (ev) {
 	};
 
 	var initTabletPreviewSelectCurrency = function initTabletPreviewSelectCurrency() {
-		$('[select-currency-js]').on('change', function (ev) {
-			$('[currency-sign-js]').text($(ev.currentTarget).find('option:selected').val());
+		$('[select-currencyFormat-js]').on('change', function (ev) {
+			var _format = $(ev.currentTarget).find('option:selected').val();
+
+			var _priceArr = [];
+
+			$('[numeric-js]').map(function (idx, val) {
+				_priceArr.push($(val).data('price'));
+			});
+
+			if (_format === '$0') {
+				_priceArr.map(function (val, idx) {
+					$('[numeric-js]')[idx].innerHTML = '<span currency-sign-js>$</span>' + parseInt(val).toFixed(0);
+				});
+			} else if (_format === '$0.00') {
+				_priceArr.map(function (val, idx) {
+					$('[numeric-js]')[idx].innerHTML = '<span currency-sign-js>$</span>' + val;
+				});
+			} else if (_format === '0$') {
+				_priceArr.map(function (val, idx) {
+					$('[numeric-js]')[idx].innerHTML = parseInt(val).toFixed(0) + '<span currency-sign-js>$</span>';
+				});
+			} else if (_format === '0.00$') {
+				_priceArr.map(function (val, idx) {
+					$('[numeric-js]')[idx].innerHTML = val + '<span currency-sign-js>$</span>';
+				});
+			}
 		});
 	};
 

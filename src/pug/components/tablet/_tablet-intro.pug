@@ -1,31 +1,32 @@
 // SECTION tablet :: START
 
-section#tablet.tablet.tablet--intro(tablet-introScreen-js)
-		.tablet__content
-			div
-				.tablet__wrapper-bg(introScreen-container-js introScreen-bg-js data-intro-name='bg')
-					.tablet__logo
-						img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
-
-				.tablet__wrapper-slideshow(introScreen-container-js introScreen-slideshow-js data-intro-name='slideshow')
-
-					mixin swiperContent()
-						.swiper-slide
-						.swiper-slide
-						.swiper-slide
-
-					+swiper('swiper-container-intro', 'swiperContent', true, false, false)
-
-				.tablet__wrapper-video(introScreen-container-js introScreen-video-js data-intro-name='video')
-
-					video(autoplay, loop, muted)
-						source(src='', type='')
-
-					.tablet__wrapper-video-cover
+.tablet--scroll
+	section#tablet.tablet.tablet--intro(tablet-introScreen-js)
+			.tablet__content
+				div
+					.tablet__wrapper-bg(introScreen-container-js introScreen-bg-js data-intro-name='bg')
 						.tablet__logo
 							img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
 
-		.tablet__footer
-			a(href="#" class="" title="")!= "Get started!"
+					.tablet__wrapper-slideshow(introScreen-container-js introScreen-slideshow-js data-intro-name='slideshow')
+
+						mixin swiperContent()
+							.swiper-slide
+							.swiper-slide
+							.swiper-slide
+
+						+swiper('swiper-container-intro', 'swiperContent', true, false, false)
+
+					.tablet__wrapper-video(introScreen-container-js introScreen-video-js data-intro-name='video')
+
+						video(autoplay, loop, muted)
+							source(src='', type='')
+
+						.tablet__wrapper-video-cover
+							.tablet__logo
+								img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
+
+			.tablet__footer
+				a(href="#" class="" title="")!= "Get started!"
 
 // SECTION tablet :: END

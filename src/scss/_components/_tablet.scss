@@ -6,6 +6,30 @@
 	width: 600px;
 	height: 1024px;
 	border: 1px solid #efefef;
+	@include adaptive(767) {
+		left: 50%;
+		top: 0;
+		transform: translate3d(-50%, 0,0);
+		transform-origin: center top;
+	}
+
+	&--scroll {
+		@include adaptive(1023) {
+			overflow-x: hidden;
+			overflow-y: auto;
+			position: absolute;
+			top: 80px;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 80px);
+			padding: 30px 15px;
+
+			> .tablet {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
 
 	&--general {
 		overflow: unset;
@@ -188,16 +212,6 @@
 		left: 0;
 		width: 100%;
 		height: 80px;
-	}
-
-	&__wrapper {
-		position: relative;
-		@include adaptive(767) {
-			left: 50%;
-			top: 50%;
-			transform: translate3d(-50%, 0,0);
-			transform-origin: center top;
-		}
 	}
 
 	&__button {
@@ -1688,6 +1702,7 @@
 			}
 
 			&__carousel {
+				pointer-events: none;
 				height: 161px;
 			}
 
@@ -1700,7 +1715,7 @@
 				padding: 9px;
 				margin-bottom: 25px;
 				border: 1px solid #191d2a;
-				background-color: #131323;
+				//background-color: #131323;
 				@include transition(background-color);
 
 				&.is-choose {

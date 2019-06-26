@@ -496,34 +496,36 @@
                   <div>
                     <p>UI Neutral</p>
                   </div>
-                  <div class="is-three">
-                    <div class="mds__form-color-content" data-color="#282d43"><a href="#" title=""></a><span style="background-color:#282d43"></span></div>
-                    <div class="mds__form-color-content" data-color="#333333"><a href="#" title=""></a><span style="background-color:#333333"></span></div>
-                    <div class="mds__form-color-content" data-color="#505050"><a href="#" title=""></a><span style="background-color:#505050"></span></div>
+                  <div>
+                    <div class="mds__form-color-content" data-color="#282d43" data-name="neutral"><a href="#" title=""></a><span style="background-color:#282d43"></span></div>
+                    <div class="mds__form-color-content" data-color="#333333" data-name="neutral1"><a href="#" title=""></a><span style="background-color:#333333"></span></div>
                   </div>
                 </div>
                 <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Confirmation button</p>
                   </div>
-                  <div class="is-one">
+                  <div>
                     <div class="mds__form-color-content" data-color="#32348e" data-name="confirm"><a href="#" title=""></a><span style="background-color:#32348e"></span></div>
+                    <div class="mds__form-color-content" data-color="#fff" data-name="confirmTxt"><a href="#" title=""></a><span style="background-color:#fff"></span></div>
                   </div>
                 </div>
                 <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Alert dialogue</p>
                   </div>
-                  <div class="is-one">
+                  <div>
                     <div class="mds__form-color-content" data-color="#55001b" data-name="alert"><a href="#" title=""></a><span style="background-color:#55001b"></span></div>
+                    <div class="mds__form-color-content" data-color="#fff" data-name="alertTxt"><a href="#" title=""></a><span style="background-color:#fff"></span></div>
                   </div>
                 </div>
                 <div class="mds__form-color mds__form-color--winput">
                   <div>
                     <p>Confirmation dialogue</p>
                   </div>
-                  <div class="is-one">
+                  <div>
                     <div class="mds__form-color-content" data-color="#005826" data-name="confirmation"><a href="#" title=""></a><span style="background-color:#005826"></span></div>
+                    <div class="mds__form-color-content" data-color="#fff" data-name="confirmationTxt"><a href="#" title=""></a><span style="background-color:#fff"></span></div>
                   </div>
                 </div>
               </div>
@@ -550,15 +552,14 @@
                     <div class="c-form__field c-form__field--select">
                       <div class="c-form__select-wrapper">
                         <div class="c-form__select-value"></div>
-                        <select class="c-form__select" id="select_price_format" name="select_price_format" select-js="select-js">
-                          <option value="" disabled="disabled" selected="selected" hidden="hidden">Price format</option>
-                          <option value="Format 1">Format 1</option>
-                          <option value="Format 2">Format 2</option>
-                          <option value="Format 3">Format 3</option>
+                        <select class="c-form__select" id="select_currency_format" name="select_currency_format" select-js select-currencyFormat-js>
+                          <option value="" selected disabled>Price format</option>
+                          <option value="$0">$0</option>
+                          <option value="$0.00">$0.00</option>
+                          <option value="0$">0$</option>
+                          <option value="0.00$">0.00$</option>
                         </select>
                         <div class="c-form__select-icon"><i></i></div>
-                      </div>
-                      <div class="c-form__notify">
                       </div>
                     </div>
                   </div>
@@ -577,61 +578,63 @@
               <div><a class="mds__wrapper-close" href="#" title=""><i class="icon-font icon-close"></i></a></div>
             </div>
             <!-- SECTION tablet :: START-->
-            <section class="tablet tablet--general tablet--menuItems" id="tablet">
-              <div class="tablet__section tablet__section-0">
-                <div class="tablet__header">
-                  <div><a href="#" title=""><span></span><span></span><span></span></a></div>
-                  <div><a href="" title=""><i class="icon-font icon-user"></i><span>3</span></a></div>
-                  <div><a href="" title=""><i class="icon-font icon-doc"></i><span>0</span></a></div>
-                  <div><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
-                </div>
-                <div class="tablet__subheader"><a href="#" title=""><i class="icon-font icon-corner"></i></a>
-                  <p sectionHeader-js>Cold Appetizers</p><a href="#" title=""><i class="icon-font icon-corner"></i></a>
-                </div>
-                <div class="tablet__content">
-                  <div class="tablet__view tablet__view-list">
-                    <div class="tablet__btn-wrapper"><a class="tablet__btn tablet__btn--spicy is-choose" href="#" title="" change-border-js change-highlight-js>
-                        <div>
-                          <p itemTitleMenu-js>Fresh florida stone crab clams</p>
-                        </div>
-                        <div><span numeric-js><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="" change-border-js>
-                        <div>
-                          <p itemTitleMenu-js>Shrimp cocktail</p>
-                        </div>
-                        <div><span numeric-js><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="" change-border-js>
-                        <div>
-                          <p itemTitleMenu-js>Tuna Tartare Tower</p>
-                        </div>
-                        <div><span numeric-js><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="" change-border-js>
-                        <div>
-                          <p itemTitleMenu-js>King Crab Mac'n'Cheese</p>
-                        </div>
-                        <div><span numeric-js><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="" change-border-js>
-                        <div>
-                          <p itemTitleMenu-js>Crab Fried Rice</p>
-                        </div>
-                        <div><span numeric-js><span currency-sign-js>$</span>14.00</span></div></a></div>
+            <div class="tablet--scroll">
+              <section class="tablet tablet--general tablet--menuItems" id="tablet">
+                <div class="tablet__section tablet__section-0">
+                  <div class="tablet__header">
+                    <div><a href="#" title=""><span></span><span></span><span></span></a></div>
+                    <div><a href="" title=""><i class="icon-font icon-user"></i><span>3</span></a></div>
+                    <div><a href="" title=""><i class="icon-font icon-doc"></i><span>0</span></a></div>
+                    <div><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
                   </div>
-                </div>
-              </div>
-              <div class="tablet__section tablet__section-1">
-                <div class="tablet__neutral">
-                  <div class="tablet__neutral-total">
-                    <div class="tablet__order">
-                      <p>Order total:</p>
-                      <div><span numeric-js><span currency-sign-js>$</span>245.35</span></div>
+                  <div class="tablet__subheader"><a href="#" title=""><i class="icon-font icon-corner"></i></a>
+                    <p sectionHeader-js>Cold Appetizers</p><a href="#" title=""><i class="icon-font icon-corner"></i></a>
+                  </div>
+                  <div class="tablet__content">
+                    <div class="tablet__view tablet__view-list">
+                      <div class="tablet__btn-wrapper"><a class="tablet__btn tablet__btn--spicy is-choose" href="#" title="" change-border-js change-highlight-js>
+                          <div>
+                            <p itemTitleMenu-js>Fresh florida stone crab clams</p>
+                          </div>
+                          <div><span numeric-js data-price="18.50"><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="" change-border-js>
+                          <div>
+                            <p itemTitleMenu-js>Shrimp cocktail</p>
+                          </div>
+                          <div><span numeric-js data-price="14.40"><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="" change-border-js>
+                          <div>
+                            <p itemTitleMenu-js>Tuna Tartare Tower</p>
+                          </div>
+                          <div><span numeric-js data-price="17.00"><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="" change-border-js>
+                          <div>
+                            <p itemTitleMenu-js>King Crab Mac'n'Cheese</p>
+                          </div>
+                          <div><span numeric-js data-price="18.20"><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="" change-border-js>
+                          <div>
+                            <p itemTitleMenu-js>Crab Fried Rice</p>
+                          </div>
+                          <div><span numeric-js data-price="14.00"><span currency-sign-js>$</span>14.00</span></div></a></div>
                     </div>
                   </div>
-                  <div class="tablet__neutral-prev"><i class="icon-font icon-arrow"></i></div>
-                  <div class="tablet__neutral-confirm" change-confirm-js>
-                    <p>Confirm</p>
+                </div>
+                <div class="tablet__section tablet__section-1">
+                  <div class="tablet__neutral">
+                    <div class="tablet__neutral-total">
+                      <div class="tablet__order" change-neutral-js>
+                        <p>Order total:</p>
+                        <div><span numeric-js data-price="245.35"><span currency-sign-js>$</span>245.35</span></div>
+                      </div>
+                    </div>
+                    <div class="tablet__neutral-prev" change-neutral1-js><i class="icon-font icon-arrow"></i></div>
+                    <div class="tablet__neutral-confirm" change-confirm-js>
+                      <p confirmTxt-js>Confirm</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="tablet__section tablet__section-2">
-                <div class="tablet__button-wrapper"><a class="tablet__button tablet__button--alert" href="#" title="" change-alert-js>Alert<br>dialogue</a><a class="tablet__button tablet__button--confirmation" href="#" title="" change-confirmation-js>Confirmation<br>dialogue</a></div>
-              </div>
-            </section>
+                <div class="tablet__section tablet__section-2">
+                  <div class="tablet__button-wrapper"><a class="tablet__button tablet__button--alert" href="#" title="" change-alert-js alertTxt-js>Alert<br>dialogue</a><a class="tablet__button tablet__button--confirmation" href="#" title="" change-confirmation-js confirmationTxt-js>Confirmation<br>dialogue</a></div>
+                </div>
+              </section>
+            </div>
             <!-- SECTION tablet :: END-->
           </div>
         </div>
