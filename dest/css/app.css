@@ -4380,23 +4380,18 @@ picture {
   position: relative;
 }
 
-/* line 434, src/scss/_components/_tablet.scss */
-.tablet--itemDetails .tablet__content {
-  overflow: hidden;
-}
-
-/* line 437, src/scss/_components/_tablet.scss */
+/* line 435, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__content-cover {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-/* line 442, src/scss/_components/_tablet.scss */
+/* line 440, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__content * {
   pointer-events: none;
 }
 
-/* line 447, src/scss/_components/_tablet.scss */
+/* line 445, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4405,13 +4400,13 @@ picture {
   min-height: 80px;
 }
 
-/* line 452, src/scss/_components/_tablet.scss */
+/* line 450, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer > div:nth-of-type(1) {
   width: 80px;
   background-color: #303030;
 }
 
-/* line 456, src/scss/_components/_tablet.scss */
+/* line 454, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer > div:nth-of-type(1) > a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4434,7 +4429,7 @@ picture {
   font-size: 20px;
 }
 
-/* line 468, src/scss/_components/_tablet.scss */
+/* line 466, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4459,24 +4454,24 @@ picture {
   padding-right: 20px;
 }
 
-/* line 479, src/scss/_components/_tablet.scss */
+/* line 477, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer > div:nth-of-type(2) span,
 .tablet--itemDetails .tablet__footer > div:nth-of-type(2) p {
   color: #ffffff;
 }
 
-/* line 484, src/scss/_components/_tablet.scss */
+/* line 482, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer > div:nth-of-type(2) span {
   font-size: 26px;
 }
 
-/* line 488, src/scss/_components/_tablet.scss */
+/* line 486, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__footer > div:nth-of-type(2) p {
   font-size: 28px;
   font-weight: bold;
 }
 
-/* line 496, src/scss/_components/_tablet.scss */
+/* line 494, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__banner {
   width: -webkit-calc(100% + 50px);
   width: calc(100% + 50px);
@@ -4489,7 +4484,7 @@ picture {
           background-size: cover;
 }
 
-/* line 506, src/scss/_components/_tablet.scss */
+/* line 504, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__heading {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4504,7 +4499,7 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 512, src/scss/_components/_tablet.scss */
+/* line 510, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__heading--top {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4517,7 +4512,7 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 518, src/scss/_components/_tablet.scss */
+/* line 516, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__heading--left {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -4527,26 +4522,26 @@ picture {
   max-width: 100%;
 }
 
-/* line 524, src/scss/_components/_tablet.scss */
+/* line 522, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__heading p,
 .tablet--itemDetails .tablet__heading span {
   color: #fff;
 }
 
-/* line 529, src/scss/_components/_tablet.scss */
+/* line 527, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__heading p {
   font-size: 30px;
   font-weight: 500;
 }
 
-/* line 534, src/scss/_components/_tablet.scss */
+/* line 532, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__heading span {
   display: block;
   font-size: 18px;
   font-weight: 200;
 }
 
-/* line 541, src/scss/_components/_tablet.scss */
+/* line 539, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__sibtitle {
   padding-bottom: 15px;
   color: #ffffff;
@@ -4554,20 +4549,20 @@ picture {
   font-weight: 200;
 }
 
-/* line 548, src/scss/_components/_tablet.scss */
+/* line 546, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__desc {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 552, src/scss/_components/_tablet.scss */
+/* line 550, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__desc p {
   color: #ffffff;
   font-size: 18px;
   font-weight: 200;
 }
 
-/* line 559, src/scss/_components/_tablet.scss */
+/* line 557, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box {
   overflow: hidden;
   position: relative;
@@ -4585,7 +4580,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 571, src/scss/_components/_tablet.scss */
+/* line 569, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box.is-choose {
   background-color: #2e3192;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -4593,14 +4588,14 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 576, src/scss/_components/_tablet.scss */
+/* line 574, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box-img {
   overflow: hidden;
   position: relative;
   min-height: 165px;
 }
 
-/* line 586, src/scss/_components/_tablet.scss */
+/* line 584, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4622,26 +4617,26 @@ picture {
   padding-top: 19px;
 }
 
-/* line 593, src/scss/_components/_tablet.scss */
+/* line 591, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box-content p {
   text-align: center;
   color: #ffffff;
 }
 
-/* line 598, src/scss/_components/_tablet.scss */
+/* line 596, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box-content span {
   text-align: center;
   font-weight: 300;
   color: #666666;
 }
 
-/* line 603, src/scss/_components/_tablet.scss */
+/* line 601, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box-content span i {
   font-style: normal;
   color: #238de7;
 }
 
-/* line 610, src/scss/_components/_tablet.scss */
+/* line 608, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4657,7 +4652,7 @@ picture {
   padding-bottom: 21px;
 }
 
-/* line 619, src/scss/_components/_tablet.scss */
+/* line 617, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4671,7 +4666,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 624, src/scss/_components/_tablet.scss */
+/* line 622, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4685,12 +4680,12 @@ picture {
   border-top: 1px solid #222222;
 }
 
-/* line 630, src/scss/_components/_tablet.scss */
+/* line 628, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field:last-of-type {
   border-bottom: 1px solid #222222;
 }
 
-/* line 635, src/scss/_components/_tablet.scss */
+/* line 633, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -4700,14 +4695,14 @@ picture {
   min-width: 1px;
 }
 
-/* line 640, src/scss/_components/_tablet.scss */
+/* line 638, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div:nth-of-type(1) p {
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;
 }
 
-/* line 647, src/scss/_components/_tablet.scss */
+/* line 645, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4724,14 +4719,14 @@ picture {
   width: 150px;
 }
 
-/* line 654, src/scss/_components/_tablet.scss */
+/* line 652, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div label {
   cursor: pointer;
   position: relative;
   margin-left: 12px;
 }
 
-/* line 659, src/scss/_components/_tablet.scss */
+/* line 657, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div label input {
   opacity: 0;
   position: absolute;
@@ -4739,7 +4734,7 @@ picture {
   height: 0;
 }
 
-/* line 667, src/scss/_components/_tablet.scss */
+/* line 665, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div label input:checked + p:before {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -4747,7 +4742,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 675, src/scss/_components/_tablet.scss */
+/* line 673, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div label p {
   overflow: hidden;
   position: relative;
@@ -4770,7 +4765,7 @@ picture {
   border: 1px solid #2e3192;
 }
 
-/* line 686, src/scss/_components/_tablet.scss */
+/* line 684, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div label p:before {
   opacity: 0;
   content: '';
@@ -4786,7 +4781,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 699, src/scss/_components/_tablet.scss */
+/* line 697, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__ques-group-field > div label p span {
   z-index: 2;
   position: relative;
@@ -4798,7 +4793,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 717, src/scss/_components/_tablet.scss */
+/* line 715, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4812,7 +4807,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 722, src/scss/_components/_tablet.scss */
+/* line 720, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4826,12 +4821,12 @@ picture {
   border-top: 1px solid #222222;
 }
 
-/* line 728, src/scss/_components/_tablet.scss */
+/* line 726, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field:last-of-type {
   border-bottom: 1px solid #222222;
 }
 
-/* line 733, src/scss/_components/_tablet.scss */
+/* line 731, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4854,7 +4849,7 @@ picture {
   padding-right: 30px;
 }
 
-/* line 743, src/scss/_components/_tablet.scss */
+/* line 741, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4871,7 +4866,7 @@ picture {
   width: 100px;
 }
 
-/* line 749, src/scss/_components/_tablet.scss */
+/* line 747, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div:nth-of-type(2) > span {
   padding-left: 10px;
   padding-right: 10px;
@@ -4880,7 +4875,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 758, src/scss/_components/_tablet.scss */
+/* line 756, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div p {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4893,25 +4888,25 @@ picture {
   font-size: 18px;
 }
 
-/* line 763, src/scss/_components/_tablet.scss */
+/* line 761, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div p:last-of-type {
   color: #238de7;
 }
 
-/* line 767, src/scss/_components/_tablet.scss */
+/* line 765, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div p strong {
   padding-right: 5px;
   color: #ffffff;
   font-weight: bold;
 }
 
-/* line 773, src/scss/_components/_tablet.scss */
+/* line 771, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div p span {
   padding-left: 5px;
   color: #666666;
 }
 
-/* line 779, src/scss/_components/_tablet.scss */
+/* line 777, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4932,7 +4927,7 @@ picture {
   background-color: #238de7;
 }
 
-/* line 788, src/scss/_components/_tablet.scss */
+/* line 786, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__count-group-field > div a span {
   position: relative;
   top: 1px;
@@ -4941,7 +4936,7 @@ picture {
   font-size: 28px;
 }
 
-/* line 801, src/scss/_components/_tablet.scss */
+/* line 799, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4960,7 +4955,7 @@ picture {
   background-color: #191d2a;
 }
 
-/* line 812, src/scss/_components/_tablet.scss */
+/* line 810, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -4970,12 +4965,12 @@ picture {
   min-width: 1px;
 }
 
-/* line 817, src/scss/_components/_tablet.scss */
+/* line 815, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity > div:nth-of-type(1) p {
   padding-bottom: 0;
 }
 
-/* line 822, src/scss/_components/_tablet.scss */
+/* line 820, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4992,7 +4987,7 @@ picture {
   width: 100px;
 }
 
-/* line 828, src/scss/_components/_tablet.scss */
+/* line 826, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity > div:nth-of-type(2) > span {
   padding-left: 10px;
   padding-right: 10px;
@@ -5001,7 +4996,7 @@ picture {
   font-weight: 300;
 }
 
-/* line 837, src/scss/_components/_tablet.scss */
+/* line 835, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity > div a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5022,7 +5017,7 @@ picture {
   background-color: #238de7;
 }
 
-/* line 846, src/scss/_components/_tablet.scss */
+/* line 844, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__quantity > div a span {
   position: relative;
   top: 1px;
@@ -5031,7 +5026,7 @@ picture {
   font-size: 28px;
 }
 
-/* line 858, src/scss/_components/_tablet.scss */
+/* line 856, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5045,7 +5040,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 863, src/scss/_components/_tablet.scss */
+/* line 861, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group-field {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5059,12 +5054,12 @@ picture {
   border-top: 1px solid #222222;
 }
 
-/* line 869, src/scss/_components/_tablet.scss */
+/* line 867, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group-field:last-of-type {
   border-bottom: 1px solid #222222;
 }
 
-/* line 874, src/scss/_components/_tablet.scss */
+/* line 872, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group-field > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -5074,12 +5069,12 @@ picture {
   min-width: 1px;
 }
 
-/* line 879, src/scss/_components/_tablet.scss */
+/* line 877, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group-field > div:nth-of-type(2) {
   width: 60px;
 }
 
-/* line 885, src/scss/_components/_tablet.scss */
+/* line 883, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group p {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5092,34 +5087,34 @@ picture {
   font-size: 22px;
 }
 
-/* line 890, src/scss/_components/_tablet.scss */
+/* line 888, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group p strong {
   padding-right: 5px;
   color: #ffffff;
   font-weight: bold;
 }
 
-/* line 896, src/scss/_components/_tablet.scss */
+/* line 894, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group p span {
   padding-left: 5px;
   padding-right: 5px;
   color: #238de7;
 }
 
-/* line 902, src/scss/_components/_tablet.scss */
+/* line 900, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group p i {
   padding-left: 5px;
   color: #666666;
   font-style: normal;
 }
 
-/* line 909, src/scss/_components/_tablet.scss */
+/* line 907, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group label {
   cursor: pointer;
   position: relative;
 }
 
-/* line 913, src/scss/_components/_tablet.scss */
+/* line 911, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group label input {
   opacity: 0;
   position: absolute;
@@ -5127,7 +5122,7 @@ picture {
   height: 0;
 }
 
-/* line 921, src/scss/_components/_tablet.scss */
+/* line 919, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group label input:checked + span:before {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -5140,7 +5135,7 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 930, src/scss/_components/_tablet.scss */
+/* line 928, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group label span {
   position: relative;
   display: -webkit-box;
@@ -5162,7 +5157,7 @@ picture {
   border: 1px solid #2e3192;
 }
 
-/* line 940, src/scss/_components/_tablet.scss */
+/* line 938, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__radio-group label span:before {
   opacity: 0;
   content: '';
@@ -5185,17 +5180,17 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 956, src/scss/_components/_tablet.scss */
+/* line 954, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range {
   padding-bottom: 60px;
 }
 
-/* line 959, src/scss/_components/_tablet.scss */
+/* line 957, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round.irs-with-grid {
   height: 60px;
 }
 
-/* line 963, src/scss/_components/_tablet.scss */
+/* line 961, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-line {
   height: 5px;
   -webkit-border-radius: 0;
@@ -5203,7 +5198,7 @@ picture {
   background-color: #ffffff;
 }
 
-/* line 969, src/scss/_components/_tablet.scss */
+/* line 967, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-handle {
   top: 7px;
   width: 60px;
@@ -5217,7 +5212,7 @@ picture {
   background-color: #2e3192;
 }
 
-/* line 981, src/scss/_components/_tablet.scss */
+/* line 979, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5227,7 +5222,7 @@ picture {
   width: 100% !important;
 }
 
-/* line 987, src/scss/_components/_tablet.scss */
+/* line 985, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-pol:not(.small) {
   position: static;
   width: 100%;
@@ -5235,44 +5230,44 @@ picture {
   max-width: calc(100% / 5);
 }
 
-/* line 993, src/scss/_components/_tablet.scss */
+/* line 991, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-pol:nth-of-type(1) {
   background-color: #b1d26a;
 }
 
-/* line 996, src/scss/_components/_tablet.scss */
+/* line 994, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-pol:nth-of-type(7) {
   background-color: #81b551;
 }
 
-/* line 999, src/scss/_components/_tablet.scss */
+/* line 997, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-pol:nth-of-type(13) {
   background-color: #f0dd5c;
 }
 
-/* line 1002, src/scss/_components/_tablet.scss */
+/* line 1000, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-pol:nth-of-type(19) {
   background-color: #e58d46;
 }
 
-/* line 1005, src/scss/_components/_tablet.scss */
+/* line 1003, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-pol:nth-of-type(25) {
   background-color: #ef5d45;
 }
 
-/* line 1009, src/scss/_components/_tablet.scss */
+/* line 1007, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range .irs--round .irs-bar--single,
 .tablet--itemDetails .tablet__range .irs--round .irs-grid-text,
 .tablet--itemDetails .tablet__range .irs-grid-pol.small {
   display: none;
 }
 
-/* line 1015, src/scss/_components/_tablet.scss */
+/* line 1013, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range:last-of-type {
   padding-bottom: 0;
 }
 
-/* line 1020, src/scss/_components/_tablet.scss */
+/* line 1018, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5288,19 +5283,19 @@ picture {
           justify-content: space-between;
 }
 
-/* line 1025, src/scss/_components/_tablet.scss */
+/* line 1023, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range > div:nth-of-type(1) p {
   padding-bottom: 0;
 }
 
-/* line 1029, src/scss/_components/_tablet.scss */
+/* line 1027, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range > div:nth-of-type(1) span {
   color: #ffffff;
   font-size: 30px;
   font-weight: bold;
 }
 
-/* line 1039, src/scss/_components/_tablet.scss */
+/* line 1037, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__range-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5314,12 +5309,12 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 1046, src/scss/_components/_tablet.scss */
+/* line 1044, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse {
   position: relative;
 }
 
-/* line 1050, src/scss/_components/_tablet.scss */
+/* line 1048, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse.is-open .icon-corner {
   -webkit-transform: translateY(-50%) rotate(90deg);
       -ms-transform: translateY(-50%) rotate(90deg);
@@ -5331,7 +5326,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1056, src/scss/_components/_tablet.scss */
+/* line 1054, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-header {
   cursor: pointer;
   position: relative;
@@ -5352,7 +5347,7 @@ picture {
   background-color: #191d2a;
 }
 
-/* line 1066, src/scss/_components/_tablet.scss */
+/* line 1064, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-header p {
   padding-right: 70px;
   color: #fff;
@@ -5360,7 +5355,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 1073, src/scss/_components/_tablet.scss */
+/* line 1071, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-header .icon-font {
   position: absolute;
   top: 50%;
@@ -5377,14 +5372,14 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 1084, src/scss/_components/_tablet.scss */
+/* line 1082, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body {
   padding: 25px;
   border-top: 1px solid #332e4e;
   background-color: #191d2a;
 }
 
-/* line 1089, src/scss/_components/_tablet.scss */
+/* line 1087, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5397,7 +5392,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 1093, src/scss/_components/_tablet.scss */
+/* line 1091, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body ul li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5415,28 +5410,28 @@ picture {
   padding-bottom: 5px;
 }
 
-/* line 1100, src/scss/_components/_tablet.scss */
+/* line 1098, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body ul li:last-of-type {
   padding-bottom: 0;
 }
 
-/* line 1104, src/scss/_components/_tablet.scss */
+/* line 1102, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body ul li p,
 .tablet--itemDetails .tablet__collapse-body ul li span {
   font-size: 22px;
 }
 
-/* line 1109, src/scss/_components/_tablet.scss */
+/* line 1107, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body ul li p {
   color: #ffffff;
 }
 
-/* line 1113, src/scss/_components/_tablet.scss */
+/* line 1111, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-body ul li span {
   color: #666666;
 }
 
-/* line 1120, src/scss/_components/_tablet.scss */
+/* line 1118, src/scss/_components/_tablet.scss */
 .tablet--itemDetails .tablet__collapse-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5450,19 +5445,19 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 1133, src/scss/_components/_tablet.scss */
+/* line 1131, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__content {
   margin-top: 135px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
-/* line 1138, src/scss/_components/_tablet.scss */
+/* line 1136, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__content * {
   pointer-events: none;
 }
 
-/* line 1143, src/scss/_components/_tablet.scss */
+/* line 1141, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__subtitle {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -5472,17 +5467,17 @@ picture {
   font-weight: bold;
 }
 
-/* line 1153, src/scss/_components/_tablet.scss */
+/* line 1151, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__view-thumb {
   display: none;
 }
 
-/* line 1156, src/scss/_components/_tablet.scss */
+/* line 1154, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__view-thumb .tablet__subtitle {
   padding-top: 48px;
 }
 
-/* line 1166, src/scss/_components/_tablet.scss */
+/* line 1164, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5499,13 +5494,12 @@ picture {
   min-height: 263px;
   padding: 9px;
   margin-bottom: 9px;
-  background-color: #191d2a;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 1177, src/scss/_components/_tablet.scss */
+/* line 1174, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block.is-choose {
   background-color: #2e3192;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -5513,51 +5507,51 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 1189, src/scss/_components/_tablet.scss */
+/* line 1186, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block--spicy span {
   color: #e03247;
 }
 
-/* line 1189, src/scss/_components/_tablet.scss */
+/* line 1186, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block--popular span {
   color: #55c431;
 }
 
-/* line 1189, src/scss/_components/_tablet.scss */
+/* line 1186, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block--special span {
   color: #af8f38;
 }
 
-/* line 1189, src/scss/_components/_tablet.scss */
+/* line 1186, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block--new span {
   color: #7b80eb;
 }
 
-/* line 1196, src/scss/_components/_tablet.scss */
+/* line 1193, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block > div:nth-of-type(1) {
   overflow: hidden;
   position: relative;
   min-height: 165px;
 }
 
-/* line 1206, src/scss/_components/_tablet.scss */
+/* line 1203, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block > div:nth-of-type(2) {
   padding-top: 6px;
 }
 
-/* line 1210, src/scss/_components/_tablet.scss */
+/* line 1207, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block > div p {
   color: #ffffff;
   font-size: 18px;
 }
 
-/* line 1214, src/scss/_components/_tablet.scss */
+/* line 1211, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block > div p i {
   color: #1e7ac9;
   font-style: normal;
 }
 
-/* line 1220, src/scss/_components/_tablet.scss */
+/* line 1217, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block > div span {
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -5565,7 +5559,7 @@ picture {
   font-weight: 500;
 }
 
-/* line 1228, src/scss/_components/_tablet.scss */
+/* line 1225, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__block-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5582,7 +5576,7 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 1237, src/scss/_components/_tablet.scss */
+/* line 1234, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5600,13 +5594,12 @@ picture {
   padding-left: 25px;
   padding-right: 25px;
   border-bottom: 1px solid #2e3192;
-  background-color: transparent;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 1248, src/scss/_components/_tablet.scss */
+/* line 1244, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn.is-choose {
   background-color: #2e3192;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -5614,27 +5607,27 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 1260, src/scss/_components/_tablet.scss */
+/* line 1256, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn--spicy sup {
   color: #e03247;
 }
 
-/* line 1260, src/scss/_components/_tablet.scss */
+/* line 1256, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn--popular sup {
   color: #55c431;
 }
 
-/* line 1260, src/scss/_components/_tablet.scss */
+/* line 1256, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn--special sup {
   color: #af8f38;
 }
 
-/* line 1260, src/scss/_components/_tablet.scss */
+/* line 1256, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn--new sup {
   color: #7b80eb;
 }
 
-/* line 1266, src/scss/_components/_tablet.scss */
+/* line 1262, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5650,28 +5643,33 @@ picture {
   margin-left: -25px;
 }
 
-/* line 1272, src/scss/_components/_tablet.scss */
+/* line 1268, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn-wrapper--pt {
   border-top: 1px solid #2e3192;
 }
 
-/* line 1277, src/scss/_components/_tablet.scss */
+/* line 1273, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn p {
   color: #ffffff;
   font-size: 22px;
 }
 
-/* line 1281, src/scss/_components/_tablet.scss */
+/* line 1277, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn p sup {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-/* line 1287, src/scss/_components/_tablet.scss */
+/* line 1283, src/scss/_components/_tablet.scss */
 .tablet--menuItems .tablet__btn span {
   color: #1e7ac9;
   font-size: 22px;
   font-weight: 300;
+}
+
+/* line 1288, src/scss/_components/_tablet.scss */
+.tablet--menuItems .tablet__btn span span {
+  color: inherit;
 }
 
 /* line 1300, src/scss/_components/_tablet.scss */

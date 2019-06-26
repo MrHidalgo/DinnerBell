@@ -432,8 +432,6 @@
 	&--itemDetails {
 		.tablet {
 			&__content {
-				overflow: hidden;
-
 				&-cover {
 					padding-left: 25px;
 					padding-right: 25px;
@@ -1171,7 +1169,6 @@
 				min-height: 263px;
 				padding: 9px;
 				margin-bottom: 9px;
-				background-color: #191d2a;
 				@include transition(background-color);
 
 				&.is-choose {
@@ -1242,7 +1239,6 @@
 				padding-left: 25px;
 				padding-right: 25px;
 				border-bottom: 1px solid #2e3192;
-				background-color: transparent;
 				@include transition(background-color);
 
 				&.is-choose {
@@ -1288,6 +1284,10 @@
 					color: #1e7ac9;
 					font-size: 22px;
 					font-weight: 300;
+
+					span {
+						color: inherit;
+					}
 				}
 			}
 		}
