@@ -122,16 +122,40 @@ section#mds.mds
 										a(href="#" class="" title="")
 										span(style="background-color:" + colorTitleArr[idx][_i].colorBG)
 
-				p.mds__subtitle.mds__subtitle--mdsDetailsPt!= "Font size"
+				p.mds__subtitle.mds__subtitle--mdsDetailsPt!= "Font Properties"
 
 				.mds__fontSize-wrapper
 
-					.mds__fontSize-row.mds__fontSize-row--full
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p!= "Item Title"
 						.mds__fontSize-col.mds__fontSize-col-1
 							div
 								span!= "a"
 							div
-								#feedbackFontsize
+								#feedbackFSItemTitle
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p!= "Item Category"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								#feedbackFSItemCategory
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p!= "Item Assessment"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								#feedbackFSItemAssessment
 							div
 								p!= "a"
 

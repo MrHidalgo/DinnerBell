@@ -1308,16 +1308,9 @@
 	// feedback
 	&--feedback {
 		.tablet {
-			&__content {
-				* {
-					pointer-events: none;
-				}
-			}
-
 			&__banner {
 				position: relative;
 				height: 180px;
-				background-color: #0f102f;
 				border-bottom: 1px solid #1f2161;
 
 				img {
@@ -1402,7 +1395,7 @@
 						}
 
 						.icon-rate {
-							color: #333333;
+							color: #666666;
 							font-size: 28px;
 						}
 					}
@@ -1438,10 +1431,6 @@
 					padding-left: 25px;
 					padding-right: 25px;
 				}
-
-				//* {
-				//	pointer-events: none;
-				//}
 			}
 
 			&__heading {
