@@ -36,7 +36,7 @@ section#mds.mds
 								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload(upload-image-js)!= "Upload images"
-									//input(type='file' accept=".jpg, .jpeg, .png" name='upload_image')
+									//input(type='file' accept=".jpg, .jpeg" name='upload_image')
 						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-image-js)
 
 					.mds__screen(choose-screen-btn-js  data-name='slideshow')
@@ -46,7 +46,7 @@ section#mds.mds
 								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG<br>3 images maximum"
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload(upload-slideshow-js)!= "Upload images"
-									//input(type='file' multiple accept=".jpg, .jpeg, .png" name='upload_slideshow')
+									//input(type='file' multiple accept=".jpg, .jpeg" name='upload_slideshow')
 						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-slideshow-js)
 
 					.mds__screen(choose-screen-btn-js data-name='video')

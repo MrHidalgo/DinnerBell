@@ -145,6 +145,38 @@ $(document).ready((ev) => {
 						'background-color' : _color
 					});
 				}
+
+				if($('.tablet--general').length > 0) {
+					if(_parentNode.data('name') === 'alert') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'background-color' : _color
+						});
+					}
+
+					if(_parentNode.data('name') === 'confirmation') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'background-color' : _color
+						});
+					}
+
+					if(_parentNode.data('name') === 'confirm') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'background-color' : _color
+						});
+					}
+
+					if(_parentNode.data('name') === 'border') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'border-color' : _color
+						});
+					}
+
+					if(_parentNode.data('name') === 'highlight') {
+						$('.is-choose[change-' + _parentNode.data('name') + '-js]').css({
+							'background-color' : _color
+						});
+					}
+				}
 			});
 		}
 	};
@@ -182,12 +214,12 @@ $(document).ready((ev) => {
 			showAdditionalUploadImageOption () {
 				console.log(`showAdditionalUploadImageOption`);
 
-				_additionalOption.slideDown(400);
+				_additionalOption.slideDown(400).addClass('is-show');
 			},
 			hideAdditionalUploadImageOption () {
 				console.log(`hideAdditionalUploadImageOption`);
 
-				_additionalOption.hide();
+				_additionalOption.hide().removeClass('is-show');
 			},
 			addImageOnPreview (file) {
 				console.log(`showImageOnPreview`);
@@ -663,8 +695,58 @@ $(document).ready((ev) => {
 			};
 		};
 
-		if($('#myOrderFontsize').length > 0) {
-			noUiSlider.create($('#myOrderFontsize')[0], _rangeOption(0,8,4)).on('slide', function (values, handle, unencoded, tap, positions) {});
+		if($('#myOrderFSHeader').length > 0) {
+			noUiSlider.create($('#myOrderFSHeader')[0], _rangeOption(26,34,30))
+				.on('slide', function (values, handle, unencoded, tap, positions) {
+					$('.tablet--myorder .tablet__heading p').css({
+						'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+					});
+				});
+		}
+
+		if($('#myOrderFSItemTitle').length > 0) {
+			noUiSlider.create($('#myOrderFSItemTitle')[0], _rangeOption(18,26,22))
+				.on('slide', function (values, handle, unencoded, tap, positions) {
+					$('.tablet--myorder .tablet__list p, .tablet--myorder .tablet__new-body p').css({
+						'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+					});
+				});
+		}
+
+		if($('#myOrderFSItemCategory').length > 0) {
+			noUiSlider.create($('#myOrderFSItemCategory')[0], _rangeOption(10,18,14))
+				.on('slide', function (values, handle, unencoded, tap, positions) {
+					$('.tablet--myorder .tablet__list i, .tablet--myorder .tablet__new-body i').css({
+						'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+					});
+				});
+		}
+
+		if($('#myOrderFSInProcess').length > 0) {
+			noUiSlider.create($('#myOrderFSInProcess')[0], _rangeOption(10,18,14))
+				.on('slide', function (values, handle, unencoded, tap, positions) {
+					$('.tablet--myorder .tablet__list--inprogress span').css({
+						'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+					});
+				});
+		}
+
+		if($('#myOrderFSPending').length > 0) {
+			noUiSlider.create($('#myOrderFSPending')[0], _rangeOption(10,18,14))
+				.on('slide', function (values, handle, unencoded, tap, positions) {
+					$('.tablet--myorder .tablet__list--pending span').css({
+						'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+					});
+				});
+		}
+
+		if($('#myOrderFSServed').length > 0) {
+			noUiSlider.create($('#myOrderFSServed')[0], _rangeOption(10,18,14))
+				.on('slide', function (values, handle, unencoded, tap, positions) {
+					$('.tablet--myorder .tablet__list--served span').css({
+						'font-size' : (parseInt(unencoded[handle]).toFixed(0)) + 'px'
+					});
+				});
 		}
 
 		if($('#feedbackFontsize').length > 0) {
@@ -898,33 +980,50 @@ $(document).ready((ev) => {
 
 
 	const initTabletPreviewSelectFonts = () => {
-		$('[select-font-js]').on('change', (ev) => {
-			const _elem = $(ev.currentTarget),
-				_elemOption = _elem.find('option:selected');
+		const generateFontsOpt = (linkTagName, styleTagName, elemOpt, style, node) => {
+			if(linkTagName.length !== 0) {
 
-			const _tabletNode = $('#tablet'),
-				_tabletLinkTag = _tabletNode.find('link'),
-				_tabletStyleTag = _tabletNode.find('style');
-
-			const _styleStr = '#tablet { font-family: "' + _elemOption.val() + '", sans-serif; }';
-
-			if(_tabletLinkTag.length !== 0) {
-
-				_tabletLinkTag.attr('href', _elemOption.data('google-api'));
-				_tabletStyleTag.text(_styleStr);
+				linkTagName.attr('href', elemOpt.data('google-api'));
+				styleTagName.text(style);
 
 			} else {
 
 				const _link = document.createElement('link'),
 					_style = document.createElement('style');
 
-				_link.href = _elemOption.data('google-api');
+				_link.href = elemOpt.data('google-api');
 
-				_style.innerHTML = _styleStr;
+				_style.innerHTML = style;
 
-				_tabletNode[0].prepend(_link);
-				_tabletNode[0].prepend(_style);
+				node[0].prepend(_link);
+				node[0].prepend(_style);
 			}
+		};
+
+		$('[select-font-js]').on('change', (ev) => {
+			const _elem = $(ev.currentTarget),
+				_elemOption = _elem.find('option:selected');
+
+			const _tabletNode = $('#tablet'),
+				_tabletLinkTag = _tabletNode.find('> link'),
+				_tabletStyleTag = _tabletNode.find('> style');
+
+			const _styleStr = '#tablet { font-family: "' + _elemOption.val() + '", sans-serif; }';
+
+			generateFontsOpt(_tabletLinkTag, _tabletStyleTag, _elemOption, _styleStr, _tabletNode);
+		});
+
+		$('[select-font-numeric-js]').on('change', (ev) => {
+			const _elem = $(ev.currentTarget),
+				_elemOption = _elem.find('option:selected');
+
+			const _tabletNode = $('[numeric-js]').parent(),
+				_tabletLinkTag = _tabletNode.find('> link'),
+				_tabletStyleTag = _tabletNode.find('> style');
+
+			const _styleStr = 'span[numeric-js] { font-family: "' + _elemOption.val() + '", sans-serif !important; }';
+
+			generateFontsOpt(_tabletLinkTag, _tabletStyleTag, _elemOption, _styleStr, _tabletNode);
 		});
 	};
 

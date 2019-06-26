@@ -24,7 +24,7 @@ PageList:
   ready: 80
 - file: menu-design-setting-7.html
   titleName: MDS - My order
-  ready: 80
+  ready: 95
 - file: menu-design-setting-8.html
   titleName: MDS - Log Out
   ready: 95

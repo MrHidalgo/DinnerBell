@@ -1020,7 +1020,12 @@
 
 			&--additional {
 				display: none;
-				padding-top: 30px;
+				@include transition(transform);
+
+				&.is-show {
+					transform: translateY(-40px);
+					@include transition(transform);
+				}
 
 				> div {
 					display: flex;
@@ -1281,6 +1286,10 @@
 		&-content {
 			padding-bottom: 30px;
 
+			.mds__fontSize-row {
+				padding-bottom: 0;
+			}
+
 			&--font {
 				.c-form__group {
 					align-items: center;
@@ -1405,6 +1414,11 @@
 		}
 	}
 	// form :: end
+
+
+	.c-form__field--btn {
+		padding-top: 30px;
+	}
 }
 
 // SECTION mds :: END

@@ -32,31 +32,31 @@ section#tablet.tablet.tablet--general.tablet--menuItems
 			.tablet__view.tablet__view-list
 
 				.tablet__btn-wrapper
-					a.tablet__btn.tablet__btn--spicy.is-choose(href="#" class="" title="")
+					a.tablet__btn.tablet__btn--spicy.is-choose(href="#" class="" title="" change-border-js change-highlight-js)
 						div
 							p(itemTitleMenu-js)!= "Fresh florida stone crab clams"
 						div
-							span!= "<span currency-sign-js>$</span>18.50"
-					a.tablet__btn.tablet__btn--popular(href="#" class="" title="")
+							span(numeric-js)!= "<span currency-sign-js>$</span>18.50"
+					a.tablet__btn.tablet__btn--popular(href="#" class="" title="" change-border-js)
 						div
 							p(itemTitleMenu-js)!= "Shrimp cocktail"
 						div
-							span!= "<span currency-sign-js>$</span>14.40"
-					a.tablet__btn.tablet__btn--special(href="#" class="" title="")
+							span(numeric-js)!= "<span currency-sign-js>$</span>14.40"
+					a.tablet__btn.tablet__btn--special(href="#" class="" title="" change-border-js)
 						div
 							p(itemTitleMenu-js)!= "Tuna Tartare Tower"
 						div
-							span!= "<span currency-sign-js>$</span>17.00"
-					a.tablet__btn.tablet__btn--new(href="#" class="" title="")
+							span(numeric-js)!= "<span currency-sign-js>$</span>17.00"
+					a.tablet__btn.tablet__btn--new(href="#" class="" title="" change-border-js)
 						div
 							p(itemTitleMenu-js)!= "King Crab Mac'n'Cheese"
 						div
-							span!= "<span currency-sign-js>$</span>18.20"
-					a.tablet__btn(href="#" class="" title="")
+							span(numeric-js)!= "<span currency-sign-js>$</span>18.20"
+					a.tablet__btn(href="#" class="" title="" change-border-js)
 						div
 							p(itemTitleMenu-js)!= "Crab Fried Rice"
 						div
-							span!= "<span currency-sign-js>$</span>14.00"
+							span(numeric-js)!= "<span currency-sign-js>$</span>14.00"
 
 	.tablet__section.tablet__section-1
 
@@ -64,16 +64,17 @@ section#tablet.tablet.tablet--general.tablet--menuItems
 			.tablet__neutral-total
 				.tablet__order
 					p!= "Order total:"
-					span!= "$245.35"
+					div
+						span(numeric-js)!= "<span currency-sign-js>$</span>245.35"
 			.tablet__neutral-prev
 				i.icon-font.icon-arrow
-			.tablet__neutral-confirm
+			.tablet__neutral-confirm(change-confirm-js)
 				p!= "Confirm"
 
 	.tablet__section.tablet__section-2
 
 		.tablet__button-wrapper
-			a.tablet__button.tablet__button--alert(href="#" class="" title="")!= "Alert<br>dialogue"
-			a.tablet__button.tablet__button--confirmation(href="#" class="" title="")!= "Confirmation<br>dialogue"
+			a.tablet__button.tablet__button--alert(href="#" class="" title="" change-alert-js)!= "Alert<br>dialogue"
+			a.tablet__button.tablet__button--confirmation(href="#" class="" title="" change-confirmation-js)!= "Confirmation<br>dialogue"
 
 // SECTION tablet :: END

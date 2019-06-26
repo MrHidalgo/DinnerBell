@@ -7,19 +7,22 @@
 				title: 'In process',
 				colorVal: '#bf650d',
 				colorBG: '#361a0b',
-				name: 'inProcess'
+				name: 'inProcess',
+				rangeName: 'InProcess'
 			},
 			{
 				title: 'Pending',
 				colorVal: '#666666',
 				colorBG: '#361a0b',
-				name: 'pending'
+				name: 'pending',
+				rangeName: 'Pending'
 			},
 			{
 				title: 'Served',
 				colorVal: '#629913',
 				colorBG: '#15200c',
-				name: 'served'
+				name: 'served',
+				rangeName: 'Served'
 			}
 		],
 	];
@@ -67,7 +70,7 @@ section#mds.mds
 							.mds__upload-bg(change-imageParent-js)
 								div(change-img-js)
 									span!= "Upload image"
-									input(type='file' accept=".jpg, .jpeg, .png" name='upload_')
+									input(type='file' accept=".jpg, .jpeg" name='upload_')
 
 					.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)
 						div
@@ -110,16 +113,51 @@ section#mds.mds
 										a(href="#" class="" title="")
 										span(style="background-color:" + colorTitleArr[idx][_i].colorBG)
 
-				p.mds__subtitle.mds__subtitle--mdsDetailsPt!= "Font size"
+							.mds__fontSize-wrapper.mds__fontSize-wrapper--full
+
+								.mds__fontSize-row
+									.mds__fontSize-col.mds__fontSize-col-1
+										div
+											span!= "a"
+										div
+											div(id!= "myOrderFS" + colorTitleArr[idx][_i].rangeName)
+										div
+											p!= "a"
+
+				p.mds__subtitle.mds__subtitle--mdsDetailsPt!= "Font Properties"
 
 				.mds__fontSize-wrapper
 
-					.mds__fontSize-row.mds__fontSize-row--full
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Header"
 						.mds__fontSize-col.mds__fontSize-col-1
 							div
 								span!= "a"
 							div
-								#myOrderFontsize
+								#myOrderFSHeader
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Item Title"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								#myOrderFSItemTitle
+							div
+								p!= "a"
+
+					.mds__fontSize-row
+						.mds__fontSize-col.mds__fontSize-col-0
+							p.mds__fontSize-name!= "Item Category"
+						.mds__fontSize-col.mds__fontSize-col-1
+							div
+								span!= "a"
+							div
+								#myOrderFSItemCategory
 							div
 								p!= "a"
 
