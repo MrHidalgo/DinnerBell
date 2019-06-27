@@ -63,35 +63,38 @@
 	@if $filename == fullscreen {
 		$char: "\E00C";
 	}
-	@if $filename == information {
+	@if $filename == increase {
 		$char: "\E00D";
 	}
-	@if $filename == list-menu {
+	@if $filename == information {
 		$char: "\E00E";
 	}
-	@if $filename == menu {
+	@if $filename == list-menu {
 		$char: "\E00F";
 	}
-	@if $filename == move {
+	@if $filename == menu {
 		$char: "\E010";
 	}
-	@if $filename == padlock {
+	@if $filename == move {
 		$char: "\E011";
 	}
-	@if $filename == rate {
+	@if $filename == padlock {
 		$char: "\E012";
 	}
-	@if $filename == settings {
+	@if $filename == rate {
 		$char: "\E013";
 	}
-	@if $filename == sign-out {
+	@if $filename == settings {
 		$char: "\E014";
 	}
-	@if $filename == unlock {
+	@if $filename == sign-out {
 		$char: "\E015";
 	}
-	@if $filename == user {
+	@if $filename == unlock {
 		$char: "\E016";
+	}
+	@if $filename == user {
+		$char: "\E017";
 	}
 
 	@return $char;
@@ -154,6 +157,10 @@
 }
 .icon-fullscreen {
 	@include icon(fullscreen);
+
+}
+.icon-increase {
+	@include icon(increase);
 
 }
 .icon-information {

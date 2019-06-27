@@ -12,6 +12,7 @@
 	@include transition(box-shadow);
 
 	&--fixed {
+		z-index: 999;
 		box-shadow: 0 2px 8px 0 rgba(#000, 0.1);
 		@include transition(box-shadow);
 
@@ -179,8 +180,17 @@
 		display: flex;
 		align-items: center;
 		min-height: 100%;
+		@include adaptive(1023) {
+			opacity: 0;
+			@include transition(opacity);
+		}
 
 		.is-hideScroll & {
+			@include adaptive(1023) {
+				opacity: 1;
+				@include transition(opacity);
+			}
+
 			.header__nav-title {
 				display: none;
 			}

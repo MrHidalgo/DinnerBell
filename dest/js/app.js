@@ -390,14 +390,14 @@ var initWebFontLoader = function initWebFontLoader() {
  */
 $(window).on("load", function (ev) {
 	initHeaderFixed();
-	initScalableBlock('#tablet');
+	initScalableBlock('.mds__wrapper-right #tablet');
 });
 
 /**
  * @description Window on resize.
  */
 $(window).on("resize", function (ev) {
-	initScalableBlock('#tablet');
+	initScalableBlock('.mds__wrapper-right #tablet');
 });
 
 /**

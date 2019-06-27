@@ -88,6 +88,7 @@
 		align-items: flex-start;
 
 		&-left {
+			position: relative;
 			width: 100%;
 			max-width: 476px;
 			padding-right: 20px;
@@ -190,11 +191,70 @@
 			}
 		}
 
+		&-preview {
+			z-index: 997;
+			overflow: hidden;
+			display: none;
+			position: absolute;
+			top: -60px;
+			right: 0;
+			width: calc(600px / 3.5);
+			height: 290.56px;
+			border-width: 1px;
+			border-color: rgb(224, 224, 224);
+			border-style: solid;
+			border-radius: 5px;
+			box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+			@include adaptive(1023) {
+				display: block;
+			}
+
+			.is-hideScroll & {
+				z-index: 900;
+			}
+
+			> a {
+				z-index: 990;
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 30px;
+				height: 30px;
+				background-color: rgba(#333333, 1);
+				border-bottom-left-radius: 5px;
+
+				.icon-font {
+					color: #ffffff;
+					font-size: 20px;
+				}
+			}
+
+			.tablet--scroll {
+				overflow: hidden;
+				top: 0;
+				height: 100%;
+				padding: 0;
+
+				.tablet {
+					left: 50%;
+					top: 0;
+					transform: translate3d(-50%, 0,0) scale(0.28237);
+					transform-origin: center top;
+				}
+			}
+		}
+
 		&-heading {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			padding: 30px 0 60px;
+			@include adaptive(1023) {
+				padding-bottom: 100px;
+			}
 
 			h2 {
 				flex: 1;

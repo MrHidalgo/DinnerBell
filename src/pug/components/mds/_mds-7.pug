@@ -32,6 +32,12 @@ section#mds.mds
 	.mds__wrapper
 		.mds__wrapper-left
 
+			.mds__wrapper-preview
+				a(href="#" class="" title="")
+					i.icon-font.icon-increase
+
+				include ../tablet/_tablet-my-order
+
 			.mds__wrapper-heading
 
 				.mds__title-wrapper(dropdown-js)
@@ -47,11 +53,6 @@ section#mds.mds
 						a(href="menu-design-setting-5.html" class="" title="")!= "Item details"
 						a(href="menu-design-setting-6.html" class="" title="")!= "Feedback"
 						a(href="menu-design-setting-8.html" class="" title="")!= "Log Out"
-
-				a.mds__wrapper-preview(href="#" class="" title="")
-					p
-						i.icon-font.icon-eye
-					span!= "preview"
 
 			form.c-form(action="" autocomplete='off')
 
