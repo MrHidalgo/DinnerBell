@@ -1020,12 +1020,6 @@
 
 			&--additional {
 				display: none;
-				@include transition(transform);
-
-				&.is-show {
-					transform: translateY(-40px);
-					@include transition(transform);
-				}
 
 				> div {
 					display: flex;
@@ -1041,9 +1035,7 @@
 		}
 
 		&-left,
-		&-right {
-			@include transition(opacity);
-		}
+		&-right {}
 
 		&-title {
 			padding-bottom: 15px;

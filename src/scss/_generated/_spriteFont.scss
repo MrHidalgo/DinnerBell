@@ -66,29 +66,32 @@
 	@if $filename == information {
 		$char: "\E00D";
 	}
-	@if $filename == menu {
+	@if $filename == list-menu {
 		$char: "\E00E";
 	}
-	@if $filename == move {
+	@if $filename == menu {
 		$char: "\E00F";
 	}
-	@if $filename == padlock {
+	@if $filename == move {
 		$char: "\E010";
 	}
-	@if $filename == rate {
+	@if $filename == padlock {
 		$char: "\E011";
 	}
-	@if $filename == settings {
+	@if $filename == rate {
 		$char: "\E012";
 	}
-	@if $filename == sign-out {
+	@if $filename == settings {
 		$char: "\E013";
 	}
-	@if $filename == unlock {
+	@if $filename == sign-out {
 		$char: "\E014";
 	}
-	@if $filename == user {
+	@if $filename == unlock {
 		$char: "\E015";
+	}
+	@if $filename == user {
+		$char: "\E016";
 	}
 
 	@return $char;
@@ -155,6 +158,10 @@
 }
 .icon-information {
 	@include icon(information);
+
+}
+.icon-list-menu {
+	@include icon(list-menu);
 
 }
 .icon-menu {

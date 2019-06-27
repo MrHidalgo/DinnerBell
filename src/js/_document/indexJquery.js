@@ -147,6 +147,22 @@ $(document).ready((ev) => {
 				}
 
 				if($('.tablet--general').length > 0) {
+					if(_parentNode.data('name') === 'navText') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color' : _color
+						});
+					}
+					if(_parentNode.data('name') === 'navBg') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'background-color' : _color
+						});
+					}
+					if(_parentNode.data('name') === 'navBorder') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'border-color' : _color
+						});
+					}
+
 					if(_parentNode.data('name') === 'alert') {
 						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color' : _color
@@ -250,12 +266,12 @@ $(document).ready((ev) => {
 			showAdditionalUploadImageOption () {
 				console.log(`showAdditionalUploadImageOption`);
 
-				_additionalOption.slideDown(400).addClass('is-show');
+				_additionalOption.show();
 			},
 			hideAdditionalUploadImageOption () {
 				console.log(`hideAdditionalUploadImageOption`);
 
-				_additionalOption.hide().removeClass('is-show');
+				_additionalOption.hide();
 			},
 			addImageOnPreview (file) {
 				console.log(`showImageOnPreview`);
@@ -282,7 +298,9 @@ $(document).ready((ev) => {
 
 				[_colorPallet, _uploadBtn].map((val, idx) => {
 					val.css({
-						'opacity' : '1'
+						'opacity' : '1',
+						'visibility' : 'visible',
+						'height' : 'auto'
 					});
 				});
 			},
@@ -291,7 +309,9 @@ $(document).ready((ev) => {
 
 				[_colorPallet, _uploadBtn].map((val, idx) => {
 					val.css({
-						'opacity' : '0'
+						'opacity' : '0',
+						'visibility' : 'hidden',
+						'height' : '0'
 					});
 				});
 			},
@@ -930,23 +950,13 @@ $(document).ready((ev) => {
 		}
 
 		if($('#marginFeedback').length > 0) {
-			noUiSlider.create($('#marginFeedback')[0], _rangeOption(0,200,180))
+			noUiSlider.create($('#marginFeedback')[0], _rangeOption(0,200,0))
 				.on('slide', function (values, handle, unencoded, tap, positions) {
 					const _feedbackBanner = $('.tablet--feedback .tablet__banner');
 
 					_feedbackBanner.css({
 						'height' : parseInt(unencoded[handle]).toFixed(0) + 'px'
 					});
-
-					if(parseInt(unencoded[handle]).toFixed(0) === '0') {
-						_feedbackBanner.css({
-							'border' : 'none'
-						})
-					} else {
-						_feedbackBanner.css({
-							'border-bottom' : '1px solid #1f2161'
-						})
-					}
 				});
 		}
 

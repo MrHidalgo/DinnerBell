@@ -5,7 +5,11 @@
 	position: relative;
 	width: 600px;
 	height: 1024px;
-	border: 1px solid #efefef;
+	border-width: 1px;
+	border-color: rgb(224, 224, 224);
+	border-style: solid;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 	@include adaptive(767) {
 		left: 50%;
 		top: 0;
@@ -35,6 +39,8 @@
 		overflow: unset;
 		border: none;
 		height: auto;
+		border-radius: 0;
+		box-shadow: none;
 
 		.tablet {
 			&__section {
@@ -84,12 +90,11 @@
 				border-right: 1px solid #1f2161;
 
 				> a {
-					span {
-						width: 20px;
-						height: 2px;
-						margin-top: 2px;
-						margin-bottom: 2px;
-						background-color: #ffffff;
+					display: flex;
+
+					.icon-font {
+						color: #ffffff;
+						font-size: 20px;
 					}
 				}
 			}
@@ -124,8 +129,9 @@
 					}
 
 					span {
+						opacity: 0.5;
 						padding-left: 5px;
-						color: #666666;
+						color: #fff;
 						font-size: 18px;
 					}
 				}
@@ -153,18 +159,16 @@
 	}
 
 	&__subheader {
-		position: absolute;
-		top: 55px;
-		left: 0;
-		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		width: calc(100% + 50px);
 		min-height: 80px;
 		padding-left: 25px;
 		padding-right: 15px;
+		margin-left: -25px;
 		border-bottom: 1px solid #332e4e;
-		background-color: #181818;
+		background-color: transparent;
 
 		p {
 			color: #ffffff;
@@ -446,6 +450,8 @@
 	&--itemDetails {
 		.tablet {
 			&__content {
+				overflow-x: hidden;
+
 				&-cover {
 					padding-left: 25px;
 					padding-right: 25px;
@@ -1143,7 +1149,8 @@
 	&--menuItems {
 		.tablet {
 			&__content {
-				margin-top: 135px;
+				height: calc(100% - (55px));
+				margin-top: 55px;
 				padding-left: 25px;
 				padding-right: 25px;
 
@@ -1313,8 +1320,7 @@
 		.tablet {
 			&__banner {
 				position: relative;
-				height: 180px;
-				border-bottom: 1px solid #1f2161;
+				height: 0;
 
 				img {
 					@extend %imageResCoverAbs;

@@ -7,7 +7,10 @@
 				title: 'Navigation bar',
 				color: '#ffffff',
 				color1: '#171732',
-				color2: '#252660'
+				color2: '#252660',
+				name : 'navText',
+				nameText : 'navBg',
+				nameBorder : 'navBorder'
 			},
 			{
 				title: 'Borders',
@@ -170,11 +173,11 @@ section#mds.mds
 											span(style="background-color:" + colorTitleArr[idx][_i].colorText)
 
 									if(idx === 0 && _i === 0)
-										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].nameText)
 											a(href="#" class="" title="")
 											span(style="background-color:" + colorTitleArr[idx][_i].color1)
 
-										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color2, data-name!= colorTitleArr[idx][_i].name)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color2, data-name!= colorTitleArr[idx][_i].nameBorder)
 											a(href="#" class="" title="")
 											span(style="background-color:" + colorTitleArr[idx][_i].color2)
 

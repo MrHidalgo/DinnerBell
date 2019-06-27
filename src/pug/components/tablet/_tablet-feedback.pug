@@ -21,104 +21,102 @@
 				a(href="" class="" title="")
 					i.icon-font.icon-bell
 
-		.tablet__content
+		.tablet__content(tablet-bg-js)
 			.tablet__banner
 
-			.tablet__content-cover(tablet-bg-js)
+			.tablet__rating-wrapper
+				.tablet__rating.tablet__rating--excellent
+					.tablet__rating-top
+						div
+							i!= "WINE"
+							p!= "Cakebread Cellars, Merlot"
+						div
+							span(changeColor-excellent-js)!= "Excellent"
+					.tablet__rating-bottom
+						a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
+							i.icon-font.icon-rate(changeColor-excellent-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
+							i.icon-font.icon-rate(changeColor-excellent-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
+							i.icon-font.icon-rate(changeColor-excellent-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
+							i.icon-font.icon-rate(changeColor-excellent-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
+							i.icon-font.icon-rate(changeColor-excellent-js)
 
-				.tablet__rating-wrapper
-					.tablet__rating.tablet__rating--excellent
-						.tablet__rating-top
-							div
-								i!= "WINE"
-								p!= "Cakebread Cellars, Merlot"
-							div
-								span(changeColor-excellent-js)!= "Excellent"
-						.tablet__rating-bottom
-							a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
-								i.icon-font.icon-rate(changeColor-excellent-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
-								i.icon-font.icon-rate(changeColor-excellent-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
-								i.icon-font.icon-rate(changeColor-excellent-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
-								i.icon-font.icon-rate(changeColor-excellent-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-excellent-js)
-								i.icon-font.icon-rate(changeColor-excellent-js)
+				.tablet__rating.tablet__rating--verygood
+					.tablet__rating-top
+						div
+							i!= "Cold appetizers"
+							p!= "Chilled Shellfish Platter"
+						div
+							span(changeColor-veryGood-js)!= "VERY GOOD"
+					.tablet__rating-bottom
+						a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
+							i.icon-font.icon-rate(changeColor-veryGood-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
+							i.icon-font.icon-rate(changeColor-veryGood-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
+							i.icon-font.icon-rate(changeColor-veryGood-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
+							i.icon-font.icon-rate(changeColor-veryGood-js)
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
 
-					.tablet__rating.tablet__rating--verygood
-						.tablet__rating-top
-							div
-								i!= "Cold appetizers"
-								p!= "Chilled Shellfish Platter"
-							div
-								span(changeColor-veryGood-js)!= "VERY GOOD"
-						.tablet__rating-bottom
-							a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
-								i.icon-font.icon-rate(changeColor-veryGood-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
-								i.icon-font.icon-rate(changeColor-veryGood-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
-								i.icon-font.icon-rate(changeColor-veryGood-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-veryGood-js)
-								i.icon-font.icon-rate(changeColor-veryGood-js)
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
+				.tablet__rating.tablet__rating--good
+					.tablet__rating-top
+						div
+							i!= "Second course"
+							p!= "Fresh florida stone crab clams"
+						div
+							span(changeColor-good-js)!= "GOOD"
+					.tablet__rating-bottom
+						a.is-choose(href="#" class="" title="" changeBgColor-good-js)
+							i.icon-font.icon-rate(changeColor-good-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-good-js)
+							i.icon-font.icon-rate(changeColor-good-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-good-js)
+							i.icon-font.icon-rate(changeColor-good-js)
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
 
-					.tablet__rating.tablet__rating--good
-						.tablet__rating-top
-							div
-								i!= "Second course"
-								p!= "Fresh florida stone crab clams"
-							div
-								span(changeColor-good-js)!= "GOOD"
-						.tablet__rating-bottom
-							a.is-choose(href="#" class="" title="" changeBgColor-good-js)
-								i.icon-font.icon-rate(changeColor-good-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-good-js)
-								i.icon-font.icon-rate(changeColor-good-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-good-js)
-								i.icon-font.icon-rate(changeColor-good-js)
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
+				.tablet__rating.tablet__rating--notgood
+					.tablet__rating-top
+						div
+							p!= "Please rate our service efficiency"
+						div
+							span(changeColor-notGood-js)!= "NOT GOOD"
+					.tablet__rating-bottom
+						a.is-choose(href="#" class="" title="" changeBgColor-notGood-js)
+							i.icon-font.icon-rate(changeColor-notGood-js)
+						a.is-choose(href="#" class="" title="" changeBgColor-notGood-js)
+							i.icon-font.icon-rate(changeColor-notGood-js)
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
 
-					.tablet__rating.tablet__rating--notgood
-						.tablet__rating-top
-							div
-								p!= "Please rate our service efficiency"
-							div
-								span(changeColor-notGood-js)!= "NOT GOOD"
-						.tablet__rating-bottom
-							a.is-choose(href="#" class="" title="" changeBgColor-notGood-js)
-								i.icon-font.icon-rate(changeColor-notGood-js)
-							a.is-choose(href="#" class="" title="" changeBgColor-notGood-js)
-								i.icon-font.icon-rate(changeColor-notGood-js)
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-
-					.tablet__rating.tablet__rating--bad
-						.tablet__rating-top
-							div
-								p!= "Rate your overall experience"
-							div
-								span(changeColor-bad-js)!= "bad"
-						.tablet__rating-bottom
-							a.is-choose(href="#" class="" title="" changeBgColor-bad-js)
-								i.icon-font.icon-rate(changeColor-bad-js)
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
-							a(href="#" class="" title="")
-								i.icon-font.icon-rate
+				.tablet__rating.tablet__rating--bad
+					.tablet__rating-top
+						div
+							p!= "Rate your overall experience"
+						div
+							span(changeColor-bad-js)!= "bad"
+					.tablet__rating-bottom
+						a.is-choose(href="#" class="" title="" changeBgColor-bad-js)
+							i.icon-font.icon-rate(changeColor-bad-js)
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
+						a(href="#" class="" title="")
+							i.icon-font.icon-rate
 
 		.tablet__footer
 			a.tablet__submit(href="#" class="" title="")!= "Submit"

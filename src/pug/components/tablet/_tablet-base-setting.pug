@@ -4,32 +4,30 @@
 	section#tablet.tablet.tablet--general.tablet--menuItems
 
 		.tablet__section.tablet__section-0
-			.tablet__header
-				div
+			.tablet__header(navBg-js navBorder-js)
+				div(navBorder-js)
 					a(href="#" class="" title="")
-						span
-						span
-						span
+						i.icon-font.icon-list-menu(navText-js)
 				div
 					a(href="" class="" title="")
-						i.icon-font.icon-user
-						span!= "3"
-				div
+						i.icon-font.icon-user(navText-js)
+						span(navText-js)!= "3"
+				div(navBorder-js)
 					a(href="" class="" title="")
-						i.icon-font.icon-doc
-						span!= "0"
-				div
+						i.icon-font.icon-doc(navText-js)
+						span(navText-js)!= "0"
+				div(navBorder-js)
 					a(href="" class="" title="")
-						i.icon-font.icon-bell
-
-			.tablet__subheader
-				a(href="#" class="" title="")
-					i.icon-font.icon-corner
-				p(sectionHeader-js)!= "Cold Appetizers"
-				a(href="#" class="" title="")
-					i.icon-font.icon-corner
+						i.icon-font.icon-bell(navText-js)
 
 			.tablet__content
+				.tablet__subheader
+					a(href="#" class="" title="")
+						i.icon-font.icon-corner
+					p(sectionHeader-js)!= "Cold Appetizers"
+					a(href="#" class="" title="")
+						i.icon-font.icon-corner
+
 				.tablet__view.tablet__view-list
 
 					.tablet__btn-wrapper
