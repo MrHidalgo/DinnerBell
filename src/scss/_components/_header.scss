@@ -69,6 +69,7 @@
 		}
 
 		&-right {
+			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
@@ -722,6 +723,51 @@
 				filter: grayscale(1);
 				@include transition(filter);
 			}
+		}
+	}
+
+	&__preview {
+		cursor: pointer;
+		display: none;
+		flex-direction: column;
+		z-index: 10;
+		position: absolute;
+		top: 12px;
+		right: 0;
+		@include transition(opacity);
+		@include adaptive(767) {
+			display: flex;
+		}
+
+		.is-hideScroll & {
+			opacity: 0;
+			visibility: hidden;
+			@include transition(opacity);
+		}
+
+		p {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 45px;
+			height: 45px;
+			border-radius: 10px;
+			background-color: #69c0f1;
+
+			.icon-font {
+				color: #ffffff;
+				font-size: 25px;
+			}
+		}
+
+		span {
+			display: block;
+			text-align: center;
+			padding-top: 2px;
+			text-transform: uppercase;
+			color: #69c0f1;
+			font-size: 10px;
+			font-weight: 500;
 		}
 	}
 }

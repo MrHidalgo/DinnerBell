@@ -192,21 +192,25 @@
 		}
 
 		&-preview {
-			z-index: 997;
+			z-index: 1000;
 			overflow: hidden;
 			display: none;
-			position: absolute;
-			top: -60px;
-			right: 0;
+			position: fixed;
+			top: 20px;
+			right: 20px;
 			width: calc(600px / 3.5);
 			height: 290.56px;
 			border-width: 1px;
 			border-color: rgb(224, 224, 224);
 			border-style: solid;
 			border-radius: 5px;
+			background-color: #ffffff;
 			box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 			@include adaptive(1023) {
 				display: block;
+			}
+			@include adaptive(767) {
+				display: none;
 			}
 
 			.is-hideScroll & {

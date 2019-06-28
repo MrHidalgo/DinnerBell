@@ -1063,7 +1063,7 @@ $(document).ready((ev) => {
 
 
 	const initTabletPreview = () => {
-		$('.mds__wrapper-preview').on('click', () => {
+		$('.mds__wrapper-preview, .header__preview').on('click', () => {
 			$('html, body').addClass('is-hideScroll');
 			$('.mds__wrapper-right').addClass('is-show');
 		});

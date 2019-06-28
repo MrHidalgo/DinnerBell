@@ -1491,7 +1491,7 @@ $(document).ready(function (ev) {
 	};
 
 	var initTabletPreview = function initTabletPreview() {
-		$('.mds__wrapper-preview').on('click', function () {
+		$('.mds__wrapper-preview, .header__preview').on('click', function () {
 			$('html, body').addClass('is-hideScroll');
 			$('.mds__wrapper-right').addClass('is-show');
 		});
