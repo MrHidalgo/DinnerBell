@@ -239,6 +239,7 @@ $(document).ready((ev) => {
 		}
 	};
 
+	let _screenName = '';
 	const _additionMethodsUploadFiles = () => {
 		const _additionalOption = $('[upload-additional-js]'),
 			_colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
@@ -286,9 +287,19 @@ $(document).ready((ev) => {
 					'background-image' : 'url("' + file + '")'
 				}).find("> *").hide();
 
-				_tabletBG.css({
-					'background-image' : 'url("' + file + '")'
-				});
+				if($('.tablet--intro').length > 0) {
+
+					if(_screenName === 'static') {
+						$('[introScreen-bg-js]').css({
+							'background-image' : 'url("' + file + '")'
+						});
+					}
+
+				} else {
+					_tabletBG.css({
+						'background-image' : 'url("' + file + '")'
+					});
+				}
 			},
 			removeImageOnPreview () {
 				console.log(`hideImageOnPreview`);
@@ -297,7 +308,15 @@ $(document).ready((ev) => {
 					_defaultOption.default
 				).find("> *").show();
 
-				_tabletBG.css(_defaultOption.default);
+				if($('.tablet--intro').length > 0) {
+
+					if(_screenName === 'static') {
+						$('[introScreen-bg-js]').css(_defaultOption.default);
+					}
+
+				} else {
+					_tabletBG.css(_defaultOption.default);
+				}
 			},
 			showColorPalletUploadBtn () {
 				console.log(`showColorPalletUploadBtn`);
@@ -325,7 +344,7 @@ $(document).ready((ev) => {
 				console.log(`fixedBGOption`);
 
 				_fixedImageBtn.on('change', (ev) => {
-					[_previewNode, _tabletBG].map((el,idx) => {
+					[_previewNode, _tabletBG, $('[introScreen-bg-js]')].map((el,idx) => {
 						el.css(_defaultOption.fixed);
 					});
 				});
@@ -334,7 +353,7 @@ $(document).ready((ev) => {
 				console.log(`repeatBGOption`);
 
 				_repeatImageBtn.on('change', (ev) => {
-					[_previewNode, _tabletBG].map((el,idx) => {
+					[_previewNode, _tabletBG, $('[introScreen-bg-js]')].map((el,idx) => {
 						el.css(_defaultOption.repeat);
 					});
 				});
@@ -371,6 +390,8 @@ $(document).ready((ev) => {
 			console.log(`change upload`);
 
 			const _self = $(ev.currentTarget);
+
+			_screenName = _self.closest('[change-img-js]').data('name');
 
 			_additionMethodsUploadFiles().hideColorPalletUploadBtn();
 
@@ -437,66 +458,6 @@ $(document).ready((ev) => {
 	};
 
 
-	const initTabletPreviewChangeBackgroundImage = () => {
-		const _logoutBGNode =  $('.tablet--logout .tablet__content');
-
-		$('[upload-image-js] input[type="file"]').on('change', (ev) => {
-
-			const _previewTemplate = (fileName) => {
-				return  `
-				<div class="mds__upload-row">
-					<div>
-						<p>${fileName}</p>
-						<a href="#" title="" upload-remove-js>
-							<i class="icon-font icon-bin"></i>
-						</a>
-					</div>    				
-				</div>								
-			`
-			};
-
-			const _showDetails = (node, filesArr) => {
-				node.prev().hide();
-				node.fadeIn(350).css({'display':'flex'});
-
-				for(let _idx = 0; _idx < filesArr; _idx++) {
-					node.append(_previewTemplate(ev.currentTarget.files[_idx].name));
-				}
-			};
-
-			const _hideDetails = (node) => {
-				node.prev().fadeIn(350);
-				node.hide();
-			};
-
-			if(ev.currentTarget.files.length !== 0) {
-				const reader = new FileReader(),
-					_previewStatic = $(ev.currentTarget).closest('.mds__change-bg').find('[upload-previewFiles-js]');
-
-				reader.onload = () => {
-					_logoutBGNode.css({
-						'background-image' : 'url("' + reader.result + '")'
-					});
-				};
-
-				_showDetails(_previewStatic, ev.currentTarget.files.length);
-
-				$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', (ev) => {
-					_hideDetails(_previewStatic);
-
-					_logoutBGNode.css({
-						'background-image' : 'url("")'
-					});
-				});
-
-				reader.readAsDataURL(ev.currentTarget.files[0]);
-			}
-
-			$(ev.currentTarget).val('');
-		});
-	};
-
-
 	const initChooseScreen = () => {
 		const removeUploadDetails = () => {
 			$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', (ev) => {
@@ -538,8 +499,8 @@ $(document).ready((ev) => {
 								<a href="#" title="" upload-remove-js>
 									<i class="icon-font icon-bin"></i>
 								</a>
-							</div>    				
-						</div>								
+							</div>
+						</div>
 					`
 				};
 
@@ -555,90 +516,58 @@ $(document).ready((ev) => {
 				const _hideDetails = (node) => {
 					node.prev().fadeIn(350);
 					node.hide();
+					node.find('> *').remove();
 				};
 
-				if(mode === 'static') {
-					console.log(`static`);
-					console.log(input);
-					console.log(input.files);
-
-					const _previewStatic = $(input).closest('.mds__screen').find('[upload-previewFiles-js]');
-
-					if(input.files.length !== 0) {
-						console.log(`if`);
-						const reader = new FileReader();
-
-						reader.onload = () => {
-							console.log(reader.result);
-
-							_bgImgContainer.css({
-								'background-image' : 'url("' + reader.result + '")'
-							});
-						};
-
-						_showDetails(_previewStatic, input.files.length);
-
-						$('[upload-preview-image-js]').on('click', '[upload-remove-js]', (ev) => {
-							_hideDetails(_previewStatic);
-
-							_bgImgContainer.css({
-								'background-image' : 'url("")'
-							});
-						});
-
-						reader.readAsDataURL(input.files[0]);
-					}
-
-				} else if(mode === 'slideshow') {
-					let _count = 0;
-
-					const _parentNode = $(input).closest('.mds__screen'),
-						_previewSlideShow = _parentNode.find('[upload-previewFiles-js]');
-
-					if(input.files.length > 3) {
-						_parentNode.addClass('is-error');
-						return false;
-					} else {
-						_parentNode.removeClass('is-error');
-
-						for(let _idx = 0; _idx < input.files.length; _idx++) {
-							if (input.files[_idx]) {
-								const reader = new FileReader();
-
-								reader.onload = () => {
-									const _slide = slideImgContainer.find('.swiper-slide')[_idx];
-
-									$(_slide).css({
-										'background-image' : 'url("' + reader.result + '")'
-									});
-								};
-
-								// _previewSlideShow.fadeIn(350).css({'display':'flex'});
-								//
-								// _previewSlideShow.append(_previewTemplate(input.files[_idx].name));
-								//
-								// reader.readAsDataURL(input.files[_idx]);
-							}
-						}
-					}
+				if(mode === 'slideshow') {
+					// let _count = 0;
+					//
+					// const _parentNode = $(input).closest('.mds__screen'),
+					// 	_previewSlideShow = _parentNode.find('[upload-previewFiles-js]');
+					//
+					// if(input.files.length > 3) {
+					// 	_parentNode.addClass('is-error');
+					// 	return false;
+					// } else {
+					// 	_parentNode.removeClass('is-error');
+					//
+					// 	for(let _idx = 0; _idx < input.files.length; _idx++) {
+					// 		if (input.files[_idx]) {
+					// 			const reader = new FileReader();
+					//
+					// 			reader.onload = () => {
+					// 				const _slide = slideImgContainer.find('.swiper-slide')[_idx];
+					//
+					// 				$(_slide).css({
+					// 					'background-image' : 'url("' + reader.result + '")'
+					// 				});
+					// 			};
+					//
+					// 			// _previewSlideShow.fadeIn(350).css({'display':'flex'});
+					// 			//
+					// 			// _previewSlideShow.append(_previewTemplate(input.files[_idx].name));
+					// 			//
+					// 			// reader.readAsDataURL(input.files[_idx]);
+					// 		}
+					// 	}
+					// }
 
 				} else if (mode === 'video') {
 					const _parentNode = $(input).closest('.mds__screen'),
 						_previewVideo = _parentNode.find('[upload-previewFiles-js]');
 
-					console.log(input);
-					console.log(input.files);
-
 					if (input.files.length !== 0) {
 						const reader = new FileReader(),
-							_vd = $(videoContainer).find('video')[0];
+							_vd = $(videoContainer).find('video');
 
 						reader.onload = () => {
-							$(_vd)
-								.find('source')
-								.attr('src', reader.result);
+							$(_vd).map((idx, val) => {
+								$(val)
+									.find('source')
+									.attr('src', reader.result);
 
-							_vd.load();
+								val.load();
+							});
 						};
 
 						_showDetails(_previewVideo, input.files.length);
@@ -646,11 +575,13 @@ $(document).ready((ev) => {
 						$('[upload-preview-video-js]').on('click', '[upload-remove-js]', (ev) => {
 							_hideDetails(_previewVideo);
 
-							$(_vd)
-								.find('source')
-								.attr('src', '');
+							$(_vd).map((idx, val) => {
+								$(val)
+									.find('source')
+									.attr('src', '');
 
-							_vd.load();
+								val.load();
+							});
 						});
 
 						reader.readAsDataURL(input.files[0]);
@@ -662,28 +593,16 @@ $(document).ready((ev) => {
 			if($(ev.target).closest('.mds__upload-row-wrapper').length !== 0) {
 				return false;
 			}
-			// STATIC IMAGE
-			else if($(ev.target).closest('[upload-image-js]').length !== 0) {
-				console.log(`STATIC IMAGE`);
-
-				$('[upload-image-js] input[type="file"]').on('change', (ev) => {
-					console.log(ev.currentTarget);
-					readFileURL(ev.currentTarget, 'static');
-					$(ev.currentTarget).val('');
-				});
-
-				selectionScreenForPreview(0);
-			}
 			// SLIDE SHOW
 			else if($(ev.target).closest('[upload-slideshow-js]').length !== 0) {
-				console.log(`if slideshow`);
-
-				$('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
-					readFileURL(ev.currentTarget, 'slideshow');
-					$(ev.currentTarget).val('');
-				});
-
-				selectionScreenForPreview(0);
+				// console.log(`if slideshow`);
+				//
+				// $('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
+				// 	readFileURL(ev.currentTarget, 'slideshow');
+				// 	$(ev.currentTarget).val('');
+				// });
+				//
+				// selectionScreenForPreview(0);
 			}
 			// VIDEO PREVIEW
 			else if($(ev.target).closest('[upload-video-js]').length !== 0) {
@@ -698,7 +617,8 @@ $(document).ready((ev) => {
 			}
 			// SCREEN SELECTION FOR PREVIEW CHANGES
 			else {
-				selectionScreenForPreview(400);
+				console.log(`SCREEN SELECTION FOR PREVIEW CHANGES`);
+				selectionScreenForPreview(0);
 			}
 		});
 	};
@@ -1224,7 +1144,6 @@ $(document).ready((ev) => {
 		initTabletPreview();
 		initTabletPreviewSelectFonts();
 		initTabletPreviewSelectCurrency();
-		initTabletPreviewChangeBackgroundImage();
 
 		initTPChangeColor();
 		initTPChangeImage();

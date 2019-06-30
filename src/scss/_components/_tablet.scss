@@ -318,13 +318,10 @@
 	&--intro {
 		.tablet {
 			&__content {
+				overflow: hidden;
 				position: relative;
 				margin-top: 0;
 				height: calc(100% - 80px);
-
-				* {
-					pointer-events: none;
-				}
 
 				> div {
 					position: absolute;

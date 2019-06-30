@@ -438,12 +438,40 @@
                       <p class="mds__screen-desc">Image dimensions: 768x1024<br>Supported Formats: JPG, PNG</p>
                     </div>
                     <div class="mds__screen-col mds__screen-col-1">
-                      <div class="mds__screen-upload" upload-image-js>Upload images
-                        <!--input(type='file' accept=".jpg, .jpeg" name='upload_image')-->
+                      <div class="mds__upload-bg" change-imageParent-js>
+                        <div change-img-js data-name="static"><span>Upload image</span>
+                          <input type="file" accept=".jpg, .jpeg" name="upload_">
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="mds__upload-row-wrapper" upload-previewFiles-js upload-preview-image-js></div>
+                  <div class="mds__upload mds__upload--hi" upload-file-js>
+                    <div class="mds__upload-wrapper mds__upload-wrapper--double mds__upload-wrapper--additional" upload-additional-js>
+                      <div>
+                        <div class="mds__upload-left">
+                          <div class="mds__upload-preview" upload-preview-js>
+                            <p>image<br>preview</p>
+                          </div>
+                        </div>
+                        <div class="mds__upload-right">
+                          <div class="mds__upload-option">
+                            <div class="mds__upload-radio">
+                              <div>
+                                <label>
+                                  <input type="radio" name="upload_image_size" checked upload-imgFixed-js><span>Fixed position</span>
+                                </label>
+                              </div>
+                              <div>
+                                <label>
+                                  <input type="radio" name="upload_image_size" upload-imgRepeat-js><span>Repeat / Tile image</span>
+                                </label>
+                              </div>
+                            </div><a class="mds__upload-remove" href="#" title="" upload-remove-js><i class="icon-font icon-bin"></i><span>Remove image</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="mds__screen" choose-screen-btn-js data-name="slideshow">
                   <p class="mds__screen-title">Slideshow</p>
@@ -467,7 +495,7 @@
                     </div>
                     <div class="mds__screen-col mds__screen-col-1">
                       <div class="mds__screen-upload" upload-video-js>Upload images
-                        <!--input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')-->
+                        <input type="file" accept=".webm, .ogg, .mp4" name="upload_video">
                       </div>
                     </div>
                   </div>

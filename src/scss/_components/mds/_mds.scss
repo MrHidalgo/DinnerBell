@@ -582,6 +582,11 @@
 					width: 100%;
 					margin-top: 15px;
 				}
+
+				.mds__upload-bg {
+					width: 100%;
+					max-width: 160px;
+				}
 			}
 		}
 
@@ -635,13 +640,18 @@
 			&-wrapper {
 				display: none;
 				flex-direction: column;
-				padding-top: 20px;
 			}
 		}
 
 		&-wrapper {
 			display: flex;
 			flex-direction: column;
+		}
+
+		.mds__upload {
+			.mds__upload-wrapper {
+				padding-top: 30px;
+			}
 		}
 	}
 	// screen :: end

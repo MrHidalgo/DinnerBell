@@ -36,9 +36,36 @@ section#mds.mds
 							.mds__screen-col.mds__screen-col-0
 								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, PNG"
 							.mds__screen-col.mds__screen-col-1
-								.mds__screen-upload(upload-image-js)!= "Upload images"
-									//input(type='file' accept=".jpg, .jpeg" name='upload_image')
-						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-image-js)
+								.mds__upload-bg(change-imageParent-js)
+									div(change-img-js data-name='static')
+										span!= "Upload image"
+										input(type='file' accept=".jpg, .jpeg" name='upload_')
+
+						.mds__upload.mds__upload--hi(upload-file-js)
+							.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)
+								div
+									.mds__upload-left
+										.mds__upload-preview(upload-preview-js)
+											p!= "image<br>preview"
+
+									.mds__upload-right
+
+										.mds__upload-option
+
+											.mds__upload-radio
+												div
+													label
+														input(type='radio' name='upload_image_size' checked upload-imgFixed-js)
+														span!= "Fixed position"
+												div
+													label
+														input(type='radio' name='upload_image_size' upload-imgRepeat-js)
+														span!= "Repeat / Tile image"
+
+											a.mds__upload-remove(href="#" class="" title="" upload-remove-js)
+												i.icon-font.icon-bin
+												span!= "Remove image"
+
 
 					.mds__screen(choose-screen-btn-js  data-name='slideshow')
 						p.mds__screen-title!= "Slideshow"
@@ -57,7 +84,7 @@ section#mds.mds
 								p.mds__screen-desc!= "Video dimensions: 768x1024<br>Supported Formats: OGG, MP4, WEBM<br>Max file weight: 50 Mb"
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload(upload-video-js)!= "Upload images"
-									//input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')
+									input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')
 						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-video-js)
 
 				+formBtn('', 'c-btn c-btn--bg', 'Update settings')

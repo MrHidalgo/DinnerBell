@@ -667,6 +667,7 @@ $(document).ready(function (ev) {
 		}
 	};
 
+	var _screenName = '';
 	var _additionMethodsUploadFiles = function _additionMethodsUploadFiles() {
 		var _additionalOption = $('[upload-additional-js]'),
 		    _colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
@@ -714,16 +715,32 @@ $(document).ready(function (ev) {
 					'background-image': 'url("' + file + '")'
 				}).find("> *").hide();
 
-				_tabletBG.css({
-					'background-image': 'url("' + file + '")'
-				});
+				if ($('.tablet--intro').length > 0) {
+
+					if (_screenName === 'static') {
+						$('[introScreen-bg-js]').css({
+							'background-image': 'url("' + file + '")'
+						});
+					}
+				} else {
+					_tabletBG.css({
+						'background-image': 'url("' + file + '")'
+					});
+				}
 			},
 			removeImageOnPreview: function removeImageOnPreview() {
 				console.log('hideImageOnPreview');
 
 				_previewNode.css(_defaultOption.default).find("> *").show();
 
-				_tabletBG.css(_defaultOption.default);
+				if ($('.tablet--intro').length > 0) {
+
+					if (_screenName === 'static') {
+						$('[introScreen-bg-js]').css(_defaultOption.default);
+					}
+				} else {
+					_tabletBG.css(_defaultOption.default);
+				}
 			},
 			showColorPalletUploadBtn: function showColorPalletUploadBtn() {
 				console.log('showColorPalletUploadBtn');
@@ -751,7 +768,7 @@ $(document).ready(function (ev) {
 				console.log('fixedBGOption');
 
 				_fixedImageBtn.on('change', function (ev) {
-					[_previewNode, _tabletBG].map(function (el, idx) {
+					[_previewNode, _tabletBG, $('[introScreen-bg-js]')].map(function (el, idx) {
 						el.css(_defaultOption.fixed);
 					});
 				});
@@ -760,7 +777,7 @@ $(document).ready(function (ev) {
 				console.log('repeatBGOption');
 
 				_repeatImageBtn.on('change', function (ev) {
-					[_previewNode, _tabletBG].map(function (el, idx) {
+					[_previewNode, _tabletBG, $('[introScreen-bg-js]')].map(function (el, idx) {
 						el.css(_defaultOption.repeat);
 					});
 				});
@@ -798,6 +815,8 @@ $(document).ready(function (ev) {
 			console.log('change upload');
 
 			var _self = $(ev.currentTarget);
+
+			_screenName = _self.closest('[change-img-js]').data('name');
 
 			_additionMethodsUploadFiles().hideColorPalletUploadBtn();
 
@@ -972,7 +991,7 @@ $(document).ready(function (ev) {
 			var readFileURL = function readFileURL(input, mode) {
 
 				var _previewTemplate = function _previewTemplate(fileName) {
-					return '\n\t\t\t\t\t\t<div class="mds__fileName-row">\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<p>' + fileName + '</p>\n\t\t\t\t\t\t\t\t<a href="#" title="" upload-remove-js>\n\t\t\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>    \t\t\t\t\n\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\n\t\t\t\t\t';
+					return '\n\t\t\t\t\t\t<div class="mds__fileName-row">\n\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<p>' + fileName + '</p>\n\t\t\t\t\t\t\t\t<a href="#" title="" upload-remove-js>\n\t\t\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t';
 				};
 
 				var _showDetails = function _showDetails(node, filesArr) {
@@ -987,90 +1006,56 @@ $(document).ready(function (ev) {
 				var _hideDetails = function _hideDetails(node) {
 					node.prev().fadeIn(350);
 					node.hide();
+					node.find('> *').remove();
 				};
 
-				if (mode === 'static') {
-					console.log('static');
-					console.log(input);
-					console.log(input.files);
+				if (mode === 'static') {} else if (mode === 'slideshow') {
+					// let _count = 0;
+					//
+					// const _parentNode = $(input).closest('.mds__screen'),
+					// 	_previewSlideShow = _parentNode.find('[upload-previewFiles-js]');
+					//
+					// if(input.files.length > 3) {
+					// 	_parentNode.addClass('is-error');
+					// 	return false;
+					// } else {
+					// 	_parentNode.removeClass('is-error');
+					//
+					// 	for(let _idx = 0; _idx < input.files.length; _idx++) {
+					// 		if (input.files[_idx]) {
+					// 			const reader = new FileReader();
+					//
+					// 			reader.onload = () => {
+					// 				const _slide = slideImgContainer.find('.swiper-slide')[_idx];
+					//
+					// 				$(_slide).css({
+					// 					'background-image' : 'url("' + reader.result + '")'
+					// 				});
+					// 			};
+					//
+					// 			// _previewSlideShow.fadeIn(350).css({'display':'flex'});
+					// 			//
+					// 			// _previewSlideShow.append(_previewTemplate(input.files[_idx].name));
+					// 			//
+					// 			// reader.readAsDataURL(input.files[_idx]);
+					// 		}
+					// 	}
+					// }
 
-					var _previewStatic = $(input).closest('.mds__screen').find('[upload-previewFiles-js]');
+				} else if (mode === 'video') {
+					var _parentNode2 = $(input).closest('.mds__screen'),
+					    _previewVideo = _parentNode2.find('[upload-previewFiles-js]');
 
 					if (input.files.length !== 0) {
-						console.log('if');
-						var reader = new FileReader();
+						var reader = new FileReader(),
+						    _vd = $(videoContainer).find('video');
 
 						reader.onload = function () {
-							console.log(reader.result);
+							$(_vd).map(function (idx, val) {
+								$(val).find('source').attr('src', reader.result);
 
-							_bgImgContainer.css({
-								'background-image': 'url("' + reader.result + '")'
+								val.load();
 							});
-						};
-
-						_showDetails(_previewStatic, input.files.length);
-
-						$('[upload-preview-image-js]').on('click', '[upload-remove-js]', function (ev) {
-							_hideDetails(_previewStatic);
-
-							_bgImgContainer.css({
-								'background-image': 'url("")'
-							});
-						});
-
-						reader.readAsDataURL(input.files[0]);
-					}
-				} else if (mode === 'slideshow') {
-					var _count = 0;
-
-					var _parentNode2 = $(input).closest('.mds__screen'),
-					    _previewSlideShow = _parentNode2.find('[upload-previewFiles-js]');
-
-					if (input.files.length > 3) {
-						_parentNode2.addClass('is-error');
-						return false;
-					} else {
-						_parentNode2.removeClass('is-error');
-
-						var _loop4 = function _loop4(_idx) {
-							if (input.files[_idx]) {
-								var _reader = new FileReader();
-
-								_reader.onload = function () {
-									var _slide = slideImgContainer.find('.swiper-slide')[_idx];
-
-									$(_slide).css({
-										'background-image': 'url("' + _reader.result + '")'
-									});
-								};
-
-								// _previewSlideShow.fadeIn(350).css({'display':'flex'});
-								//
-								// _previewSlideShow.append(_previewTemplate(input.files[_idx].name));
-								//
-								// reader.readAsDataURL(input.files[_idx]);
-							}
-						};
-
-						for (var _idx = 0; _idx < input.files.length; _idx++) {
-							_loop4(_idx);
-						}
-					}
-				} else if (mode === 'video') {
-					var _parentNode3 = $(input).closest('.mds__screen'),
-					    _previewVideo = _parentNode3.find('[upload-previewFiles-js]');
-
-					console.log(input);
-					console.log(input.files);
-
-					if (input.files.length !== 0) {
-						var _reader2 = new FileReader(),
-						    _vd = $(videoContainer).find('video')[0];
-
-						_reader2.onload = function () {
-							$(_vd).find('source').attr('src', _reader2.result);
-
-							_vd.load();
 						};
 
 						_showDetails(_previewVideo, input.files.length);
@@ -1078,12 +1063,14 @@ $(document).ready(function (ev) {
 						$('[upload-preview-video-js]').on('click', '[upload-remove-js]', function (ev) {
 							_hideDetails(_previewVideo);
 
-							$(_vd).find('source').attr('src', '');
+							$(_vd).map(function (idx, val) {
+								$(val).find('source').attr('src', '');
 
-							_vd.load();
+								val.load();
+							});
 						});
 
-						_reader2.readAsDataURL(input.files[0]);
+						reader.readAsDataURL(input.files[0]);
 					}
 				}
 			};
@@ -1092,44 +1079,33 @@ $(document).ready(function (ev) {
 			if ($(ev.target).closest('.mds__upload-row-wrapper').length !== 0) {
 				return false;
 			}
-			// STATIC IMAGE
-			else if ($(ev.target).closest('[upload-image-js]').length !== 0) {
-					console.log('STATIC IMAGE');
+			// SLIDE SHOW
+			else if ($(ev.target).closest('[upload-slideshow-js]').length !== 0) {}
+				// console.log(`if slideshow`);
+				//
+				// $('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
+				// 	readFileURL(ev.currentTarget, 'slideshow');
+				// 	$(ev.currentTarget).val('');
+				// });
+				//
+				// selectionScreenForPreview(0);
 
-					$('[upload-image-js] input[type="file"]').on('change', function (ev) {
-						console.log(ev.currentTarget);
-						readFileURL(ev.currentTarget, 'static');
-						$(ev.currentTarget).val('');
-					});
+				// VIDEO PREVIEW
+				else if ($(ev.target).closest('[upload-video-js]').length !== 0) {
+						console.log('VIDEO PREVIEW');
 
-					selectionScreenForPreview(0);
-				}
-				// SLIDE SHOW
-				else if ($(ev.target).closest('[upload-slideshow-js]').length !== 0) {
-						console.log('if slideshow');
-
-						$('[upload-slideshow-js] input[type="file"]').on('change', function (ev) {
-							readFileURL(ev.currentTarget, 'slideshow');
+						$('[upload-video-js] input[type="file"]').on('change', function (ev) {
+							readFileURL(ev.currentTarget, 'video');
 							$(ev.currentTarget).val('');
 						});
 
 						selectionScreenForPreview(0);
 					}
-					// VIDEO PREVIEW
-					else if ($(ev.target).closest('[upload-video-js]').length !== 0) {
-							console.log('VIDEO PREVIEW');
-
-							$('[upload-video-js] input[type="file"]').on('change', function (ev) {
-								readFileURL(ev.currentTarget, 'video');
-								$(ev.currentTarget).val('');
-							});
-
+					// SCREEN SELECTION FOR PREVIEW CHANGES
+					else {
+							console.log('SCREEN SELECTION FOR PREVIEW CHANGES');
 							selectionScreenForPreview(0);
 						}
-						// SCREEN SELECTION FOR PREVIEW CHANGES
-						else {
-								selectionScreenForPreview(400);
-							}
 		});
 	};
 
@@ -1384,7 +1360,7 @@ $(document).ready(function (ev) {
 
 		var _colorFontNodes = $('.mds__fontSize-row a');
 
-		var _loop5 = function _loop5(_el) {
+		var _loop4 = function _loop4(_el) {
 			var _parentNode = $(_el).closest('.mds__fontSize-col');
 
 			new Pickr({
@@ -1442,7 +1418,7 @@ $(document).ready(function (ev) {
 			for (var _iterator6 = _colorFontNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
 				var _el = _step6.value;
 
-				_loop5(_el);
+				_loop4(_el);
 			}
 		} catch (err) {
 			_didIteratorError6 = true;
