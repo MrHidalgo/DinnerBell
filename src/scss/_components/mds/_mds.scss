@@ -93,7 +93,7 @@
 			max-width: 476px;
 			padding-right: 20px;
 			@include adaptive(1023) {
-				max-width: 100%;
+				max-width: 400px;
 				padding-right: 0;
 			}
 		}
@@ -196,10 +196,10 @@
 			overflow: hidden;
 			display: none;
 			position: fixed;
-			top: 20px;
+			top: 80px;
 			right: 20px;
-			width: calc(600px / 3.5);
-			height: 290.56px;
+			width: calc(600px / 2);
+			height: 508.59px;
 			border-width: 1px;
 			border-color: rgb(224, 224, 224);
 			border-style: solid;
@@ -220,19 +220,19 @@
 			> a {
 				z-index: 990;
 				position: absolute;
-				top: 0;
-				right: 0;
+				bottom: 10px;
+				right: 10px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 30px;
-				height: 30px;
-				background-color: rgba(#333333, 1);
-				border-bottom-left-radius: 5px;
+				width: 45px;
+				height: 45px;
+				border-radius: 10px;
+				background-color: #69c0f1;
 
 				.icon-font {
 					color: #ffffff;
-					font-size: 20px;
+					font-size: 25px;
 				}
 			}
 
@@ -245,7 +245,7 @@
 				.tablet {
 					left: 50%;
 					top: 0;
-					transform: translate3d(-50%, 0,0) scale(0.28237);
+					transform: translate3d(-50%, 0,0) scale(0.496667);
 					transform-origin: center top;
 				}
 			}
@@ -257,7 +257,7 @@
 			justify-content: space-between;
 			padding: 30px 0 60px;
 			@include adaptive(1023) {
-				padding-bottom: 100px;
+				padding-bottom: 75px;
 			}
 
 			h2 {

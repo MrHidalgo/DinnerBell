@@ -33,7 +33,7 @@ section#mds.mds
 
 			.mds__wrapper-preview
 				a(href="#" class="" title="")
-					i.icon-font.icon-increase
+					i.icon-font.icon-eye
 
 				include ../tablet/_tablet-menu-items
 
@@ -198,6 +198,13 @@ section#mds.mds
 										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
 											a(href="#" class="" title="")
 											span(style="background-color:" + colorTitleArr[idx][_i].color)
+
+					p.mds__subtitle.mds__subtitle--mdsFeedbackPt!= "Subsection indent"
+
+					.mds__indent-wrapper
+						.mds__indent
+							div
+								#marginSubsection
 
 					p.mds__subtitle.mds__subtitle--mdsMenuItemPt!= "Menu Layout"
 
