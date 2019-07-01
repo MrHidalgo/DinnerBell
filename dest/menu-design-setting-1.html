@@ -386,7 +386,7 @@
     <!-- HEADER sidebar :: END-->
     <div class="body body--start p-mds">
       <!-- SECTION mds :: START-->
-      <section class="mds" id="mds">
+      <section class="mds mds--base" id="mds">
         <div class="mds__wrapper">
           <div class="mds__wrapper-left">
             <div class="mds__wrapper-preview"><a href="#" title=""><i class="icon-font icon-eye"></i></a>
@@ -395,10 +395,10 @@
                 <section class="tablet tablet--general tablet--menuItems" id="tablet">
                   <div class="tablet__section tablet__section-0">
                     <div class="tablet__header" navBg-js navBorder-js>
-                      <div navBorder-js><a href="#" title=""><i class="icon-font icon-list-menu"></i></a></div>
-                      <div><a href="" title=""><i class="icon-font icon-user"></i><span navText-js>3</span></a></div>
-                      <div navBorder-js><a href="" title=""><i class="icon-font icon-doc"></i><span navText-js>0</span></a></div>
-                      <div navBorder-js><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
+                      <div navBorder-js><a href="#" title=""><i class="icon-font icon-list-menu" navIcon-js></i></a></div>
+                      <div><a href="" title=""><i class="icon-font icon-user" navIcon-js></i><span navText-js>3</span></a></div>
+                      <div navBorder-js><a href="" title=""><i class="icon-font icon-doc" navIcon-js></i><span navText-js>0</span></a></div>
+                      <div navBorder-js><a href="" title=""><i class="icon-font icon-bell" navIcon-js></i></a></div>
                     </div>
                     <div class="tablet__content" change-background-js>
                       <div class="tablet__subheader"><a href="#" title=""><i class="icon-font icon-corner"></i></a>
@@ -407,25 +407,25 @@
                       <div class="tablet__view tablet__view-list">
                         <div class="tablet__btn-wrapper"><a class="tablet__btn tablet__btn--spicy is-choose" href="#" title="" change-border-js change-highlight-js>
                             <div>
-                              <p itemTitleMenu-js>Fresh florida stone crab clams</p>
+                              <p itemTitleMenu-js fontText-js>Fresh florida stone crab clams</p>
                             </div>
-                            <div><span numeric-js data-price="18.50"><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="" change-border-js>
+                            <div><span numeric-js fontNumeric-js data-price="18.50"><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="" change-border-js>
                             <div>
-                              <p itemTitleMenu-js>Shrimp cocktail</p>
+                              <p itemTitleMenu-js fontText-js>Shrimp cocktail</p>
                             </div>
-                            <div><span numeric-js data-price="14.40"><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="" change-border-js>
+                            <div><span numeric-js fontNumeric-js data-price="14.40"><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="" change-border-js>
                             <div>
-                              <p itemTitleMenu-js>Tuna Tartare Tower</p>
+                              <p itemTitleMenu-js fontText-js>Tuna Tartare Tower</p>
                             </div>
-                            <div><span numeric-js data-price="17.00"><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="" change-border-js>
+                            <div><span numeric-js fontNumeric-js data-price="17.00"><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="" change-border-js>
                             <div>
-                              <p itemTitleMenu-js>King Crab Mac'n'Cheese</p>
+                              <p itemTitleMenu-js fontText-js>King Crab Mac'n'Cheese</p>
                             </div>
-                            <div><span numeric-js data-price="18.20"><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="" change-border-js>
+                            <div><span numeric-js fontNumeric-js data-price="18.20"><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="" change-border-js>
                             <div>
-                              <p itemTitleMenu-js>Crab Fried Rice</p>
+                              <p itemTitleMenu-js fontText-js>Crab Fried Rice</p>
                             </div>
-                            <div><span numeric-js data-price="14.00"><span currency-sign-js>$</span>14.00</span></div></a></div>
+                            <div><span numeric-js fontNumeric-js data-price="14.00"><span currency-sign-js>$</span>14.00</span></div></a></div>
                       </div>
                     </div>
                   </div>
@@ -433,8 +433,8 @@
                     <div class="tablet__neutral">
                       <div class="tablet__neutral-total">
                         <div class="tablet__order" change-neutral-js>
-                          <p>Order total:</p>
-                          <div><span numeric-js data-price="245.35"><span currency-sign-js>$</span>245.35</span></div>
+                          <p change-neutral2-js>Order total:</p>
+                          <div><span numeric-js change-neutral2-js data-price="245.35"><span currency-sign-js change-neutral2-js>$</span>245.35</span></div>
                         </div>
                       </div>
                       <div class="tablet__neutral-prev" change-neutral1-js><i class="icon-font icon-arrow"></i></div>
@@ -488,6 +488,9 @@
                       </div>
                     </div>
                   </div>
+                  <div class="c-form__group-col c-form__group-col-2">
+                    <div class="mds__form-color-content" data-color="#fff" data-name="fontText"><a href="#" title=""></a><span style="background-color:#fff"></span></div>
+                  </div>
                 </div>
                 <div class="c-form__group c-form__group--two">
                   <div class="c-form__group-col c-form__group-col-0">
@@ -518,9 +521,30 @@
                       </div>
                     </div>
                   </div>
+                  <div class="c-form__group-col c-form__group-col-2">
+                    <div class="mds__form-color-content" data-color="#1e7ac9" data-name="fontNumeric"><a href="#" title=""></a><span style="background-color:#1e7ac9"></span></div>
+                    <div data-name=""><a href="#" title=""></a></div>
+                  </div>
                 </div>
               </div>
               <p class="mds__subtitle">General UI style</p>
+              <div class="mds__form-content mds__form-content--radio">
+                <div>
+                  <p>Navigation icon</p>
+                </div>
+                <div>
+                  <div>
+                    <label>
+                      <input type="radio" name="iconName" value="#fff" checked radioColorIcon-js><span>White</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label>
+                      <input type="radio" name="iconName" value="#000" radioColorIcon-js><span>Blue</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
               <div class="mds__form-content">
                 <div class="mds__form-color mds__form-color--winput">
                   <div>
@@ -562,9 +586,10 @@
                   <div>
                     <p>UI Neutral</p>
                   </div>
-                  <div>
+                  <div class="is-three">
                     <div class="mds__form-color-content" data-color="#282d43" data-name="neutral"><a href="#" title=""></a><span style="background-color:#282d43"></span></div>
                     <div class="mds__form-color-content" data-color="#333333" data-name="neutral1"><a href="#" title=""></a><span style="background-color:#333333"></span></div>
+                    <div class="mds__form-color-content" data-color="#fff" data-name="neutral2"><a href="#" title=""></a><span style="background-color:#fff"></span></div>
                   </div>
                 </div>
                 <div class="mds__form-color mds__form-color--winput">
@@ -648,10 +673,10 @@
               <section class="tablet tablet--general tablet--menuItems" id="tablet">
                 <div class="tablet__section tablet__section-0">
                   <div class="tablet__header" navBg-js navBorder-js>
-                    <div navBorder-js><a href="#" title=""><i class="icon-font icon-list-menu"></i></a></div>
-                    <div><a href="" title=""><i class="icon-font icon-user"></i><span navText-js>3</span></a></div>
-                    <div navBorder-js><a href="" title=""><i class="icon-font icon-doc"></i><span navText-js>0</span></a></div>
-                    <div navBorder-js><a href="" title=""><i class="icon-font icon-bell"></i></a></div>
+                    <div navBorder-js><a href="#" title=""><i class="icon-font icon-list-menu" navIcon-js></i></a></div>
+                    <div><a href="" title=""><i class="icon-font icon-user" navIcon-js></i><span navText-js>3</span></a></div>
+                    <div navBorder-js><a href="" title=""><i class="icon-font icon-doc" navIcon-js></i><span navText-js>0</span></a></div>
+                    <div navBorder-js><a href="" title=""><i class="icon-font icon-bell" navIcon-js></i></a></div>
                   </div>
                   <div class="tablet__content" change-background-js>
                     <div class="tablet__subheader"><a href="#" title=""><i class="icon-font icon-corner"></i></a>
@@ -660,25 +685,25 @@
                     <div class="tablet__view tablet__view-list">
                       <div class="tablet__btn-wrapper"><a class="tablet__btn tablet__btn--spicy is-choose" href="#" title="" change-border-js change-highlight-js>
                           <div>
-                            <p itemTitleMenu-js>Fresh florida stone crab clams</p>
+                            <p itemTitleMenu-js fontText-js>Fresh florida stone crab clams</p>
                           </div>
-                          <div><span numeric-js data-price="18.50"><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="" change-border-js>
+                          <div><span numeric-js fontNumeric-js data-price="18.50"><span currency-sign-js>$</span>18.50</span></div></a><a class="tablet__btn tablet__btn--popular" href="#" title="" change-border-js>
                           <div>
-                            <p itemTitleMenu-js>Shrimp cocktail</p>
+                            <p itemTitleMenu-js fontText-js>Shrimp cocktail</p>
                           </div>
-                          <div><span numeric-js data-price="14.40"><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="" change-border-js>
+                          <div><span numeric-js fontNumeric-js data-price="14.40"><span currency-sign-js>$</span>14.40</span></div></a><a class="tablet__btn tablet__btn--special" href="#" title="" change-border-js>
                           <div>
-                            <p itemTitleMenu-js>Tuna Tartare Tower</p>
+                            <p itemTitleMenu-js fontText-js>Tuna Tartare Tower</p>
                           </div>
-                          <div><span numeric-js data-price="17.00"><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="" change-border-js>
+                          <div><span numeric-js fontNumeric-js data-price="17.00"><span currency-sign-js>$</span>17.00</span></div></a><a class="tablet__btn tablet__btn--new" href="#" title="" change-border-js>
                           <div>
-                            <p itemTitleMenu-js>King Crab Mac'n'Cheese</p>
+                            <p itemTitleMenu-js fontText-js>King Crab Mac'n'Cheese</p>
                           </div>
-                          <div><span numeric-js data-price="18.20"><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="" change-border-js>
+                          <div><span numeric-js fontNumeric-js data-price="18.20"><span currency-sign-js>$</span>18.20</span></div></a><a class="tablet__btn" href="#" title="" change-border-js>
                           <div>
-                            <p itemTitleMenu-js>Crab Fried Rice</p>
+                            <p itemTitleMenu-js fontText-js>Crab Fried Rice</p>
                           </div>
-                          <div><span numeric-js data-price="14.00"><span currency-sign-js>$</span>14.00</span></div></a></div>
+                          <div><span numeric-js fontNumeric-js data-price="14.00"><span currency-sign-js>$</span>14.00</span></div></a></div>
                     </div>
                   </div>
                 </div>
@@ -686,8 +711,8 @@
                   <div class="tablet__neutral">
                     <div class="tablet__neutral-total">
                       <div class="tablet__order" change-neutral-js>
-                        <p>Order total:</p>
-                        <div><span numeric-js data-price="245.35"><span currency-sign-js>$</span>245.35</span></div>
+                        <p change-neutral2-js>Order total:</p>
+                        <div><span numeric-js change-neutral2-js data-price="245.35"><span currency-sign-js change-neutral2-js>$</span>245.35</span></div>
                       </div>
                     </div>
                     <div class="tablet__neutral-prev" change-neutral1-js><i class="icon-font icon-arrow"></i></div>

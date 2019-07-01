@@ -8,18 +8,18 @@
 			.tablet__header(navBg-js navBorder-js)
 				div(navBorder-js)
 					a(href="#" class="" title="")
-						i.icon-font.icon-list-menu
+						i.icon-font.icon-list-menu(navIcon-js)
 				div
 					a(href="" class="" title="")
-						i.icon-font.icon-user
+						i.icon-font.icon-user(navIcon-js)
 						span(navText-js)!= "3"
 				div(navBorder-js)
 					a(href="" class="" title="")
-						i.icon-font.icon-doc
+						i.icon-font.icon-doc(navIcon-js)
 						span(navText-js)!= "0"
 				div(navBorder-js)
 					a(href="" class="" title="")
-						i.icon-font.icon-bell
+						i.icon-font.icon-bell(navIcon-js)
 
 			.tablet__content(change-background-js)
 				.tablet__subheader
@@ -34,38 +34,38 @@
 					.tablet__btn-wrapper
 						a.tablet__btn.tablet__btn--spicy.is-choose(href="#" class="" title="" change-border-js change-highlight-js)
 							div
-								p(itemTitleMenu-js)!= "Fresh florida stone crab clams"
+								p(itemTitleMenu-js fontText-js)!= "Fresh florida stone crab clams"
 							div
-								span(numeric-js data-price="18.50")!= "<span currency-sign-js>$</span>18.50"
+								span(numeric-js fontNumeric-js data-price="18.50")!= "<span currency-sign-js>$</span>18.50"
 						a.tablet__btn.tablet__btn--popular(href="#" class="" title="" change-border-js)
 							div
-								p(itemTitleMenu-js)!= "Shrimp cocktail"
+								p(itemTitleMenu-js fontText-js)!= "Shrimp cocktail"
 							div
-								span(numeric-js data-price="14.40")!= "<span currency-sign-js>$</span>14.40"
+								span(numeric-js fontNumeric-js data-price="14.40")!= "<span currency-sign-js>$</span>14.40"
 						a.tablet__btn.tablet__btn--special(href="#" class="" title="" change-border-js)
 							div
-								p(itemTitleMenu-js)!= "Tuna Tartare Tower"
+								p(itemTitleMenu-js fontText-js)!= "Tuna Tartare Tower"
 							div
-								span(numeric-js data-price="17.00")!= "<span currency-sign-js>$</span>17.00"
+								span(numeric-js fontNumeric-js data-price="17.00")!= "<span currency-sign-js>$</span>17.00"
 						a.tablet__btn.tablet__btn--new(href="#" class="" title="" change-border-js)
 							div
-								p(itemTitleMenu-js)!= "King Crab Mac'n'Cheese"
+								p(itemTitleMenu-js fontText-js)!= "King Crab Mac'n'Cheese"
 							div
-								span(numeric-js data-price="18.20")!= "<span currency-sign-js>$</span>18.20"
+								span(numeric-js fontNumeric-js data-price="18.20")!= "<span currency-sign-js>$</span>18.20"
 						a.tablet__btn(href="#" class="" title="" change-border-js)
 							div
-								p(itemTitleMenu-js)!= "Crab Fried Rice"
+								p(itemTitleMenu-js fontText-js)!= "Crab Fried Rice"
 							div
-								span(numeric-js data-price="14.00")!= "<span currency-sign-js>$</span>14.00"
+								span(numeric-js fontNumeric-js data-price="14.00")!= "<span currency-sign-js>$</span>14.00"
 
 		.tablet__section.tablet__section-1
 
 			.tablet__neutral
 				.tablet__neutral-total
 					.tablet__order(change-neutral-js)
-						p!= "Order total:"
+						p(change-neutral2-js)!= "Order total:"
 						div
-							span(numeric-js data-price="245.35")!= "<span currency-sign-js>$</span>245.35"
+							span(numeric-js change-neutral2-js data-price="245.35")!= "<span currency-sign-js change-neutral2-js>$</span>245.35"
 				.tablet__neutral-prev(change-neutral1-js)
 					i.icon-font.icon-arrow
 				.tablet__neutral-confirm(change-confirm-js)

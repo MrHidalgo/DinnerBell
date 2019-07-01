@@ -33,8 +33,10 @@
 				title: 'UI Neutral',
 				color: '#282d43',
 				color1: '#333333',
+				color2: '#fff',
 				name: 'neutral',
 				name1: 'neutral1',
+				name2: 'neutral2',
 			},
 			{
 				title: 'Confirmation button',
@@ -60,7 +62,7 @@
 		]
 	];
 
-section#mds.mds
+section#mds.mds.mds--base
 
 	.mds__wrapper
 		.mds__wrapper-left
@@ -126,6 +128,11 @@ section#mds.mds
 									.c-form__select-icon
 										i
 
+						.c-form__group-col.c-form__group-col-2
+							.mds__form-color-content(data-color!= "#fff" data-name="fontText")
+								a(href="#" class="" title="")
+								span(style="background-color:#fff")
+
 					.c-form__group.c-form__group--two
 						.c-form__group-col.c-form__group-col-0
 							p!= "Numeric"
@@ -160,7 +167,28 @@ section#mds.mds
 									.c-form__select-icon
 										i
 
+						.c-form__group-col.c-form__group-col-2
+							.mds__form-color-content(data-color!= "#1e7ac9" data-name="fontNumeric")
+								a(href="#" class="" title="")
+								span(style="background-color:#1e7ac9")
+
+							div(data-name="")
+								a(href="#" class="" title="")
+
 				p.mds__subtitle!= "General UI style"
+
+				.mds__form-content.mds__form-content--radio
+					div
+						p!= "Navigation icon"
+					div
+						div
+							label
+								input(type="radio" name="iconName" value="#fff" checked radioColorIcon-js)
+								span!= "White"
+						div
+							label
+								input(type="radio" name="iconName" value="#000" radioColorIcon-js)
+								span!= "Blue"
 
 				each val, idx in colorTitleArr
 					.mds__form-content
@@ -168,7 +196,7 @@ section#mds.mds
 							.mds__form-color.mds__form-color--winput
 								div
 									p!= colorTitleArr[idx][_i].title
-								div(class!= ((idx === 0 && _i === 0)) ?'is-three': (idx === 1 && _i === 0) ? '': (idx > 0 && _i > 0) ? '':'is-one')
+								div(class!= ((idx === 0 && _i === 0) || (idx === 1 && _i === 0)) ?'is-three': (idx === 1 && _i === 0) ? '': (idx > 0 && _i > 0) ? '':'is-one')
 									.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color, data-name!= colorTitleArr[idx][_i].name)
 										a(href="#" class="" title="")
 										span(style="background-color:" + colorTitleArr[idx][_i].color)
@@ -191,6 +219,9 @@ section#mds.mds
 										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color1, data-name!= colorTitleArr[idx][_i].name1)
 											a(href="#" class="" title="")
 											span(style="background-color:" + colorTitleArr[idx][_i].color1)
+										.mds__form-color-content(data-color!= colorTitleArr[idx][_i].color2, data-name!= colorTitleArr[idx][_i].name2)
+											a(href="#" class="" title="")
+											span(style="background-color:" + colorTitleArr[idx][_i].color2)
 
 				p.mds__subtitle!= "Currency and Price format"
 

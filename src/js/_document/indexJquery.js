@@ -147,6 +147,17 @@ $(document).ready((ev) => {
 				}
 
 				if($('.tablet--general').length > 0) {
+					if(_parentNode.data('name') === 'fontNumeric') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color' : _color
+						});
+					}
+					if(_parentNode.data('name') === 'fontText') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color' : _color
+						});
+					}
+
 					if(_parentNode.data('name') === 'navText') {
 						$('[' + _parentNode.data('name') + '-js]').css({
 							'color' : _color
@@ -228,10 +239,14 @@ $(document).ready((ev) => {
 							'background-color' : _color
 						});
 					}
-
 					if(_parentNode.data('name') === 'neutral1') {
 						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color' : _color
+						});
+					}
+					if(_parentNode.data('name') === 'neutral2') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'color' : _color
 						});
 					}
 				}
@@ -975,23 +990,6 @@ $(document).ready((ev) => {
 	};
 
 
-	const initTabletMenuItemsView = () => {
-		$('.tablet--menuItems .tablet__btn').on('click', (ev) => {
-			const _btn = $(ev.currentTarget);
-
-			$('.tablet--menuItems .tablet__btn').removeClass('is-choose');
-			_btn.addClass('is-choose');
-		});
-
-		$('.tablet--menuItems .tablet__block').on('click', (ev) => {
-			const _btn = $(ev.currentTarget);
-
-			$('.tablet--menuItems .tablet__block').removeClass('is-choose');
-			_btn.addClass('is-choose');
-		});
-	};
-
-
 	const initTabletMainMenuBlock = () => {
 		$('.tablet--mainMenu .tablet__block').on('click', (ev) => {
 			$('.tablet--mainMenu .tablet__block').removeClass('is-choose');
@@ -1063,6 +1061,13 @@ $(document).ready((ev) => {
 
 
 	const initTabletPreviewSelectCurrency = () => {
+		$('[select-currency-js]').on('change', (ev) => {
+			const _elem = $(ev.currentTarget),
+				_elemOption = _elem.find('option:selected');
+
+			$('[currency-sign-js]').text(_elemOption.val());
+		});
+
 		$('[select-currencyFormat-js]').on('change', (ev) => {
 			const _format = $(ev.currentTarget).find('option:selected').val();
 
@@ -1105,6 +1110,18 @@ $(document).ready((ev) => {
 			_btn.siblings('.header__nav-drop--collapse-body').slideToggle(400);
 		});
 	};
+
+
+	const initTPNavigationColorIcon = () => {
+		$('[radioColorIcon-js]').on('change', (ev) => {
+			const _el = $(ev.currentTarget),
+				_elVal = _el.val();
+
+			$('[navIcon-js]').css({
+				'color' : _elVal
+			});
+		});
+	};
  	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -1139,7 +1156,6 @@ $(document).ready((ev) => {
 
 		initTabletRange();
 		initTabletBoxChoose();
-		initTabletMenuItemsView();
 		initTabletMainMenuBlock();
 		initTabletPreview();
 		initTabletPreviewSelectFonts();
@@ -1147,6 +1163,7 @@ $(document).ready((ev) => {
 
 		initTPChangeColor();
 		initTPChangeImage();
+		initTPNavigationColorIcon();
 		// ==========================================
   };
   initJquery();

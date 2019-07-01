@@ -550,6 +550,17 @@ $(document).ready(function (ev) {
 				}
 
 				if ($('.tablet--general').length > 0) {
+					if (_parentNode.data('name') === 'fontNumeric') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
+					}
+					if (_parentNode.data('name') === 'fontText') {
+						$('[' + _parentNode.data('name') + '-js]').css({
+							'color': _color
+						});
+					}
+
 					if (_parentNode.data('name') === 'navText') {
 						$('[' + _parentNode.data('name') + '-js]').css({
 							'color': _color
@@ -631,10 +642,14 @@ $(document).ready(function (ev) {
 							'background-color': _color
 						});
 					}
-
 					if (_parentNode.data('name') === 'neutral1') {
 						$('[change-' + _parentNode.data('name') + '-js]').css({
 							'background-color': _color
+						});
+					}
+					if (_parentNode.data('name') === 'neutral2') {
+						$('[change-' + _parentNode.data('name') + '-js]').css({
+							'color': _color
 						});
 					}
 				}
@@ -909,56 +924,6 @@ $(document).ready(function (ev) {
 		}
 	};
 
-	var initTabletPreviewChangeBackgroundImage = function initTabletPreviewChangeBackgroundImage() {
-		var _logoutBGNode = $('.tablet--logout .tablet__content');
-
-		$('[upload-image-js] input[type="file"]').on('change', function (ev) {
-
-			var _previewTemplate = function _previewTemplate(fileName) {
-				return '\n\t\t\t\t<div class="mds__upload-row">\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p>' + fileName + '</p>\n\t\t\t\t\t\t<a href="#" title="" upload-remove-js>\n\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div>    \t\t\t\t\n\t\t\t\t</div>\t\t\t\t\t\t\t\t\n\t\t\t';
-			};
-
-			var _showDetails = function _showDetails(node, filesArr) {
-				node.prev().hide();
-				node.fadeIn(350).css({ 'display': 'flex' });
-
-				for (var _idx = 0; _idx < filesArr; _idx++) {
-					node.append(_previewTemplate(ev.currentTarget.files[_idx].name));
-				}
-			};
-
-			var _hideDetails = function _hideDetails(node) {
-				node.prev().fadeIn(350);
-				node.hide();
-			};
-
-			if (ev.currentTarget.files.length !== 0) {
-				var reader = new FileReader(),
-				    _previewStatic = $(ev.currentTarget).closest('.mds__change-bg').find('[upload-previewFiles-js]');
-
-				reader.onload = function () {
-					_logoutBGNode.css({
-						'background-image': 'url("' + reader.result + '")'
-					});
-				};
-
-				_showDetails(_previewStatic, ev.currentTarget.files.length);
-
-				$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', function (ev) {
-					_hideDetails(_previewStatic);
-
-					_logoutBGNode.css({
-						'background-image': 'url("")'
-					});
-				});
-
-				reader.readAsDataURL(ev.currentTarget.files[0]);
-			}
-
-			$(ev.currentTarget).val('');
-		});
-	};
-
 	var initChooseScreen = function initChooseScreen() {
 		var removeUploadDetails = function removeUploadDetails() {
 			$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', function (ev) {
@@ -1009,7 +974,7 @@ $(document).ready(function (ev) {
 					node.find('> *').remove();
 				};
 
-				if (mode === 'static') {} else if (mode === 'slideshow') {
+				if (mode === 'slideshow') {
 					// let _count = 0;
 					//
 					// const _parentNode = $(input).closest('.mds__screen'),
@@ -1460,22 +1425,6 @@ $(document).ready(function (ev) {
 		});
 	};
 
-	var initTabletMenuItemsView = function initTabletMenuItemsView() {
-		$('.tablet--menuItems .tablet__btn').on('click', function (ev) {
-			var _btn = $(ev.currentTarget);
-
-			$('.tablet--menuItems .tablet__btn').removeClass('is-choose');
-			_btn.addClass('is-choose');
-		});
-
-		$('.tablet--menuItems .tablet__block').on('click', function (ev) {
-			var _btn = $(ev.currentTarget);
-
-			$('.tablet--menuItems .tablet__block').removeClass('is-choose');
-			_btn.addClass('is-choose');
-		});
-	};
-
 	var initTabletMainMenuBlock = function initTabletMainMenuBlock() {
 		$('.tablet--mainMenu .tablet__block').on('click', function (ev) {
 			$('.tablet--mainMenu .tablet__block').removeClass('is-choose');
@@ -1543,6 +1492,13 @@ $(document).ready(function (ev) {
 	};
 
 	var initTabletPreviewSelectCurrency = function initTabletPreviewSelectCurrency() {
+		$('[select-currency-js]').on('change', function (ev) {
+			var _elem = $(ev.currentTarget),
+			    _elemOption = _elem.find('option:selected');
+
+			$('[currency-sign-js]').text(_elemOption.val());
+		});
+
 		$('[select-currencyFormat-js]').on('change', function (ev) {
 			var _format = $(ev.currentTarget).find('option:selected').val();
 
@@ -1581,6 +1537,17 @@ $(document).ready(function (ev) {
 			_btn.siblings('.header__nav-drop--collapse-body').slideToggle(400);
 		});
 	};
+
+	var initTPNavigationColorIcon = function initTPNavigationColorIcon() {
+		$('[radioColorIcon-js]').on('change', function (ev) {
+			var _el = $(ev.currentTarget),
+			    _elVal = _el.val();
+
+			$('[navIcon-js]').css({
+				'color': _elVal
+			});
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -1613,15 +1580,14 @@ $(document).ready(function (ev) {
 
 		initTabletRange();
 		initTabletBoxChoose();
-		initTabletMenuItemsView();
 		initTabletMainMenuBlock();
 		initTabletPreview();
 		initTabletPreviewSelectFonts();
 		initTabletPreviewSelectCurrency();
-		initTabletPreviewChangeBackgroundImage();
 
 		initTPChangeColor();
 		initTPChangeImage();
+		initTPNavigationColorIcon();
 		// ==========================================
 	};
 	initJquery();
