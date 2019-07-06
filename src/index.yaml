@@ -9,7 +9,7 @@ PageList:
   ready: 95
 - file: menu-design-setting-2.html
   titleName: MDS - Intro screen
-  ready: 75
+  ready: 95
 - file: menu-design-setting-3.html
   titleName: MDS - Main menu
   ready: 95

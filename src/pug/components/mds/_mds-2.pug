@@ -106,18 +106,55 @@ section#mds.mds
 								.mds__upload-bg(upload-slideshow-js)
 									div
 										span!= "Upload images"
-										input(type='file' multiple accept=".jpg, .jpeg" name='upload_slideshow')
 						.mds__screen-row.mds__screen-row--info
-							h2!= "You are trying to upload more than 5 files!"
+							h2!= "You are trying to upload more than 6 files!"
 
 					.mds__screen.mds__screen--slideshow(data-name='slideshowPreview')
 						p.mds__screen-title!= "Slideshow images"
 						.mds__screen-row
 							.mds__screen-preview(upload-smallPreview-js)
-								//div(upload-addPreviewImagesPrev-js)
-								//	.mds__screen-preview-card.mds__screen-preview-card--add(upload-addPreviewImages-js)
-								//		span!= "+"
-								//		input(type='file' multiple accept=".jpg, .jpeg" name='upload_slideshow')
+								div
+									.mds__screen-preview-card(data-id="0" upload-smallPreviewAdd-js)
+										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+											i.icon-font.icon-bin
+										.mds__screen-preview-card-add
+											span!= "+"
+										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
+								div
+									.mds__screen-preview-card(data-id="1" upload-smallPreviewAdd-js)
+										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+											i.icon-font.icon-bin
+										.mds__screen-preview-card-add
+											span!= "+"
+										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
+								div
+									.mds__screen-preview-card(data-id="2" upload-smallPreviewAdd-js)
+										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+											i.icon-font.icon-bin
+										.mds__screen-preview-card-add
+											span!= "+"
+										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
+								div
+									.mds__screen-preview-card(data-id="3" upload-smallPreviewAdd-js)
+										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+											i.icon-font.icon-bin
+										.mds__screen-preview-card-add
+											span!= "+"
+										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
+								div
+									.mds__screen-preview-card(data-id="4" upload-smallPreviewAdd-js)
+										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+											i.icon-font.icon-bin
+										.mds__screen-preview-card-add
+											span!= "+"
+										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
+								div
+									.mds__screen-preview-card(data-id="5" upload-smallPreviewAdd-js)
+										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+											i.icon-font.icon-bin
+										.mds__screen-preview-card-add
+											span!= "+"
+										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
 
 					// BACKGROUND VIDEO
 					// =========================

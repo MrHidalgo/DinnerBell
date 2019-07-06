@@ -723,6 +723,15 @@ $(document).ready(function (ev) {
 		}
 	};
 
+	/**
+  * @name _additionMethodsUploadFiles
+  *
+  * @description additional methods for change background image on tablet preview.
+  *
+  * @param _prNode
+  * @returns {{removeImageOnPreview(*): void, repeatBGOption(): void, removeImage(): void, showColorPalletUploadBtn(*): void, addImageOnPreviewLogo(*=): void, resetBGOption(): void, showAdditionalUploadImageOption(*): void, addImageOnPreview(*): void, hideAdditionalUploadImageOption(*): void, hideColorPalletUploadBtn(*): void, fixedBGOption(): void}}
+  * @private
+  */
 	var _additionMethodsUploadFiles = function _additionMethodsUploadFiles(_prNode) {
 		console.log(_prNode);
 
@@ -835,6 +844,11 @@ $(document).ready(function (ev) {
 		};
 	};
 
+	/**
+  * @name initTPChangeImage
+  *
+  * @description change background image for pablet preview.
+  */
 	var initTPChangeImage = function initTPChangeImage() {
 		$('[change-img-js] input[type="file"]').on('change', function (ev) {
 			var _self = $(ev.currentTarget),
@@ -869,6 +883,11 @@ $(document).ready(function (ev) {
 		});
 	};
 
+	/**
+  * @name initTPChangeColor
+  *
+  * @description change backgrond color for tablet preview.
+  */
 	var initTPChangeColor = function initTPChangeColor() {
 		var _colorNodes = $('[change-bg-js] > a');
 
@@ -945,7 +964,7 @@ $(document).ready(function (ev) {
   *
   * @description choose video file for tablet intro screen
   */
-	var initTPVideoPreview = function initTPVideoPreview() {
+	var initTPVideoPreviewChooseMode = function initTPVideoPreviewChooseMode() {
 		var removeUploadDetails = function removeUploadDetails() {
 			$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', function (ev) {
 				console.log('remove');
@@ -1040,108 +1059,145 @@ $(document).ready(function (ev) {
 	};
 
 	var initTPSlideshow = function initTPSlideshow() {
-		var _previewAddMoreImagesNode = $('[upload-addPreviewImages-js]'),
-		    _previewSmallContainer = $('[upload-smallPreview-js]'),
-		    _previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
+		var _previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
 		    _previewSlideLarge = $('.mds__wrapper-right .swiper-slide');
 
-		var _fileCount = 0,
-		    _tmpIdx = 0;
-
-		var _previewTMPL = function _previewTMPL(fl, idx) {
-			return '\t\t\t\t\n\t\t\t\t<script >\n\t\t\t\t\tconst _removeSmallPreviewSlide' + idx + ' = (ev) => {\n\t\t\t\t\t\tconst _el = $(ev),\n\t\t\t\t\t\t\t_parentNode = _el.closest(\'.mds__screen-preview-card\'),\n\t\t\t\t\t\t\t_parentNodeID = _parentNode.data(\'id\');\n\t\t\t\t\t\t\n\t\t\t\t\t\tconst _smallSlide = $(\'.mds__wrapper-preview .swiper-slide\')[_parentNodeID],\n\t\t\t\t\t\t\t_largeSlide = $(\'.mds__wrapper-right .swiper-slide\')[_parentNodeID];\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t// _parentNode.prev().remove();\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t// _parentNode.remove();\n\t\t\t\t\t\t\n\t\t\t\t\t\t_parentNode.css({\n\t\t\t\t\t\t\t\'background-image\' : \'url("")\'\n\t\t\t\t\t\t});\n\t\t\t\t\t\t$(_smallSlide).css({\n\t\t\t\t\t\t\t\'background-image\' : \'url("")\'\n\t\t\t\t\t\t});\n\t\t\t\t\t\t$(_largeSlide).css({\n\t\t\t\t\t\t\t\'background-image\' : \'url("")\'\n\t\t\t\t\t\t});\n\t\t\t\t\t};\n\t\t\t\t</script>\n\t\t\n\t\t\t\t<div data-id="' + idx + '">\n\t\t\t\t\t<div class="mds__screen-preview-card" style="background-image:url(\'' + fl + '\')">\n\t\t\t\t\t\t<a onclick="_removeSmallPreviewSlide' + idx + '(this);" href="#" title="">\n\t\t\t\t\t\t\t<i class="icon-font icon-bin"></i>\n\t\t\t\t\t\t</a>\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t';
-		};
-
-		$('[upload-slideshow-js] input[type="file"]').on('change', function (ev) {
-			var _self = $(ev.currentTarget),
-			    _fileLen = _self[0].files.length;
-
-			var _infoNode = $('.mds__screen-row--info'),
-			    _slideShowBtn = $('[data-name="slideshow"]'),
-			    _slideShowAdditionalPreview = $('[data-name="slideshowPreview"]');
-
-			_infoNode.hide();
-
-			if (_fileLen > 5) {
-				_infoNode.fadeIn('350').css({ 'display': 'flex' });
-			} else if (_fileLen !== 0) {
-
-				// _fileCount += _fileLen;
-				// _tmpIdx += _fileLen;
-
-				// console.log(`_fileCount main: ${_fileCount}`);
-
-				_slideShowBtn.hide();
-				_slideShowAdditionalPreview.fadeIn(350);
-
-				var _loop4 = function _loop4(i) {
-					var reader = new FileReader();
-
-					reader.onload = function () {
-						if (i === 0) {
-							_previewSmallContainer.prepend(_previewTMPL(reader.result, i));
-						} else {
-							$('[upload-smallPreview-js] > div').last().before(_previewTMPL(reader.result, i));
-						}
-
-						$(_previewSlideSmall[i]).css({
-							'background-image': 'url("' + reader.result + '")'
-						});
-						$(_previewSlideLarge[i]).css({
-							'background-image': 'url("' + reader.result + '")'
-						});
-					};
-
-					reader.readAsDataURL(_self[0].files[i]);
-				};
-
-				for (var i = 0; i < _fileLen; i++) {
-					_loop4(i);
-				}
-
-				_self.val('');
-			}
-
-			// if(_fileCount === 5) {
-			// 	_previewAddMoreImagesNode.hide();
-			// } else {
-			// 	_previewAddMoreImagesNode.show();
-			// }
+		$('[upload-slideshow-js]').on('click', function (ev) {
+			$('.mds__screen--slideshow').slideToggle(350);
 		});
 
-		// $('[upload-addPreviewImages-js] input[type="file"]').on('change', (ev) => {
-		// 	const _self = $(ev.currentTarget),
-		// 		_fileLen = _self[0].files.length;
-		//
-		// 	_fileCount += _fileLen;
-		//
-		// 	if(_fileLen !== 0) {
-		// 		for(let i = 0; i < _fileLen; i++) {
-		// 			const reader = new FileReader();
-		//
-		// 			reader.onload = () => {
-		// 				$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, _tmpIdx));
-		//
-		// 				$(_previewSlideSmall[_tmpIdx]).css({
-		// 					'background-image' : 'url("' + reader.result + '")'
-		// 				});
-		// 				$(_previewSlideLarge[_tmpIdx]).css({
-		// 					'background-image' : 'url("' + reader.result + '")'
-		// 				});
-		//
-		// 				++_tmpIdx;
-		// 			};
-		//
-		// 			reader.readAsDataURL(_self[0].files[i]);
-		// 		}
-		//
-		// 		_self.val('');
-		// 	}
-		//
-		// 	if(_fileCount > 4) {
-		// 		_previewAddMoreImagesNode.hide();
-		// 	}
-		// });
+		$('[upload-smallPreviewClear-js]').on('click', function (ev) {
+			var _el = $(ev.currentTarget),
+			    _parentNode = _el.parent(),
+			    _elID = _parentNode.data('id');
+
+			_parentNode.css({
+				'background-image': 'url("")'
+			});
+			$(_previewSlideSmall[_elID]).css({
+				'background-image': 'url("")'
+			});
+			$(_previewSlideLarge[_elID]).css({
+				'background-image': 'url("")'
+			});
+
+			_parentNode.removeClass('is-add');
+			_parentNode.find('input[type="file"]').show();
+		});
+
+		$('[upload-smallPreviewAdd-js] input[type="file"]').on('change', function (ev) {
+			var _self = $(ev.currentTarget),
+			    _parentNode = _self.parent(),
+			    _elID = _parentNode.data('id');
+
+			if (_self[0].files.length !== 0) {
+				var reader = new FileReader();
+
+				reader.onload = function () {
+					_parentNode.css({
+						'background-image': 'url("' + reader.result + '")'
+					});
+					$(_previewSlideSmall[_elID]).css({
+						'background-image': 'url("' + reader.result + '")'
+					});
+					$(_previewSlideLarge[_elID]).css({
+						'background-image': 'url("' + reader.result + '")'
+					});
+				};
+
+				_parentNode.addClass('is-add');
+				_self.hide();
+
+				reader.readAsDataURL(_self[0].files[0]);
+			}
+
+			_self.val('');
+		});
+
+		/*
+  		const _previewAddMoreImagesNode = $('[upload-addPreviewImages-js]'),
+  			_previewSmallContainer = $('[upload-smallPreview-js]'),
+  			_previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
+  			_previewSlideLarge = $('.mds__wrapper-right .swiper-slide');
+  
+  		let _fileCount = 0,
+  			_tmpIdx = 0;
+  
+  		const _previewTMPL = (fl, idx) => {
+  			return `				
+  				<script >
+  					const _removeSmallPreviewSlide${idx} = (ev) => {
+  						const _el = $(ev),
+  							_parentNode = _el.closest('.mds__screen-preview-card'),
+  							_parentNodeID = _parentNode.data('id');
+  						
+  						const _smallSlide = $('.mds__wrapper-preview .swiper-slide')[_parentNodeID],
+  							_largeSlide = $('.mds__wrapper-right .swiper-slide')[_parentNodeID];
+  						
+  						_parentNode.css({
+  							'background-image' : 'url("")'
+  						});
+  						$(_smallSlide).css({
+  							'background-image' : 'url("")'
+  						});
+  						$(_largeSlide).css({
+  							'background-image' : 'url("")'
+  						});
+  					};
+  				</script>
+  		
+  				<div data-id="${idx}">
+  					<div class="mds__screen-preview-card" style="background-image:url('${fl}')">
+  						<a onclick="_removeSmallPreviewSlide${idx}(this);" href="#" title="">
+  							<i class="icon-font icon-bin"></i>
+  						</a>					
+  					</div>
+  				</div>
+  			`;
+  		};
+  
+  
+  		$('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
+  			const _self = $(ev.currentTarget),
+  				_fileLen = _self[0].files.length;
+  
+  			const _infoNode = $('.mds__screen-row--info'),
+  				_slideShowBtn = $('[data-name="slideshow"]'),
+  				_slideShowAdditionalPreview = $('[data-name="slideshowPreview"]');
+  
+  			_infoNode.hide();
+  
+  			if(_fileLen > 5) {
+  				_infoNode.fadeIn('350').css({'display':'flex'});
+  			} else if(_fileLen !== 0) {
+  
+  				_slideShowBtn.hide();
+  				_slideShowAdditionalPreview.fadeIn(350);
+  
+  				for(let i = 0; i < _fileLen; i++) {
+  					const reader = new FileReader();
+  
+  					reader.onload = () => {
+  						if(i === 0) {
+  							_previewSmallContainer.prepend( _previewTMPL(reader.result, i));
+  						} else {
+  							$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, i));
+  						}
+  
+  						$(_previewSlideSmall[i]).css({
+  							'background-image' : 'url("' + reader.result + '")'
+  						});
+  						$(_previewSlideLarge[i]).css({
+  							'background-image' : 'url("' + reader.result + '")'
+  						});
+  					};
+  
+  					reader.readAsDataURL(_self[0].files[i]);
+  				}
+  
+  				_self.val('');
+  			}
+  		});*/
 	};
 
 	/**
@@ -1405,7 +1461,7 @@ $(document).ready(function (ev) {
 
 		var _colorFontNodes = $('.mds__fontSize-row a');
 
-		var _loop5 = function _loop5(_el) {
+		var _loop4 = function _loop4(_el) {
 			var _parentNode = $(_el).closest('.mds__fontSize-col');
 
 			new Pickr({
@@ -1463,7 +1519,7 @@ $(document).ready(function (ev) {
 			for (var _iterator6 = _colorFontNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
 				var _el = _step6.value;
 
-				_loop5(_el);
+				_loop4(_el);
 			}
 		} catch (err) {
 			_didIteratorError6 = true;
@@ -1484,7 +1540,7 @@ $(document).ready(function (ev) {
 	/**
   * @name initTPTabletRange
   *
-  * @description init item detailsrange
+  * @description init item details range
   */
 	var initTPTabletRange = function initTPTabletRange() {
 		var _input = $('.tablet--itemDetails .tablet__range input');
@@ -1573,19 +1629,33 @@ $(document).ready(function (ev) {
 	};
 
 	/**
-  * @name initTPSelectCurrencyPriceFormat
+  * @name initTPSelectPage
   *
-  * @description select currency or price format
+  * @description change tablet preview page.
   */
-	var initTPSelectCurrencyPriceFormat = function initTPSelectCurrencyPriceFormat() {
+	var initTPSelectPage = function initTPSelectPage() {
 		$('[select-tp-page-js]').on('change', function (ev) {
 			window.location.href = '/' + $(ev.currentTarget).find('option:selected').val();
 		});
+	};
 
+	/**
+  * @name initTPSelectCurrency
+  *
+  * @description select currency.
+  */
+	var initTPSelectCurrency = function initTPSelectCurrency() {
 		$('[select-currency-js]').on('change', function (ev) {
 			$('[currency-sign-js]').text(_$(ev.currentTarget).find('option:selected').val());
 		});
+	};
 
+	/**
+  * @name initTPSelectPriceFormat
+  *
+  * @description select price format.
+  */
+	var initTPSelectPriceFormat = function initTPSelectPriceFormat() {
 		$('[select-currencyFormat-js]').on('change', function (ev) {
 			var _format = $(ev.currentTarget).find('option:selected').val();
 
@@ -1659,15 +1729,17 @@ $(document).ready(function (ev) {
 		initTP();
 		initTPSlideshow();
 		initTPMenuLayout();
+		initTPSelectPage();
 		initTPChooseColor();
 		initTPTabletRange();
 		initTPChangeColor();
 		initTPChangeImage();
-		initTPVideoPreview();
+		initTPSelectCurrency();
 		initTPRangeChangeSize();
 		initTPSelectFontFamily();
+		initTPSelectPriceFormat();
 		initTPNavigationColorIcon();
-		initTPSelectCurrencyPriceFormat();
+		initTPVideoPreviewChooseMode();
 		// ==========================================
 	};
 	initJquery();

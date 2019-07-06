@@ -287,7 +287,15 @@ $(document).ready((ev) => {
 	};
 
 
-
+	/**
+	 * @name _additionMethodsUploadFiles
+	 *
+	 * @description additional methods for change background image on tablet preview.
+	 *
+	 * @param _prNode
+	 * @returns {{removeImageOnPreview(*): void, repeatBGOption(): void, removeImage(): void, showColorPalletUploadBtn(*): void, addImageOnPreviewLogo(*=): void, resetBGOption(): void, showAdditionalUploadImageOption(*): void, addImageOnPreview(*): void, hideAdditionalUploadImageOption(*): void, hideColorPalletUploadBtn(*): void, fixedBGOption(): void}}
+	 * @private
+	 */
 	const _additionMethodsUploadFiles = (_prNode) => {
 		console.log(_prNode);
 
@@ -402,6 +410,11 @@ $(document).ready((ev) => {
 	};
 
 
+	/**
+	 * @name initTPChangeImage
+	 *
+	 * @description change background image for pablet preview.
+	 */
 	const initTPChangeImage = () => {
 		$('[change-img-js] input[type="file"]').on('change', (ev) => {
 			const _self = $(ev.currentTarget),
@@ -437,6 +450,11 @@ $(document).ready((ev) => {
 	};
 
 
+	/**
+	 * @name initTPChangeColor
+	 *
+	 * @description change backgrond color for tablet preview.
+	 */
 	const initTPChangeColor = () => {
 		const _colorNodes = $('[change-bg-js] > a');
 
@@ -484,9 +502,9 @@ $(document).ready((ev) => {
 	/**
 	 * @name initTPVideoPreview
 	 *
-	 * @description choose video file for tablet intro screen
+	 * @description choose video file for tablet intro screen.
 	 */
-	const initTPVideoPreview = () => {
+	const initTPVideoPreviewChooseMode = () => {
 		const removeUploadDetails = () => {
 			$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', (ev) => {
 				console.log(`remove`);
@@ -501,7 +519,6 @@ $(document).ready((ev) => {
 				_tabletContainer = $('[introScreen-container-js][data-intro-name="' + _btnIDName + '"]');
 
 			const videoContainer = $('[introScreen-video-js]');
-
 
 			const selectionScreenForPreview = (fadeDuration) => {
 				$('[choose-screen-btn-js]').removeClass('is-error is-choose');
@@ -594,140 +611,66 @@ $(document).ready((ev) => {
 	};
 
 
+	/**
+	 * @name initTPSlideshow
+	 *
+	 * @description upload images for tablet preview slideshow.
+	 */
 	const initTPSlideshow = () => {
-		const _previewAddMoreImagesNode = $('[upload-addPreviewImages-js]'),
-			_previewSmallContainer = $('[upload-smallPreview-js]'),
-			_previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
+		const _previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
 			_previewSlideLarge = $('.mds__wrapper-right .swiper-slide');
 
-		let _fileCount = 0,
-			_tmpIdx = 0;
-
-
-		const _previewTMPL = (fl, idx) => {
-			return `				
-				<script >
-					const _removeSmallPreviewSlide${idx} = (ev) => {
-						const _el = $(ev),
-							_parentNode = _el.closest('.mds__screen-preview-card'),
-							_parentNodeID = _parentNode.data('id');
-						
-						const _smallSlide = $('.mds__wrapper-preview .swiper-slide')[_parentNodeID],
-							_largeSlide = $('.mds__wrapper-right .swiper-slide')[_parentNodeID];
-																
-						// _parentNode.prev().remove();										
-						// _parentNode.remove();
-						
-						_parentNode.css({
-							'background-image' : 'url("")'
-						});
-						$(_smallSlide).css({
-							'background-image' : 'url("")'
-						});
-						$(_largeSlide).css({
-							'background-image' : 'url("")'
-						});
-					};
-				</script>
-		
-				<div data-id="${idx}">
-					<div class="mds__screen-preview-card" style="background-image:url('${fl}')">
-						<a onclick="_removeSmallPreviewSlide${idx}(this);" href="#" title="">
-							<i class="icon-font icon-bin"></i>
-						</a>					
-					</div>
-				</div>
-			`;
-		};
-
-
-		$('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
-			const _self = $(ev.currentTarget),
-				_fileLen = _self[0].files.length;
-
-			const _infoNode = $('.mds__screen-row--info'),
-				_slideShowBtn = $('[data-name="slideshow"]'),
-				_slideShowAdditionalPreview = $('[data-name="slideshowPreview"]');
-
-			_infoNode.hide();
-
-			if(_fileLen > 5) {
-				_infoNode.fadeIn('350').css({'display':'flex'});
-			} else if(_fileLen !== 0) {
-
-				// _fileCount += _fileLen;
-				// _tmpIdx += _fileLen;
-
-				// console.log(`_fileCount main: ${_fileCount}`);
-
-				_slideShowBtn.hide();
-				_slideShowAdditionalPreview.fadeIn(350);
-
-				for(let i = 0; i < _fileLen; i++) {
-					const reader = new FileReader();
-
-					reader.onload = () => {
-						if(i === 0) {
-							_previewSmallContainer.prepend( _previewTMPL(reader.result, i));
-						} else {
-							$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, i));
-						}
-
-						$(_previewSlideSmall[i]).css({
-							'background-image' : 'url("' + reader.result + '")'
-						});
-						$(_previewSlideLarge[i]).css({
-							'background-image' : 'url("' + reader.result + '")'
-						});
-					};
-
-					reader.readAsDataURL(_self[0].files[i]);
-				}
-
-				_self.val('');
-			}
-
-			// if(_fileCount === 5) {
-			// 	_previewAddMoreImagesNode.hide();
-			// } else {
-			// 	_previewAddMoreImagesNode.show();
-			// }
+		$('[upload-slideshow-js]').on('click', (ev) => {
+			$('.mds__screen--slideshow').slideToggle(350);
 		});
 
+		$('[upload-smallPreviewClear-js]').on('click', (ev) => {
+			const _el = $(ev.currentTarget),
+				_parentNode = _el.parent(),
+				_elID = _parentNode.data('id');
 
-		// $('[upload-addPreviewImages-js] input[type="file"]').on('change', (ev) => {
-		// 	const _self = $(ev.currentTarget),
-		// 		_fileLen = _self[0].files.length;
-		//
-		// 	_fileCount += _fileLen;
-		//
-		// 	if(_fileLen !== 0) {
-		// 		for(let i = 0; i < _fileLen; i++) {
-		// 			const reader = new FileReader();
-		//
-		// 			reader.onload = () => {
-		// 				$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, _tmpIdx));
-		//
-		// 				$(_previewSlideSmall[_tmpIdx]).css({
-		// 					'background-image' : 'url("' + reader.result + '")'
-		// 				});
-		// 				$(_previewSlideLarge[_tmpIdx]).css({
-		// 					'background-image' : 'url("' + reader.result + '")'
-		// 				});
-		//
-		// 				++_tmpIdx;
-		// 			};
-		//
-		// 			reader.readAsDataURL(_self[0].files[i]);
-		// 		}
-		//
-		// 		_self.val('');
-		// 	}
-		//
-		// 	if(_fileCount > 4) {
-		// 		_previewAddMoreImagesNode.hide();
-		// 	}
-		// });
+			_parentNode.css({
+				'background-image' : 'url("")'
+			});
+			$(_previewSlideSmall[_elID]).css({
+				'background-image' : 'url("")'
+			});
+			$(_previewSlideLarge[_elID]).css({
+				'background-image' : 'url("")'
+			});
+
+			_parentNode.removeClass('is-add');
+			_parentNode.find('input[type="file"]').show();
+		});
+
+		$('[upload-smallPreviewAdd-js] input[type="file"]').on('change', (ev) => {
+			const _self = $(ev.currentTarget),
+				_parentNode = _self.parent(),
+				_elID = _parentNode.data('id');
+
+			if(_self[0].files.length !== 0) {
+				const reader = new FileReader();
+
+				reader.onload = () => {
+					_parentNode.css({
+						'background-image' : 'url("' + reader.result + '")'
+					});
+					$(_previewSlideSmall[_elID]).css({
+						'background-image' : 'url("' + reader.result + '")'
+					});
+					$(_previewSlideLarge[_elID]).css({
+						'background-image' : 'url("' + reader.result + '")'
+					});
+				};
+
+				_parentNode.addClass('is-add');
+				_self.hide();
+
+				reader.readAsDataURL(_self[0].files[0]);
+			}
+
+			_self.val('');
+		});
 	};
 
 
@@ -1069,7 +1012,7 @@ $(document).ready((ev) => {
 	/**
 	 * @name initTPTabletRange
 	 *
-	 * @description init item detailsrange
+	 * @description init item details range
 	 */
 	const initTPTabletRange = () => {
 		const _input = $('.tablet--itemDetails .tablet__range input');
@@ -1162,19 +1105,34 @@ $(document).ready((ev) => {
 
 
 	/**
-	 * @name initTPSelectCurrencyPriceFormat
+	 * @name initTPSelectPage
 	 *
-	 * @description select currency or price format
+	 * @description change tablet preview page.
 	 */
-	const initTPSelectCurrencyPriceFormat = () => {
+	const initTPSelectPage = () => {
 		$('[select-tp-page-js]').on('change', (ev) => {
 			window.location.href = '/' + $(ev.currentTarget).find('option:selected').val();
 		});
+	};
 
+	/**
+	 * @name initTPSelectCurrency
+	 *
+	 * @description select currency.
+	 */
+	const initTPSelectCurrency = () => {
 		$('[select-currency-js]').on('change', (ev) => {
 			$('[currency-sign-js]').text(_$(ev.currentTarget).find('option:selected').val());
 		});
+	};
 
+
+	/**
+	 * @name initTPSelectPriceFormat
+	 *
+	 * @description select price format.
+	 */
+	const initTPSelectPriceFormat = () => {
 		$('[select-currencyFormat-js]').on('change', (ev) => {
 			const _format = $(ev.currentTarget).find('option:selected').val();
 
@@ -1254,15 +1212,17 @@ $(document).ready((ev) => {
 		initTP();
 		initTPSlideshow();
 		initTPMenuLayout();
+		initTPSelectPage();
 		initTPChooseColor();
 		initTPTabletRange();
 		initTPChangeColor();
 		initTPChangeImage();
-		initTPVideoPreview();
+		initTPSelectCurrency();
 		initTPRangeChangeSize();
 		initTPSelectFontFamily();
+		initTPSelectPriceFormat();
 		initTPNavigationColorIcon();
-		initTPSelectCurrencyPriceFormat();
+		initTPVideoPreviewChooseMode();
 		// ==========================================
   };
   initJquery();
