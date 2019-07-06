@@ -69,6 +69,43 @@
 			position: relative;
 			display: flex;
 			flex-direction: column;
+			@include adaptive(767) {
+				display: none;
+			}
+		}
+
+		&-select {
+			display: none;
+			width: 100%;
+			@include adaptive(767) {
+				display: block;
+			}
+
+			.c-form {
+				&__select{
+					&-wrapper {
+						border: none;
+						border-radius: 0;
+					}
+
+					&-value {
+						position: relative;
+						width: auto;
+						padding-left: 0;
+						color: #000000;
+						font-size: 28px;
+						font-weight: bold;
+					}
+
+					&-icon {
+						position: relative;
+
+						i {
+							border-color: #000 transparent transparent;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -95,6 +132,9 @@
 			@include adaptive(1023) {
 				max-width: 400px;
 				padding-right: 0;
+			}
+			@include adaptive(767) {
+				max-width: 100%;
 			}
 		}
 
@@ -192,9 +232,10 @@
 		}
 
 		&-preview {
-			z-index: 1000;
+			z-index: -1;
 			overflow: hidden;
-			display: none;
+			opacity: 0;
+			visibility: hidden;
 			position: fixed;
 			top: 100px;
 			right: 20px;
@@ -207,7 +248,9 @@
 			background-color: #ffffff;
 			box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 			@include adaptive(1023) {
-				display: block;
+				z-index: 1000;
+				opacity: 1;
+				visibility: visible;
 			}
 			@include adaptive(767) {
 				display: none;
@@ -264,6 +307,9 @@
 			padding: 30px 0 60px;
 			@include adaptive(1023) {
 				padding-bottom: 75px;
+			}
+			@include adaptive(767) {
+				padding-bottom: 30px;
 			}
 
 			h2 {
@@ -570,6 +616,23 @@
 			@include adaptive(575) {
 				flex-wrap: wrap;
 			}
+
+			&--info {
+				display: none;
+				align-items: center;
+				min-height: 40px;
+				margin-top: 15px;
+				padding: 10px 15px;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				background-color: #F8F8F8;
+
+				h2 {
+					color: red;
+					font-size: 12px;
+					font-weight: bold;
+				}
+			}
 		}
 
 		&-col {
@@ -584,6 +647,7 @@
 				justify-content: flex-end;
 				width: 185px;
 				@include adaptive(575) {
+					justify-content: center;
 					width: 100%;
 					margin-top: 15px;
 				}
@@ -618,7 +682,7 @@
 			}
 
 			&:hover {
-				background-color: rgb(97, 189, 240);
+				background-color: #61BDF0;
 				color: #ffffff;
 				@include transition(background-color, color);
 			}
@@ -654,8 +718,107 @@
 		}
 
 		.mds__upload {
-			.mds__upload-wrapper {
-				padding-top: 30px;
+			padding-bottom: 0;
+		}
+
+		&--slideshow {
+			display: none;
+
+			&:before {
+				border-color: rgb(105, 192, 241);
+			}
+
+			&:hover {
+				&:before {
+					border-color: rgb(105, 192, 241);
+				}
+			}
+
+			.mds__screen {
+				&-preview {
+					display: flex;
+					flex-wrap: wrap;
+					width: calc(100% + 20px);
+					margin-left: -10px;
+
+					> div {
+						width: 100%;
+						max-width: calc(100% / 3);
+						padding-left: 10px;
+						padding-bottom: 10px;
+					}
+
+					&-card {
+						position: relative;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						height: 175px;
+						border-radius: 5px;
+						border: 1px solid #ccc;
+						background-color: #ffffff;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						@include transition(border-color);
+
+						&:hover {
+							border-color: #69c0f1;
+							@include transition(border-color);
+						}
+
+						> a {
+							position: absolute;
+							top: 5px;
+							right: 5px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 30px;
+							height: 30px;
+							border-radius: 5px;
+							background-color: #F8F8F8;
+
+							.icon-font {
+								color: #69c0f1;
+							}
+						}
+
+						&--add {
+							&:hover {
+								span {
+									transform: scale(1.1);
+									@include transition(transform);
+								}
+							}
+
+							span {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 30px;
+								height: 30px;
+								border-radius: 50%;
+								background-color: #69c0f1;
+								color: #ffffff;
+								font-size: 30px;
+								@include transition(transform);
+							}
+
+							input[type='file'] {
+								opacity: 0;
+								z-index: 10;
+								cursor: pointer;
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1092,6 +1255,9 @@
 		&-wrapper {
 			display: flex;
 			justify-content: space-between;
+			@include adaptive(575) {
+				flex-wrap: wrap;
+			}
 
 			&:last-of-type {
 				padding-bottom: 0;
@@ -1103,6 +1269,9 @@
 				> div {
 					display: flex;
 					justify-content: space-between;
+					@include adaptive(575) {
+						flex-wrap: wrap;
+					}
 				}
 			}
 		}
@@ -1111,10 +1280,16 @@
 		&-right {
 			width: 100%;
 			max-width: calc((100% - 30px) / 2);
+			@include adaptive(575) {
+				max-width: 100%;
+			}
 		}
 
-		&-left,
-		&-right {}
+		&-right {
+			@include adaptive(575) {
+				padding-top: 15px;
+			}
+		}
 
 		&-title {
 			padding-bottom: 15px;
@@ -1124,6 +1299,9 @@
 			padding-bottom: 15px;
 			font-size: 16px;
 			font-weight: 300;
+			@include adaptive(575) {
+				padding-bottom: 5px;
+			}
 		}
 
 		&-color {
@@ -1215,6 +1393,9 @@
 			background-color: #f7f7f7;
 			background-size: cover;
 			background-repeat: no-repeat;
+			@include adaptive(575) {
+				height: 200px;
+			}
 
 			p {
 				text-align: center;
@@ -1364,6 +1545,9 @@
 			&--radio{
 				display: flex;
 				align-items: center;
+				@include adaptive(575) {
+					flex-wrap: wrap;
+				}
 
 				p {
 					font-size: 16px;
@@ -1372,14 +1556,25 @@
 
 				> div {
 					width: 50%;
+					@include adaptive(575) {
+						width: 100%;
+					}
 
 					&:nth-of-type(2) {
 						display: flex;
 						align-items: center;
 						justify-content: flex-end;
+						@include adaptive(575) {
+							padding-top: 15px;
+							justify-content: flex-start;
+						}
 
 						> div {
 							padding-left: 20px;
+							@include adaptive(575) {
+								padding-left: 0;
+								padding-right: 20px;
+							}
 						}
 					}
 				}
@@ -1456,6 +1651,11 @@
 					}
 
 					&-col {
+						&-1 {
+							@include adaptive(575) {
+								width: calc(100% - 48px);
+							}
+						}
 						&-2 {
 							width: 48px;
 							padding-left: 5px;

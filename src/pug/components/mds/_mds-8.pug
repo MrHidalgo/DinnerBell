@@ -27,6 +27,32 @@ section#mds.mds
 						a(href="menu-design-setting-6.html" class="" title="")!= "Feedback"
 						a(href="menu-design-setting-7.html" class="" title="")!= "My order"
 
+				.mds__title-select
+					.c-form
+						.c-form__field.c-form__field--select
+
+							.c-form__select-wrapper
+								.c-form__select-value
+
+								select.c-form__select(
+									id!= ''
+									name!= 'select_currency'
+									select-js
+									select-tp-page-js
+								)
+									option(value!= '' selected="")!= 'Log Out'
+									option(value="menu-design-setting.html")!= "Base theme"
+									option(value="menu-design-setting-1.html")!= "Base settings"
+									option(value="menu-design-setting-2.html")!= "Intro screen"
+									option(value="menu-design-setting-3.html")!= "Main menu"
+									option(value="menu-design-setting-4.html")!= "Menu items"
+									option(value="menu-design-setting-5.html")!= "Item details"
+									option(value="menu-design-setting-6.html")!= "Feedback"
+									option(value="menu-design-setting-7.html")!= "My order"
+
+								.c-form__select-icon
+									i
+
 			form.c-form(action="" autocomplete='off')
 
 				.mds__upload(upload-file-js)

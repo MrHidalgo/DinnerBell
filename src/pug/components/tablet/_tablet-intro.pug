@@ -4,13 +4,15 @@
 	section#tablet.tablet.tablet--intro(tablet-introScreen-js)
 			.tablet__content
 				div
-					.tablet__wrapper-bg(introScreen-container-js introScreen-bg-js data-intro-name='bg')
+					.tablet__wrapper-bg(introScreen-container-js introScreen-bg-js tablet-bg-js data-intro-name='bg')
 						.tablet__logo
-							img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
+							img(src="" alt="" title="" introScreen-logo-js)
 
 					.tablet__wrapper-slideshow(introScreen-container-js introScreen-slideshow-js data-intro-name='slideshow')
 
 						mixin swiperContent()
+							.swiper-slide
+							.swiper-slide
 							.swiper-slide
 							.swiper-slide
 							.swiper-slide
@@ -24,7 +26,7 @@
 
 						.tablet__wrapper-video-cover
 							.tablet__logo
-								img(src="img/img-tablet-logo.png" srcset="img/img-tablet-logo@2x.png 2x" alt="" title="")
+								img(src="" alt="" title="" introScreen-logo-js)
 
 			.tablet__footer
 				a(href="#" class="" title="")!= "Get started!"

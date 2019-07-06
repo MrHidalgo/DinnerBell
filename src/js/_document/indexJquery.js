@@ -17,6 +17,9 @@ $(document).ready((ev) => {
 	* =============================================
 	* CALLBACK :: start
 	* ============================================= */
+	/**
+	 * @name initBodyClick
+	 */
 	const initBodyClick = () => {
 		$('body').on('click', function (e) {
 			const className = `
@@ -35,6 +38,27 @@ $(document).ready((ev) => {
 	};
 
 
+	/**
+	 * @name initHeaderDropDownCollapse
+	 *
+	 * @description
+	 */
+	const initHeaderDropDownCollapse = () => {
+		$('.header__nav-drop--collapse-head').on('click', (ev) => {
+			const _btn = $(ev.currentTarget),
+				_parent = _btn.closest('.header__nav-drop--collapse');
+
+			_parent.toggleClass('is-open');
+			_btn.siblings('.header__nav-drop--collapse-body').slideToggle(400);
+		});
+	};
+
+
+	/**
+	 * @name initSidebarCollapse
+	 *
+	 * @description show/hide left menu
+	 */
 	const initSidebarCollapse = () => {
 		$('.sidebar__nav-btn--drop').on('click', (ev) => {
 			const _btn = $(ev.currentTarget),
@@ -62,6 +86,9 @@ $(document).ready((ev) => {
 	};
 
 
+	/**
+	 * @name initDropDown
+	 */
 	const initDropDown = () => {
 		$('[dropdown-btn-js]').on('click', (ev) => {
 			const _btn = $(ev.currentTarget),
@@ -83,7 +110,12 @@ $(document).ready((ev) => {
 	};
 
 
-	const initChooseColor = () => {
+	/**
+	 * @name initTPChooseColor
+	 *
+	 * @description change color or background-color in tablet preview elements
+	 */
+	const initTPChooseColor = () => {
 		const _colorArr = $('.mds__form-color-content > a, [change-color-js] > a');
 
 		for(let el of _colorArr) {
@@ -254,16 +286,20 @@ $(document).ready((ev) => {
 		}
 	};
 
-	let _screenName = '';
-	const _additionMethodsUploadFiles = () => {
-		const _additionalOption = $('[upload-additional-js]'),
-			_colorPallet = $('[change-bg-js]').closest('.mds__upload-left'),
-			_uploadBtn = $('[change-img-js]').closest('.mds__upload-right'),
-			_previewNode = $('[upload-preview-js]'),
-			_fixedImageBtn = $('[upload-imgFixed-js]'),
-			_repeatImageBtn = $('[upload-imgRepeat-js]');
 
-		const _tabletBG = $('[tablet-bg-js]');
+
+	const _additionMethodsUploadFiles = (_prNode) => {
+		console.log(_prNode);
+
+		const
+			_colorPallet = _prNode.find('[change-bg-js]').closest('.mds__upload-left'),
+			_uploadBtn = _prNode.find('[change-img-js]').closest('.mds__upload-right'),
+			_previewNode = _prNode.find('[upload-preview-js]'),
+			_fixedImageBtn = _prNode.find('[upload-imgFixed-js]'),
+			_repeatImageBtn = _prNode.find('[upload-imgRepeat-js]');
+
+		const _tabletBG = $('[tablet-bg-js]'),
+			_tabletLogo = $('[introScreen-logo-js]');
 
 		const _defaultOption = {
 			fixed: {
@@ -285,58 +321,35 @@ $(document).ready((ev) => {
 		};
 
 		return {
-			showAdditionalUploadImageOption () {
-				console.log(`showAdditionalUploadImageOption`);
-
-				_additionalOption.show();
+			showAdditionalUploadImageOption (parentNode) {
+				parentNode.closest(_prNode).find('[upload-additional-js]').show();
 			},
-			hideAdditionalUploadImageOption () {
-				console.log(`hideAdditionalUploadImageOption`);
-
-				_additionalOption.hide();
+			hideAdditionalUploadImageOption (parentNode) {
+				parentNode.closest(_prNode).find('[upload-additional-js]').hide();
 			},
 			addImageOnPreview (file) {
-				console.log(`showImageOnPreview`);
-
 				_previewNode.css({
 					'background-image' : 'url("' + file + '")'
 				}).find("> *").hide();
-
-				if($('.tablet--intro').length > 0) {
-
-					if(_screenName === 'static') {
-						$('[introScreen-bg-js]').css({
-							'background-image' : 'url("' + file + '")'
-						});
-					}
-
-				} else {
-					_tabletBG.css({
-						'background-image' : 'url("' + file + '")'
-					});
-				}
+				_tabletBG.css({
+					'background-image' : 'url("' + file + '")'
+				});
 			},
-			removeImageOnPreview () {
-				console.log(`hideImageOnPreview`);
-
-				_previewNode.css(
+			addImageOnPreviewLogo (file) {
+				_previewNode.css({
+					'background-image' : 'url("' + file + '")'
+				}).find("> *").hide();
+				_tabletLogo.attr('src', file);
+			},
+			removeImageOnPreview (parentNode) {
+				parentNode.closest(_prNode).find('[upload-preview-js]').css(
 					_defaultOption.default
 				).find("> *").show();
-
-				if($('.tablet--intro').length > 0) {
-
-					if(_screenName === 'static') {
-						$('[introScreen-bg-js]').css(_defaultOption.default);
-					}
-
-				} else {
-					_tabletBG.css(_defaultOption.default);
-				}
+				_tabletBG.css(_defaultOption.default);
+				_tabletLogo.attr('src', '');
 			},
-			showColorPalletUploadBtn () {
-				console.log(`showColorPalletUploadBtn`);
-
-				[_colorPallet, _uploadBtn].map((val, idx) => {
+			showColorPalletUploadBtn (parentNode) {
+				[_colorPallet, _uploadBtn, parentNode.closest(_prNode).find('[upload-mainPallet-js]')].map((val, idx) => {
 					val.css({
 						'opacity' : '1',
 						'visibility' : 'visible',
@@ -344,10 +357,8 @@ $(document).ready((ev) => {
 					});
 				});
 			},
-			hideColorPalletUploadBtn () {
-				console.log(`hideColorPalletUploadBtn`);
-
-				[_colorPallet, _uploadBtn].map((val, idx) => {
+			hideColorPalletUploadBtn (parentNode) {
+				[_colorPallet, _uploadBtn, parentNode.closest(_prNode).find('[upload-mainPallet-js]')].map((val, idx) => {
 					val.css({
 						'opacity' : '0',
 						'visibility' : 'hidden',
@@ -356,40 +367,35 @@ $(document).ready((ev) => {
 				});
 			},
 			fixedBGOption () {
-				console.log(`fixedBGOption`);
-
 				_fixedImageBtn.on('change', (ev) => {
-					[_previewNode, _tabletBG, $('[introScreen-bg-js]')].map((el,idx) => {
+					[_previewNode, _tabletBG].map((el,idx) => {
 						el.css(_defaultOption.fixed);
 					});
 				});
 			},
 			repeatBGOption () {
-				console.log(`repeatBGOption`);
-
 				_repeatImageBtn.on('change', (ev) => {
-					[_previewNode, _tabletBG, $('[introScreen-bg-js]')].map((el,idx) => {
+					[_previewNode, _tabletBG].map((el,idx) => {
 						el.css(_defaultOption.repeat);
 					});
 				});
 			},
 			resetBGOption () {
-				console.log('resetBGOption');
-
 				if(_repeatImageBtn.is(':checked')) {
 					_fixedImageBtn.prop('checked', true).change();
 				}
 			},
 			removeImage () {
-				console.log(`removeImage`);
+				$(document).on('click', '[upload-remove-js]', (ev) => {
+					const _el = $(ev.currentTarget);
 
-				$('[upload-remove-js]').on('click', (ev) => {
-					this.hideAdditionalUploadImageOption();
-					this.showColorPalletUploadBtn();
-					this.removeImageOnPreview();
+					this.hideAdditionalUploadImageOption(_el);
+					this.showColorPalletUploadBtn(_el);
+					this.removeImageOnPreview(_el);
 					this.resetBGOption();
 
 					ev.stopPropagation();
+					ev.preventDefault();
 				});
 			}
 		}
@@ -397,30 +403,32 @@ $(document).ready((ev) => {
 
 
 	const initTPChangeImage = () => {
-		_additionMethodsUploadFiles().removeImage();
-		_additionMethodsUploadFiles().fixedBGOption();
-		_additionMethodsUploadFiles().repeatBGOption();
-
 		$('[change-img-js] input[type="file"]').on('change', (ev) => {
-			console.log(`change upload`);
+			const _self = $(ev.currentTarget),
+				_btnOpt = _self.data('opt'),
+				_parentNode = _self.closest('[upload-file-js]');
 
-			const _self = $(ev.currentTarget);
-
-			_screenName = _self.closest('[change-img-js]').data('name');
-
-			_additionMethodsUploadFiles().hideColorPalletUploadBtn();
+			_additionMethodsUploadFiles(_parentNode).removeImage();
+			_additionMethodsUploadFiles(_parentNode).fixedBGOption();
+			_additionMethodsUploadFiles(_parentNode).repeatBGOption();
 
 			if(_self[0].files.length !== 0) {
+
+				_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
+
 				const reader = new FileReader();
 
 				reader.onload = () => {
 					const _file = reader.result;
 
-					_additionMethodsUploadFiles().addImageOnPreview(_file);
+					if(_btnOpt === 'logo') {
+						_additionMethodsUploadFiles(_parentNode).addImageOnPreviewLogo(_file);
+					} else {
+						_additionMethodsUploadFiles(_parentNode).addImageOnPreview(_file);
+					}
 				};
 
-				_additionMethodsUploadFiles().showAdditionalUploadImageOption();
-
+				_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
 				reader.readAsDataURL(_self[0].files[0]);
 			}
 
@@ -473,7 +481,12 @@ $(document).ready((ev) => {
 	};
 
 
-	const initChooseScreen = () => {
+	/**
+	 * @name initTPVideoPreview
+	 *
+	 * @description choose video file for tablet intro screen
+	 */
+	const initTPVideoPreview = () => {
 		const removeUploadDetails = () => {
 			$('[upload-previewFiles-js]').on('click', '[upload-remove-js]', (ev) => {
 				console.log(`remove`);
@@ -487,9 +500,7 @@ $(document).ready((ev) => {
 				_btnIDName = _btn.data('name'),
 				_tabletContainer = $('[introScreen-container-js][data-intro-name="' + _btnIDName + '"]');
 
-			const _bgImgContainer = $('[introScreen-bg-js]'),
-				slideImgContainer = $('[introScreen-slideshow-js]'),
-				videoContainer = $('[introScreen-video-js]');
+			const videoContainer = $('[introScreen-video-js]');
 
 
 			const selectionScreenForPreview = (fadeDuration) => {
@@ -503,9 +514,7 @@ $(document).ready((ev) => {
 				}).fadeIn(fadeDuration);
 			};
 
-
-			const readFileURL = (input, mode) => {
-
+			const readFileURL = (input) => {
 				const _previewTemplate = (fileName) => {
 					return  `
 						<div class="mds__fileName-row">
@@ -534,112 +543,200 @@ $(document).ready((ev) => {
 					node.find('> *').remove();
 				};
 
-				if(mode === 'slideshow') {
-					// let _count = 0;
-					//
-					// const _parentNode = $(input).closest('.mds__screen'),
-					// 	_previewSlideShow = _parentNode.find('[upload-previewFiles-js]');
-					//
-					// if(input.files.length > 3) {
-					// 	_parentNode.addClass('is-error');
-					// 	return false;
-					// } else {
-					// 	_parentNode.removeClass('is-error');
-					//
-					// 	for(let _idx = 0; _idx < input.files.length; _idx++) {
-					// 		if (input.files[_idx]) {
-					// 			const reader = new FileReader();
-					//
-					// 			reader.onload = () => {
-					// 				const _slide = slideImgContainer.find('.swiper-slide')[_idx];
-					//
-					// 				$(_slide).css({
-					// 					'background-image' : 'url("' + reader.result + '")'
-					// 				});
-					// 			};
-					//
-					// 			// _previewSlideShow.fadeIn(350).css({'display':'flex'});
-					// 			//
-					// 			// _previewSlideShow.append(_previewTemplate(input.files[_idx].name));
-					// 			//
-					// 			// reader.readAsDataURL(input.files[_idx]);
-					// 		}
-					// 	}
-					// }
+				const _parentNode = $(input).closest('.mds__screen'),
+					_previewVideo = _parentNode.find('[upload-previewFiles-js]');
 
-				} else if (mode === 'video') {
-					const _parentNode = $(input).closest('.mds__screen'),
-						_previewVideo = _parentNode.find('[upload-previewFiles-js]');
+				if (input.files.length !== 0) {
+					const reader = new FileReader(),
+						_vd = $(videoContainer).find('video');
 
-					if (input.files.length !== 0) {
-						const reader = new FileReader(),
-							_vd = $(videoContainer).find('video');
-
-						reader.onload = () => {
-							$(_vd).map((idx, val) => {
-								$(val)
-									.find('source')
-									.attr('src', reader.result);
-
-								val.load();
-							});
-						};
-
-						_showDetails(_previewVideo, input.files.length);
-
-						$('[upload-preview-video-js]').on('click', '[upload-remove-js]', (ev) => {
-							_hideDetails(_previewVideo);
-
-							$(_vd).map((idx, val) => {
-								$(val)
-									.find('source')
-									.attr('src', '');
-
-								val.load();
-							});
+					reader.onload = () => {
+						$(_vd).map((idx, val) => {
+							$(val).find('source').attr('src', reader.result);
+							val.load();
 						});
+					};
 
-						reader.readAsDataURL(input.files[0]);
-					}
+					_showDetails(_previewVideo, input.files.length);
+
+					$('[upload-preview-video-js]').on('click', '[upload-remove-js]', (ev) => {
+						_hideDetails(_previewVideo);
+
+						$(_vd).map((idx, val) => {
+							$(val).find('source').attr('src', '');
+							val.load();
+						});
+					});
+
+					reader.readAsDataURL(input.files[0]);
 				}
 			};
 
-			// REMOVE BUTTON
+
 			if($(ev.target).closest('.mds__upload-row-wrapper').length !== 0) {
+				// REMOVE BUTTON
 				return false;
 			}
-			// SLIDE SHOW
-			else if($(ev.target).closest('[upload-slideshow-js]').length !== 0) {
-				// console.log(`if slideshow`);
-				//
-				// $('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
-				// 	readFileURL(ev.currentTarget, 'slideshow');
-				// 	$(ev.currentTarget).val('');
-				// });
-				//
-				// selectionScreenForPreview(0);
-			}
-			// VIDEO PREVIEW
 			else if($(ev.target).closest('[upload-video-js]').length !== 0) {
-				console.log(`VIDEO PREVIEW`);
-
+				// VIDEO PREVIEW
 				$('[upload-video-js] input[type="file"]').on('change', (ev) => {
-					readFileURL(ev.currentTarget, 'video');
+					readFileURL(ev.currentTarget);
 					$(ev.currentTarget).val('');
 				});
 
 				selectionScreenForPreview(0);
 			}
-			// SCREEN SELECTION FOR PREVIEW CHANGES
 			else {
-				console.log(`SCREEN SELECTION FOR PREVIEW CHANGES`);
+				// SCREEN SELECTION FOR PREVIEW CHANGES
 				selectionScreenForPreview(0);
 			}
 		});
 	};
 
 
-	const initMenuLayout = () => {
+	const initTPSlideshow = () => {
+		const _previewAddMoreImagesNode = $('[upload-addPreviewImages-js]'),
+			_previewSmallContainer = $('[upload-smallPreview-js]'),
+			_previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
+			_previewSlideLarge = $('.mds__wrapper-right .swiper-slide');
+
+		let _fileCount = 0,
+			_tmpIdx = 0;
+
+
+		const _previewTMPL = (fl, idx) => {
+			return `				
+				<script >
+					const _removeSmallPreviewSlide${idx} = (ev) => {
+						const _el = $(ev),
+							_parentNode = _el.closest('.mds__screen-preview-card'),
+							_parentNodeID = _parentNode.data('id');
+						
+						const _smallSlide = $('.mds__wrapper-preview .swiper-slide')[_parentNodeID],
+							_largeSlide = $('.mds__wrapper-right .swiper-slide')[_parentNodeID];
+																
+						// _parentNode.prev().remove();										
+						// _parentNode.remove();
+						
+						_parentNode.css({
+							'background-image' : 'url("")'
+						});
+						$(_smallSlide).css({
+							'background-image' : 'url("")'
+						});
+						$(_largeSlide).css({
+							'background-image' : 'url("")'
+						});
+					};
+				</script>
+		
+				<div data-id="${idx}">
+					<div class="mds__screen-preview-card" style="background-image:url('${fl}')">
+						<a onclick="_removeSmallPreviewSlide${idx}(this);" href="#" title="">
+							<i class="icon-font icon-bin"></i>
+						</a>					
+					</div>
+				</div>
+			`;
+		};
+
+
+		$('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
+			const _self = $(ev.currentTarget),
+				_fileLen = _self[0].files.length;
+
+			const _infoNode = $('.mds__screen-row--info'),
+				_slideShowBtn = $('[data-name="slideshow"]'),
+				_slideShowAdditionalPreview = $('[data-name="slideshowPreview"]');
+
+			_infoNode.hide();
+
+			if(_fileLen > 5) {
+				_infoNode.fadeIn('350').css({'display':'flex'});
+			} else if(_fileLen !== 0) {
+
+				// _fileCount += _fileLen;
+				// _tmpIdx += _fileLen;
+
+				// console.log(`_fileCount main: ${_fileCount}`);
+
+				_slideShowBtn.hide();
+				_slideShowAdditionalPreview.fadeIn(350);
+
+				for(let i = 0; i < _fileLen; i++) {
+					const reader = new FileReader();
+
+					reader.onload = () => {
+						if(i === 0) {
+							_previewSmallContainer.prepend( _previewTMPL(reader.result, i));
+						} else {
+							$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, i));
+						}
+
+						$(_previewSlideSmall[i]).css({
+							'background-image' : 'url("' + reader.result + '")'
+						});
+						$(_previewSlideLarge[i]).css({
+							'background-image' : 'url("' + reader.result + '")'
+						});
+					};
+
+					reader.readAsDataURL(_self[0].files[i]);
+				}
+
+				_self.val('');
+			}
+
+			// if(_fileCount === 5) {
+			// 	_previewAddMoreImagesNode.hide();
+			// } else {
+			// 	_previewAddMoreImagesNode.show();
+			// }
+		});
+
+
+		// $('[upload-addPreviewImages-js] input[type="file"]').on('change', (ev) => {
+		// 	const _self = $(ev.currentTarget),
+		// 		_fileLen = _self[0].files.length;
+		//
+		// 	_fileCount += _fileLen;
+		//
+		// 	if(_fileLen !== 0) {
+		// 		for(let i = 0; i < _fileLen; i++) {
+		// 			const reader = new FileReader();
+		//
+		// 			reader.onload = () => {
+		// 				$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, _tmpIdx));
+		//
+		// 				$(_previewSlideSmall[_tmpIdx]).css({
+		// 					'background-image' : 'url("' + reader.result + '")'
+		// 				});
+		// 				$(_previewSlideLarge[_tmpIdx]).css({
+		// 					'background-image' : 'url("' + reader.result + '")'
+		// 				});
+		//
+		// 				++_tmpIdx;
+		// 			};
+		//
+		// 			reader.readAsDataURL(_self[0].files[i]);
+		// 		}
+		//
+		// 		_self.val('');
+		// 	}
+		//
+		// 	if(_fileCount > 4) {
+		// 		_previewAddMoreImagesNode.hide();
+		// 	}
+		// });
+	};
+
+
+	/**
+	 * @name initTPMenuLayout
+	 *
+	 * @description change view for blocks, from list to thumb
+	 */
+	const initTPMenuLayout = () => {
 		$('.mds__menu').on('click', (ev) => {
 			const _btn = $(ev.currentTarget),
 				_btnId = _btn.data('name');
@@ -674,7 +771,12 @@ $(document).ready((ev) => {
 	};
 
 
-	const initRange = () => {
+	/**
+	 * @name initTPRangeChangeSize
+	 *
+	 * @description change font size, indent and color for font-size
+	 */
+	const initTPRangeChangeSize = () => {
 		const _rangeOption = (min, max, start) => {
 			return {
 				connect: true,
@@ -964,8 +1066,13 @@ $(document).ready((ev) => {
 	};
 
 
-	const initTabletRange = () => {
-		const _input = $('.tablet__range input');
+	/**
+	 * @name initTPTabletRange
+	 *
+	 * @description init item detailsrange
+	 */
+	const initTPTabletRange = () => {
+		const _input = $('.tablet--itemDetails .tablet__range input');
 
 		_input.map((idx, val) => {
 			$(val).ionRangeSlider({
@@ -982,24 +1089,13 @@ $(document).ready((ev) => {
 	};
 
 
-	const initTabletBoxChoose = () => {
-		$('.tablet__box').on('click', (ev) => {
-			$('.tablet__box').removeClass('is-choose');
-			$(ev.currentTarget).addClass('is-choose');
-		});
-	};
-
-
-	const initTabletMainMenuBlock = () => {
-		$('.tablet--mainMenu .tablet__block').on('click', (ev) => {
-			$('.tablet--mainMenu .tablet__block').removeClass('is-choose');
-			$(ev.currentTarget).addClass('is-choose');
-		});
-	};
-
-
-	const initTabletPreview = () => {
-		$('.mds__wrapper-preview, .header__preview').on('click', () => {
+	/**
+	 * @name initTP
+	 *
+	 * @description show tablet preview for small resolution
+	 */
+	const initTP = () => {
+		$('.mds__wrapper-preview a, .header__preview').on('click', () => {
 			$('html, body').addClass('is-hideScroll');
 			$('.mds__wrapper-right').addClass('is-show');
 		});
@@ -1011,7 +1107,12 @@ $(document).ready((ev) => {
 	};
 
 
-	const initTabletPreviewSelectFonts = () => {
+	/**
+	 * @name initTPSelectFontFamily
+	 *
+	 * @description change font-family for main text and numeric
+	 */
+	const initTPSelectFontFamily = () => {
 		const generateFontsOpt = (linkTagName, styleTagName, elemOpt, style, node) => {
 			if(linkTagName.length !== 0) {
 
@@ -1060,12 +1161,18 @@ $(document).ready((ev) => {
 	};
 
 
-	const initTabletPreviewSelectCurrency = () => {
-		$('[select-currency-js]').on('change', (ev) => {
-			const _elem = $(ev.currentTarget),
-				_elemOption = _elem.find('option:selected');
+	/**
+	 * @name initTPSelectCurrencyPriceFormat
+	 *
+	 * @description select currency or price format
+	 */
+	const initTPSelectCurrencyPriceFormat = () => {
+		$('[select-tp-page-js]').on('change', (ev) => {
+			window.location.href = '/' + $(ev.currentTarget).find('option:selected').val();
+		});
 
-			$('[currency-sign-js]').text(_elemOption.val());
+		$('[select-currency-js]').on('change', (ev) => {
+			$('[currency-sign-js]').text(_$(ev.currentTarget).find('option:selected').val());
 		});
 
 		$('[select-currencyFormat-js]').on('change', (ev) => {
@@ -1101,17 +1208,11 @@ $(document).ready((ev) => {
 	};
 
 
-	const initDropDownCollapse = () => {
-		$('.header__nav-drop--collapse-head').on('click', (ev) => {
-			const _btn = $(ev.currentTarget),
-				_parent = _btn.closest('.header__nav-drop--collapse');
-
-			_parent.toggleClass('is-open');
-			_btn.siblings('.header__nav-drop--collapse-body').slideToggle(400);
-		});
-	};
-
-
+	/**
+	 * @name initTPNavigationColorIcon
+	 *
+	 * @description change navigation icon color - only two mode: whide & black
+	 */
 	const initTPNavigationColorIcon = () => {
 		$('[radioColorIcon-js]').on('change', (ev) => {
 			const _el = $(ev.currentTarget),
@@ -1144,26 +1245,24 @@ $(document).ready((ev) => {
 		initSwiper();
 		// ==========================================
 
-    // callback
+		// callback
+		initDropDown();
 		initBodyClick();
 		initSidebarCollapse();
-		initDropDown();
-		initChooseColor();
-		initChooseScreen();
-		initMenuLayout();
-		initRange();
-		initDropDownCollapse();
+		initHeaderDropDownCollapse();
 
-		initTabletRange();
-		initTabletBoxChoose();
-		initTabletMainMenuBlock();
-		initTabletPreview();
-		initTabletPreviewSelectFonts();
-		initTabletPreviewSelectCurrency();
-
+		initTP();
+		initTPSlideshow();
+		initTPMenuLayout();
+		initTPChooseColor();
+		initTPTabletRange();
 		initTPChangeColor();
 		initTPChangeImage();
+		initTPVideoPreview();
+		initTPRangeChangeSize();
+		initTPSelectFontFamily();
 		initTPNavigationColorIcon();
+		initTPSelectCurrencyPriceFormat();
 		// ==========================================
   };
   initJquery();

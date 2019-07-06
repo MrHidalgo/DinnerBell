@@ -89,6 +89,33 @@ section#mds.mds.mds--base
 						a(href="menu-design-setting-7.html" class="" title="")!= "My order"
 						a(href="menu-design-setting-8.html" class="" title="")!= "Log Out"
 
+				.mds__title-select
+					.c-form
+						.c-form__field.c-form__field--select
+
+							.c-form__select-wrapper
+								.c-form__select-value
+
+								select.c-form__select(
+									id!= ''
+									name!= 'select_currency'
+									select-js
+									select-tp-page-js
+								)
+									option(value!= '' selected="")!= 'Base settings'
+									option(value="menu-design-setting.html")!= "Base theme"
+									option(value="menu-design-setting-2.html")!= "Intro screen"
+									option(value="menu-design-setting-3.html")!= "Main menu"
+									option(value="menu-design-setting-4.html")!= "Menu items"
+									option(value="menu-design-setting-5.html")!= "Item details"
+									option(value="menu-design-setting-6.html")!= "Feedback"
+									option(value="menu-design-setting-7.html")!= "My order"
+									option(value="menu-design-setting-8.html")!= "Log Out"
+
+								.c-form__select-icon
+									i
+
+
 			form.c-form(action="" autocomplete='off')
 
 				p.mds__subtitle!= "Font settings"
@@ -188,7 +215,7 @@ section#mds.mds.mds--base
 						div
 							label
 								input(type="radio" name="iconName" value="#000" radioColorIcon-js)
-								span!= "Blue"
+								span!= "Black"
 
 				each val, idx in colorTitleArr
 					.mds__form-content

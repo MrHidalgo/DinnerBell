@@ -7,13 +7,23 @@
  */
 const initSwiper = () => {
 
-  const mySwiperTabletIntro = new Swiper('.swiper-container-intro', {
+  const mySwiperTabletIntroSmall = new Swiper('.mds__wrapper-preview .swiper-container-intro', {
     loop: false,
-    watchOverflow: true,
-    normalizeSlideIndex: true,
     grabCursor: true,
-    freeMode: false,
-    effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
+    effect: 'slide',
+		speed: 750,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  const mySwiperTabletIntroLarge = new Swiper('.mds__wrapper-right .swiper-container-intro', {
+    loop: false,
+    grabCursor: true,
+    effect: 'slide',
 		speed: 750,
     slidesPerView: 1,
     spaceBetween: 0,
