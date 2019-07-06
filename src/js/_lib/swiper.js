@@ -10,8 +10,10 @@ const initSwiper = () => {
   const mySwiperTabletIntroSmall = new Swiper('.mds__wrapper-preview .swiper-container-intro', {
     loop: false,
     grabCursor: true,
-    effect: 'slide',
-		speed: 750,
+    effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {
@@ -23,8 +25,10 @@ const initSwiper = () => {
   const mySwiperTabletIntroLarge = new Swiper('.mds__wrapper-right .swiper-container-intro', {
     loop: false,
     grabCursor: true,
-    effect: 'slide',
-		speed: 750,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {

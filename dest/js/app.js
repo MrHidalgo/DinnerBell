@@ -263,8 +263,10 @@ var initSwiper = function initSwiper() {
 	var mySwiperTabletIntroSmall = new Swiper('.mds__wrapper-preview .swiper-container-intro', {
 		loop: false,
 		grabCursor: true,
-		effect: 'slide',
-		speed: 750,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
 		slidesPerView: 1,
 		spaceBetween: 0,
 		pagination: {
@@ -276,8 +278,10 @@ var initSwiper = function initSwiper() {
 	var mySwiperTabletIntroLarge = new Swiper('.mds__wrapper-right .swiper-container-intro', {
 		loop: false,
 		grabCursor: true,
-		effect: 'slide',
-		speed: 750,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
 		slidesPerView: 1,
 		spaceBetween: 0,
 		pagination: {
@@ -723,6 +727,20 @@ $(document).ready(function (ev) {
 		}
 	};
 
+	function checkExtensionLogo() {
+		var file = document.querySelector("#fUpload");
+		if (/\.(png)$/i.test(file.files[0].name) === false) {
+			alert("not an *.PNG!");
+		}
+	}
+
+	var checkExtensionBG = function checkExtensionBG() {
+		var file = document.querySelector("#fUpload");
+		if (/\.(jpe?g)$/i.test(file.files[0].name) === false) {
+			alert("not an *.JPG!");
+		}
+	};
+
 	/**
   * @name _additionMethodsUploadFiles
   *
@@ -733,8 +751,6 @@ $(document).ready(function (ev) {
   * @private
   */
 	var _additionMethodsUploadFiles = function _additionMethodsUploadFiles(_prNode) {
-		console.log(_prNode);
-
 		var _colorPallet = _prNode.find('[change-bg-js]').closest('.mds__upload-left'),
 		    _uploadBtn = _prNode.find('[change-img-js]').closest('.mds__upload-right'),
 		    _previewNode = _prNode.find('[upload-preview-js]'),
@@ -852,6 +868,7 @@ $(document).ready(function (ev) {
 	var initTPChangeImage = function initTPChangeImage() {
 		$('[change-img-js] input[type="file"]').on('change', function (ev) {
 			var _self = $(ev.currentTarget),
+			    _fileExt = /[.]/.exec(_self[0].value) ? /[^.]+$/.exec(_self[0].value)[0] : undefined,
 			    _btnOpt = _self.data('opt'),
 			    _parentNode = _self.closest('[upload-file-js]');
 
@@ -861,21 +878,37 @@ $(document).ready(function (ev) {
 
 			if (_self[0].files.length !== 0) {
 
-				_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
-
 				var reader = new FileReader();
 
 				reader.onload = function () {
 					var _file = reader.result;
 
 					if (_btnOpt === 'logo') {
-						_additionMethodsUploadFiles(_parentNode).addImageOnPreviewLogo(_file);
+						if (_fileExt.toLowerCase().trim() !== "png") {
+							alert("not an *.PNG!");
+						} else {
+							_additionMethodsUploadFiles(_parentNode).addImageOnPreviewLogo(_file);
+							_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
+							_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
+						}
 					} else {
-						_additionMethodsUploadFiles(_parentNode).addImageOnPreview(_file);
+
+						switch (_fileExt.toLowerCase().trim()) {
+							case "jpg":
+							case "jpeg":
+
+								_additionMethodsUploadFiles(_parentNode).addImageOnPreview(_file);
+								_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
+								_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
+
+								break;
+							default:
+								alert("not an *.JPG or *.JPEG!");
+								break;
+						}
 					}
 				};
 
-				_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
 				reader.readAsDataURL(_self[0].files[0]);
 			}
 
@@ -962,7 +995,7 @@ $(document).ready(function (ev) {
 	/**
   * @name initTPVideoPreview
   *
-  * @description choose video file for tablet intro screen
+  * @description choose video file for tablet intro screen.
   */
 	var initTPVideoPreviewChooseMode = function initTPVideoPreviewChooseMode() {
 		var removeUploadDetails = function removeUploadDetails() {
@@ -1058,6 +1091,11 @@ $(document).ready(function (ev) {
 		});
 	};
 
+	/**
+  * @name initTPSlideshow
+  *
+  * @description upload images for tablet preview slideshow.
+  */
 	var initTPSlideshow = function initTPSlideshow() {
 		var _previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
 		    _previewSlideLarge = $('.mds__wrapper-right .swiper-slide');
@@ -1087,6 +1125,7 @@ $(document).ready(function (ev) {
 
 		$('[upload-smallPreviewAdd-js] input[type="file"]').on('change', function (ev) {
 			var _self = $(ev.currentTarget),
+			    _fileExt = /[.]/.exec(_self[0].value) ? /[^.]+$/.exec(_self[0].value)[0] : undefined,
 			    _parentNode = _self.parent(),
 			    _elID = _parentNode.data('id');
 
@@ -1094,110 +1133,35 @@ $(document).ready(function (ev) {
 				var reader = new FileReader();
 
 				reader.onload = function () {
-					_parentNode.css({
-						'background-image': 'url("' + reader.result + '")'
-					});
-					$(_previewSlideSmall[_elID]).css({
-						'background-image': 'url("' + reader.result + '")'
-					});
-					$(_previewSlideLarge[_elID]).css({
-						'background-image': 'url("' + reader.result + '")'
-					});
-				};
+					switch (_fileExt.toLowerCase().trim()) {
+						case "jpg":
+						case "jpeg":
 
-				_parentNode.addClass('is-add');
-				_self.hide();
+							_parentNode.css({
+								'background-image': 'url("' + reader.result + '")'
+							});
+							$(_previewSlideSmall[_elID]).css({
+								'background-image': 'url("' + reader.result + '")'
+							});
+							$(_previewSlideLarge[_elID]).css({
+								'background-image': 'url("' + reader.result + '")'
+							});
+
+							_parentNode.addClass('is-add');
+							_self.hide();
+
+							break;
+						default:
+							alert("not an *.JPG or *.JPEG!");
+							break;
+					}
+				};
 
 				reader.readAsDataURL(_self[0].files[0]);
 			}
 
 			_self.val('');
 		});
-
-		/*
-  		const _previewAddMoreImagesNode = $('[upload-addPreviewImages-js]'),
-  			_previewSmallContainer = $('[upload-smallPreview-js]'),
-  			_previewSlideSmall = $('.mds__wrapper-preview .swiper-slide'),
-  			_previewSlideLarge = $('.mds__wrapper-right .swiper-slide');
-  
-  		let _fileCount = 0,
-  			_tmpIdx = 0;
-  
-  		const _previewTMPL = (fl, idx) => {
-  			return `				
-  				<script >
-  					const _removeSmallPreviewSlide${idx} = (ev) => {
-  						const _el = $(ev),
-  							_parentNode = _el.closest('.mds__screen-preview-card'),
-  							_parentNodeID = _parentNode.data('id');
-  						
-  						const _smallSlide = $('.mds__wrapper-preview .swiper-slide')[_parentNodeID],
-  							_largeSlide = $('.mds__wrapper-right .swiper-slide')[_parentNodeID];
-  						
-  						_parentNode.css({
-  							'background-image' : 'url("")'
-  						});
-  						$(_smallSlide).css({
-  							'background-image' : 'url("")'
-  						});
-  						$(_largeSlide).css({
-  							'background-image' : 'url("")'
-  						});
-  					};
-  				</script>
-  		
-  				<div data-id="${idx}">
-  					<div class="mds__screen-preview-card" style="background-image:url('${fl}')">
-  						<a onclick="_removeSmallPreviewSlide${idx}(this);" href="#" title="">
-  							<i class="icon-font icon-bin"></i>
-  						</a>					
-  					</div>
-  				</div>
-  			`;
-  		};
-  
-  
-  		$('[upload-slideshow-js] input[type="file"]').on('change', (ev) => {
-  			const _self = $(ev.currentTarget),
-  				_fileLen = _self[0].files.length;
-  
-  			const _infoNode = $('.mds__screen-row--info'),
-  				_slideShowBtn = $('[data-name="slideshow"]'),
-  				_slideShowAdditionalPreview = $('[data-name="slideshowPreview"]');
-  
-  			_infoNode.hide();
-  
-  			if(_fileLen > 5) {
-  				_infoNode.fadeIn('350').css({'display':'flex'});
-  			} else if(_fileLen !== 0) {
-  
-  				_slideShowBtn.hide();
-  				_slideShowAdditionalPreview.fadeIn(350);
-  
-  				for(let i = 0; i < _fileLen; i++) {
-  					const reader = new FileReader();
-  
-  					reader.onload = () => {
-  						if(i === 0) {
-  							_previewSmallContainer.prepend( _previewTMPL(reader.result, i));
-  						} else {
-  							$('[upload-smallPreview-js] > div').last().before( _previewTMPL(reader.result, i));
-  						}
-  
-  						$(_previewSlideSmall[i]).css({
-  							'background-image' : 'url("' + reader.result + '")'
-  						});
-  						$(_previewSlideLarge[i]).css({
-  							'background-image' : 'url("' + reader.result + '")'
-  						});
-  					};
-  
-  					reader.readAsDataURL(_self[0].files[i]);
-  				}
-  
-  				_self.val('');
-  			}
-  		});*/
 	};
 
 	/**

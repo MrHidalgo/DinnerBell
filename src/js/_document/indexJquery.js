@@ -287,6 +287,17 @@ $(document).ready((ev) => {
 	};
 
 
+	function checkExtensionLogo() {
+		let file = document.querySelector("#fUpload");
+		if ( /\.(png)$/i.test(file.files[0].name) === false ) { alert("not an *.PNG!"); }
+	}
+
+	const checkExtensionBG = () => {
+		let file = document.querySelector("#fUpload");
+		if ( /\.(jpe?g)$/i.test(file.files[0].name) === false ) { alert("not an *.JPG!"); }
+	};
+
+
 	/**
 	 * @name _additionMethodsUploadFiles
 	 *
@@ -297,8 +308,6 @@ $(document).ready((ev) => {
 	 * @private
 	 */
 	const _additionMethodsUploadFiles = (_prNode) => {
-		console.log(_prNode);
-
 		const
 			_colorPallet = _prNode.find('[change-bg-js]').closest('.mds__upload-left'),
 			_uploadBtn = _prNode.find('[change-img-js]').closest('.mds__upload-right'),
@@ -418,6 +427,7 @@ $(document).ready((ev) => {
 	const initTPChangeImage = () => {
 		$('[change-img-js] input[type="file"]').on('change', (ev) => {
 			const _self = $(ev.currentTarget),
+				_fileExt = (/[.]/.exec(_self[0].value)) ? /[^.]+$/.exec(_self[0].value)[0] : undefined,
 				_btnOpt = _self.data('opt'),
 				_parentNode = _self.closest('[upload-file-js]');
 
@@ -427,21 +437,37 @@ $(document).ready((ev) => {
 
 			if(_self[0].files.length !== 0) {
 
-				_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
-
 				const reader = new FileReader();
 
 				reader.onload = () => {
 					const _file = reader.result;
 
 					if(_btnOpt === 'logo') {
-						_additionMethodsUploadFiles(_parentNode).addImageOnPreviewLogo(_file);
+						if(_fileExt.toLowerCase().trim() !== "png") {
+							alert("not an *.PNG!");
+						} else {
+							_additionMethodsUploadFiles(_parentNode).addImageOnPreviewLogo(_file);
+							_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
+							_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
+						}
 					} else {
-						_additionMethodsUploadFiles(_parentNode).addImageOnPreview(_file);
+
+						switch (_fileExt.toLowerCase().trim()) {
+							case "jpg":
+							case "jpeg":
+
+								_additionMethodsUploadFiles(_parentNode).addImageOnPreview(_file);
+								_additionMethodsUploadFiles(_parentNode).hideColorPalletUploadBtn(_self);
+								_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
+
+								break;
+							default:
+								alert("not an *.JPG or *.JPEG!");
+								break;
+						}
 					}
 				};
 
-				_additionMethodsUploadFiles(_parentNode).showAdditionalUploadImageOption(_self);
 				reader.readAsDataURL(_self[0].files[0]);
 			}
 
@@ -645,6 +671,7 @@ $(document).ready((ev) => {
 
 		$('[upload-smallPreviewAdd-js] input[type="file"]').on('change', (ev) => {
 			const _self = $(ev.currentTarget),
+				_fileExt = (/[.]/.exec(_self[0].value)) ? /[^.]+$/.exec(_self[0].value)[0] : undefined,
 				_parentNode = _self.parent(),
 				_elID = _parentNode.data('id');
 
@@ -652,19 +679,29 @@ $(document).ready((ev) => {
 				const reader = new FileReader();
 
 				reader.onload = () => {
-					_parentNode.css({
-						'background-image' : 'url("' + reader.result + '")'
-					});
-					$(_previewSlideSmall[_elID]).css({
-						'background-image' : 'url("' + reader.result + '")'
-					});
-					$(_previewSlideLarge[_elID]).css({
-						'background-image' : 'url("' + reader.result + '")'
-					});
-				};
+					switch (_fileExt.toLowerCase().trim()) {
+						case "jpg":
+						case "jpeg":
 
-				_parentNode.addClass('is-add');
-				_self.hide();
+							_parentNode.css({
+								'background-image' : 'url("' + reader.result + '")'
+							});
+							$(_previewSlideSmall[_elID]).css({
+								'background-image' : 'url("' + reader.result + '")'
+							});
+							$(_previewSlideLarge[_elID]).css({
+								'background-image' : 'url("' + reader.result + '")'
+							});
+
+							_parentNode.addClass('is-add');
+							_self.hide();
+
+							break;
+						default:
+							alert("not an *.JPG or *.JPEG!");
+							break;
+					}
+				};
 
 				reader.readAsDataURL(_self[0].files[0]);
 			}

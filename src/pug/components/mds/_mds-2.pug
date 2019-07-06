@@ -68,7 +68,7 @@ section#mds.mds
 								.mds__upload-bg(change-imageParent-js)
 									div(change-img-js)
 										span!= "Upload image"
-										input(type='file' accept=".jpg, .jpeg" name='upload_static' data-opt='static')
+										input(type='file' name='upload_static' data-opt='static')
 
 						.mds__upload.mds__upload--hi
 							.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)
@@ -103,58 +103,52 @@ section#mds.mds
 							.mds__screen-col.mds__screen-col-0
 								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, JPEG<br>5 images maximum"
 							.mds__screen-col.mds__screen-col-1
-								.mds__upload-bg(upload-slideshow-js)
-									div
-										span!= "Upload images"
-						.mds__screen-row.mds__screen-row--info
-							h2!= "You are trying to upload more than 6 files!"
 
-					.mds__screen.mds__screen--slideshow(data-name='slideshowPreview')
-						p.mds__screen-title!= "Slideshow images"
-						.mds__screen-row
-							.mds__screen-preview(upload-smallPreview-js)
-								div
-									.mds__screen-preview-card(data-id="0" upload-smallPreviewAdd-js)
-										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
-											i.icon-font.icon-bin
-										.mds__screen-preview-card-add
-											span!= "+"
-										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
-								div
-									.mds__screen-preview-card(data-id="1" upload-smallPreviewAdd-js)
-										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
-											i.icon-font.icon-bin
-										.mds__screen-preview-card-add
-											span!= "+"
-										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
-								div
-									.mds__screen-preview-card(data-id="2" upload-smallPreviewAdd-js)
-										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
-											i.icon-font.icon-bin
-										.mds__screen-preview-card-add
-											span!= "+"
-										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
-								div
-									.mds__screen-preview-card(data-id="3" upload-smallPreviewAdd-js)
-										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
-											i.icon-font.icon-bin
-										.mds__screen-preview-card-add
-											span!= "+"
-										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
-								div
-									.mds__screen-preview-card(data-id="4" upload-smallPreviewAdd-js)
-										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
-											i.icon-font.icon-bin
-										.mds__screen-preview-card-add
-											span!= "+"
-										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
-								div
-									.mds__screen-preview-card(data-id="5" upload-smallPreviewAdd-js)
-										a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
-											i.icon-font.icon-bin
-										.mds__screen-preview-card-add
-											span!= "+"
-										input(type='file' accept=".jpg, .jpeg" name="slideshow_")
+						.mds__screen.mds__screen--slideshow(data-name='slideshowPreview')
+							.mds__screen-row
+								.mds__screen-preview(upload-smallPreview-js)
+									div
+										.mds__screen-preview-card(data-id="0" upload-smallPreviewAdd-js)
+											a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+												i.icon-font.icon-bin
+											.mds__screen-preview-card-add
+												span!= "+"
+											input(type='file' accept="image/jpg, image/jpeg" name="slideshow_")
+									div
+										.mds__screen-preview-card(data-id="1" upload-smallPreviewAdd-js)
+											a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+												i.icon-font.icon-bin
+											.mds__screen-preview-card-add
+												span!= "+"
+											input(type='file' accept="image/jpg, image/jpeg" name="slideshow_")
+									div
+										.mds__screen-preview-card(data-id="2" upload-smallPreviewAdd-js)
+											a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+												i.icon-font.icon-bin
+											.mds__screen-preview-card-add
+												span!= "+"
+											input(type='file' accept="image/jpg, image/jpeg" name="slideshow_")
+									div
+										.mds__screen-preview-card(data-id="3" upload-smallPreviewAdd-js)
+											a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+												i.icon-font.icon-bin
+											.mds__screen-preview-card-add
+												span!= "+"
+											input(type='file' accept="image/jpg, image/jpeg" name="slideshow_")
+									div
+										.mds__screen-preview-card(data-id="4" upload-smallPreviewAdd-js)
+											a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+												i.icon-font.icon-bin
+											.mds__screen-preview-card-add
+												span!= "+"
+											input(type='file' accept="image/jpg, image/jpeg" name="slideshow_")
+									div
+										.mds__screen-preview-card(data-id="5" upload-smallPreviewAdd-js)
+											a.mds__screen-preview-card-clear(href='#', title='' upload-smallPreviewClear-js)
+												i.icon-font.icon-bin
+											.mds__screen-preview-card-add
+												span!= "+"
+											input(type='file' accept="image/jpg, image/jpeg" name="slideshow_")
 
 					// BACKGROUND VIDEO
 					// =========================
@@ -165,7 +159,7 @@ section#mds.mds
 								p.mds__screen-desc!= "Video dimensions: 768x1024<br>Supported Formats: OGG, MP4, WEBM<br>Max file weight: 50 Mb"
 							.mds__screen-col.mds__screen-col-1
 								.mds__screen-upload(upload-video-js)!= "Upload video"
-									input(type='file' accept=".webm, .ogg, .mp4" name='upload_video')
+									input(type='file' accept="video/webm, video/ogg, video/mp4" name='upload_video')
 						.mds__upload-row-wrapper(upload-previewFiles-js upload-preview-video-js)
 
 					// LOGO
@@ -174,12 +168,12 @@ section#mds.mds
 						p.mds__screen-title!= "Logo overlay"
 						.mds__screen-row(upload-mainPallet-js)
 							.mds__screen-col.mds__screen-col-0
-								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: JPG, JPEG, PNG"
+								p.mds__screen-desc!= "Image dimensions: 768x1024<br>Supported Formats: PNG"
 							.mds__screen-col.mds__screen-col-1
 								.mds__upload-bg(change-imageParent-js)
 									div(change-img-js)
 										span!= "Upload image"
-										input(type='file' accept=".jpg, .jpeg, .png" name='upload_logo' data-opt='logo')
+										input(type='file'  name='upload_logo' data-opt='logo')
 
 						.mds__upload.mds__upload--hi
 							.mds__upload-wrapper.mds__upload-wrapper--double.mds__upload-wrapper--additional(upload-additional-js)

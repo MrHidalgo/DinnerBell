@@ -519,22 +519,26 @@
 
 	// screen
 	&__screen {
+		cursor: pointer;
 		position: relative;
-		padding: 20px;
+		padding: 20px 20px 0;
 		margin-bottom: 20px;
-
-		&:hover {
-			&:before {
-				border-color: rgba(105, 192, 241, 0.25);
-				@include transition(border-color);
-			}
-		}
 
 		&.is-choose {
 			&:before {
 				border-color: rgb(105, 192, 241);
 				box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 				@include transition(border-color, box-shadow);
+			}
+
+			.mds__screen-row {
+				&:nth-of-type(1) {
+					display: flex;
+					padding-bottom: 20px;
+					animation-fill-mode: both;
+					animation-direction: 350ms;
+					animation-name: fadeIn;
+				}
 			}
 		}
 		&.is-error {
@@ -571,7 +575,7 @@
 			border-radius: 5px;
 			border-width: 1px;
 			border-style: solid;
-			border-color: transparent;
+			border-color: rgba(105, 192, 241, 0.25);
 			background-color: #ffffff;
 			@include transition(border-color, box-shadow);
 		}
@@ -590,7 +594,7 @@
 		}
 
 		&-title {
-			padding-bottom: 30px;
+			padding-bottom: 20px;
 			color: #000000;
 			font-size: 20px;
 			font-weight: bold;
@@ -615,6 +619,10 @@
 			align-items: center;
 			@include adaptive(575) {
 				flex-wrap: wrap;
+			}
+
+			&:nth-of-type(1) {
+				display: none;
 			}
 
 			&--info {
@@ -722,7 +730,13 @@
 		}
 
 		&--slideshow {
-			display: none;
+			//display: none;
+			padding: 0 !important;
+			margin-bottom: 0 !important;
+
+			&:before {
+				display: none;
+			}
 
 			&:before {
 				border-color: rgb(105, 192, 241);
@@ -735,11 +749,16 @@
 			}
 
 			.mds__screen {
+				&-row {
+					//display: flex;
+					padding-bottom: 0 !important;
+				}
 				&-preview {
 					display: flex;
 					flex-wrap: wrap;
 					width: calc(100% + 20px);
 					margin-left: -10px;
+					padding-bottom: 10px;
 
 					> div {
 						width: 100%;
@@ -1280,6 +1299,7 @@
 
 			&--additional {
 				display: none;
+				padding-bottom: 20px !important;
 
 				> div {
 					display: flex;
