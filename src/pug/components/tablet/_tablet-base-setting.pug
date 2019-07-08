@@ -22,10 +22,10 @@
 						i.icon-font.icon-bell(navIcon-js)
 
 			.tablet__content(change-background-js)
-				.tablet__subheader
+				.tablet__subheader(navBorder-js navBg-js)
 					a(href="#" class="" title="")
 						i.icon-font.icon-corner
-					p(sectionHeader-js)!= "Cold Appetizers"
+					p(sectionHeader-js navText-js)!= "Cold Appetizers"
 					a(href="#" class="" title="")
 						i.icon-font.icon-corner
 
@@ -64,8 +64,8 @@
 				.tablet__neutral-total
 					.tablet__order(change-neutral-js)
 						p(change-neutral2-js)!= "Order total:"
-						div
-							span(numeric-js change-neutral2-js data-price="245.35")!= "<span currency-sign-js change-neutral2-js>$</span>245.35"
+						div(change-neutral2-js)
+							span(numeric-js data-price="245.35")!= "<span currency-sign-js>$</span>245.35"
 				.tablet__neutral-prev(change-neutral1-js)
 					i.icon-font.icon-arrow
 				.tablet__neutral-confirm(change-confirm-js)

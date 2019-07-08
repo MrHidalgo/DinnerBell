@@ -1159,7 +1159,7 @@ $(document).ready((ev) => {
 	 */
 	const initTPSelectCurrency = () => {
 		$('[select-currency-js]').on('change', (ev) => {
-			$('[currency-sign-js]').text(_$(ev.currentTarget).find('option:selected').val());
+			$('[currency-sign-js]').text($(ev.currentTarget).find('option:selected').val());
 		});
 	};
 
@@ -1181,22 +1181,30 @@ $(document).ready((ev) => {
 
 			if(_format === '$0') {
 				_priceArr.map((val, idx) => {
-					$('[numeric-js]')[idx].innerHTML = '<span currency-sign-js>$</span>' + parseInt(val).toFixed(0);
+					const _num = $('[numeric-js]')[idx];
+
+					_num.innerHTML = '<span currency-sign-js>' + $(_num).parent().find('[currency-sign-js]').text() + '</span>' + parseInt(val).toFixed(0);
 				});
 			}
 			else if(_format === '$0.00') {
 				_priceArr.map((val, idx) => {
-					$('[numeric-js]')[idx].innerHTML = '<span currency-sign-js>$</span>' + val;
+					const _num = $('[numeric-js]')[idx];
+
+					_num.innerHTML = '<span currency-sign-js>' + $(_num).parent().find('[currency-sign-js]').text() + '</span>' + val;
 				});
 			}
 			else if(_format === '0$') {
 				_priceArr.map((val, idx) => {
-					$('[numeric-js]')[idx].innerHTML = parseInt(val).toFixed(0) + '<span currency-sign-js>$</span>';
+					const _num = $('[numeric-js]')[idx];
+
+					_num.innerHTML = parseInt(val).toFixed(0) + '<span currency-sign-js>' + $(_num).parent().find('[currency-sign-js]').text() + '</span>';
 				});
 			}
 			else if(_format === '0.00$') {
 				_priceArr.map((val, idx) => {
-					$('[numeric-js]')[idx].innerHTML = val + '<span currency-sign-js>$</span>';
+					const _num = $('[numeric-js]')[idx];
+
+					_num.innerHTML = val + '<span currency-sign-js>' + $(_num).parent().find('[currency-sign-js]').text() + '</span>';
 				});
 			}
 		});
