@@ -1,0 +1,219 @@
+// SECTION trial period :: START
+
+.trial {
+	padding-top: 30px;
+
+	&__wrapper {
+		width: 100%;
+		max-width: 650px;
+	}
+
+	&__title {
+		padding-bottom: 50px;
+		font-size: 32px;
+	}
+
+	&__week {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 40px;
+
+		&-title {
+			font-size: 20px;
+		}
+
+		&-desc {
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__col {
+		width: 50%;
+
+		&-1 {
+			padding-right: 15px;
+		}
+	}
+
+	&__revenue,
+	&__feedback {
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-head {
+			display: flex;
+			align-items: center;
+			padding-bottom: 40px;
+		}
+
+		&-body {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-image {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #f8f8f8;
+		}
+
+		&-title {
+			padding-left: 20px;
+			font-size: 20px;
+			font-weight: 500;
+		}
+	}
+
+	&__revenue {
+		&-list {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 250px;
+		}
+
+		&-item {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 15px;
+
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+
+			&.is-current {
+				.trial__revenue-item {
+					&-day,
+					&-date,
+					&-count {
+						color: #61bdf0;
+						font-weight: bold;
+					}
+				}
+			}
+
+			&-day,
+			&-date,
+			&-count {
+				line-height: 1;
+			}
+
+			&-day,
+			&-date {
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+
+			&-date {
+				color: #999999;
+			}
+
+			&-count {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__feedback {
+		&-rating,
+		&-star {
+			&-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-bottom: 15px;
+
+				&:last-of-type {
+					padding-bottom: 0;
+				}
+			}
+
+			&-col {
+				width: 100%;
+
+				&-1 {
+					max-width: 120px;
+				}
+				&-2 {
+					max-width: 125px;
+				}
+				&-3 {
+					max-width: calc(100% - (120px + 125px));
+					padding-left: 20px;
+				}
+			}
+
+			&-name {
+				font-size: 16px;
+			}
+
+			&-num {
+				color: #80c4e9;
+				font-size: 16px;
+			}
+		}
+
+		&-star {
+			padding-bottom: 50px;
+
+			&-progress {
+				overflow: hidden;
+				position: relative;
+				width: 100%;
+				height: 25px;
+				padding: 3px;
+				border-radius: 5px;
+
+				&:after {
+					content: '';
+					z-index: -1;
+					position: absolute;
+					top: -3px;
+					left: -3px;
+					width: calc(100% + 6px);
+					height: calc(100% + 6px);
+					background-color: #f9f9f9;
+				}
+
+				i {
+					display: flex;
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+					max-width: 100%;
+					height: 19px;
+					border-radius: 5px;
+					background-color: #80c4e9;
+				}
+			}
+		}
+
+		&-rating {
+			&-star {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.icon-font {
+					color: #80c4e9;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+// SECTION trial period :: END

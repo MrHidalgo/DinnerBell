@@ -1,0 +1,171 @@
+// SECTION trial period :: START
+
+section#trial.trial
+	.c-grid
+		.trial__wrapper
+
+			h2.trial__title!= "Welcome to your<br>Dashboard, Peter."
+
+			.trial__week
+				p.trial__week-title Your week in numbers:
+				span.trial__week-desc Apr 6 - May 5
+
+
+			.trial__row
+				.trial__col.trial__col-1
+
+					.trial__revenue-wrapper
+
+						.trial__revenue-head
+							.trial__revenue-image
+								i.icon-png.i-revenue
+							p.trial__revenue-title Revenue
+
+						.trial__revenue-body
+
+							ul.trial__revenue-list
+								-
+									const arr = [
+										{
+											day: 'Monday',
+											date: '09.05.19',
+											count: '$2003.50',
+										},
+										{
+											day: 'Tuesday',
+											date: '10.05.19',
+											count: '$3360.50',
+										},
+										{
+											day: 'Wednesday',
+											date: '11.05.19',
+											count: '$5267.50',
+										},
+										{
+											day: 'Thursday',
+											date: '12.05.19',
+											count: '$3876.00',
+										},
+										{
+											day: 'Friday',
+											date: '13.05.19',
+											count: '$435.00',
+										},
+										{
+											day: 'Saturday',
+											date: '14.05.19',
+											count: '$0',
+										},
+										{
+											day: 'Sunday',
+											date: '15.05.19',
+											count: '$0',
+										},
+									];
+
+								each val, idx in arr
+									li.trial__revenue-item(class!= (idx === 4)?'is-current':'')
+										div
+											p.trial__revenue-item-day!= arr[idx].day
+											span.trial__revenue-item-date!= arr[idx].date
+										div
+											p.trial__revenue-item-count!= arr[idx].count
+
+				.trial__col.trial__col-2
+
+					.trial__feedback-wrapper
+
+						.trial__feedback-head
+							.trial__feedback-image
+								i.icon-png.i-feedback
+							p.trial__feedback-title Feedback
+
+						.trial__feedback-body
+
+							.trial__feedback-star
+								.trial__feedback-star-wrapper
+									.trial__feedback-star-col.trial__feedback-star-col-1
+										p.trial__feedback-star-name 5 star
+									.trial__feedback-star-col.trial__feedback-star-col-2
+										.trial__feedback-star-progress
+											i(style="width:90%;")
+									.trial__feedback-star-col.trial__feedback-star-col-3
+										p.trial__feedback-star-num 90%
+
+								.trial__feedback-star-wrapper
+									.trial__feedback-star-col.trial__feedback-star-col-1
+										p.trial__feedback-star-name 4 star
+									.trial__feedback-star-col.trial__feedback-star-col-2
+										.trial__feedback-star-progress
+											i(style="width:80%;")
+									.trial__feedback-star-col.trial__feedback-star-col-3
+										p.trial__feedback-star-num 80%
+
+								.trial__feedback-star-wrapper
+									.trial__feedback-star-col.trial__feedback-star-col-1
+										p.trial__feedback-star-name 3 star
+									.trial__feedback-star-col.trial__feedback-star-col-2
+										.trial__feedback-star-progress
+											i(style="width:3%;")
+									.trial__feedback-star-col.trial__feedback-star-col-3
+										p.trial__feedback-star-num 3%
+
+								.trial__feedback-star-wrapper
+									.trial__feedback-star-col.trial__feedback-star-col-1
+										p.trial__feedback-star-name 2 star
+									.trial__feedback-star-col.trial__feedback-star-col-2
+										.trial__feedback-star-progress
+											i(style="width:5%;")
+									.trial__feedback-star-col.trial__feedback-star-col-3
+										p.trial__feedback-star-num 5%
+
+								.trial__feedback-star-wrapper
+									.trial__feedback-star-col.trial__feedback-star-col-1
+										p.trial__feedback-star-name 1 star
+									.trial__feedback-star-col.trial__feedback-star-col-2
+										.trial__feedback-star-progress
+											i(style="width:10%;")
+									.trial__feedback-star-col.trial__feedback-star-col-3
+										p.trial__feedback-star-num 10%
+
+							.trial__feedback-rating
+								.trial__feedback-rating-wrapper
+									.trial__feedback-rating-col.trial__feedback-rating-col-1
+										p.trial__feedback-rating-name Experience
+									.trial__feedback-rating-col.trial__feedback-rating-col-2
+										.trial__feedback-rating-star
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+									.trial__feedback-rating-col.trial__feedback-rating-col-3
+										p.trial__feedback-rating-num 4.5
+
+								.trial__feedback-rating-wrapper
+									.trial__feedback-rating-col.trial__feedback-rating-col-1
+										p.trial__feedback-rating-name Service
+									.trial__feedback-rating-col.trial__feedback-rating-col-2
+										.trial__feedback-rating-star
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-empty
+									.trial__feedback-rating-col.trial__feedback-rating-col-3
+										p.trial__feedback-rating-num 4
+
+								.trial__feedback-rating-wrapper
+									.trial__feedback-rating-col.trial__feedback-rating-col-1
+										p.trial__feedback-rating-name Food
+									.trial__feedback-rating-col.trial__feedback-rating-col-2
+										.trial__feedback-rating-star
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-full
+											i.icon-font.icon-star-half-empty
+									.trial__feedback-rating-col.trial__feedback-rating-col-3
+										p.trial__feedback-rating-num 4.8
+
+// SECTION trial period :: END

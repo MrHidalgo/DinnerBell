@@ -28,3 +28,9 @@ PageList:
 - file: menu-design-setting-8.html
   titleName: MDS - Log Out
   ready: 95
+- file: trial.html
+  titleName: Trial Period
+  ready: 55
+- file: services.html
+  titleName: Services
+  ready: 1
