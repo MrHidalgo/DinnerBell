@@ -1,0 +1,194 @@
+// SECTION item list :: START
+
+.itemList {
+	padding-top: 30px;
+
+	&__wrapper {
+		width: 100%;
+		max-width: 1170px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding-bottom: 40px;
+
+		> div {
+			display: flex;
+			align-items: center;
+		}
+
+		&-setting,
+		&-new {
+			display: flex;
+			align-items: center;
+			color: #61bdf0;
+		}
+
+		&-setting {
+			.icon-font {
+				font-size: 16px;
+				margin-right: 5px;
+			}
+
+			span {
+				font-size: 12px;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+		}
+
+		&-new {
+			margin-left: 40px;
+
+			span {
+				font-size: 30px;
+				font-weight: bold;
+				margin-right: 5px;
+			}
+
+			p {
+				font-size: 12px;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 28px;
+		font-weight: bold;
+
+		span {
+			padding-left: 15px;
+			font-weight: normal;
+		}
+	}
+
+	&__table {
+		.table-responsive {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.table {
+			width: 100%;
+			color: #000;
+			text-align: left;
+
+			.nowrap {
+				white-space: nowrap;
+			}
+
+			.red {
+				color: #b10000;
+				font-weight: bold;
+			}
+
+			.range {
+				display: flex;
+				align-items: center;
+
+				> * {
+					display: flex;
+					align-items: center;
+					width: 30px;
+					height: 30px;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+
+				&__btn {
+					justify-content: center;
+					color: #61bdf0;
+					font-size: 25px;
+				}
+
+				&__val {
+					width: auto;
+					min-width: 60px;
+					padding-left: 5px;
+					padding-right: 5px;
+					text-align: left;
+				}
+			}
+
+			.reload {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 30px;
+				height: 30px;
+
+				.icon-font {
+					color: #61bdf0;
+					font-size: 20px;
+				}
+			}
+
+			.btn {
+				display: flex;
+				align-items: center;
+
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 30px;
+					height: 30px;
+					margin-left: 5px;
+					margin-right: 5px;
+
+					.icon-font {
+						color: #000000;
+						font-size: 20px;
+					}
+				}
+			}
+
+			tr {
+				td {
+					&:last-of-type {
+						> div {
+							display: flex;
+							justify-content: flex-end;
+						}
+					}
+				}
+			}
+
+			th,
+			td {
+				padding: 0.75rem 0.5rem;
+				vertical-align: middle;
+				border-bottom: 2px solid #f6f4f4;
+			}
+
+			th {
+				font-weight: 300;
+			}
+
+			td {
+				border-bottom: 2px solid #f6f4f4;
+				font-weight: normal;
+			}
+
+			thead th {
+				vertical-align: bottom;
+				border-bottom-color: #f6f4f4;
+			}
+
+			tbody + tbody {
+				border-top: 2px solid #f6f4f4;
+			}
+		}
+	}
+}
+
+// SECTION item list :: END

@@ -81,29 +81,38 @@
 	@if $filename == padlock {
 		$char: "\E012";
 	}
-	@if $filename == rate {
+	@if $filename == pencil {
 		$char: "\E013";
 	}
-	@if $filename == settings {
+	@if $filename == rate {
 		$char: "\E014";
 	}
-	@if $filename == sign-out {
+	@if $filename == refresh {
 		$char: "\E015";
 	}
-	@if $filename == star-empty {
+	@if $filename == settings {
 		$char: "\E016";
 	}
-	@if $filename == star-full {
+	@if $filename == sign-out {
 		$char: "\E017";
 	}
-	@if $filename == star-half-empty {
+	@if $filename == star-empty {
 		$char: "\E018";
 	}
-	@if $filename == unlock {
+	@if $filename == star-full {
 		$char: "\E019";
 	}
-	@if $filename == user {
+	@if $filename == star-half-empty {
 		$char: "\E01A";
+	}
+	@if $filename == unlock {
+		$char: "\E01B";
+	}
+	@if $filename == user {
+		$char: "\E01C";
+	}
+	@if $filename == waste-bin {
+		$char: "\E01D";
 	}
 
 	@return $char;
@@ -192,8 +201,16 @@
 	@include icon(padlock);
 
 }
+.icon-pencil {
+	@include icon(pencil);
+
+}
 .icon-rate {
 	@include icon(rate);
+
+}
+.icon-refresh {
+	@include icon(refresh);
 
 }
 .icon-settings {
@@ -222,5 +239,9 @@
 }
 .icon-user {
 	@include icon(user);
+
+}
+.icon-waste-bin {
+	@include icon(waste-bin);
 
 }

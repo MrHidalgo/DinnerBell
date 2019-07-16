@@ -325,7 +325,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-alert:before, .icon-arrow:before, .icon-bell:before, .icon-billing:before, .icon-bin:before, .icon-close:before, .icon-cook:before, .icon-copy:before, .icon-corner:before, .icon-doc:before, .icon-eye:before, .icon-fullscreen:before, .icon-increase:before, .icon-information:before, .icon-list-menu:before, .icon-menu:before, .icon-move:before, .icon-padlock:before, .icon-rate:before, .icon-settings:before, .icon-sign-out:before, .icon-star-empty:before, .icon-star-full:before, .icon-star-half-empty:before, .icon-unlock:before, .icon-user:before {
+.icon-alert:before, .icon-arrow:before, .icon-bell:before, .icon-billing:before, .icon-bin:before, .icon-close:before, .icon-cook:before, .icon-copy:before, .icon-corner:before, .icon-doc:before, .icon-eye:before, .icon-fullscreen:before, .icon-increase:before, .icon-information:before, .icon-list-menu:before, .icon-menu:before, .icon-move:before, .icon-padlock:before, .icon-pencil:before, .icon-rate:before, .icon-refresh:before, .icon-settings:before, .icon-sign-out:before, .icon-star-empty:before, .icon-star-full:before, .icon-star-half-empty:before, .icon-unlock:before, .icon-user:before, .icon-waste-bin:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -336,134 +336,149 @@
   text-transform: none;
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-alert:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-bell:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-billing:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-bin:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-close:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-cook:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-copy:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-corner:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-doc:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-eye:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-fullscreen:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-increase:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-information:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-list-menu:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-menu:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-move:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
+/* line 122, src/scss/_generated/_spriteFont.scss */
 .icon-padlock:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-rate:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-pencil:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-settings:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-rate:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-sign-out:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-refresh:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-star-empty:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-settings:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-star-full:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-sign-out:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-star-half-empty:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-star-empty:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-unlock:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-star-full:before {
   content: "";
 }
 
-/* line 113, src/scss/_generated/_spriteFont.scss */
-.icon-user:before {
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-star-half-empty:before {
   content: "";
+}
+
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-unlock:before {
+  content: "";
+}
+
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-user:before {
+  content: "";
+}
+
+/* line 122, src/scss/_generated/_spriteFont.scss */
+.icon-waste-bin:before {
+  content: "";
 }
 
 @font-face {
@@ -10154,6 +10169,283 @@ picture {
 .menu__box-title {
   padding-top: 20px;
   font-size: 16px;
+}
+
+/* line 3, src/scss/_components/item-list/_item-list.scss */
+.itemList {
+  padding-top: 30px;
+}
+
+/* line 6, src/scss/_components/item-list/_item-list.scss */
+.itemList__wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 13, src/scss/_components/item-list/_item-list.scss */
+.itemList__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* line 20, src/scss/_components/item-list/_item-list.scss */
+.itemList__header > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 25, src/scss/_components/item-list/_item-list.scss */
+.itemList__header-setting, .itemList__header-new {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #61bdf0;
+}
+
+/* line 33, src/scss/_components/item-list/_item-list.scss */
+.itemList__header-setting .icon-font {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* line 38, src/scss/_components/item-list/_item-list.scss */
+.itemList__header-setting span {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 45, src/scss/_components/item-list/_item-list.scss */
+.itemList__header-new {
+  margin-left: 40px;
+}
+
+/* line 48, src/scss/_components/item-list/_item-list.scss */
+.itemList__header-new span {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* line 54, src/scss/_components/item-list/_item-list.scss */
+.itemList__header-new p {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 62, src/scss/_components/item-list/_item-list.scss */
+.itemList__title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* line 66, src/scss/_components/item-list/_item-list.scss */
+.itemList__title span {
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+/* line 73, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 80, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table {
+  width: 100%;
+  color: #000;
+  text-align: left;
+}
+
+/* line 85, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .nowrap {
+  white-space: nowrap;
+}
+
+/* line 89, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .red {
+  color: #b10000;
+  font-weight: bold;
+}
+
+/* line 94, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .range {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 98, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .range > * {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 107, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .range__btn {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #61bdf0;
+  font-size: 25px;
+}
+
+/* line 113, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .range__val {
+  width: auto;
+  min-width: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+
+/* line 122, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .reload {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+/* line 129, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .reload .icon-font {
+  color: #61bdf0;
+  font-size: 20px;
+}
+
+/* line 135, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 139, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .btn a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 148, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table .btn a .icon-font {
+  color: #000000;
+  font-size: 20px;
+}
+
+/* line 158, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table tr td:last-of-type > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 166, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table th,
+.itemList__table .table td {
+  padding: 0.75rem 0.5rem;
+  vertical-align: middle;
+  border-bottom: 2px solid #f6f4f4;
+}
+
+/* line 173, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table th {
+  font-weight: 300;
+}
+
+/* line 177, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table td {
+  border-bottom: 2px solid #f6f4f4;
+  font-weight: normal;
+}
+
+/* line 182, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table thead th {
+  vertical-align: bottom;
+  border-bottom-color: #f6f4f4;
+}
+
+/* line 187, src/scss/_components/item-list/_item-list.scss */
+.itemList__table .table tbody + tbody {
+  border-top: 2px solid #f6f4f4;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

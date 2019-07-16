@@ -1,0 +1,69 @@
+// SECTION item list :: START
+
+section#itemList.itemList
+	.c-grid
+		.itemList__wrapper
+
+			.itemList__header
+				div
+					h2.itemList__title Greens
+				div
+				div
+					a.itemList__header-setting(href="#" class="" title="")
+						i.icon-font.icon-settings
+						span Settings
+					a.itemList__header-new(href="#" class="" title="")
+						span +
+						p new item
+
+			.itemList__table
+				.table-responsive
+
+					table.table
+						thead
+							tr
+								th.nowrap Item
+								th.nowrap Stock
+								th.nowrap Stock left
+								th.nowrap Reset
+								th
+						tbody
+							tr
+								td Kale
+								td
+									.range
+										a.range__btn(href="#" class="" title="")!= "-"
+										.range__val 5 lb
+										a.range__btn(href="#" class="" title="")!= "+"
+								td.red 0.54 lb
+								td
+									a.reload(href="#" class="" title="")
+										i.icon-font.icon-refresh
+								td
+									div
+										.btn
+											a.edit(href="#" class="" title="")
+												i.icon-font.icon-pencil
+											a.remove(href="#" class="" title="")
+												i.icon-font.icon-waste-bin
+							tr
+								td Asparagus
+								td
+									.range
+										a.range__btn(href="#" class="" title="")!= "-"
+										.range__val 35.5 lb
+										a.range__btn(href="#" class="" title="")!= "+"
+								td 4 lb
+								td
+									a.reload(href="#" class="" title="")
+										i.icon-font.icon-refresh
+								td
+									div
+										.btn
+											a(href="#" class="" title="")
+												i.icon-font.icon-pencil
+											a(href="#" class="" title="")
+												i.icon-font.icon-waste-bin
+
+
+// SECTION item list :: END
