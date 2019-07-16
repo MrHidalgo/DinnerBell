@@ -37,3 +37,6 @@ PageList:
 - file: menu.html
   titleName: Menu
   ready: 55
+- file: menu-fixe.html
+  titleName: Menu Prix-fixe
+  ready: 55

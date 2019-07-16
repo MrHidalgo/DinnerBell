@@ -1,0 +1,54 @@
+// SECTION menu fixe price :: START
+
+section#menu.menu.menu--fixe
+	.c-grid
+		.menu__wrapper
+
+			.menu__header
+				div
+					h2.menu__title!= "Business lunch <span>$26</span>"
+				div
+				div
+					a.menu__header-setting(href="#" class="" title="")
+						i.icon-font.icon-settings
+						span Settings
+					a.menu__header-new(href="#" class="" title="")
+						span +
+						p new item
+
+			h3.menu__subtitle Appetizer
+
+			.menu__box-wrapper
+				each val, idx in [1,2,3,4,5]
+					div
+						.menu__box.menu__box(class!= "menu__box-" + val)
+							.menu__box-image(class!= (idx % 2 !== 0)?'menu__box-image--fill':'menu__box-image--emty')
+								if(idx % 2 === 0)
+									img(src="img/img-empty.png" alt="" title="")
+								else
+									img(src="img/img-test.jpg" alt="" title="")
+
+							if(idx % 2 === 0)
+								p.menu__box-title!= "Shelter Island Mirinated Oysters with Calamari"
+							else
+								p.menu__box-title!= "Grilled Fresh Calamari"
+
+			h3.menu__subtitle Main course
+
+			.menu__box-wrapper
+				each val, idx in [1,2,3]
+					div
+						.menu__box.menu__box(class!= "menu__box-" + val)
+							.menu__box-image(class!= (idx % 2 !== 0)?'menu__box-image--fill':'menu__box-image--emty')
+								if(idx % 2 === 0)
+									img(src="img/img-empty.png" alt="" title="")
+								else
+									img(src="img/img-test.jpg" alt="" title="")
+
+							if(idx % 2 === 0)
+								p.menu__box-title!= "Shelter Island Mirinated Oysters with Calamari"
+							else
+								p.menu__box-title!= "Grilled Fresh Calamari"
+
+
+// SECTION menu fixe price :: END

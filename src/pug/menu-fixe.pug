@@ -1,0 +1,12 @@
+---
+title: DinnerBell | Menu
+
+pageClassName: p-menu
+pageSubClassName: p-menu-fixe
+---
+extends shared/_layout
+
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/menu/_menu--fixe

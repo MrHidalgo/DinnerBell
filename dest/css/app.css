@@ -10064,12 +10064,25 @@ picture {
   font-weight: bold;
 }
 
-/* line 60, src/scss/_components/menu/_menu.scss */
+/* line 59, src/scss/_components/menu/_menu.scss */
+.menu__title span {
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+/* line 65, src/scss/_components/menu/_menu.scss */
+.menu__subtitle {
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 71, src/scss/_components/menu/_menu.scss */
 .menu__box {
   width: 100%;
 }
 
-/* line 63, src/scss/_components/menu/_menu.scss */
+/* line 74, src/scss/_components/menu/_menu.scss */
 .menu__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10084,7 +10097,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 70, src/scss/_components/menu/_menu.scss */
+/* line 81, src/scss/_components/menu/_menu.scss */
 .menu__box-wrapper > div {
   width: 100%;
   max-width: 315px;
@@ -10092,7 +10105,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 78, src/scss/_components/menu/_menu.scss */
+/* line 89, src/scss/_components/menu/_menu.scss */
 .menu__box-image {
   overflow: hidden;
   position: relative;
@@ -10113,7 +10126,7 @@ picture {
   background-color: #fafafa;
 }
 
-/* line 91, src/scss/_components/menu/_menu.scss */
+/* line 102, src/scss/_components/menu/_menu.scss */
 .menu__box-image--fill:hover img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -10125,7 +10138,7 @@ picture {
   transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 
-/* line 98, src/scss/_components/menu/_menu.scss */
+/* line 109, src/scss/_components/menu/_menu.scss */
 .menu__box-image img {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
@@ -10137,7 +10150,7 @@ picture {
   transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
 }
 
-/* line 105, src/scss/_components/menu/_menu.scss */
+/* line 116, src/scss/_components/menu/_menu.scss */
 .menu__box-title {
   padding-top: 20px;
   font-size: 16px;
