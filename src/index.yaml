@@ -33,4 +33,7 @@ PageList:
   ready: 55
 - file: services.html
   titleName: Services
-  ready: 1
+  ready: 55
+- file: menu.html
+  titleName: Menu
+  ready: 55

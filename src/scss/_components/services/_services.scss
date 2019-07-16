@@ -1,0 +1,108 @@
+// SECTION services :: START
+
+.services {
+	padding-top: 30px;
+
+	&__title {
+		padding-bottom: 40px;
+		font-size: 28px;
+	}
+
+	&__box {
+		width: 100%;
+
+		&-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			width: calc(100% + 40px);
+			margin-left: -40px;
+			padding-bottom: 50px;
+
+			> div {
+				width: 100%;
+				max-width: 390px;
+				padding-left: 40px;
+				padding-bottom: 40px;
+			}
+		}
+
+		&-image {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			height: 235px;
+			border-width: 1px;
+			border-color: rgb(224, 224, 224);
+			border-style: solid;
+			border-radius: 10px;
+			background-color: rgb(248, 248, 248);
+
+			&:hover {
+				img {
+					transform: scale(1.1);
+					@include transition(transform 0.7s);
+				}
+			}
+
+			img {
+				@extend %imageResCoverAbs;
+				transform-origin: center;
+				@include transition(transform 0.45s);
+			}
+		}
+
+		&-title {
+			padding-top: 20px;
+			padding-bottom: 30px;
+			font-size: 22px;
+			font-weight: 800;
+
+			span {
+				vertical-align: middle;
+				padding-left: 20px;
+				font-weight: 300;
+
+				sup {
+					font-size: 12px;
+				}
+			}
+		}
+
+		&-desc {
+			padding-bottom: 30px;
+			font-size: 16px;
+			font-weight: 300;
+
+			a {
+				color: #69c0f1;
+				font-weight: normal;
+			}
+		}
+
+		&-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			max-width: 121px;
+			height: 43px;
+			border-width: 1px;
+			border-color: rgb(105, 192, 241);
+			border-style: solid;
+			border-radius: 5px;
+			background-color: rgb(255, 255, 255);
+			color: #69c0f1;
+			font-size: 16px;
+			font-weight: bold;
+			@include transition(background-color, color);
+
+			&:hover {
+				background-color: #69c0f1;
+				color: #ffffff;
+				@include transition(background-color, color);
+			}
+		}
+	}
+}
+
+// SECTION services :: END

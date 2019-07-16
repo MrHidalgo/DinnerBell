@@ -1,0 +1,47 @@
+// SECTION services :: START
+
+section#services.services
+	.c-grid
+		.services__wrapper
+
+			.services__box-wrapper
+				each val, idx in [1,2,3,4,5,6,7]
+					div
+						.services__box(class!= "services__box-" + val)
+							.services__box-image
+								img(src="img/img-test.jpg" alt="" title="")
+
+							p.services__box-title!= "Digital Menu <span>$20<sup>/mo</sup></span>"
+							p.services__box-desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. <a href='#'>Learn More ></a>"
+
+							a.services__box-btn(href="#" class="" title="")!= "Subscribe"
+
+			h3.services__title!= "Creative Services:"
+
+			.services__box-wrapper
+				each val, idx in [1,2,3,4]
+					div
+						.services__box(class!= "services__box-" + val)
+							.services__box-image
+								img(src="img/img-test.jpg" alt="" title="")
+
+							p.services__box-title!= "Digital Menu <span>$20<sup>/mo</sup></span>"
+							p.services__box-desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. <a href='#'>Learn More ></a>"
+
+							a.services__box-btn(href="#" class="" title="")!= "Subscribe"
+
+			h3.services__title!= "Coming soon:"
+
+			.services__box-wrapper
+				each val, idx in [1,2,3]
+					div
+						.services__box(class!= "services__box-" + val)
+							.services__box-image
+								img(src="img/img-test.jpg" alt="" title="")
+
+							p.services__box-title!= "Digital Menu <span>$20<sup>/mo</sup></span>"
+							p.services__box-desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. <a href='#'>Learn More ></a>"
+
+							a.services__box-btn(href="#" class="" title="")!= "Subscribe"
+
+// SECTION services :: END
