@@ -52,3 +52,6 @@ PageList:
 - file: new-category.html
   titleName: New Category
   ready: 55
+- file: new-item.html
+  titleName: New Item
+  ready: 55

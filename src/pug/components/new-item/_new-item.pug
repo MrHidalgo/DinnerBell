@@ -1,0 +1,123 @@
+// SECTION new item :: START
+
+-
+	var dataFormObj = {
+		inputName: {
+			classMod: "",
+			uniqueName: "input_name",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "Name",
+			val: ""
+		},
+		inputPrice: {
+			classMod: "",
+			uniqueName: "input_price",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "Price ($)",
+			val: ""
+		},
+		inputStock: {
+			classMod: "",
+			uniqueName: "input_stock",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "Stock Keeping Unit (SKU)",
+			val: ""
+		},
+		selectFieldCustomItemCategory: {
+			classMod: "",
+			uniqueName: "select_ItemCategory",
+			labelVal: "Item category:",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Greens"
+		},
+		selectFieldCustomUnitType: {
+			classMod: "",
+			uniqueName: "select_UnitType",
+			labelVal: "Unit type:",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Ounces"
+		},
+		selectFieldCustomMenuLabel: {
+			classMod: "",
+			uniqueName: "select_MenuLabel",
+			labelVal: "Menu label:",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "No label"
+		},
+		textareaField: {
+			classMod: "",
+			uniqueName: "message",
+			labelVal: "",
+			textareaClassMod: "",
+			placeholderVal: "Description",
+			val: ""
+		},
+	};
+
+section#pf-menu.pf-menu
+	.c-grid
+
+		form(action='' method='' autocomplete='off')
+
+			.pf-menu__wrapper
+
+				p.pf-menu__title New Item
+
+				.pf-menu__form.pf-menu__form-1
+
+					.pf-menu__form-row
+						.pf-menu__form-col.pf-menu__form-col-1
+
+							.pf-menu__form-field.pf-menu__form-field--twoInput.pf-menu__form-field-8
+								div
+									+formInput(dataFormObj.inputName)
+								div
+									+formInput(dataFormObj.inputPrice)
+
+							.pf-menu__form-field.pf-menu__form-field--description.pf-menu__form-field-9
+								+formTextarea(dataFormObj.textareaField)
+
+							.pf-menu__form-field.pf-menu__form-field--half.pf-menu__form-field-10
+								div
+									+formInput(dataFormObj.inputStock)
+								div
+
+						.pf-menu__form-col.pf-menu__form-col-2
+
+							.pf-menu__upload
+								p Add photo
+								input(type='file' accept="image/jpg, image/jpeg")
+
+				.pf-menu__form.pf-menu__form-2
+
+					.pf-menu__form-field.pf-menu__form-field--threeSelect.pf-menu__form-field-7
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomItemCategory)
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomUnitType)
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomMenuLabel)
+
+				.pf-menu__form.pf-menu__form-3
+					button.pf-menu__btn(type="submit") Add new item
+
+
+// SECTION new item :: END
