@@ -1,0 +1,149 @@
+// SECTION regular menu :: START
+
+-
+	var dataFormObj = {
+		inputMenuName: {
+			classMod: "",
+			uniqueName: "input_menu_name",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "Menu name",
+			val: ""
+		},
+		inputSubsectionName: {
+			classMod: "",
+			uniqueName: "input_subsection_name",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "Subsection Name",
+			val: ""
+		},
+		inputMealPrice: {
+			classMod: "",
+			uniqueName: "input_meal_price",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "$0",
+			val: ""
+		},
+		selectFieldCustomServingFrom: {
+			classMod: "",
+			uniqueName: "select_serving_from",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Serving from"
+		},
+		selectFieldCustomServingTo: {
+			classMod: "",
+			uniqueName: "select_serving_to",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "To"
+		},
+		selectFieldCustomPrixFixeMenu: {
+			classMod: "",
+			uniqueName: "select_prixfixe_menu",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Prix-fixe menu"
+		},
+	};
+
+section#pf-menu.pf-menu
+	.c-grid
+
+		form(action='' method='' autocomplete='off')
+
+			.pf-menu__wrapper
+
+				p.pf-menu__title Breakfast
+
+				.pf-menu__form.pf-menu__form-1
+
+					.pf-menu__form-row
+						.pf-menu__form-col.pf-menu__form-col-1
+
+							.pf-menu__form-field.pf-menu__form-field--inputWStatus.pf-menu__form-field-1
+								div
+									+formInput(dataFormObj.inputMenuName)
+								div
+
+									.pf-menu__status
+										p Status:
+										div
+											.pf-menu__status-btn
+												input(type="checkbox" checked='checked')
+												label
+													p
+														span off
+														span on
+													i
+
+							.pf-menu__form-field.pf-menu__form-field--twoSelect.pf-menu__form-field-2
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomServingFrom)
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomServingTo)
+
+							.pf-menu__form-field.pf-menu__form-field--oneSelect.pf-menu__form-field-3
+								+formSelectCustom(dataFormObj.selectFieldCustomPrixFixeMenu)
+
+						.pf-menu__form-col.pf-menu__form-col-2
+
+							.pf-menu__upload
+								p Add photo
+								input(type='file' accept="image/jpg, image/jpeg")
+
+				.pf-menu__header
+					div
+						p.pf-menu__subtitle Regular menu settings
+					div
+						.pf-menu__status
+							p Subsections:
+							div
+								.pf-menu__status-btn
+									input(type="checkbox")
+									label
+										p
+											span off
+											span on
+										i
+
+				.pf-menu__form.pf-menu__form-2
+
+					.pf-menu__form-field.pf-menu__form-field--details.pf-menu__form-field-5
+
+						.pf-menu__details
+							div
+								p Appetizer
+							div
+							a(href="#" class="" title="")
+								i.icon-font.icon-waste-bin
+
+					.pf-menu__form-field.pf-menu__form-field--inputWButton.pf-menu__form-field-6
+						div
+							+formInput(dataFormObj.inputSubsectionName)
+						div
+							a.pf-menu__add(href="#" class="" title="") Add subsection
+
+				.pf-menu__form.pf-menu__form-3
+					button.pf-menu__btn(type="submit") Save
+
+
+
+// SECTION regular menu :: END

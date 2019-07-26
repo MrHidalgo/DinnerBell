@@ -43,3 +43,9 @@ PageList:
 - file: item-list.html
   titleName: Item list
   ready: 55
+- file: regular-menu.html
+  titleName: Regular Menu
+  ready: 55
+- file: pre-fixe-menu.html
+  titleName: Prix-fixe Menu
+  ready: 55

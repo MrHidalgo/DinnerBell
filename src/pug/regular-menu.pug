@@ -1,0 +1,11 @@
+---
+title: DinnerBell | Regular Menu
+
+pageClassName: p-regular-menu
+---
+extends shared/_layout
+
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/regular-menu/_r-menu
