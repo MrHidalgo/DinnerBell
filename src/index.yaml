@@ -49,3 +49,6 @@ PageList:
 - file: pre-fixe-menu.html
   titleName: Prix-fixe Menu
   ready: 55
+- file: new-category.html
+  titleName: New Category
+  ready: 55

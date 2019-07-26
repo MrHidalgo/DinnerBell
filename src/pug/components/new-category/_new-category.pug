@@ -1,0 +1,96 @@
+// SECTION new category :: START
+
+-
+	var dataFormObj = {
+		inputCategoryName: {
+			classMod: "",
+			uniqueName: "input_category_name",
+			labelVal: "",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "Category name",
+			val: ""
+		},
+		selectFieldCustomSelectCategory: {
+			classMod: "",
+			uniqueName: "select_select_category",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Select Category"
+		},
+	};
+
+section#n-category.n-category
+	.c-grid
+		.n-category__wrapper
+
+			p.n-category__title New Category
+
+				form(action='' method='' autocomplete='off')
+
+					.n-category__form.n-category__form-1
+
+						.n-category__form-field.n-category__form-field-1
+							div
+								+formInput(dataFormObj.inputCategoryName)
+							div
+								.pf-menu__status
+									p Status:
+									div
+										.pf-menu__status-btn
+											input(type="checkbox")
+											label
+												p
+													span off
+													span on
+												i
+
+					.n-category__form.n-category__form-2
+
+						.n-category__import
+							.n-category__import-header
+								div
+									p Import items
+									span For your convenience DinnerBell<br>library contains over 200 ingredients
+								div
+									.n-category__form-field.n-category__form-field-2
+										div
+											+formSelectCustom(dataFormObj.selectFieldCustomSelectCategory)
+										div
+											a(href="#" class="" title="") Import Items
+
+							.n-category__import-body
+								p Greens
+
+								-
+									let arr = [
+										'Romaine',
+										'Spinach',
+										'Arugula',
+										'Spinach',
+										'Mesclun',
+										'Kale',
+										'Romaine',
+										'Mesclun',
+										'Romaine',
+										'Spinach',
+										'Arugula',
+										'Spinach'
+									];
+								.n-category__import-checkbox-wrapper
+									each val, idx in arr
+										.n-category__import-checkbox
+											input(type="checkbox")
+											label
+												span!= val
+
+					.n-category__form.n-category__form-3
+						p!= "Missing ingredient? <a href=''>Help us complete our library.</a>"
+
+						button.n-category__btn(type="submit") Save
+
+// SECTION new category :: END

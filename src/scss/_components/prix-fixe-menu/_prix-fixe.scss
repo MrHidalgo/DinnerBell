@@ -1,7 +1,7 @@
 // SECTION pre-fixe menu :: START
 
 .pf-menu {
-	padding-top: 36px;
+	padding-top: 30px;
 
 	&__wrapper {
 		width: 100%;
@@ -217,27 +217,27 @@
 	}
 
 	&__add {
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 41px;
-		box-shadow: none;
-		border: 1px solid rgb(105, 192, 241);
-		border-radius: 5px;
-		background-color: transparent;
-		color: rgb(105, 192, 241);
-		font-size: 18px;
-		font-weight: bold;
-		@include transition(background-color, color);
+		 cursor: pointer;
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
+		 width: 100%;
+		 height: 41px;
+		 box-shadow: none;
+		 border: 1px solid rgb(105, 192, 241);
+		 border-radius: 5px;
+		 background-color: transparent;
+		 color: rgb(105, 192, 241);
+		 font-size: 18px;
+		 font-weight: bold;
+		 @include transition(background-color, color);
 
-		&:hover {
-			background-color: rgb(105, 192, 241);
-			color: #fff;
-			@include transition(background-color, color);
-		}
-	}
+		 &:hover {
+			 background-color: rgb(105, 192, 241);
+			 color: #fff;
+			 @include transition(background-color, color);
+		 }
+	 }
 
 	&__status {
 		display: flex;
