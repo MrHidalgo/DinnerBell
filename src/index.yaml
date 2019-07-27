@@ -28,6 +28,7 @@ PageList:
 - file: menu-design-setting-8.html
   titleName: MDS - Log Out
   ready: 95
+- titleName: ==========
 - file: trial.html
   titleName: Trial Period
   ready: 90
@@ -36,7 +37,7 @@ PageList:
   ready: 90
 - file: menu.html
   titleName: Menu
-  ready: 55
+  ready: 90
 - file: menu-fixe.html
   titleName: Menu Prix-fixe
   ready: 55

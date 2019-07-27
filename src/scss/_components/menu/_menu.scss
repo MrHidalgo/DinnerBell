@@ -9,10 +9,17 @@
 		justify-content: space-between;
 		width: 100%;
 		padding-bottom: 40px;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+			font-size: 14px;
+		}
 
 		> div {
 			display: flex;
 			align-items: center;
+			@include adaptive(767) {
+				width: 100%;
+			}
 		}
 
 		&-setting,
@@ -55,6 +62,9 @@
 	&__title {
 		font-size: 28px;
 		font-weight: bold;
+		@include adaptive(767) {
+			font-size: 26px;
+		}
 
 		span {
 			padding-left: 15px;
@@ -80,9 +90,21 @@
 
 			> div {
 				width: 100%;
-				max-width: 315px;
+				max-width: calc(100% / 5);
 				padding-left: 15px;
 				padding-bottom: 30px;
+				@include adaptive(1599) {
+					max-width: calc(100% / 4);
+				}
+				@include adaptive(1365) {
+					max-width: calc(100% / 3);
+				}
+				@include adaptive(1023) {
+					max-width: calc(100% / 2);
+				}
+				@include adaptive(575) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -95,6 +117,9 @@
 			width: 100%;
 			height: 185px;
 			background-color: #fafafa;
+			@include adaptive(767) {
+				height: 150px;
+			}
 
 			&--empty {}
 			&--fill {
@@ -116,6 +141,9 @@
 		&-title {
 			padding-top: 20px;
 			font-size: 16px;
+			@include adaptive(767) {
+				font-size: 14px;
+			}
 		}
 	}
 }
