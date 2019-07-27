@@ -6,11 +6,17 @@
 	&__wrapper {
 		width: 100%;
 		max-width: 650px;
+		@include adaptive(767) {
+			max-width: 100%;
+		}
 	}
 
 	&__title {
 		padding-bottom: 50px;
 		font-size: 32px;
+		@include adaptive(767) {
+			font-size: 28px;
+		}
 	}
 
 	&__week {
@@ -31,13 +37,32 @@
 
 	&__row {
 		display: flex;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+			max-width: 375px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	&__col {
 		width: 50%;
+		@include adaptive(767) {
+			width: 100%;
+		}
 
 		&-1 {
 			padding-right: 15px;
+			@include adaptive(767) {
+				padding-right: 0;
+				padding-bottom: 30px;
+			}
+		}
+
+		&-2 {
+			@include adaptive(767) {
+				padding-bottom: 30px;
+			}
 		}
 	}
 
@@ -82,6 +107,9 @@
 			flex-direction: column;
 			width: 100%;
 			max-width: 250px;
+			@include adaptive(767) {
+				max-width: 100%;
+			}
 		}
 
 		&-item {
@@ -145,13 +173,24 @@
 
 				&-1 {
 					max-width: 120px;
+					@include adaptive(767) {
+						max-width: 100px;
+					}
 				}
 				&-2 {
 					max-width: 125px;
+					@include adaptive(767) {
+						flex: 1;
+						min-width: 1px;
+						max-width: 100%;
+					}
 				}
 				&-3 {
 					max-width: calc(100% - (120px + 125px));
 					padding-left: 20px;
+					@include adaptive(767) {
+						max-width: 70px;
+					}
 				}
 			}
 

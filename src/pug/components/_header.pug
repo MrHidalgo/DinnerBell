@@ -17,10 +17,11 @@ header#header.header
 
 		.header__wrapper-right
 
-			a.header__preview(href="#" class="" title="")
-				p
-					i.icon-font.icon-eye
-				span!= "preview"
+			if(pageMod !== 'woPreview')
+				a.header__preview(href="#" class="" title="")
+					p
+						i.icon-font.icon-eye
+					span!= "preview"
 
 			.header__dropdown(dropdown-js)
 				.header__dropdown-toggle(dropdown-btn-js)

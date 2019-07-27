@@ -30,7 +30,7 @@ PageList:
   ready: 95
 - file: trial.html
   titleName: Trial Period
-  ready: 55
+  ready: 90
 - file: services.html
   titleName: Services
   ready: 55
