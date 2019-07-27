@@ -6,6 +6,10 @@
 	&__title {
 		padding-bottom: 40px;
 		font-size: 28px;
+		@include adaptive(767) {
+			padding-bottom: 30px;
+			font-size: 26px;
+		}
 	}
 
 	&__box {
@@ -17,12 +21,28 @@
 			width: calc(100% + 40px);
 			margin-left: -40px;
 			padding-bottom: 50px;
+			@include adaptive(1365) {
+				width: calc(100% + 20px);
+				margin-left: -20px;
+			}
 
 			> div {
 				width: 100%;
-				max-width: 390px;
+				max-width: calc(100% / 4);
 				padding-left: 40px;
 				padding-bottom: 40px;
+				@include adaptive(1599) {
+					max-width: calc(100% / 3);
+				}
+				@include adaptive(1365) {
+					padding-left: 20px;
+				}
+				@include adaptive(1023) {
+					max-width: calc(100% / 2);
+				}
+				@include adaptive(575) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -36,6 +56,9 @@
 			border-style: solid;
 			border-radius: 10px;
 			background-color: rgb(248, 248, 248);
+			@include adaptive(767) {
+				height: 200px;
+			}
 
 			&:hover {
 				img {
@@ -56,6 +79,10 @@
 			padding-bottom: 30px;
 			font-size: 22px;
 			font-weight: 800;
+			@include adaptive(767) {
+				padding-bottom: 20px;
+				font-size: 20px;
+			}
 
 			span {
 				vertical-align: middle;
@@ -72,6 +99,9 @@
 			padding-bottom: 30px;
 			font-size: 16px;
 			font-weight: 300;
+			@include adaptive(767) {
+				font-size: 14px;
+			}
 
 			a {
 				color: #69c0f1;

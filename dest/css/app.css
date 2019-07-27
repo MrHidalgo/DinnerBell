@@ -9935,12 +9935,20 @@ picture {
   font-size: 28px;
 }
 
-/* line 11, src/scss/_components/services/_services.scss */
+@media screen and (max-width: 767px) {
+  /* line 6, src/scss/_components/services/_services.scss */
+  .services__title {
+    padding-bottom: 30px;
+    font-size: 26px;
+  }
+}
+
+/* line 15, src/scss/_components/services/_services.scss */
 .services__box {
   width: 100%;
 }
 
-/* line 14, src/scss/_components/services/_services.scss */
+/* line 18, src/scss/_components/services/_services.scss */
 .services__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9955,15 +9963,55 @@ picture {
   padding-bottom: 50px;
 }
 
-/* line 21, src/scss/_components/services/_services.scss */
+@media screen and (max-width: 1365px) {
+  /* line 18, src/scss/_components/services/_services.scss */
+  .services__box-wrapper {
+    width: -webkit-calc(100% + 20px);
+    width: calc(100% + 20px);
+    margin-left: -20px;
+  }
+}
+
+/* line 29, src/scss/_components/services/_services.scss */
 .services__box-wrapper > div {
   width: 100%;
-  max-width: 390px;
+  max-width: -webkit-calc(100% / 4);
+  max-width: calc(100% / 4);
   padding-left: 40px;
   padding-bottom: 40px;
 }
 
-/* line 29, src/scss/_components/services/_services.scss */
+@media screen and (max-width: 1599px) {
+  /* line 29, src/scss/_components/services/_services.scss */
+  .services__box-wrapper > div {
+    max-width: -webkit-calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 29, src/scss/_components/services/_services.scss */
+  .services__box-wrapper > div {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 29, src/scss/_components/services/_services.scss */
+  .services__box-wrapper > div {
+    max-width: -webkit-calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 29, src/scss/_components/services/_services.scss */
+  .services__box-wrapper > div {
+    max-width: 100%;
+  }
+}
+
+/* line 49, src/scss/_components/services/_services.scss */
 .services__box-image {
   overflow: hidden;
   position: relative;
@@ -9977,7 +10025,14 @@ picture {
   background-color: #f8f8f8;
 }
 
-/* line 41, src/scss/_components/services/_services.scss */
+@media screen and (max-width: 767px) {
+  /* line 49, src/scss/_components/services/_services.scss */
+  .services__box-image {
+    height: 200px;
+  }
+}
+
+/* line 64, src/scss/_components/services/_services.scss */
 .services__box-image:hover img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -9989,7 +10044,7 @@ picture {
   transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 
-/* line 47, src/scss/_components/services/_services.scss */
+/* line 70, src/scss/_components/services/_services.scss */
 .services__box-image img {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
@@ -10001,7 +10056,7 @@ picture {
   transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
 }
 
-/* line 54, src/scss/_components/services/_services.scss */
+/* line 77, src/scss/_components/services/_services.scss */
 .services__box-title {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -10009,32 +10064,47 @@ picture {
   font-weight: 800;
 }
 
-/* line 60, src/scss/_components/services/_services.scss */
+@media screen and (max-width: 767px) {
+  /* line 77, src/scss/_components/services/_services.scss */
+  .services__box-title {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+/* line 87, src/scss/_components/services/_services.scss */
 .services__box-title span {
   vertical-align: middle;
   padding-left: 20px;
   font-weight: 300;
 }
 
-/* line 65, src/scss/_components/services/_services.scss */
+/* line 92, src/scss/_components/services/_services.scss */
 .services__box-title span sup {
   font-size: 12px;
 }
 
-/* line 71, src/scss/_components/services/_services.scss */
+/* line 98, src/scss/_components/services/_services.scss */
 .services__box-desc {
   padding-bottom: 30px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 76, src/scss/_components/services/_services.scss */
+@media screen and (max-width: 767px) {
+  /* line 98, src/scss/_components/services/_services.scss */
+  .services__box-desc {
+    font-size: 14px;
+  }
+}
+
+/* line 106, src/scss/_components/services/_services.scss */
 .services__box-desc a {
   color: #69c0f1;
   font-weight: normal;
 }
 
-/* line 82, src/scss/_components/services/_services.scss */
+/* line 112, src/scss/_components/services/_services.scss */
 .services__box-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10065,7 +10135,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 99, src/scss/_components/services/_services.scss */
+/* line 129, src/scss/_components/services/_services.scss */
 .services__box-btn:hover {
   background-color: #69c0f1;
   color: #ffffff;
