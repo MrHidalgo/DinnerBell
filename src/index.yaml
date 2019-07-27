@@ -40,10 +40,10 @@ PageList:
   ready: 90
 - file: menu-fixe.html
   titleName: Menu Prix-fixe
-  ready: 55
+  ready: 90
 - file: item-list.html
   titleName: Item list
-  ready: 55
+  ready: 90
 - file: regular-menu.html
   titleName: Regular Menu
   ready: 55
