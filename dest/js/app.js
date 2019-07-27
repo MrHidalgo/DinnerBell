@@ -192,6 +192,36 @@ var initHeaderFixed = function initHeaderFixed() {
 };
 
 /**
+ * @name initInputFocus
+ *
+ * @description
+ */
+var initInputFocus = function initInputFocus() {
+	var inputElem = $("[input-js], [textarea-js]");
+
+	/**
+  * @description
+  */
+	inputElem.on("focus", function (e) {
+		var curElem = $(e.target);
+
+		curElem.closest(".c-form__field").addClass("is-focus");
+	});
+
+	/**
+  * @description
+  */
+	inputElem.on("blur", function (e) {
+		var curElem = $(e.target),
+		    curElemVal = curElem.val().trim();
+
+		if (curElemVal === "") {
+			curElem.closest(".c-form__field").removeClass("is-focus");
+		}
+	});
+};
+
+/**
  * @name initPreventBehavior
  *
  * @description
@@ -1690,6 +1720,7 @@ $(document).ready(function (ev) {
 		initCustomSelect();
 		initHamburger();
 		initSwiper();
+		initInputFocus();
 		// ==========================================
 
 		// callback

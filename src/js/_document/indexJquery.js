@@ -1246,6 +1246,7 @@ $(document).ready((ev) => {
 		initCustomSelect();
 		initHamburger();
 		initSwiper();
+		initInputFocus();
 		// ==========================================
 
 		// callback

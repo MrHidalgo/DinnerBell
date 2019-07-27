@@ -239,6 +239,49 @@
 			}
 		}
 	}
+
+	.c-form {
+		&__field {
+			&.is-focus {
+				.c-form {
+					&__label {
+						transform: translateY(-14px);
+						color: #bba478;
+						font-size: 14px;
+						@include transition(color, transform);
+					}
+
+					&__input {
+						padding-top: 15px;
+
+						&-wrapper {
+							height: 57px;
+							@include transition(height);
+						}
+					}
+				}
+			}
+		}
+
+		&__label {
+			z-index: 2;
+			position: absolute;
+			top: 0;
+			left: 15px;
+			width: 100%;
+			height: 41px;
+			padding: 0 15px 0 0;
+			color: #666;
+			@include transition(color, transform);
+		}
+
+		&__textarea,
+		&__input {
+			&-wrapper {
+				@include transition(height);
+			}
+		}
+	}
 }
 
 // SECTION new category :: END

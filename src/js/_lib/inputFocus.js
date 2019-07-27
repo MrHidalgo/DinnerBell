@@ -6,7 +6,7 @@
  * @description
  */
 const initInputFocus = () => {
-	const inputElem = $("[input-js]");
+	const inputElem = $("[input-js], [textarea-js]");
 
 	/**
 	 * @description
@@ -14,7 +14,7 @@ const initInputFocus = () => {
 	inputElem.on("focus", (e) => {
 		let curElem = $(e.target);
 
-		curElem.closest(".form__field").addClass("is-focus");
+		curElem.closest(".c-form__field").addClass("is-focus");
 	});
 
 	/**
@@ -25,7 +25,7 @@ const initInputFocus = () => {
 			curElemVal = curElem.val().trim();
 
 		if(curElemVal === "") {
-			curElem.closest(".form__field").removeClass("is-focus");
+			curElem.closest(".c-form__field").removeClass("is-focus");
 		}
 	});
 };

@@ -10918,11 +10918,16 @@ picture {
 }
 
 /* line 156, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu__form-field-9 .c-form__textarea {
+  padding: 0 15px;
+}
+
+/* line 159, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-9 .c-form__textarea-wrapper {
   height: 85px;
 }
 
-/* line 161, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 165, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10930,22 +10935,22 @@ picture {
   display: flex;
 }
 
-/* line 164, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 168, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 > div {
   width: 50%;
 }
 
-/* line 167, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 171, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 > div:nth-of-type(1) {
   padding-right: 10px;
 }
 
-/* line 171, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 175, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 > div:nth-of-type(2) {
   padding-left: 10px;
 }
 
-/* line 179, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 183, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__price {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10957,19 +10962,19 @@ picture {
           align-items: center;
 }
 
-/* line 183, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 187, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__price p {
   width: 180px;
   padding-bottom: 20px;
   font-size: 16px;
 }
 
-/* line 189, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 193, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__price > div {
   width: 180px;
 }
 
-/* line 194, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 198, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__details {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10991,19 +10996,19 @@ picture {
   margin-bottom: 20px;
 }
 
-/* line 204, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 208, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__details p {
   font-size: 16px;
   font-weight: bold;
 }
 
-/* line 209, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 213, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__details a {
   color: #000000;
   font-size: 16px;
 }
 
-/* line 215, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 219, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__upload {
   cursor: pointer;
   position: relative;
@@ -11031,7 +11036,7 @@ picture {
   background-color: white;
 }
 
-/* line 230, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 234, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__upload p {
   color: #69c0f1;
   text-align: center;
@@ -11039,7 +11044,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 237, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 241, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__upload input {
   cursor: pointer;
   opacity: 0;
@@ -11051,7 +11056,7 @@ picture {
   height: 100%;
 }
 
-/* line 249, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 253, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__btn {
   cursor: pointer;
   outline: none;
@@ -11077,14 +11082,14 @@ picture {
           border-radius: 5px;
   background-color: #69c0f1;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 267, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 271, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__btn:hover {
   background-color: transparent;
   color: #69c0f1;
@@ -11093,7 +11098,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 274, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 278, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__add {
   cursor: pointer;
   display: -webkit-box;
@@ -11117,14 +11122,14 @@ picture {
           border-radius: 5px;
   background-color: transparent;
   color: #69c0f1;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 290, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 294, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__add:hover {
   background-color: #69c0f1;
   color: #fff;
@@ -11133,7 +11138,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 297, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 301, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11146,19 +11151,19 @@ picture {
   height: 41px;
 }
 
-/* line 302, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 306, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status p {
   padding-right: 20px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 308, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 312, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status > div {
   position: relative;
 }
 
-/* line 312, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 316, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn {
   cursor: pointer;
   overflow: hidden;
@@ -11170,7 +11175,7 @@ picture {
           border-radius: 16px;
 }
 
-/* line 321, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 325, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label {
   cursor: pointer;
   position: absolute;
@@ -11196,7 +11201,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 334, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 338, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p {
   position: relative;
   display: -webkit-box;
@@ -11224,7 +11229,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 349, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 353, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p span {
   position: absolute;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -11232,12 +11237,12 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 353, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 357, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p span:nth-of-type(2) {
   opacity: 0;
 }
 
-/* line 359, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 363, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label i {
   width: 23px;
   height: 23px;
@@ -11252,7 +11257,7 @@ picture {
   transition: border-color 0.3s ease-in-out;
 }
 
-/* line 371, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 375, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input {
   opacity: 0;
   cursor: pointer;
@@ -11264,7 +11269,7 @@ picture {
   height: 100%;
 }
 
-/* line 382, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 386, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label {
   background-color: #a0d392;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -11272,7 +11277,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 386, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 390, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p {
   color: #ffffff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -11280,29 +11285,98 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 390, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 394, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p span {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 393, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 397, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p span:nth-of-type(1) {
   opacity: 0;
 }
 
-/* line 396, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 400, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p span:nth-of-type(2) {
   opacity: 1;
 }
 
-/* line 402, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 406, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label i {
   border-color: #a0d392;
   -webkit-transition: border-color 0.3s ease-in-out;
   -o-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
+}
+
+/* line 420, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__field.is-focus .c-form__label {
+  -webkit-transform: translateY(-7px);
+      -ms-transform: translateY(-7px);
+          transform: translateY(-7px);
+  color: #bba478;
+  font-size: 14px;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 427, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__field.is-focus .c-form__input {
+  padding-top: 15px;
+}
+
+/* line 430, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__field.is-focus .c-form__input-wrapper {
+  height: 57px;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+/* line 436, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__field.is-focus .c-form__textarea {
+  padding-top: 25px;
+}
+
+/* line 439, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__field.is-focus .c-form__textarea-wrapper {
+  height: 100px;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+/* line 448, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__field--select .c-form__label {
+  position: static;
+}
+
+/* line 454, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__label {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 100%;
+  height: 41px;
+  padding: 0 15px 0 0;
+  color: #666;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 467, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+.pf-menu .c-form__input-wrapper {
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 /* line 3, src/scss/_components/new-category/_new-category.scss */
@@ -11641,6 +11715,57 @@ picture {
 /* line 236, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox label span {
   font-size: 16px;
+}
+
+/* line 247, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__field.is-focus .c-form__label {
+  -webkit-transform: translateY(-14px);
+      -ms-transform: translateY(-14px);
+          transform: translateY(-14px);
+  color: #bba478;
+  font-size: 14px;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 254, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__field.is-focus .c-form__input {
+  padding-top: 15px;
+}
+
+/* line 257, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__field.is-focus .c-form__input-wrapper {
+  height: 57px;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+/* line 266, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__label {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 100%;
+  height: 41px;
+  padding: 0 15px 0 0;
+  color: #666;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 280, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__textarea-wrapper, .n-category .c-form__input-wrapper {
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
