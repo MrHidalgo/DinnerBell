@@ -253,11 +253,6 @@
 
 					&__input {
 						padding-top: 15px;
-
-						&-wrapper {
-							height: 57px;
-							@include transition(height);
-						}
 					}
 				}
 			}
@@ -275,7 +270,6 @@
 			@include transition(color, transform);
 		}
 
-		&__textarea,
 		&__input {
 			&-wrapper {
 				@include transition(height);

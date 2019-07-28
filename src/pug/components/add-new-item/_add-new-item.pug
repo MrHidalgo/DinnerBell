@@ -1,0 +1,182 @@
+// SECTION add new item :: START
+
+-
+	var dataFormObj = {
+		inputItemTitle: {
+			classMod: "",
+			uniqueName: "input_ItemTitle",
+			labelVal: "Item Title",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+		inputWeight: {
+			classMod: "",
+			uniqueName: "input_weight",
+			labelVal: "Weight (Oz)",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+		inputCalories: {
+			classMod: "",
+			uniqueName: "input_calories",
+			labelVal: "Calories",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+		inputPrice: {
+			classMod: "",
+			uniqueName: "input_Price",
+			labelVal: "Price ($)",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+		selectFieldCustomLabel: {
+			classMod: "",
+			uniqueName: "select_Label",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Label"
+		},
+		selectFieldCustomItemtype: {
+			classMod: "",
+			uniqueName: "select_Itemtype",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Item type"
+		},
+		selectFieldCustomPortionSize: {
+			classMod: "",
+			uniqueName: "select_Portionsize",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Portion size"
+		},
+		textareaField: {
+			classMod: "",
+			uniqueName: "message",
+			labelVal: "Description",
+			textareaClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+	};
+
+section#pf-menu.pf-menu
+	.c-grid
+
+		form(action='' method='' autocomplete='off')
+
+			.pf-menu__wrapper
+
+				p.pf-menu__title New item
+
+				.pf-menu__tabs-wrapper
+					a.pf-menu__tabs.is-active(href="#" class="" title="") Item Details
+					a.pf-menu__tabs(href="#" class="" title="") Used Ingredients
+					a.pf-menu__tabs(href="#" class="" title="") Customization options
+
+				.pf-menu__form.pf-menu__form-1
+
+					.pf-menu__form-field.pf-menu__form-field--inputWStatus.pf-menu__form-field-1
+						div
+							+formInput(dataFormObj.inputItemTitle)
+						div
+
+							.pf-menu__status
+								p Status:
+								div
+									.pf-menu__status-btn
+										input(type="checkbox")
+										label
+											p
+												span off
+												span on
+											i
+
+					.pf-menu__form-row
+						.pf-menu__form-col.pf-menu__form-col-1
+
+							.pf-menu__form-field.pf-menu__form-field--description.pf-menu__form-field-9
+								+formTextarea(dataFormObj.textareaField)
+
+							.pf-menu__form-field.pf-menu__form-field--checkbox.pf-menu__form-field-11
+								.pf-menu__checkbox
+									label
+										input(type='checkbox' name='')
+										span Use ingredient list
+
+							.pf-menu__form-field.pf-menu__form-field--twoSelect.pf-menu__form-field-2
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomLabel)
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomItemtype)
+
+						.pf-menu__form-col.pf-menu__form-col-2
+
+							.pf-menu__upload
+								p Add photo
+								input(type='file' accept="image/jpg, image/jpeg")
+
+				p.pf-menu__subtitle Portions and pricing
+
+				.pf-menu__form.pf-menu__form-2
+
+					.pf-menu__portion
+						.pf-menu__portion-row
+
+							.pf-menu__portion-result
+								div
+									p Extra Large
+								div
+									span 22 Oz
+								div
+									span 1400 Cal
+								div
+									span $69
+								div
+									a(href="#" class="" title="")
+										i.icon-font.icon-waste-bin
+
+						.pf-menu__portion-row
+
+							.pf-menu__portion-add
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomPortionSize)
+								div
+									+formInput(dataFormObj.inputWeight)
+								div
+									+formInput(dataFormObj.inputCalories)
+								div
+									+formInput(dataFormObj.inputPrice)
+								div
+									a.pf-menu__portion-btn(href="#" class="" title="") Add portion
+
+
+						.pf-menu__portion-row
+							a.pf-menu__portion-btn(href="#" class="" title="") Add portion
+
+				.pf-menu__form.pf-menu__form-3
+					button.pf-menu__btn(type="submit") Save the item
+
+
+// SECTION add new item :: END

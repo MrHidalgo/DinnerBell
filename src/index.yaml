@@ -56,3 +56,13 @@ PageList:
 - file: new-item.html
   titleName: New Item
   ready: 55
+- titleName: ==========
+- file: add-new-item.html
+  titleName: Add New Item
+  ready: 55
+- file: used-ingredients.html
+  titleName: Used Ingredients
+  ready: 1
+- file: customization.html
+  titleName: Customization
+  ready: 1
