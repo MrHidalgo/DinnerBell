@@ -1,0 +1,228 @@
+// SECTION used :: START
+
+-
+	var dataFormObj = {
+		selectFieldCustomSelectInventory : {
+			classMod: "",
+			uniqueName: "select_Selectinventorysection",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Select inventory section"
+		},
+		selectFieldCustomTest: {
+			classMod: "",
+			uniqueName: "select_",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'25 oz',
+			'30 oz',
+			],
+			placeholderVal: "30 oz"
+		},
+	};
+
+section#used.used
+	.c-grid
+		.used__wrapper
+
+			form(action='' method='' autocomplete='off')
+
+				.used__row.used__row-1
+
+					.used__list
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomSelectInventory)
+						div
+							a(href="#" class="" title="") Add ingredient list
+
+				p.used__title Greens
+
+				.used__row.used__row-2
+
+					.used__checkbox-wrapper
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Cabbage
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Mesclun
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Romaine
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Arugula
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Mesclun
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Kale
+						div
+							.customization__checkbox
+								input(type="checkbox" name="options")
+								label
+									span Romaine
+
+					a(href="#" class="" title="") Add selected ingredients
+
+				p.used__title Greens
+
+				.used__row.used__row-3
+
+					.used__box-wrapper
+						div
+							.used__box
+								div
+									p Cabbage
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomTest)
+								div
+									a(href="#" class="" title="")
+										i.icon-font.icon-waste-bin
+						div
+							.used__box
+								div
+									p Cabbage
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomTest)
+								div
+									a(href="#" class="" title="")
+										i.icon-font.icon-waste-bin
+						div
+							.used__box
+								div
+									p Cabbage
+								div
+									+formSelectCustom(dataFormObj.selectFieldCustomTest)
+								div
+									a(href="#" class="" title="")
+										i.icon-font.icon-waste-bin
+
+				.used__row.used__row-4
+
+					.used__block
+						.used__block-head
+							p.used__title Extra large
+						.used__block-body
+
+							p.used__title Greens
+
+								.used__row.used__row-3
+
+									.used__box-wrapper
+										div
+											.used__box
+												div
+													p Cabbage
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+										div
+											.used__box
+												div
+													p Cabbage
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+										div
+											.used__box
+												div
+													p Cabbage
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+
+							p.used__title Meat
+
+								.used__row.used__row-3
+
+									.used__box-wrapper
+										div
+											.used__box
+												div
+													p Chicken
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+
+					.used__block
+						.used__block-head
+							p.used__title Large
+						.used__block-body
+
+							p.used__title Greens
+
+								.used__row.used__row-3
+
+									.used__box-wrapper
+										div
+											.used__box
+												div
+													p Cabbage
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+										div
+											.used__box
+												div
+													p Cabbage
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+										div
+											.used__box
+												div
+													p Cabbage
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+
+							p.used__title Meat
+
+								.used__row.used__row-3
+
+									.used__box-wrapper
+										div
+											.used__box
+												div
+													p Chicken
+												div
+													+formSelectCustom(dataFormObj.selectFieldCustomTest)
+												div
+													a(href="#" class="" title="")
+														i.icon-font.icon-waste-bin
+
+
+// SECTION used :: END

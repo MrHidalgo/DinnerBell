@@ -1,0 +1,13 @@
+---
+title: DinnerBell | Used Ingredients
+
+pageClassName: p-used-ingredients
+pageMod: woPreview
+---
+extends shared/_layout
+
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/used-ingredients/_add-new-item
+		include components/used-ingredients/_used

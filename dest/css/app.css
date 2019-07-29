@@ -12636,4 +12636,367 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
+/* line 4, src/scss/_components/used-ingredients/_used.scss */
+.used__wrapper {
+  width: 100%;
+  max-width: 770px;
+}
+
+/* line 9, src/scss/_components/used-ingredients/_used.scss */
+.used__title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+/* line 17, src/scss/_components/used-ingredients/_used.scss */
+.used__row-2 a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  height: 41px;
+  margin-top: 20px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+  color: #69c0f1;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 35, src/scss/_components/used-ingredients/_used.scss */
+.used__row-2 a:hover {
+  background-color: #69c0f1;
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 43, src/scss/_components/used-ingredients/_used.scss */
+.used__row-3 {
+  padding-bottom: 30px;
+}
+
+/* line 48, src/scss/_components/used-ingredients/_used.scss */
+.used__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 53, src/scss/_components/used-ingredients/_used.scss */
+.used__list > div:nth-of-type(1) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+/* line 60, src/scss/_components/used-ingredients/_used.scss */
+.used__list > div:nth-of-type(2) {
+  width: 238px;
+}
+
+/* line 64, src/scss/_components/used-ingredients/_used.scss */
+.used__list > div a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 41px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+  color: #69c0f1;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 81, src/scss/_components/used-ingredients/_used.scss */
+.used__list > div a:hover {
+  background-color: #69c0f1;
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 90, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox {
+  position: relative;
+  width: 100%;
+  min-height: 45px;
+}
+
+/* line 95, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: -webkit-calc(100% + 5px);
+  width: calc(100% + 5px);
+  margin-left: -5px;
+}
+
+/* line 101, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 20px) / 4);
+  max-width: calc((100% - 20px) / 4);
+  margin-left: 5px;
+  padding-bottom: 5px;
+}
+
+/* line 109, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox input,
+.used__checkbox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 118, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox input {
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+
+/* line 124, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox input:checked + label {
+  border-color: white;
+  background-color: #d0ecfb;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 133, src/scss/_components/used-ingredients/_used.scss */
+.used__checkbox label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #f7f7f7;
+  background-color: #f7f7f7;
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 145, src/scss/_components/used-ingredients/_used.scss */
+.used__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 41px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: rgba(235, 235, 235, 0.4);
+}
+
+/* line 152, src/scss/_components/used-ingredients/_used.scss */
+.used__box-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+  margin-left: -20px;
+}
+
+/* line 158, src/scss/_components/used-ingredients/_used.scss */
+.used__box-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
+
+/* line 167, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div:nth-of-type(1) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding: 5px 13px;
+}
+
+/* line 178, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div:nth-of-type(2) {
+  width: 105px;
+}
+
+/* line 182, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div:nth-of-type(3) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 60px;
+  padding: 5px 13px;
+}
+
+/* line 188, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div:nth-of-type(3) a {
+  color: #999999;
+}
+
+/* line 194, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div .c-form__field {
+  margin-bottom: 0;
+}
+
+/* line 199, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div .c-form__select-wrapper {
+  height: 31px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #ffffff;
+}
+
+/* line 205, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div .c-form__select-value {
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  padding-left: 10px;
+  line-height: 31px;
+}
+
+/* line 211, src/scss/_components/used-ingredients/_used.scss */
+.used__box > div .c-form__select-icon {
+  width: 30px;
+}
+
+/* line 219, src/scss/_components/used-ingredients/_used.scss */
+.used__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid rgba(235, 235, 235, 0.8);
+}
+
+/* line 226, src/scss/_components/used-ingredients/_used.scss */
+.used__block-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  padding: 5px 25px;
+  background-color: rgba(235, 235, 235, 0.4);
+}
+
+/* line 233, src/scss/_components/used-ingredients/_used.scss */
+.used__block-head .used__title {
+  padding: 0;
+}
+
+/* line 238, src/scss/_components/used-ingredients/_used.scss */
+.used__block-body {
+  padding: 25px 5px;
+}
+
+/* line 241, src/scss/_components/used-ingredients/_used.scss */
+.used__block-body .used__title {
+  padding-top: 0;
+  padding-left: 20px;
+}
+
+/* line 248, src/scss/_components/used-ingredients/_used.scss */
+.used__block-body .used__row-3:last-of-type {
+  padding-bottom: 0;
+}
+
 /*# sourceMappingURL=maps/app.css.map */

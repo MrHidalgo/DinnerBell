@@ -62,7 +62,7 @@ PageList:
   ready: 55
 - file: used-ingredients.html
   titleName: Used Ingredients
-  ready: 1
+  ready: 55
 - file: customization.html
   titleName: Customization
   ready: 55
