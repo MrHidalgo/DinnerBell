@@ -1,0 +1,13 @@
+---
+title: DinnerBell | Customization
+
+pageClassName: p-customization
+pageMod: woPreview
+---
+extends shared/_layout
+
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/customization/_add-new-item
+		include components/customization/_customization

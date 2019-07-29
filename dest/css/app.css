@@ -12,25 +12,25 @@
      object-position: center;
 }
 
-/* line 200, src/scss/_generated/_spritePNG.scss */
+/* line 227, src/scss/_generated/_spritePNG.scss */
 .i-customers:before {
   background-image: url("../img/sprite.png");
-  background-position: -65px -71px;
+  background-position: 0px -130px;
   background-repeat: no-repeat;
   width: 26px;
   height: 21px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 200, src/scss/_generated/_spritePNG.scss */
+  /* line 227, src/scss/_generated/_spritePNG.scss */
   .i-customers:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 203, src/scss/_generated/_spritePNG.scss */
+/* line 230, src/scss/_generated/_spritePNG.scss */
 .i-entertainment:before {
   background-image: url("../img/sprite.png");
   background-position: -115px 0px;
@@ -40,51 +40,69 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 203, src/scss/_generated/_spritePNG.scss */
+  /* line 230, src/scss/_generated/_spritePNG.scss */
   .i-entertainment:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 206, src/scss/_generated/_spritePNG.scss */
+/* line 233, src/scss/_generated/_spritePNG.scss */
 .i-feedback:before {
   background-image: url("../img/sprite.png");
-  background-position: -34px -71px;
+  background-position: -30px -100px;
   background-repeat: no-repeat;
   width: 26px;
   height: 23px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 206, src/scss/_generated/_spritePNG.scss */
+  /* line 233, src/scss/_generated/_spritePNG.scss */
   .i-feedback:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 209, src/scss/_generated/_spritePNG.scss */
+/* line 236, src/scss/_generated/_spritePNG.scss */
+.i-image:before {
+  background-image: url("../img/sprite.png");
+  background-position: -34px -71px;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 18px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 236, src/scss/_generated/_spritePNG.scss */
+  .i-image:before {
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 239, src/scss/_generated/_spritePNG.scss */
 .i-inventory:before {
   background-image: url("../img/sprite.png");
-  background-position: -146px 0px;
+  background-position: -146px -29px;
   background-repeat: no-repeat;
   width: 21px;
   height: 25px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 209, src/scss/_generated/_spritePNG.scss */
+  /* line 239, src/scss/_generated/_spritePNG.scss */
   .i-inventory:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 212, src/scss/_generated/_spritePNG.scss */
+/* line 242, src/scss/_generated/_spritePNG.scss */
 .i-mastercard:before {
   background-image: url("../img/sprite.png");
   background-position: 0px 0px;
@@ -94,15 +112,15 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 212, src/scss/_generated/_spritePNG.scss */
+  /* line 242, src/scss/_generated/_spritePNG.scss */
   .i-mastercard:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 215, src/scss/_generated/_spritePNG.scss */
+/* line 245, src/scss/_generated/_spritePNG.scss */
 .i-menu:before {
   background-image: url("../img/sprite.png");
   background-position: -115px -60px;
@@ -112,33 +130,33 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 215, src/scss/_generated/_spritePNG.scss */
+  /* line 245, src/scss/_generated/_spritePNG.scss */
   .i-menu:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 218, src/scss/_generated/_spritePNG.scss */
+/* line 248, src/scss/_generated/_spritePNG.scss */
 .i-merchandise:before {
   background-image: url("../img/sprite.png");
-  background-position: -30px -100px;
+  background-position: -146px 0px;
   background-repeat: no-repeat;
   width: 23px;
   height: 24px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 218, src/scss/_generated/_spritePNG.scss */
+  /* line 248, src/scss/_generated/_spritePNG.scss */
   .i-merchandise:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 221, src/scss/_generated/_spritePNG.scss */
+/* line 251, src/scss/_generated/_spritePNG.scss */
 .i-notification:before {
   background-image: url("../img/sprite.png");
   background-position: -33px -38px;
@@ -148,15 +166,33 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 221, src/scss/_generated/_spritePNG.scss */
+  /* line 251, src/scss/_generated/_spritePNG.scss */
   .i-notification:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 224, src/scss/_generated/_spritePNG.scss */
+/* line 254, src/scss/_generated/_spritePNG.scss */
+.i-numeric:before {
+  background-image: url("../img/sprite.png");
+  background-position: -72px -71px;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 17px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 254, src/scss/_generated/_spritePNG.scss */
+  .i-numeric:before {
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 257, src/scss/_generated/_spritePNG.scss */
 .i-orders:before {
   background-image: url("../img/sprite.png");
   background-position: -83px 0px;
@@ -166,15 +202,15 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 224, src/scss/_generated/_spritePNG.scss */
+  /* line 257, src/scss/_generated/_spritePNG.scss */
   .i-orders:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 227, src/scss/_generated/_spritePNG.scss */
+/* line 260, src/scss/_generated/_spritePNG.scss */
 .i-overview:before {
   background-image: url("../img/sprite.png");
   background-position: 0px -71px;
@@ -184,15 +220,15 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 227, src/scss/_generated/_spritePNG.scss */
+  /* line 260, src/scss/_generated/_spritePNG.scss */
   .i-overview:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 230, src/scss/_generated/_spritePNG.scss */
+/* line 263, src/scss/_generated/_spritePNG.scss */
 .i-qrcode:before {
   background-image: url("../img/sprite.png");
   background-position: 0px -100px;
@@ -202,33 +238,33 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 230, src/scss/_generated/_spritePNG.scss */
+  /* line 263, src/scss/_generated/_spritePNG.scss */
   .i-qrcode:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 233, src/scss/_generated/_spritePNG.scss */
+/* line 266, src/scss/_generated/_spritePNG.scss */
 .i-reports:before {
   background-image: url("../img/sprite.png");
-  background-position: -146px -30px;
+  background-position: -146px -59px;
   background-repeat: no-repeat;
   width: 19px;
   height: 26px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 233, src/scss/_generated/_spritePNG.scss */
+  /* line 266, src/scss/_generated/_spritePNG.scss */
   .i-reports:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 236, src/scss/_generated/_spritePNG.scss */
+/* line 269, src/scss/_generated/_spritePNG.scss */
 .i-revenue:before {
   background-image: url("../img/sprite.png");
   background-position: 0px -38px;
@@ -238,15 +274,15 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 236, src/scss/_generated/_spritePNG.scss */
+  /* line 269, src/scss/_generated/_spritePNG.scss */
   .i-revenue:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 239, src/scss/_generated/_spritePNG.scss */
+/* line 272, src/scss/_generated/_spritePNG.scss */
 .i-setting-1:before {
   background-image: url("../img/sprite.png");
   background-position: -83px -32px;
@@ -256,15 +292,15 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 239, src/scss/_generated/_spritePNG.scss */
+  /* line 272, src/scss/_generated/_spritePNG.scss */
   .i-setting-1:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 242, src/scss/_generated/_spritePNG.scss */
+/* line 275, src/scss/_generated/_spritePNG.scss */
 .i-team:before {
   background-image: url("../img/sprite.png");
   background-position: -47px 0px;
@@ -274,33 +310,51 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 242, src/scss/_generated/_spritePNG.scss */
+  /* line 275, src/scss/_generated/_spritePNG.scss */
   .i-team:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 245, src/scss/_generated/_spritePNG.scss */
+/* line 278, src/scss/_generated/_spritePNG.scss */
+.i-toggle:before {
+  background-image: url("../img/sprite.png");
+  background-position: -61px -100px;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 17px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 278, src/scss/_generated/_spritePNG.scss */
+  .i-toggle:before {
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
+    background-image: url("../img/sprite@2x.png");
+  }
+}
+
+/* line 281, src/scss/_generated/_spritePNG.scss */
 .i-user-1:before {
   background-image: url("../img/sprite.png");
-  background-position: -146px -61px;
+  background-position: -146px -90px;
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 245, src/scss/_generated/_spritePNG.scss */
+  /* line 281, src/scss/_generated/_spritePNG.scss */
   .i-user-1:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-/* line 248, src/scss/_generated/_spritePNG.scss */
+/* line 284, src/scss/_generated/_spritePNG.scss */
 .i-user:before {
   background-image: url("../img/sprite.png");
   background-position: -115px -30px;
@@ -310,10 +364,10 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 248, src/scss/_generated/_spritePNG.scss */
+  /* line 284, src/scss/_generated/_spritePNG.scss */
   .i-user:before {
-    -webkit-background-size: 167px 125px;
-            background-size: 167px 125px;
+    -webkit-background-size: 169px 151px;
+            background-size: 169px 151px;
     background-image: url("../img/sprite@2x.png");
   }
 }
@@ -11570,7 +11624,7 @@ picture {
           justify-content: center;
   width: 100%;
   max-width: 142px;
-  height: 40px;
+  height: 41px;
   border-width: 1px;
   border-color: #69c0f1;
   border-style: solid;
@@ -11615,7 +11669,7 @@ picture {
           justify-content: center;
   width: 100%;
   max-width: 142px;
-  height: 40px;
+  height: 41px;
   border-width: 1px;
   border-color: #69c0f1;
   border-style: solid;
@@ -12033,9 +12087,9 @@ picture {
 
 /* line 247, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__label {
-  -webkit-transform: translateY(-14px);
-      -ms-transform: translateY(-14px);
-          transform: translateY(-14px);
+  -webkit-transform: translateY(-7px);
+      -ms-transform: translateY(-7px);
+          transform: translateY(-7px);
   color: #bba478;
   font-size: 14px;
   -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -12050,7 +12104,25 @@ picture {
   padding-top: 15px;
 }
 
-/* line 261, src/scss/_components/new-category/_new-category.scss */
+/* line 257, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__field.is-focus .c-form__input-wrapper {
+  height: 57px;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+/* line 263, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__field.is-focus .c-form__textarea {
+  padding-top: 25px;
+}
+
+/* line 270, src/scss/_components/new-category/_new-category.scss */
+.n-category .c-form__field--select .c-form__label {
+  position: static;
+}
+
+/* line 276, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__label {
   z-index: 2;
   position: absolute;
@@ -12067,11 +12139,501 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 274, src/scss/_components/new-category/_new-category.scss */
-.n-category .c-form__input-wrapper {
+/* line 4, src/scss/_components/customization/_customization.scss */
+.customization__wrapper {
+  width: 100%;
+  max-width: 770px;
+}
+
+/* line 9, src/scss/_components/customization/_customization.scss */
+.customization__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* line 16, src/scss/_components/customization/_customization.scss */
+.customization__header .customization__title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 21, src/scss/_components/customization/_customization.scss */
+.customization__header a {
+  color: #9d9d9d;
+}
+
+/* line 26, src/scss/_components/customization/_customization.scss */
+.customization__title {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+/* line 31, src/scss/_components/customization/_customization.scss */
+.customization__title:first-of-type {
+  padding-top: 0;
+}
+
+/* line 36, src/scss/_components/customization/_customization.scss */
+.customization__line {
+  height: 2px;
+  background-color: #ebebeb;
+}
+
+/* line 41, src/scss/_components/customization/_customization.scss */
+.customization__modifier {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 45, src/scss/_components/customization/_customization.scss */
+.customization__modifier > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 20px) / 3);
+  max-width: calc((100% - 20px) / 3);
+}
+
+/* line 49, src/scss/_components/customization/_customization.scss */
+.customization__modifier > div a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 41px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+  color: #69c0f1;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 66, src/scss/_components/customization/_customization.scss */
+.customization__modifier > div a:hover {
+  background-color: #69c0f1;
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 75, src/scss/_components/customization/_customization.scss */
+.customization__checkbox {
+  position: relative;
+  width: 100%;
+  min-height: 45px;
+}
+
+/* line 80, src/scss/_components/customization/_customization.scss */
+.customization__checkbox-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 84, src/scss/_components/customization/_customization.scss */
+.customization__checkbox-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 20px) / 5);
+  max-width: calc((100% - 20px) / 5);
+}
+
+/* line 90, src/scss/_components/customization/_customization.scss */
+.customization__checkbox input,
+.customization__checkbox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 99, src/scss/_components/customization/_customization.scss */
+.customization__checkbox input {
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+
+/* line 105, src/scss/_components/customization/_customization.scss */
+.customization__checkbox input:checked + label {
+  border-color: white;
+  background-color: #d0ecfb;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 114, src/scss/_components/customization/_customization.scss */
+.customization__checkbox label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 15px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #f7f7f7;
+  background-color: #f7f7f7;
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 128, src/scss/_components/customization/_customization.scss */
+.customization__preferences-result {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+/* line 140, src/scss/_components/customization/_customization.scss */
+.customization__preferences-result > div:nth-of-type(1) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 145, src/scss/_components/customization/_customization.scss */
+.customization__preferences-result > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100px;
+}
+
+/* line 151, src/scss/_components/customization/_customization.scss */
+.customization__preferences-result > div a {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #333333;
+}
+
+/* line 159, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 162, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add .c-form__field {
+  margin-bottom: 0;
+}
+
+/* line 166, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add > div {
+  width: 100%;
+}
+
+/* line 169, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add > div:nth-of-type(1) {
+  max-width: -webkit-calc((100% - (100% - 20px) / 3));
+  max-width: calc((100% - (100% - 20px) / 3));
+  padding-right: 10px;
+}
+
+/* line 173, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add > div:nth-of-type(2) {
+  max-width: -webkit-calc((100% - 20px) / 3);
+  max-width: calc((100% - 20px) / 3);
+}
+
+/* line 177, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add > div a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 41px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+  color: #69c0f1;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 194, src/scss/_components/customization/_customization.scss */
+.customization__preferences-add > div a:hover {
+  background-color: #69c0f1;
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 205, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result, .customization__ingredients-add {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 210, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div, .customization__ingredients-add > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 20px) / 3);
+  max-width: calc((100% - 20px) / 3);
+}
+
+/* line 216, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+/* line 224, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div {
+  padding: 5px 15px;
+}
+
+/* line 227, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 231, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 235, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div:nth-of-type(3) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 240, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div a {
+  color: #333333;
+}
+
+/* line 244, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div .icon-png {
+  padding-right: 10px;
+}
+
+/* line 251, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-add a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 41px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+  color: #69c0f1;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 268, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-add a:hover {
+  background-color: #69c0f1;
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 281, src/scss/_components/customization/_customization.scss */
+.customization .c-form__field.is-focus .c-form__label {
+  -webkit-transform: translateY(-7px);
+      -ms-transform: translateY(-7px);
+          transform: translateY(-7px);
+  color: #bba478;
+  font-size: 14px;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 288, src/scss/_components/customization/_customization.scss */
+.customization .c-form__field.is-focus .c-form__input {
+  padding-top: 15px;
+}
+
+/* line 291, src/scss/_components/customization/_customization.scss */
+.customization .c-form__field.is-focus .c-form__input-wrapper {
+  height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
   -o-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
+}
+
+/* line 297, src/scss/_components/customization/_customization.scss */
+.customization .c-form__field.is-focus .c-form__textarea {
+  padding-top: 25px;
+}
+
+/* line 304, src/scss/_components/customization/_customization.scss */
+.customization .c-form__field--select .c-form__label {
+  position: static;
+}
+
+/* line 310, src/scss/_components/customization/_customization.scss */
+.customization .c-form__label {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 100%;
+  height: 41px;
+  padding: 0 15px 0 0;
+  color: #666;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

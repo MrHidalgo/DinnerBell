@@ -245,7 +245,7 @@
 			&.is-focus {
 				.c-form {
 					&__label {
-						transform: translateY(-14px);
+						transform: translateY(-7px);
 						color: #bba478;
 						font-size: 14px;
 						@include transition(color, transform);
@@ -253,7 +253,22 @@
 
 					&__input {
 						padding-top: 15px;
+
+						&-wrapper {
+							height: 57px;
+							@include transition(height);
+						}
 					}
+
+					&__textarea {
+						padding-top: 25px;
+					}
+				}
+			}
+
+			&--select {
+				.c-form__label {
+					position: static;
 				}
 			}
 		}
@@ -268,12 +283,6 @@
 			padding: 0 15px 0 0;
 			color: #666;
 			@include transition(color, transform);
-		}
-
-		&__input {
-			&-wrapper {
-				@include transition(height);
-			}
 		}
 	}
 }

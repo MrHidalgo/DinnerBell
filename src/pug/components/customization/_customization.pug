@@ -1,0 +1,228 @@
+// SECTION customization :: START
+
+-
+	var dataFormObj = {
+		inputItemQuestion: {
+			classMod: "",
+			uniqueName: "input_question",
+			labelVal: "Question",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+		inputItemModifierName: {
+			classMod: "",
+			uniqueName: "input_ModifierName",
+			labelVal: "Modifier Name",
+			inputType: "",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: ""
+		},
+		selectFieldCustomCategory: {
+			classMod: "",
+			uniqueName: "select_category",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Category"
+		},
+		selectFieldCustomSelectorType: {
+			classMod: "",
+			uniqueName: "select_Selectortype",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+				'Numeric',
+				'Toggle',
+				'Image',
+			],
+			placeholderVal: "Selector type"
+		},
+		selectFieldCustomType: {
+			classMod: "",
+			uniqueName: "select_Type",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+				'Action',
+				'More action'
+			],
+			placeholderVal: "Type"
+		}
+	};
+
+section#customization.customization
+	.c-grid
+		.customization__wrapper
+
+			form(action='' method='' autocomplete='off')
+
+				p.customization__title Add modifier
+
+				.customization__row.customization__row-1.customization__row--modifier
+
+					.customization__modifier
+						div
+							+formInput(dataFormObj.inputItemModifierName)
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomType)
+						div
+							a(href="#" class="" title="") Add modifier
+
+					.customization__line
+
+				.customization__header
+					div
+						p.customization__title Spice Options
+					div
+						a(href="#" class="" title="")
+							i.icon-font.icon-close
+
+				.customization__row.customization__row-1.customization__row--options
+
+					.customization__checkbox-wrapper
+						div
+							.customization__checkbox
+								input(type="radio" name="options")
+								label
+									span Extra Spicy
+						div
+							.customization__checkbox
+								input(type="radio" name="options")
+								label
+									span Hot
+						div
+							.customization__checkbox
+								input(type="radio" name="options")
+								label
+									span Medium
+						div
+							.customization__checkbox
+								input(type="radio" name="options")
+								label
+									span Mild
+						div
+							.customization__checkbox
+								input(type="radio" name="options")
+								label
+									span Not spicy
+
+				.customization__header
+					div
+						p.customization__title Meat temperature
+					div
+						a(href="#" class="" title="")
+							i.icon-font.icon-close
+
+				.customization__row.customization__row-1.customization__row--temperature
+
+					.customization__checkbox-wrapper
+						div
+							.customization__checkbox
+								input(type="radio" name="temperature")
+								label
+									span Extra-rare
+						div
+							.customization__checkbox
+								input(type="radio" name="temperature")
+								label
+									span Rare
+						div
+							.customization__checkbox
+								input(type="radio" name="temperature")
+								label
+									span Medium
+						div
+							.customization__checkbox
+								input(type="radio" name="temperature")
+								label
+									span Well-done
+						div
+							.customization__checkbox
+								input(type="radio" name="temperature")
+								label
+									span Overcooked
+
+				.customization__header
+					div
+						p.customization__title Personal preferences
+					div
+						a(href="#" class="" title="")
+							i.icon-font.icon-close
+
+				.customization__row.customization__row-1.customization__row--preferences
+
+					.customization__preferences-result
+						div
+							p Would you like your dressing mixed in?
+						div
+							a(href="#" class="" title="")
+								i.icon-font.icon-pencil
+							a(href="#" class="" title="")
+								i.icon-font.icon-waste-bin
+
+					.customization__preferences-add
+						div
+							+formInput(dataFormObj.inputItemQuestion)
+						div
+							a(href="#" class="" title="") Add question
+
+				.customization__header
+					div
+						p.customization__title Ingredients
+					div
+						a(href="#" class="" title="")
+							i.icon-font.icon-close
+
+				.customization__row.customization__row-1.customization__row--ingredients
+
+					.customization__ingredients-result.customization__ingredients-result--numeric
+						div
+							p Greens
+							a(href="#" class="" title="")
+								i.icon-font.icon-pencil
+						div
+							i.icon-png.i-numeric
+							p Numeric
+						div
+							a(href="#" class="" title="")
+								i.icon-font.icon-waste-bin
+
+					.customization__ingredients-result.customization__ingredients-result--toggle
+						div
+							p Greens
+							a(href="#" class="" title="")
+								i.icon-font.icon-pencil
+						div
+							i.icon-png.i-toggle
+							p Toggle
+						div
+							a(href="#" class="" title="")
+								i.icon-font.icon-waste-bin
+
+					.customization__ingredients-result.customization__ingredients-result--image
+						div
+							p Greens
+							a(href="#" class="" title="")
+								i.icon-font.icon-pencil
+						div
+							i.icon-png.i-image
+							p Image
+						div
+							a(href="#" class="" title="")
+								i.icon-font.icon-waste-bin
+
+					.customization__ingredients-add
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomCategory)
+						div
+							+formSelectCustom(dataFormObj.selectFieldCustomSelectorType)
+						div
+							a(href="#" class="" title="") Add category
+
+// SECTION customization :: END
