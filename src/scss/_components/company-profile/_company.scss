@@ -1,8 +1,6 @@
 // SECTION company :: START
 
 .company {
-	padding-top: 50px;
-
 	&__wrapper {
 		width: 100%;
 		max-width: 770px;
@@ -57,6 +55,10 @@
 	&__title {
 		color: #bba478;
 		font-size: 20px;
+
+		.team & {
+			color: #000000;
+		}
 	}
 
 	&__text {
@@ -104,6 +106,34 @@
 				&:nth-of-type(5) {
 					width: 100%;
 					max-width: calc((100% - 10px) / 3);
+				}
+			}
+		}
+
+		&-4 {
+			button {
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				max-width: 150px;
+				height: 45px;
+				border-width: 1px;
+				border-color: rgb(105, 192, 241);
+				border-style: solid;
+				border-radius: 5px;
+				box-shadow: none;
+				background-color: rgb(105, 192, 241);
+				color: #fff;
+				font-size: 16px;
+				font-weight: bold;
+				@include transition(background-color, color);
+
+				&:hover {
+					background-color: #fff;
+					color: rgb(105, 192, 241);
+					@include transition(background-color, color);
 				}
 			}
 		}

@@ -1,0 +1,164 @@
+// SECTION team :: START
+
+.team {
+	&__title {
+		padding-bottom: 30px;
+		font-size: 28px;
+	}
+
+	&__table {
+		width: 100%;
+		max-width: 770px;
+		@include adaptive(767) {
+			width: calc(100% + 15px);
+			margin-right: -15px;
+		}
+
+		.table-responsive {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.table {
+			width: 100%;
+			color: #000;
+			text-align: left;
+
+			.nowrap {
+				white-space: nowrap;
+			}
+
+			.btn {
+				display: flex;
+				align-items: center;
+
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 30px;
+					height: 30px;
+					margin-left: 5px;
+					margin-right: 5px;
+
+					.icon-font {
+						color: #000000;
+						font-size: 20px;
+					}
+				}
+			}
+
+			tr {
+				@include transition(background-color);
+
+				&:hover {
+					background-color: rgba(#f6f4f4, 0.6);
+					@include transition(background-color);
+				}
+
+				td {
+					&:last-of-type {
+						> div {
+							display: flex;
+							justify-content: flex-end;
+						}
+					}
+
+					&.name {
+						p {
+							font-weight: bold;
+						}
+					}
+
+					&.position,
+					&.email {
+						font-weight: 300;
+					}
+
+					&.email {
+						span {
+							color: rgba(#000, 0.6);
+						}
+					}
+				}
+			}
+
+			th,
+			td {
+				padding: 0.75rem 0.5rem;
+				vertical-align: middle;
+				border-bottom: 2px solid #f6f4f4;
+			}
+
+			th {
+				font-weight: 300;
+			}
+
+			td {
+				border-bottom: 2px solid #f6f4f4;
+				font-weight: normal;
+			}
+
+			thead th {
+				vertical-align: bottom;
+				border-bottom-color: #f6f4f4;
+			}
+
+			tbody + tbody {
+				border-top: 2px solid #f6f4f4;
+			}
+		}
+
+		.indication {
+			i {
+				display: flex;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #ebebeb;
+			}
+
+			&--active {
+				i {
+					background-color: #cbde9d;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		height: 45px;
+		padding: 5px 30px;
+		border-width: 1px;
+		border-color: rgb(105, 192, 241);
+		border-style: solid;
+		border-radius: 5px;
+		box-shadow: none;
+		background-color: rgb(105, 192, 241);
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		@include transition(background-color, color);
+
+		&:hover {
+			background-color: #fff;
+			color: rgb(105, 192, 241);
+			@include transition(background-color, color);
+		}
+
+		&-wrapper {
+			display: flex;
+			padding-top: 50px;
+			padding-bottom: 40px;
+		}
+	}
+}
+
+// SECTION team :: END

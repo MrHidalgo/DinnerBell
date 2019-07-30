@@ -12999,18 +12999,13 @@ picture {
   padding-bottom: 0;
 }
 
-/* line 3, src/scss/_components/company-profile/_company.scss */
-.company {
-  padding-top: 50px;
-}
-
-/* line 6, src/scss/_components/company-profile/_company.scss */
+/* line 4, src/scss/_components/company-profile/_company.scss */
 .company__wrapper {
   width: 100%;
   max-width: 770px;
 }
 
-/* line 11, src/scss/_components/company-profile/_company.scss */
+/* line 9, src/scss/_components/company-profile/_company.scss */
 .company__header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13027,7 +13022,7 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 20, src/scss/_components/company-profile/_company.scss */
+/* line 18, src/scss/_components/company-profile/_company.scss */
 .company__header.is-update > div:nth-of-type(2) a {
   opacity: 1;
   visibility: visible;
@@ -13036,12 +13031,12 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 28, src/scss/_components/company-profile/_company.scss */
+/* line 26, src/scss/_components/company-profile/_company.scss */
 .company__header.is-update > a {
   display: none;
 }
 
-/* line 34, src/scss/_components/company-profile/_company.scss */
+/* line 32, src/scss/_components/company-profile/_company.scss */
 .company__header > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13057,7 +13052,7 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 39, src/scss/_components/company-profile/_company.scss */
+/* line 37, src/scss/_components/company-profile/_company.scss */
 .company__header > div:nth-of-type(2) a {
   opacity: 0;
   visibility: hidden;
@@ -13068,7 +13063,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 49, src/scss/_components/company-profile/_company.scss */
+/* line 47, src/scss/_components/company-profile/_company.scss */
 .company__header a {
   color: #69c0f1;
   text-transform: uppercase;
@@ -13076,19 +13071,24 @@ picture {
   font-weight: bold;
 }
 
-/* line 57, src/scss/_components/company-profile/_company.scss */
+/* line 55, src/scss/_components/company-profile/_company.scss */
 .company__title {
   color: #bba478;
   font-size: 20px;
 }
 
-/* line 62, src/scss/_components/company-profile/_company.scss */
+/* line 59, src/scss/_components/company-profile/_company.scss */
+.team .company__title {
+  color: #000000;
+}
+
+/* line 64, src/scss/_components/company-profile/_company.scss */
 .company__text {
   font-size: 14px;
   font-weight: 300;
 }
 
-/* line 68, src/scss/_components/company-profile/_company.scss */
+/* line 70, src/scss/_components/company-profile/_company.scss */
 .company__form-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13100,14 +13100,14 @@ picture {
           justify-content: space-between;
 }
 
-/* line 72, src/scss/_components/company-profile/_company.scss */
+/* line 74, src/scss/_components/company-profile/_company.scss */
 .company__form-1 > div {
   width: 100%;
   max-width: -webkit-calc((100% - 20px) / 3);
   max-width: calc((100% - 20px) / 3);
 }
 
-/* line 78, src/scss/_components/company-profile/_company.scss */
+/* line 80, src/scss/_components/company-profile/_company.scss */
 .company__form-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13119,14 +13119,14 @@ picture {
           justify-content: space-between;
 }
 
-/* line 82, src/scss/_components/company-profile/_company.scss */
+/* line 84, src/scss/_components/company-profile/_company.scss */
 .company__form-2 > div {
   width: 100%;
   max-width: -webkit-calc((100% - 10px) / 2);
   max-width: calc((100% - 10px) / 2);
 }
 
-/* line 88, src/scss/_components/company-profile/_company.scss */
+/* line 90, src/scss/_components/company-profile/_company.scss */
 .company__form-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13141,33 +13141,76 @@ picture {
           justify-content: space-between;
 }
 
-/* line 94, src/scss/_components/company-profile/_company.scss */
+/* line 96, src/scss/_components/company-profile/_company.scss */
 .company__form-3 > div:nth-of-type(1), .company__form-3 > div:nth-of-type(2), .company__form-3 > div:nth-of-type(3) {
   width: 100%;
   max-width: -webkit-calc((100% - 20px) / 3);
   max-width: calc((100% - 20px) / 3);
 }
 
-/* line 100, src/scss/_components/company-profile/_company.scss */
+/* line 102, src/scss/_components/company-profile/_company.scss */
 .company__form-3 > div:nth-of-type(4) {
   width: 100%;
   max-width: -webkit-calc((100% - ((100% - 10px) / 3)) - 10px);
   max-width: calc((100% - ((100% - 10px) / 3)) - 10px);
 }
 
-/* line 104, src/scss/_components/company-profile/_company.scss */
+/* line 106, src/scss/_components/company-profile/_company.scss */
 .company__form-3 > div:nth-of-type(5) {
   width: 100%;
   max-width: -webkit-calc((100% - 10px) / 3);
   max-width: calc((100% - 10px) / 3);
 }
 
-/* line 113, src/scss/_components/company-profile/_company.scss */
+/* line 114, src/scss/_components/company-profile/_company.scss */
+.company__form-4 button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 150px;
+  height: 45px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #69c0f1;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 133, src/scss/_components/company-profile/_company.scss */
+.company__form-4 button:hover {
+  background-color: #fff;
+  color: #69c0f1;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 143, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field {
   height: 57px;
 }
 
-/* line 118, src/scss/_components/company-profile/_company.scss */
+/* line 148, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__label {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
@@ -13181,12 +13224,12 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 125, src/scss/_components/company-profile/_company.scss */
+/* line 155, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__input {
   padding-top: 15px;
 }
 
-/* line 129, src/scss/_components/company-profile/_company.scss */
+/* line 159, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__input-wrapper {
   height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -13194,29 +13237,29 @@ picture {
   transition: height 0.3s ease-in-out;
 }
 
-/* line 135, src/scss/_components/company-profile/_company.scss */
+/* line 165, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__textarea {
   padding-top: 25px;
 }
 
-/* line 143, src/scss/_components/company-profile/_company.scss */
+/* line 173, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-disabled .c-form__input {
   border-color: #f7f7f7;
   background-color: #f7f7f7;
 }
 
-/* line 150, src/scss/_components/company-profile/_company.scss */
+/* line 180, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover {
   position: relative;
 }
 
-/* line 155, src/scss/_components/company-profile/_company.scss */
+/* line 185, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover.is-disabled .c-form__input {
   border-color: #f7f7f7;
   background-color: #f7f7f7;
 }
 
-/* line 161, src/scss/_components/company-profile/_company.scss */
+/* line 191, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover.is-disabled .c-form__field--input {
   opacity: 1;
   visibility: visible;
@@ -13225,7 +13268,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 166, src/scss/_components/company-profile/_company.scss */
+/* line 196, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover.is-disabled .c-form__field--select {
   opacity: 0;
   visibility: hidden;
@@ -13234,7 +13277,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 175, src/scss/_components/company-profile/_company.scss */
+/* line 205, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover .c-form__field--input {
   opacity: 0;
   visibility: hidden;
@@ -13247,19 +13290,19 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 186, src/scss/_components/company-profile/_company.scss */
+/* line 216, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field--select {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 189, src/scss/_components/company-profile/_company.scss */
+/* line 219, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field--select .c-form__label {
   position: static;
 }
 
-/* line 195, src/scss/_components/company-profile/_company.scss */
+/* line 225, src/scss/_components/company-profile/_company.scss */
 .company .c-form__label {
   z-index: 1;
   cursor: default;
@@ -13276,6 +13319,228 @@ picture {
   -o-transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 4, src/scss/_components/team/_team.scss */
+.team__title {
+  padding-bottom: 30px;
+  font-size: 28px;
+}
+
+/* line 9, src/scss/_components/team/_team.scss */
+.team__table {
+  width: 100%;
+  max-width: 770px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 9, src/scss/_components/team/_team.scss */
+  .team__table {
+    width: -webkit-calc(100% + 15px);
+    width: calc(100% + 15px);
+    margin-right: -15px;
+  }
+}
+
+/* line 17, src/scss/_components/team/_team.scss */
+.team__table .table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 24, src/scss/_components/team/_team.scss */
+.team__table .table {
+  width: 100%;
+  color: #000;
+  text-align: left;
+}
+
+/* line 29, src/scss/_components/team/_team.scss */
+.team__table .table .nowrap {
+  white-space: nowrap;
+}
+
+/* line 33, src/scss/_components/team/_team.scss */
+.team__table .table .btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 37, src/scss/_components/team/_team.scss */
+.team__table .table .btn a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 46, src/scss/_components/team/_team.scss */
+.team__table .table .btn a .icon-font {
+  color: #000000;
+  font-size: 20px;
+}
+
+/* line 53, src/scss/_components/team/_team.scss */
+.team__table .table tr {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 56, src/scss/_components/team/_team.scss */
+.team__table .table tr:hover {
+  background-color: rgba(246, 244, 244, 0.6);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 63, src/scss/_components/team/_team.scss */
+.team__table .table tr td:last-of-type > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 70, src/scss/_components/team/_team.scss */
+.team__table .table tr td.name p {
+  font-weight: bold;
+}
+
+/* line 75, src/scss/_components/team/_team.scss */
+.team__table .table tr td.position, .team__table .table tr td.email {
+  font-weight: 300;
+}
+
+/* line 81, src/scss/_components/team/_team.scss */
+.team__table .table tr td.email span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 88, src/scss/_components/team/_team.scss */
+.team__table .table th,
+.team__table .table td {
+  padding: 0.75rem 0.5rem;
+  vertical-align: middle;
+  border-bottom: 2px solid #f6f4f4;
+}
+
+/* line 95, src/scss/_components/team/_team.scss */
+.team__table .table th {
+  font-weight: 300;
+}
+
+/* line 99, src/scss/_components/team/_team.scss */
+.team__table .table td {
+  border-bottom: 2px solid #f6f4f4;
+  font-weight: normal;
+}
+
+/* line 104, src/scss/_components/team/_team.scss */
+.team__table .table thead th {
+  vertical-align: bottom;
+  border-bottom-color: #f6f4f4;
+}
+
+/* line 109, src/scss/_components/team/_team.scss */
+.team__table .table tbody + tbody {
+  border-top: 2px solid #f6f4f4;
+}
+
+/* line 115, src/scss/_components/team/_team.scss */
+.team__table .indication i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #ebebeb;
+}
+
+/* line 124, src/scss/_components/team/_team.scss */
+.team__table .indication--active i {
+  background-color: #cbde9d;
+}
+
+/* line 131, src/scss/_components/team/_team.scss */
+.team__btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: 45px;
+  padding: 5px 30px;
+  border-width: 1px;
+  border-color: #69c0f1;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #69c0f1;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 150, src/scss/_components/team/_team.scss */
+.team__btn:hover {
+  background-color: #fff;
+  color: #69c0f1;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 156, src/scss/_components/team/_team.scss */
+.team__btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

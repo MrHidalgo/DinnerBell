@@ -70,9 +70,12 @@ PageList:
 - file: company-profile.html
   titleName: Company Profile
   ready: 55
+- file: team-add.html
+  titleName: Team Add
+  ready: 55
 - file: team.html
   titleName: Team
-  ready: 5
+  ready: 55
 - file: login-security.html
   titleName: Login & Security
   ready: 5

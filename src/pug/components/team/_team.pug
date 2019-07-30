@@ -1,0 +1,46 @@
+// SECTION team :: START
+
+section#team.team
+	.c-grid
+		.team__wrapper
+
+			.team__table
+				.table-responsive
+
+					table.table
+						tbody
+							each val, idx in [1,2,3,4,5]
+								tr
+									td
+										if(idx % 2 === 0)
+											.indication.indication--active
+												i
+										else
+											.indication
+												i
+									td.name
+										if(idx % 2 === 0)
+											p Oliver Twist
+										else
+											p Christopher Kelly
+									td.position
+										if(idx % 2 === 0)
+											span Kitchen
+										else
+											span Host
+									td.email
+										if(idx % 2 === 0)
+											span oliver@gmail.com
+										else
+											span christopher@gmail.com
+									td
+										.btn
+											a.edit(href="#" class="" title="")
+												i.icon-font.icon-pencil
+											a.remove(href="#" class="" title="")
+												i.icon-font.icon-waste-bin
+
+			.team__btn-wrapper
+				a.team__btn(href="#" class="" title="") Add new team member
+
+// SECTION team :: END
