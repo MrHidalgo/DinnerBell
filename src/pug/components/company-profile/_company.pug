@@ -1,0 +1,168 @@
+// SECTION company :: START
+
+-
+	var dataFormObj = {
+		selectFieldCustomTest: {
+			classMod: "",
+			uniqueName: "select_test",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+			'Some option',
+			'Some action',
+			],
+			placeholderVal: "Label"
+		},
+	};
+
+section#company.company
+	.c-grid
+		.company__wrapper
+
+			form(action='' method='' autocomplete='off')
+
+				.company__row.company__row-1
+
+					.company__header
+						div
+							p.company__title Venue name, type and served cuisines
+						div
+							a.company__cancel(href="#" class="" title="") cancel
+							a.company__save(href="#" class="" title="") save
+						a.company__edit(href="#" class="" title="") Edit
+
+					.company__form.company__form-1
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-1')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-1' name!= 'input_test-1' value!= 'Some value input' disabled input-js
+										)
+								.c-form__notify
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-2')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-2' name!= 'input_test-2' value!= 'Some value input' disabled input-js
+										)
+								.c-form__notify
+						div
+							.c-form__field-cover.is-disabled
+								.c-form__field.c-form__field--input
+									label.c-form__label(for!= 'input_test-3')!= 'Label Title'
+									.c-form__input-wrapper
+										input.c-form__input(
+											type!= 'text' id!= 'input_test-3' name!= 'input_test-3' value!= '' disabled input-js
+										)
+								.c-form__field.c-form__field--select
+									.c-form__select-wrapper
+										.c-form__select-value
+										select.c-form__select(select-js)
+											option(value!= 'Some option')!= 'Some trtr'
+											option(value!= 'Some actiob')!= 'Some action'
+										.c-form__select-icon
+											i
+									.c-form__notify
+
+				.company__row.company__row-2
+
+					.company__header
+						div
+							p.company__title Contact Person
+						div
+							a.company__cancel(href="#" class="" title="") cancel
+							a.company__save(href="#" class="" title="") save
+						a.company__edit(href="#" class="" title="") Edit
+
+					.company__form.company__form-2
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-4')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-4' name!= 'input_test-4' value!= 'Some value input' disabled input-js
+									)
+								.c-form__notify
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-5')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-5' name!= 'input_test-5' value!= 'Some value input' disabled input-js
+									)
+								.c-form__notify
+
+				.company__row.company__row-3
+
+					.company__header
+						div
+							p.company__title Location
+							p.company__text Set your primary location so we know your language preferences,</br>time zone and our availability in your area
+						div
+							a.company__cancel(href="#" class="" title="") cancel
+							a.company__save(href="#" class="" title="") save
+						a.company__edit(href="#" class="" title="") Edit
+
+					.company__form.company__form-3
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-6')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-6' name!= 'input_test-6' value!= 'Some value input' disabled input-js
+									)
+								.c-form__notify
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-7')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-7' name!= 'input_test-7' value!= 'Some value input' disabled input-js
+									)
+								.c-form__notify
+						div
+							.c-form__field-cover.is-disabled
+								.c-form__field.c-form__field--input
+									label.c-form__label(for!= 'input_test-8')!= 'Label Title'
+									.c-form__input-wrapper
+										input.c-form__input(
+											type!= 'text' id!= 'input_test-8' name!= 'input_test-8' value!= '' disabled input-js
+										)
+								.c-form__field.c-form__field--select
+									.c-form__select-wrapper
+										.c-form__select-value
+										select.c-form__select(select-js)
+											option(value!= 'Some option')!= 'Some trtr'
+											option(value!= 'Some actiob')!= 'Some action'
+										.c-form__select-icon
+											i
+									.c-form__notify
+						div
+							.c-form__field.c-form__field--input.is-disabled
+								label.c-form__label(for!= 'input_test-9')!= 'Label Title'
+								.c-form__input-wrapper
+									input.c-form__input(
+										type!= 'text' id!= 'input_test-9' name!= 'input_test-9' value!= 'Some value input' disabled input-js
+									)
+								.c-form__notify
+						div
+							.c-form__field-cover.is-disabled
+								.c-form__field.c-form__field--input
+									label.c-form__label(for!= 'input_test-10')!= 'Label Title'
+									.c-form__input-wrapper
+										input.c-form__input(
+											type!= 'text' id!= 'input_test-10' name!= 'input_test-10' value!= '' disabled input-js
+										)
+								.c-form__field.c-form__field--select
+									.c-form__select-wrapper
+										.c-form__select-value
+										select.c-form__select(select-js)
+											option(value!= 'Some option')!= 'Some trtr'
+											option(value!= 'Some actiob')!= 'Some action'
+										.c-form__select-icon
+											i
+									.c-form__notify
+
+// SECTION company :: END

@@ -11,6 +11,7 @@ const customSelect = {
 
 		for (let elem of _select) {
 			elem.previousElementSibling.innerHTML = elem.options[elem.selectedIndex].text;
+			$(elem).closest('.c-form__field-cover').find('input[type="text"]').val(elem.options[elem.selectedIndex].text);
 		}
 	},
 	change() {
@@ -26,6 +27,7 @@ const customSelect = {
 			}
 
 			elem.previousElementSibling.innerHTML = _selectedText;
+			$(elem).closest('.c-form__field-cover').find('input[type="text"]').val(_selectedText);
 			this.blurElem(elem);
 		}
 	},

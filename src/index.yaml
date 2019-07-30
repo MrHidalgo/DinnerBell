@@ -66,3 +66,16 @@ PageList:
 - file: customization.html
   titleName: Customization
   ready: 55
+- titleName: ==========
+- file: company-profile.html
+  titleName: Company Profile
+  ready: 55
+- file: team.html
+  titleName: Team
+  ready: 5
+- file: login-security.html
+  titleName: Login & Security
+  ready: 5
+- file: billing-center.html
+  titleName: Billing Center
+  ready: 90

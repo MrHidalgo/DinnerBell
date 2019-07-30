@@ -1,0 +1,12 @@
+---
+title: DinnerBell |  Billing Center
+
+pageClassName: p-billing-center
+pageMod: woPreview
+---
+extends shared/_layout
+
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/billing-center/_add-new-item

@@ -33,6 +33,7 @@ var customSelect = {
 				var elem = _step.value;
 
 				elem.previousElementSibling.innerHTML = elem.options[elem.selectedIndex].text;
+				$(elem).closest('.c-form__field-cover').find('input[type="text"]').val(elem.options[elem.selectedIndex].text);
 			}
 		} catch (err) {
 			_didIteratorError = true;
@@ -69,6 +70,7 @@ var customSelect = {
 				}
 
 				elem.previousElementSibling.innerHTML = _selectedText;
+				$(elem).closest('.c-form__field-cover').find('input[type="text"]').val(_selectedText);
 				this.blurElem(elem);
 			}
 		} catch (err) {
@@ -198,6 +200,15 @@ var initHeaderFixed = function initHeaderFixed() {
  */
 var initInputFocus = function initInputFocus() {
 	var inputElem = $("[input-js], [textarea-js]");
+
+	$.each(inputElem, function (idx, val) {
+		var curElem = $(val),
+		    curElemVal = $(val).val().trim();
+
+		if (curElemVal !== "") {
+			curElem.closest(".c-form__field").addClass("is-focus");
+		}
+	});
 
 	/**
   * @description
@@ -1702,6 +1713,40 @@ $(document).ready(function (ev) {
 			});
 		});
 	};
+
+	var initCompanyEditInfo = function initCompanyEditInfo() {
+		$('.company__edit').on('click', function (ev) {
+			var _parentNode = $(ev.currentTarget).closest('.company__row');
+
+			$(ev.currentTarget).closest('.company__header').addClass('is-update');
+
+			_parentNode.find('.c-form__field--input.is-disabled, .c-form__field-cover.is-disabled').removeClass('is-disabled');
+			$.each(_parentNode.find('input[type="text"]'), function (idx, val) {
+				$(val).attr('data-val', $(val).val());
+			});
+			_parentNode.find('input[type="text"]').removeAttr('disabled');
+		});
+		$('.company__cancel').on('click', function (ev) {
+			var _parentNode = $(ev.currentTarget).closest('.company__row');
+
+			$(ev.currentTarget).closest('.company__header').removeClass('is-update');
+
+			_parentNode.find('.c-form__field--input, .c-form__field-cover').addClass('is-disabled');
+			$.each(_parentNode.find('input[type="text"]'), function (idx, val) {
+				$(val).val($(val).data('val'));
+			});
+			_parentNode.find('input[type="text"]').attr('disabled', 'disabled');
+			_parentNode.find('select').prop('selectedIndex', 0);
+		});
+		$('.company__save').on('click', function (ev) {
+			var _parentNode = $(ev.currentTarget).closest('.company__row');
+
+			$(ev.currentTarget).closest('.company__header').removeClass('is-update');
+
+			_parentNode.find('.c-form__field--input, .c-form__field-cover').addClass('is-disabled');
+			_parentNode.find('input[type="text"]').attr('disabled', 'disabled');
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -1743,6 +1788,8 @@ $(document).ready(function (ev) {
 		initTPSelectPriceFormat();
 		initTPNavigationColorIcon();
 		initTPVideoPreviewChooseMode();
+
+		initCompanyEditInfo();
 		// ==========================================
 	};
 	initJquery();

@@ -8,6 +8,15 @@
 const initInputFocus = () => {
 	const inputElem = $("[input-js], [textarea-js]");
 
+	$.each(inputElem, (idx, val) => {
+		let curElem = $(val),
+			curElemVal = $(val).val().trim();
+
+		if(curElemVal !== "") {
+			curElem.closest(".c-form__field").addClass("is-focus");
+		}
+	});
+
 	/**
 	 * @description
 	 */
