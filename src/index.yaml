@@ -77,8 +77,11 @@ PageList:
   titleName: Team
   ready: 55
 - file: login-security.html
-  titleName: Login & Security
-  ready: 5
+  titleName: Login & Security (L&S)
+  ready: 55
+- file: login-security-phone.html
+  titleName: L&S Phone Resend Code
+  ready: 55
 - file: billing-center.html
   titleName: Billing Center
   ready: 90

@@ -1,0 +1,266 @@
+// SECTION security :: START
+
+.security {
+	&__wrapper {
+		width: 100%;
+		max-width: 770px;
+	}
+
+	&__title {
+		font-size: 28px;
+	}
+
+	&__subtitle {
+		color: #bba478;
+		font-size: 20px;
+	}
+
+	&__text {
+		padding-bottom: 30px;
+		color: #666666;
+		font-size: 14px;
+	}
+
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 41px;
+		padding: 5px 15px;
+		border-width: 1px;
+		border-color: rgb(105, 192, 241);
+		border-style: solid;
+		border-radius: 5px;
+		box-shadow: none;
+		background-color: #fff;
+		color: rgb(105, 192, 241);
+		font-size: 16px;
+		font-weight: bold;
+		@include transition(background-color, color);
+
+		&:hover {
+			background-color: rgb(105, 192, 241);
+			color: #fff;
+			@include transition(background-color, color);
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding-bottom: 15px;
+
+		.security__text {
+			padding-bottom: 0;
+		}
+
+		a {
+			color: #69c0f1;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+
+	&__col {
+		padding-bottom: 30px;
+
+		div {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			height: 42px;
+			padding: 5px 15px;
+			border-radius: 5px;
+			background-color: rgb(247, 247, 247);
+
+			p {
+				font-weight: 300;
+			}
+		}
+	}
+
+	&__row {
+		padding-bottom: 30px;
+
+		&-1 {
+			display: flex;
+
+			> div {
+				&:nth-of-type(1) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding-right: 10px;
+				}
+
+				&:nth-of-type(2) {
+					width: 100%;
+					max-width: 230px;
+				}
+			}
+		}
+
+		&-2 {
+			display: flex;
+
+			> div {
+				&:nth-of-type(1) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding-right: 10px;
+				}
+
+				&:nth-of-type(2) {
+					width: 100%;
+					max-width: 100px;
+				}
+			}
+		}
+
+		&-3 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			> div {
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3),
+				&:nth-of-type(4) {
+					width: 100%;
+					max-width: calc((100% - 10px) / 2);
+				}
+
+				&:nth-of-type(5) {
+					display: flex;
+					justify-content: flex-end;
+					width: 100%;
+
+					.security__btn {
+						width: auto;
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+
+		&-4 {
+			display: flex;
+
+			> div {
+				&:nth-of-type(1) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding-right: 10px;
+				}
+
+				&:nth-of-type(2) {
+					width: 100%;
+					max-width: 220px;
+					padding-right: 10px;
+				}
+
+				&:nth-of-type(3) {
+					width: 100%;
+					max-width: 120px;
+				}
+			}
+
+			.c-form__input {
+				padding-right: 72px;
+
+				&-wrapper {
+					position: relative;
+
+					a {
+						position: absolute;
+						top: 0;
+						right: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 72px;
+						height: 100%;
+						color: #69c0f1;
+						text-transform: uppercase;
+						font-size: 12px;
+						font-weight: bold;
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		min-height: 78px;
+		padding: 10px 20px;
+		margin-bottom: 15px;
+		border-width: 1px;
+		border-color: rgb(224, 224, 224);
+		border-style: solid;
+		border-radius: 5px;
+		background-color: rgb(255, 255, 255);
+
+		&-left {
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+		}
+
+		&-right {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+			max-width: 180px;
+		}
+
+		&-title {
+			color: #bba478;
+			font-size: 20px;
+		}
+
+		&-text {
+			color: #666666;
+			font-size: 14px;
+		}
+
+		&-btn {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 45px;
+			padding: 5px 15px;
+			border-width: 1px;
+			border-color: rgb(105, 192, 241);
+			border-style: solid;
+			border-radius: 5px;
+			box-shadow: none;
+			background-color: #fff;
+			color: rgb(105, 192, 241);
+			font-size: 16px;
+			font-weight: bold;
+			@include transition(background-color, color);
+
+			&:hover {
+				background-color: rgb(105, 192, 241);
+				color: #fff;
+				@include transition(background-color, color);
+			}
+		}
+	}
+}
+
+// SECTION security :: END
