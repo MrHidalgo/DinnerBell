@@ -48,9 +48,16 @@
 		font-weight: 500;
 		color: #61bdf0;
 		@include transition(color);
+		@include adaptive(767) {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
 
 		&:last-of-type {
 			margin-right: 0;
+			@include adaptive(767) {
+				margin-bottom: 0;
+			}
 		}
 
 		&:after {
@@ -58,7 +65,7 @@
 			opacity: 0;
 			z-index: 0;
 			position: absolute;
-			top: calc(100% + 10px);
+			top: calc(100% + 8px);
 			left: 0;
 			width: 100%;
 			height: 2px;
@@ -84,6 +91,10 @@
 			display: flex;
 			align-items: center;
 			padding-bottom: 51px;
+			@include adaptive(767) {
+				align-items: flex-start;
+				flex-direction: column;
+			}
 		}
 	}
 
