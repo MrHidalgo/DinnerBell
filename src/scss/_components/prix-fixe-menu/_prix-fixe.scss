@@ -94,6 +94,7 @@
 			@include adaptive(767) {
 				align-items: flex-start;
 				flex-direction: column;
+				padding-bottom: 0;
 			}
 		}
 	}

@@ -75,7 +75,7 @@ PageList:
   ready: 55
 - file: team.html
   titleName: Team
-  ready: 55
+  ready: 95
 - file: login-security.html
   titleName: Login & Security (L&S)
   ready: 55
