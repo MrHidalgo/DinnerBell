@@ -72,7 +72,7 @@ PageList:
   ready: 55
 - file: team-add.html
   titleName: Team Add
-  ready: 55
+  ready: 95
 - file: team.html
   titleName: Team
   ready: 95

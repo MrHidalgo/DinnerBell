@@ -13374,13 +13374,18 @@ picture {
   padding-bottom: 0;
 }
 
-/* line 4, src/scss/_components/company-profile/_company.scss */
-.company__wrapper {
-  width: 100%;
-  max-width: 770px;
+/* line 3, src/scss/_components/company-profile/_company.scss */
+.company {
+  padding-bottom: 50px;
 }
 
-/* line 9, src/scss/_components/company-profile/_company.scss */
+/* line 6, src/scss/_components/company-profile/_company.scss */
+.company__wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 11, src/scss/_components/company-profile/_company.scss */
 .company__header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13397,7 +13402,7 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 18, src/scss/_components/company-profile/_company.scss */
+/* line 20, src/scss/_components/company-profile/_company.scss */
 .company__header.is-update > div:nth-of-type(2) a {
   opacity: 1;
   visibility: visible;
@@ -13406,12 +13411,12 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 26, src/scss/_components/company-profile/_company.scss */
+/* line 28, src/scss/_components/company-profile/_company.scss */
 .company__header.is-update > a {
   display: none;
 }
 
-/* line 32, src/scss/_components/company-profile/_company.scss */
+/* line 34, src/scss/_components/company-profile/_company.scss */
 .company__header > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13427,7 +13432,7 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 37, src/scss/_components/company-profile/_company.scss */
+/* line 39, src/scss/_components/company-profile/_company.scss */
 .company__header > div:nth-of-type(2) a {
   opacity: 0;
   visibility: hidden;
@@ -13438,7 +13443,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 47, src/scss/_components/company-profile/_company.scss */
+/* line 49, src/scss/_components/company-profile/_company.scss */
 .company__header a {
   color: #69c0f1;
   text-transform: uppercase;
@@ -13446,24 +13451,24 @@ picture {
   font-weight: bold;
 }
 
-/* line 55, src/scss/_components/company-profile/_company.scss */
+/* line 57, src/scss/_components/company-profile/_company.scss */
 .company__title {
   color: #bba478;
   font-size: 20px;
 }
 
-/* line 59, src/scss/_components/company-profile/_company.scss */
+/* line 61, src/scss/_components/company-profile/_company.scss */
 .team .company__title {
   color: #000000;
 }
 
-/* line 64, src/scss/_components/company-profile/_company.scss */
+/* line 66, src/scss/_components/company-profile/_company.scss */
 .company__text {
   font-size: 14px;
   font-weight: 300;
 }
 
-/* line 70, src/scss/_components/company-profile/_company.scss */
+/* line 72, src/scss/_components/company-profile/_company.scss */
 .company__form-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13475,14 +13480,30 @@ picture {
           justify-content: space-between;
 }
 
-/* line 74, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 72, src/scss/_components/company-profile/_company.scss */
+  .company__form-1 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 79, src/scss/_components/company-profile/_company.scss */
 .company__form-1 > div {
   width: 100%;
   max-width: -webkit-calc((100% - 20px) / 3);
   max-width: calc((100% - 20px) / 3);
 }
 
-/* line 80, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 79, src/scss/_components/company-profile/_company.scss */
+  .company__form-1 > div {
+    max-width: 100%;
+  }
+}
+
+/* line 88, src/scss/_components/company-profile/_company.scss */
 .company__form-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13494,14 +13515,30 @@ picture {
           justify-content: space-between;
 }
 
-/* line 84, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 88, src/scss/_components/company-profile/_company.scss */
+  .company__form-2 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 95, src/scss/_components/company-profile/_company.scss */
 .company__form-2 > div {
   width: 100%;
   max-width: -webkit-calc((100% - 10px) / 2);
   max-width: calc((100% - 10px) / 2);
 }
 
-/* line 90, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 95, src/scss/_components/company-profile/_company.scss */
+  .company__form-2 > div {
+    max-width: 100%;
+  }
+}
+
+/* line 104, src/scss/_components/company-profile/_company.scss */
 .company__form-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13516,28 +13553,49 @@ picture {
           justify-content: space-between;
 }
 
-/* line 96, src/scss/_components/company-profile/_company.scss */
+/* line 110, src/scss/_components/company-profile/_company.scss */
 .company__form-3 > div:nth-of-type(1), .company__form-3 > div:nth-of-type(2), .company__form-3 > div:nth-of-type(3) {
   width: 100%;
   max-width: -webkit-calc((100% - 20px) / 3);
   max-width: calc((100% - 20px) / 3);
 }
 
-/* line 102, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 110, src/scss/_components/company-profile/_company.scss */
+  .company__form-3 > div:nth-of-type(1), .company__form-3 > div:nth-of-type(2), .company__form-3 > div:nth-of-type(3) {
+    max-width: 100%;
+  }
+}
+
+/* line 119, src/scss/_components/company-profile/_company.scss */
 .company__form-3 > div:nth-of-type(4) {
   width: 100%;
   max-width: -webkit-calc((100% - ((100% - 10px) / 3)) - 10px);
   max-width: calc((100% - ((100% - 10px) / 3)) - 10px);
 }
 
-/* line 106, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 119, src/scss/_components/company-profile/_company.scss */
+  .company__form-3 > div:nth-of-type(4) {
+    max-width: 100%;
+  }
+}
+
+/* line 126, src/scss/_components/company-profile/_company.scss */
 .company__form-3 > div:nth-of-type(5) {
   width: 100%;
   max-width: -webkit-calc((100% - 10px) / 3);
   max-width: calc((100% - 10px) / 3);
 }
 
-/* line 114, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 126, src/scss/_components/company-profile/_company.scss */
+  .company__form-3 > div:nth-of-type(5) {
+    max-width: 100%;
+  }
+}
+
+/* line 137, src/scss/_components/company-profile/_company.scss */
 .company__form-4 button {
   cursor: pointer;
   display: -webkit-box;
@@ -13571,7 +13629,14 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 133, src/scss/_components/company-profile/_company.scss */
+@media screen and (max-width: 767px) {
+  /* line 137, src/scss/_components/company-profile/_company.scss */
+  .company__form-4 button {
+    max-width: 100%;
+  }
+}
+
+/* line 159, src/scss/_components/company-profile/_company.scss */
 .company__form-4 button:hover {
   background-color: #fff;
   color: #69c0f1;
@@ -13580,12 +13645,12 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 143, src/scss/_components/company-profile/_company.scss */
+/* line 169, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field {
   height: 57px;
 }
 
-/* line 148, src/scss/_components/company-profile/_company.scss */
+/* line 174, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__label {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
@@ -13599,12 +13664,12 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 155, src/scss/_components/company-profile/_company.scss */
+/* line 181, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__input {
   padding-top: 15px;
 }
 
-/* line 159, src/scss/_components/company-profile/_company.scss */
+/* line 185, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__input-wrapper {
   height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -13612,29 +13677,29 @@ picture {
   transition: height 0.3s ease-in-out;
 }
 
-/* line 165, src/scss/_components/company-profile/_company.scss */
+/* line 191, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-focus .c-form__textarea {
   padding-top: 25px;
 }
 
-/* line 173, src/scss/_components/company-profile/_company.scss */
+/* line 199, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field.is-disabled .c-form__input {
   border-color: #f7f7f7;
   background-color: #f7f7f7;
 }
 
-/* line 180, src/scss/_components/company-profile/_company.scss */
+/* line 206, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover {
   position: relative;
 }
 
-/* line 185, src/scss/_components/company-profile/_company.scss */
+/* line 211, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover.is-disabled .c-form__input {
   border-color: #f7f7f7;
   background-color: #f7f7f7;
 }
 
-/* line 191, src/scss/_components/company-profile/_company.scss */
+/* line 217, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover.is-disabled .c-form__field--input {
   opacity: 1;
   visibility: visible;
@@ -13643,7 +13708,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 196, src/scss/_components/company-profile/_company.scss */
+/* line 222, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover.is-disabled .c-form__field--select {
   opacity: 0;
   visibility: hidden;
@@ -13652,7 +13717,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 205, src/scss/_components/company-profile/_company.scss */
+/* line 231, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field-cover .c-form__field--input {
   opacity: 0;
   visibility: hidden;
@@ -13665,19 +13730,19 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 216, src/scss/_components/company-profile/_company.scss */
+/* line 242, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field--select {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 219, src/scss/_components/company-profile/_company.scss */
+/* line 245, src/scss/_components/company-profile/_company.scss */
 .company .c-form__field--select .c-form__label {
   position: static;
 }
 
-/* line 225, src/scss/_components/company-profile/_company.scss */
+/* line 251, src/scss/_components/company-profile/_company.scss */
 .company .c-form__label {
   z-index: 1;
   cursor: default;
