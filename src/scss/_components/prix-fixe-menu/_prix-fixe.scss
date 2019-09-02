@@ -94,7 +94,7 @@
 			@include adaptive(767) {
 				align-items: flex-start;
 				flex-direction: column;
-				padding-bottom: 0;
+				padding-bottom: 30px;
 			}
 		}
 	}
@@ -432,7 +432,6 @@
 		@include transition(background-color, color);
 		@include adaptive(767) {
 			max-width: 100%;
-			margin-top: 50px;
 		}
 
 		&:hover {
@@ -620,17 +619,31 @@
 			padding: 5px 13px;
 			border-radius: 5px;
 			background-color: #f7f7f7;
+			@include adaptive(767) {
+				flex-direction: column;
+				height: auto;
+				min-height: 42px;
+				padding-top: 13px;
+				padding-bottom: 13px;
+			}
 
 			> div {
 				flex: 1;
 				min-width: 1px;
 				max-width: 100%;
 				padding-right: 10px;
+				@include adaptive(767) {
+					padding-right: 0;
+					text-align: center;
+				}
 
 				&:first-of-type {
 					flex: unset;
 					width: 100%;
 					max-width: 185px;
+					@include adaptive(767) {
+						padding-bottom: 13px;
+					}
 				}
 
 				&:last-of-type {
@@ -640,6 +653,10 @@
 					width: 100%;
 					max-width: 142px;
 					padding-right: 0;
+					@include adaptive(767) {
+						justify-content: center;
+						padding-top: 13px;
+					}
 				}
 
 				p {
@@ -660,17 +677,27 @@
 		&-add {
 			display: flex;
 			height: 42px;
+			@include adaptive(767) {
+				height: auto;
+				flex-direction: column;
+			}
 
 			> div {
 				flex: 1;
 				min-width: 1px;
 				max-width: 100%;
 				padding-right: 10px;
+				@include adaptive(767) {
+					padding-right: 0;
+				}
 
 				&:first-of-type {
 					flex: unset;
 					width: 100%;
 					max-width: 185px;
+					@include adaptive(767) {
+						max-width: 100%;
+					}
 				}
 
 				&:last-of-type {
@@ -680,6 +707,9 @@
 					width: 100%;
 					max-width: 142px;
 					padding-right: 0;
+					@include adaptive(767) {
+						max-width: 100%;
+					}
 				}
 
 				a {
@@ -728,6 +758,9 @@
 			font-size: 16px;
 			font-weight: bold;
 			@include transition(background-color, color);
+			@include adaptive(767) {
+				max-width: 100%;
+			}
 
 			&:hover {
 				background-color: rgb(105, 192, 241);

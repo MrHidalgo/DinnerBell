@@ -59,7 +59,7 @@ PageList:
 - titleName: ==========
 - file: add-new-item.html
   titleName: Add New Item
-  ready: 55
+  ready: 95
 - file: used-ingredients.html
   titleName: Used Ingredients
   ready: 55
