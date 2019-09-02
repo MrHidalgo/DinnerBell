@@ -225,10 +225,16 @@
 			&-7 {
 				display: flex;
 				justify-content: space-between;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+				}
 
 				> div {
 					width: 100%;
 					max-width: calc((100% - 40px) / 3);
+					@include adaptive(767) {
+						max-width: 100%;
+					}
 
 					.c-form__label {
 						font-size: 20px;
@@ -238,6 +244,9 @@
 
 			&-8 {
 				display: flex;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+				}
 
 				> div {
 					&:nth-of-type(1) {
@@ -245,12 +254,19 @@
 						min-width: 1px;
 						max-width: 100%;
 						padding-right: 10px;
+						@include adaptive(767) {
+							padding-right: 0;
+						}
 					}
 
 					&:nth-of-type(2) {
 						width: 100%;
 						max-width: 155px;
 						padding-left: 10px;
+						@include adaptive(767) {
+							max-width: 100%;
+							padding-left: 0;
+						}
 					}
 				}
 			}
@@ -267,16 +283,28 @@
 
 			&-10 {
 				display: flex;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+				}
 
 				> div {
 					width: 50%;
+					@include adaptive(767) {
+						width: 100%;
+					}
 
 					&:nth-of-type(1) {
 						padding-right: 10px;
+						@include adaptive(767) {
+							padding-right: 0;
+						}
 					}
 
 					&:nth-of-type(2) {
 						padding-left: 10px;
+						@include adaptive(767) {
+							padding-left: 0;
+						}
 					}
 				}
 			}

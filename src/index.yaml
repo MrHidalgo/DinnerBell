@@ -55,7 +55,7 @@ PageList:
   ready: 95
 - file: new-item.html
   titleName: New Item
-  ready: 55
+  ready: 95
 - titleName: ==========
 - file: add-new-item.html
   titleName: Add New Item
