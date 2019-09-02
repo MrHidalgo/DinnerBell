@@ -11915,22 +11915,23 @@ picture {
 /* line 3, src/scss/_components/new-category/_new-category.scss */
 .n-category {
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 
-/* line 6, src/scss/_components/new-category/_new-category.scss */
+/* line 7, src/scss/_components/new-category/_new-category.scss */
 .n-category__wrapper {
   width: 100%;
-  max-width: 770px;
+  max-width: 100%;
 }
 
-/* line 11, src/scss/_components/new-category/_new-category.scss */
+/* line 12, src/scss/_components/new-category/_new-category.scss */
 .n-category__title {
   padding-bottom: 35px;
   font-size: 28px;
   font-weight: bold;
 }
 
-/* line 22, src/scss/_components/new-category/_new-category.scss */
+/* line 23, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-3 p {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -11940,18 +11941,32 @@ picture {
   font-weight: 300;
 }
 
-/* line 30, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 23, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-3 p {
+    text-align: center;
+  }
+}
+
+/* line 34, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-3 p a {
   color: #666666;
   text-decoration: underline;
 }
 
-/* line 37, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 34, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-3 p a {
+    display: block;
+  }
+}
+
+/* line 44, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field {
   width: 100%;
 }
 
-/* line 40, src/scss/_components/new-category/_new-category.scss */
+/* line 47, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11959,7 +11974,21 @@ picture {
   display: flex;
 }
 
-/* line 44, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 47, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-field-1 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+/* line 55, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-1 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11970,7 +11999,14 @@ picture {
   padding-right: 10px;
 }
 
-/* line 51, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 55, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-field-1 > div:nth-of-type(1) {
+    padding-right: 0;
+  }
+}
+
+/* line 65, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-1 > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11985,7 +12021,16 @@ picture {
   padding-left: 10px;
 }
 
-/* line 61, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 65, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-field-1 > div:nth-of-type(2) {
+    max-width: 100%;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+}
+
+/* line 80, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11993,30 +12038,55 @@ picture {
   display: flex;
 }
 
-/* line 65, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 80, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-field-2 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 87, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 > div:nth-of-type(1) {
   width: 60%;
   padding-right: 10px;
 }
 
-/* line 70, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 87, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-field-2 > div:nth-of-type(1) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* line 96, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 > div:nth-of-type(2) {
   width: 40%;
   padding-left: 10px;
 }
 
-/* line 75, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 96, src/scss/_components/new-category/_new-category.scss */
+  .n-category__form-field-2 > div:nth-of-type(2) {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+/* line 105, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 > div .c-form__select-wrapper {
   overflow: hidden;
 }
 
-/* line 79, src/scss/_components/new-category/_new-category.scss */
+/* line 109, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 > div .c-form__select-value,
 .n-category__form-field-2 > div .c-form__select-icon {
   background-color: #ffffff;
 }
 
-/* line 84, src/scss/_components/new-category/_new-category.scss */
+/* line 114, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 > div a {
   cursor: pointer;
   display: -webkit-box;
@@ -12047,7 +12117,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 100, src/scss/_components/new-category/_new-category.scss */
+/* line 130, src/scss/_components/new-category/_new-category.scss */
 .n-category__form-field-2 > div a:hover {
   background-color: #69c0f1;
   color: #fff;
@@ -12056,7 +12126,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 111, src/scss/_components/new-category/_new-category.scss */
+/* line 141, src/scss/_components/new-category/_new-category.scss */
 .n-category__btn {
   cursor: pointer;
   outline: none;
@@ -12089,7 +12159,14 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 129, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 141, src/scss/_components/new-category/_new-category.scss */
+  .n-category__btn {
+    max-width: 100%;
+  }
+}
+
+/* line 162, src/scss/_components/new-category/_new-category.scss */
 .n-category__btn:hover {
   background-color: transparent;
   color: #69c0f1;
@@ -12098,7 +12175,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 136, src/scss/_components/new-category/_new-category.scss */
+/* line 169, src/scss/_components/new-category/_new-category.scss */
 .n-category__import {
   overflow: hidden;
   border-width: 1px;
@@ -12109,7 +12186,7 @@ picture {
   background-color: white;
 }
 
-/* line 144, src/scss/_components/new-category/_new-category.scss */
+/* line 177, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12120,13 +12197,30 @@ picture {
   background-color: #f7f7f7;
 }
 
-/* line 151, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 177, src/scss/_components/new-category/_new-category.scss */
+  .n-category__import-header {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 187, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-header > div:nth-of-type(1) {
   width: 100%;
   max-width: 325px;
 }
 
-/* line 155, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 187, src/scss/_components/new-category/_new-category.scss */
+  .n-category__import-header > div:nth-of-type(1) {
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+/* line 195, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-header > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -12136,33 +12230,33 @@ picture {
   max-width: 100%;
 }
 
-/* line 161, src/scss/_components/new-category/_new-category.scss */
+/* line 201, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-header > div p {
   padding-bottom: 10px;
   color: #bba478;
   font-size: 20px;
 }
 
-/* line 167, src/scss/_components/new-category/_new-category.scss */
+/* line 207, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-header > div span {
   color: #666666;
   font-size: 14px;
   font-weight: 300;
 }
 
-/* line 175, src/scss/_components/new-category/_new-category.scss */
+/* line 215, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-body {
   padding: 39px 23px 23px 23px;
 }
 
-/* line 178, src/scss/_components/new-category/_new-category.scss */
+/* line 218, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-body p {
   padding-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* line 185, src/scss/_components/new-category/_new-category.scss */
+/* line 225, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox {
   position: relative;
   width: 100%;
@@ -12172,7 +12266,22 @@ picture {
   margin-bottom: 6px;
 }
 
-/* line 192, src/scss/_components/new-category/_new-category.scss */
+@media screen and (max-width: 767px) {
+  /* line 225, src/scss/_components/new-category/_new-category.scss */
+  .n-category__import-checkbox {
+    max-width: -webkit-calc((100% - 12px) / 2);
+    max-width: calc((100% - 12px) / 2);
+  }
+}
+
+@media screen and (max-width: 424px) {
+  /* line 225, src/scss/_components/new-category/_new-category.scss */
+  .n-category__import-checkbox {
+    max-width: 100%;
+  }
+}
+
+/* line 238, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12186,7 +12295,7 @@ picture {
   margin-left: -6px;
 }
 
-/* line 199, src/scss/_components/new-category/_new-category.scss */
+/* line 245, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox input {
   opacity: 0;
   cursor: pointer;
@@ -12197,7 +12306,7 @@ picture {
   height: 100%;
 }
 
-/* line 209, src/scss/_components/new-category/_new-category.scss */
+/* line 255, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox input:checked + label {
   border-style: solid;
   border-width: 1px;
@@ -12212,12 +12321,12 @@ picture {
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 217, src/scss/_components/new-category/_new-category.scss */
+/* line 263, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox input:checked + label span {
   font-weight: bold;
 }
 
-/* line 224, src/scss/_components/new-category/_new-category.scss */
+/* line 270, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox label {
   cursor: pointer;
   display: -webkit-box;
@@ -12245,12 +12354,12 @@ picture {
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 236, src/scss/_components/new-category/_new-category.scss */
+/* line 282, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox label span {
   font-size: 16px;
 }
 
-/* line 247, src/scss/_components/new-category/_new-category.scss */
+/* line 293, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__label {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
@@ -12264,12 +12373,12 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 254, src/scss/_components/new-category/_new-category.scss */
+/* line 300, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__input {
   padding-top: 15px;
 }
 
-/* line 257, src/scss/_components/new-category/_new-category.scss */
+/* line 303, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__input-wrapper {
   height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -12277,17 +12386,17 @@ picture {
   transition: height 0.3s ease-in-out;
 }
 
-/* line 263, src/scss/_components/new-category/_new-category.scss */
+/* line 309, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__textarea {
   padding-top: 25px;
 }
 
-/* line 270, src/scss/_components/new-category/_new-category.scss */
+/* line 316, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field--select .c-form__label {
   position: static;
 }
 
-/* line 276, src/scss/_components/new-category/_new-category.scss */
+/* line 322, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__label {
   z-index: 2;
   position: absolute;
