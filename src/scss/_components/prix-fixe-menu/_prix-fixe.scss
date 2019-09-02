@@ -2,10 +2,11 @@
 
 .pf-menu {
 	padding-top: 30px;
+	padding-bottom: 50px;
 
 	&__wrapper {
 		width: 100%;
-		max-width: 770px;
+		max-width: 100%;
 	}
 
 	&__title {
@@ -24,6 +25,15 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-bottom: 20px;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+
+			> div {
+				&:nth-of-type(1) {
+					padding-bottom: 15px;
+				}
+			}
+		}
 
 		.pf-menu__subtitle {
 			padding-bottom: 0;
@@ -93,6 +103,10 @@
 		&-row {
 			display: flex;
 			width: 100%;
+			@include adaptive(767) {
+				flex-direction: column-reverse;
+				flex-wrap: wrap;
+			}
 		}
 
 		&-col {
@@ -105,12 +119,22 @@
 			&-2 {
 				width: 260px;
 				padding-left: 15px;
+				@include adaptive(767) {
+					padding-left: 0;
+					padding-bottom: 30px;
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 		}
 
 		&-field {
 			&-1 {
 				display: flex;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+					flex-direction: column-reverse;
+				}
 
 				> div {
 					&:nth-of-type(1) {
@@ -118,15 +142,25 @@
 						min-width: 1px;
 						max-width: 100%;
 						padding-right: 18px;
+						@include adaptive(767) {
+							padding-right: 0;
+						}
 					}
 
 					&:nth-of-type(2) {
 						width: 100%;
 						max-width: 243px;
 						padding-left: 10px;
+						@include adaptive(767) {
+							max-width: 100%;
+							padding-bottom: 20px;
+						}
 
 						.pf-menu__form-row & {
 							max-width: 180px;
+							@include adaptive(767) {
+								margin-left: auto;
+							}
 						}
 					}
 				}
@@ -134,26 +168,36 @@
 
 			&-2 {
 				display: flex;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+				}
 
 				> div {
 					width: 50%;
+					@include adaptive(767) {
+						width: 100%;
+					}
 
 					&:nth-of-type(1) {
 						padding-right: 10px;
+						@include adaptive(767) {
+							padding-right: 0;
+						}
 					}
 					&:nth-of-type(2) {
 						padding-left: 10px;
+						@include adaptive(767) {
+							padding-left: 0;
+						}
 					}
 				}
 			}
 
-			&-3 {}
-
-			&-4 {}
-			&-5 {}
-
 			&-6 {
 				display: flex;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+				}
 
 				> div {
 					&:nth-of-type(1) {
@@ -161,12 +205,19 @@
 						min-width: 1px;
 						max-width: 100%;
 						padding-right: 10px;
+						@include adaptive(767) {
+							padding-right: 0;
+						}
 					}
 
 					&:nth-of-type(2) {
 						width: 100%;
 						max-width: 245px;
 						padding-left: 10px;
+						@include adaptive(767) {
+							max-width: 100%;
+							padding-left: 0;
+						}
 					}
 				}
 			}
@@ -260,10 +311,26 @@
 		height: 45px;
 		padding: 5px 20px;
 		margin-bottom: 20px;
+		@include adaptive(767) {
+			position: relative;
+		}
 
 		p {
 			font-size: 16px;
 			font-weight: bold;
+			@include adaptive(767) {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding-left: 20px;
+				padding-right: 55px;
+				line-height: 45px;
+			}
 		}
 
 		a {
@@ -323,6 +390,10 @@
 		font-size: 16px;
 		font-weight: bold;
 		@include transition(background-color, color);
+		@include adaptive(767) {
+			max-width: 100%;
+			margin-top: 50px;
+		}
 
 		&:hover {
 			background-color: transparent;
@@ -358,6 +429,9 @@
 		display: flex;
 		align-items: center;
 		height: 41px;
+		@include adaptive(767) {
+			justify-content: flex-end;
+		}
 
 		p {
 			padding-right: 20px;

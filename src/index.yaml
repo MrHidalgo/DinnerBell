@@ -31,25 +31,25 @@ PageList:
 - titleName: ==========
 - file: trial.html
   titleName: Trial Period
-  ready: 90
+  ready: 95
 - file: services.html
   titleName: Services
-  ready: 90
+  ready: 95
 - file: menu.html
   titleName: Menu
-  ready: 90
+  ready: 95
 - file: menu-fixe.html
   titleName: Menu Prix-fixe
-  ready: 90
+  ready: 95
 - file: item-list.html
   titleName: Item list
-  ready: 90
+  ready: 95
 - file: regular-menu.html
   titleName: Regular Menu
-  ready: 55
+  ready: 95
 - file: prix-fixe-menu.html
   titleName: Prix-fixe Menu
-  ready: 55
+  ready: 95
 - file: new-category.html
   titleName: New Category
   ready: 55

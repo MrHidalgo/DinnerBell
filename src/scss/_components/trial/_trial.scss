@@ -2,10 +2,9 @@
 
 .trial {
 	padding-top: 30px;
+	padding-bottom: 50px;
 
 	&__wrapper {
-		width: 100%;
-		max-width: 650px;
 		@include adaptive(767) {
 			max-width: 100%;
 		}
