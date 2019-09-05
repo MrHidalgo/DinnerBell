@@ -69,7 +69,7 @@ PageList:
 - titleName: ==========
 - file: company-profile.html
   titleName: Company Profile
-  ready: 55
+  ready: 95
 - file: team-add.html
   titleName: Team Add
   ready: 95
@@ -78,7 +78,7 @@ PageList:
   ready: 95
 - file: login-security.html
   titleName: Login & Security (L&S)
-  ready: 55
+  ready: 95
 - file: login-security-phone.html
   titleName: L&S Phone Resend Code
   ready: 55

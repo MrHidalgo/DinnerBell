@@ -14258,31 +14258,36 @@ picture {
   padding-bottom: 40px;
 }
 
-/* line 4, src/scss/_components/login-sacurity/_security.scss */
-.security__wrapper {
-  width: 100%;
-  max-width: 770px;
+/* line 3, src/scss/_components/login-sacurity/_security.scss */
+.security {
+  padding-bottom: 50px;
 }
 
-/* line 9, src/scss/_components/login-sacurity/_security.scss */
+/* line 6, src/scss/_components/login-sacurity/_security.scss */
+.security__wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 11, src/scss/_components/login-sacurity/_security.scss */
 .security__title {
   font-size: 28px;
 }
 
-/* line 13, src/scss/_components/login-sacurity/_security.scss */
+/* line 15, src/scss/_components/login-sacurity/_security.scss */
 .security__subtitle {
   color: #bba478;
   font-size: 20px;
 }
 
-/* line 18, src/scss/_components/login-sacurity/_security.scss */
+/* line 20, src/scss/_components/login-sacurity/_security.scss */
 .security__text {
   padding-bottom: 30px;
   color: #666666;
   font-size: 14px;
 }
 
-/* line 24, src/scss/_components/login-sacurity/_security.scss */
+/* line 26, src/scss/_components/login-sacurity/_security.scss */
 .security__btn {
   cursor: pointer;
   display: -webkit-box;
@@ -14316,7 +14321,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 43, src/scss/_components/login-sacurity/_security.scss */
+/* line 45, src/scss/_components/login-sacurity/_security.scss */
 .security__btn:hover {
   background-color: #69c0f1;
   color: #fff;
@@ -14325,7 +14330,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 50, src/scss/_components/login-sacurity/_security.scss */
+/* line 52, src/scss/_components/login-sacurity/_security.scss */
 .security__header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14342,12 +14347,17 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 56, src/scss/_components/login-sacurity/_security.scss */
+/* line 59, src/scss/_components/login-sacurity/_security.scss */
+.security__header > div:nth-of-type(1) {
+  padding-right: 15px;
+}
+
+/* line 64, src/scss/_components/login-sacurity/_security.scss */
 .security__header .security__text {
   padding-bottom: 0;
 }
 
-/* line 60, src/scss/_components/login-sacurity/_security.scss */
+/* line 68, src/scss/_components/login-sacurity/_security.scss */
 .security__header a {
   color: #69c0f1;
   text-transform: uppercase;
@@ -14355,12 +14365,12 @@ picture {
   font-weight: bold;
 }
 
-/* line 68, src/scss/_components/login-sacurity/_security.scss */
+/* line 76, src/scss/_components/login-sacurity/_security.scss */
 .security__col {
   padding-bottom: 30px;
 }
 
-/* line 71, src/scss/_components/login-sacurity/_security.scss */
+/* line 79, src/scss/_components/login-sacurity/_security.scss */
 .security__col div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14380,17 +14390,17 @@ picture {
   background-color: #f7f7f7;
 }
 
-/* line 80, src/scss/_components/login-sacurity/_security.scss */
+/* line 88, src/scss/_components/login-sacurity/_security.scss */
 .security__col div p {
   font-weight: 300;
 }
 
-/* line 86, src/scss/_components/login-sacurity/_security.scss */
+/* line 94, src/scss/_components/login-sacurity/_security.scss */
 .security__row {
   padding-bottom: 30px;
 }
 
-/* line 89, src/scss/_components/login-sacurity/_security.scss */
+/* line 97, src/scss/_components/login-sacurity/_security.scss */
 .security__row-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14398,7 +14408,16 @@ picture {
   display: flex;
 }
 
-/* line 93, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 97, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-1 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 104, src/scss/_components/login-sacurity/_security.scss */
 .security__row-1 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -14409,13 +14428,27 @@ picture {
   padding-right: 10px;
 }
 
-/* line 100, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 104, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-1 > div:nth-of-type(1) {
+    padding-right: 0;
+  }
+}
+
+/* line 114, src/scss/_components/login-sacurity/_security.scss */
 .security__row-1 > div:nth-of-type(2) {
   width: 100%;
   max-width: 230px;
 }
 
-/* line 107, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 114, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-1 > div:nth-of-type(2) {
+    max-width: 100%;
+  }
+}
+
+/* line 124, src/scss/_components/login-sacurity/_security.scss */
 .security__row-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14423,7 +14456,16 @@ picture {
   display: flex;
 }
 
-/* line 111, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 124, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-2 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 131, src/scss/_components/login-sacurity/_security.scss */
 .security__row-2 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -14434,13 +14476,27 @@ picture {
   padding-right: 10px;
 }
 
-/* line 118, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 131, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-2 > div:nth-of-type(1) {
+    padding-right: 0;
+  }
+}
+
+/* line 141, src/scss/_components/login-sacurity/_security.scss */
 .security__row-2 > div:nth-of-type(2) {
   width: 100%;
   max-width: 100px;
 }
 
-/* line 125, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 141, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-2 > div:nth-of-type(2) {
+    max-width: 100%;
+  }
+}
+
+/* line 151, src/scss/_components/login-sacurity/_security.scss */
 .security__row-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14455,14 +14511,21 @@ picture {
           justify-content: space-between;
 }
 
-/* line 131, src/scss/_components/login-sacurity/_security.scss */
+/* line 157, src/scss/_components/login-sacurity/_security.scss */
 .security__row-3 > div:nth-of-type(1), .security__row-3 > div:nth-of-type(2), .security__row-3 > div:nth-of-type(3), .security__row-3 > div:nth-of-type(4) {
   width: 100%;
   max-width: -webkit-calc((100% - 10px) / 2);
   max-width: calc((100% - 10px) / 2);
 }
 
-/* line 139, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 157, src/scss/_components/login-sacurity/_security.scss */
+  .security__row-3 > div:nth-of-type(1), .security__row-3 > div:nth-of-type(2), .security__row-3 > div:nth-of-type(3), .security__row-3 > div:nth-of-type(4) {
+    max-width: 100%;
+  }
+}
+
+/* line 168, src/scss/_components/login-sacurity/_security.scss */
 .security__row-3 > div:nth-of-type(5) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14475,14 +14538,14 @@ picture {
   width: 100%;
 }
 
-/* line 144, src/scss/_components/login-sacurity/_security.scss */
+/* line 173, src/scss/_components/login-sacurity/_security.scss */
 .security__row-3 > div:nth-of-type(5) .security__btn {
   width: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 153, src/scss/_components/login-sacurity/_security.scss */
+/* line 182, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14490,7 +14553,7 @@ picture {
   display: flex;
 }
 
-/* line 157, src/scss/_components/login-sacurity/_security.scss */
+/* line 186, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -14501,30 +14564,30 @@ picture {
   padding-right: 10px;
 }
 
-/* line 164, src/scss/_components/login-sacurity/_security.scss */
+/* line 193, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 > div:nth-of-type(2) {
   width: 100%;
   max-width: 220px;
   padding-right: 10px;
 }
 
-/* line 170, src/scss/_components/login-sacurity/_security.scss */
+/* line 199, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 > div:nth-of-type(3) {
   width: 100%;
   max-width: 120px;
 }
 
-/* line 176, src/scss/_components/login-sacurity/_security.scss */
+/* line 205, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 .c-form__input {
   padding-right: 72px;
 }
 
-/* line 179, src/scss/_components/login-sacurity/_security.scss */
+/* line 208, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 .c-form__input-wrapper {
   position: relative;
 }
 
-/* line 182, src/scss/_components/login-sacurity/_security.scss */
+/* line 211, src/scss/_components/login-sacurity/_security.scss */
 .security__row-4 .c-form__input-wrapper a {
   position: absolute;
   top: 0;
@@ -14551,7 +14614,7 @@ picture {
   padding-right: 10px;
 }
 
-/* line 203, src/scss/_components/login-sacurity/_security.scss */
+/* line 232, src/scss/_components/login-sacurity/_security.scss */
 .security__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14572,7 +14635,7 @@ picture {
   background-color: white;
 }
 
-/* line 215, src/scss/_components/login-sacurity/_security.scss */
+/* line 244, src/scss/_components/login-sacurity/_security.scss */
 .security__box-left {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -14582,7 +14645,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 221, src/scss/_components/login-sacurity/_security.scss */
+/* line 250, src/scss/_components/login-sacurity/_security.scss */
 .security__box-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14596,19 +14659,19 @@ picture {
   max-width: 180px;
 }
 
-/* line 228, src/scss/_components/login-sacurity/_security.scss */
+/* line 257, src/scss/_components/login-sacurity/_security.scss */
 .security__box-title {
   color: #bba478;
   font-size: 20px;
 }
 
-/* line 233, src/scss/_components/login-sacurity/_security.scss */
+/* line 262, src/scss/_components/login-sacurity/_security.scss */
 .security__box-text {
   color: #666666;
   font-size: 14px;
 }
 
-/* line 238, src/scss/_components/login-sacurity/_security.scss */
+/* line 267, src/scss/_components/login-sacurity/_security.scss */
 .security__box-btn {
   cursor: pointer;
   display: -webkit-box;
@@ -14642,7 +14705,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 257, src/scss/_components/login-sacurity/_security.scss */
+/* line 286, src/scss/_components/login-sacurity/_security.scss */
 .security__box-btn:hover {
   background-color: #69c0f1;
   color: #fff;
