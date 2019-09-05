@@ -65,7 +65,7 @@ PageList:
   ready: 95
 - file: customization.html
   titleName: Customization
-  ready: 55
+  ready: 95
 - titleName: ==========
 - file: company-profile.html
   titleName: Company Profile

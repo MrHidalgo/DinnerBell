@@ -1,9 +1,11 @@
 // SECTION customization :: START
 
 .customization {
+	padding-bottom: 50px;
+
 	&__wrapper {
 		width: 100%;
-		max-width: 770px;
+		max-width: 100%;
 	}
 
 	&__header {
@@ -41,10 +43,16 @@
 	&__modifier {
 		display: flex;
 		justify-content: space-between;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		> div {
 			width: 100%;
 			max-width: calc((100% - 20px) / 3);
+			@include adaptive(767) {
+				max-width: 100%;
+			}
 
 			a {
 				display: flex;
@@ -62,6 +70,9 @@
 				font-size: 16px;
 				font-weight: bold;
 				@include transition(background-color, color);
+				@include adaptive(767) {
+					margin-bottom: 20px;
+				}
 
 				&:hover {
 					background-color: rgb(105, 192, 241);
@@ -80,10 +91,20 @@
 		&-wrapper {
 			display: flex;
 			justify-content: space-between;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc((100% - 20px) / 5);
+				@include adaptive(767) {
+					max-width: calc((100% - 10px) / 2);
+                  	padding-bottom: 5px;
+				}
+				@include adaptive(424) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -158,6 +179,9 @@
 
 		&-add {
 			display: flex;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			.c-form__field {
 				margin-bottom: 0;
@@ -169,9 +193,17 @@
 				&:nth-of-type(1) {
 					max-width: calc((100% - (100% - 20px) / 3));
 					padding-right: 10px;
+					@include adaptive(767) {
+						max-width: 100%;
+						padding-right: 0;
+						padding-bottom: 5px;
+					}
 				}
 				&:nth-of-type(2) {
 					max-width: calc((100% - 20px) / 3);
+					@include adaptive(767) {
+						max-width: 100%;
+					}
 				}
 
 				a {
@@ -206,10 +238,16 @@
 		&-add {
 			display: flex;
 			justify-content: space-between;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc((100% - 20px) / 3);
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -220,9 +258,16 @@
 			margin-bottom: 20px;
 			border-radius: 5px;
 			background-color: rgb(247, 247, 247);
+			@include adaptive(767) {
+				height: auto;
+			}
 
 			> div {
 				padding: 5px 15px;
+				@include adaptive(767) {
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
 
 				&:nth-of-type(1) {
 					display: flex;
