@@ -13094,7 +13094,7 @@ picture {
 /* line 4, src/scss/_components/used-ingredients/_used.scss */
 .used__wrapper {
   width: 100%;
-  max-width: 770px;
+  max-width: 100%;
 }
 
 /* line 9, src/scss/_components/used-ingredients/_used.scss */
@@ -13136,7 +13136,22 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 35, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 17, src/scss/_components/used-ingredients/_used.scss */
+  .used__row-2 a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  /* line 17, src/scss/_components/used-ingredients/_used.scss */
+  .used__row-2 a {
+    max-width: 100%;
+  }
+}
+
+/* line 42, src/scss/_components/used-ingredients/_used.scss */
 .used__row-2 a:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -13145,12 +13160,12 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 43, src/scss/_components/used-ingredients/_used.scss */
+/* line 50, src/scss/_components/used-ingredients/_used.scss */
 .used__row-3 {
   padding-bottom: 30px;
 }
 
-/* line 48, src/scss/_components/used-ingredients/_used.scss */
+/* line 55, src/scss/_components/used-ingredients/_used.scss */
 .used__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13162,7 +13177,16 @@ picture {
           justify-content: space-between;
 }
 
-/* line 53, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 55, src/scss/_components/used-ingredients/_used.scss */
+  .used__list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 63, src/scss/_components/used-ingredients/_used.scss */
 .used__list > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -13173,12 +13197,26 @@ picture {
   padding-right: 10px;
 }
 
-/* line 60, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 63, src/scss/_components/used-ingredients/_used.scss */
+  .used__list > div:nth-of-type(1) {
+    padding-right: 0;
+  }
+}
+
+/* line 73, src/scss/_components/used-ingredients/_used.scss */
 .used__list > div:nth-of-type(2) {
   width: 238px;
 }
 
-/* line 64, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 73, src/scss/_components/used-ingredients/_used.scss */
+  .used__list > div:nth-of-type(2) {
+    width: 100%;
+  }
+}
+
+/* line 80, src/scss/_components/used-ingredients/_used.scss */
 .used__list > div a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13209,7 +13247,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 81, src/scss/_components/used-ingredients/_used.scss */
+/* line 97, src/scss/_components/used-ingredients/_used.scss */
 .used__list > div a:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -13218,14 +13256,14 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 90, src/scss/_components/used-ingredients/_used.scss */
+/* line 106, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox {
   position: relative;
   width: 100%;
   min-height: 45px;
 }
 
-/* line 95, src/scss/_components/used-ingredients/_used.scss */
+/* line 111, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13239,7 +13277,16 @@ picture {
   margin-left: -5px;
 }
 
-/* line 101, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 111, src/scss/_components/used-ingredients/_used.scss */
+  .used__checkbox-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 120, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox-wrapper > div {
   width: 100%;
   max-width: -webkit-calc((100% - 20px) / 4);
@@ -13248,7 +13295,22 @@ picture {
   padding-bottom: 5px;
 }
 
-/* line 109, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 120, src/scss/_components/used-ingredients/_used.scss */
+  .used__checkbox-wrapper > div {
+    max-width: -webkit-calc((100% - 10px) / 2);
+    max-width: calc((100% - 10px) / 2);
+  }
+}
+
+@media screen and (max-width: 424px) {
+  /* line 120, src/scss/_components/used-ingredients/_used.scss */
+  .used__checkbox-wrapper > div {
+    max-width: 100%;
+  }
+}
+
+/* line 134, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox input,
 .used__checkbox label {
   position: absolute;
@@ -13258,14 +13320,14 @@ picture {
   height: 100%;
 }
 
-/* line 118, src/scss/_components/used-ingredients/_used.scss */
+/* line 143, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox input {
   cursor: pointer;
   opacity: 0;
   z-index: 10;
 }
 
-/* line 124, src/scss/_components/used-ingredients/_used.scss */
+/* line 149, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox input:checked + label {
   border-color: white;
   background-color: #d0ecfb;
@@ -13278,7 +13340,7 @@ picture {
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 133, src/scss/_components/used-ingredients/_used.scss */
+/* line 158, src/scss/_components/used-ingredients/_used.scss */
 .used__checkbox label {
   cursor: pointer;
   display: -webkit-box;
@@ -13301,7 +13363,7 @@ picture {
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 145, src/scss/_components/used-ingredients/_used.scss */
+/* line 170, src/scss/_components/used-ingredients/_used.scss */
 .used__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13317,7 +13379,7 @@ picture {
   background-color: rgba(235, 235, 235, 0.4);
 }
 
-/* line 152, src/scss/_components/used-ingredients/_used.scss */
+/* line 177, src/scss/_components/used-ingredients/_used.scss */
 .used__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13331,7 +13393,16 @@ picture {
   margin-left: -20px;
 }
 
-/* line 158, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 177, src/scss/_components/used-ingredients/_used.scss */
+  .used__box-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 186, src/scss/_components/used-ingredients/_used.scss */
 .used__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(50% - 20px);
@@ -13340,7 +13411,14 @@ picture {
   padding-bottom: 5px;
 }
 
-/* line 167, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 186, src/scss/_components/used-ingredients/_used.scss */
+  .used__box-wrapper > div {
+    max-width: 100%;
+  }
+}
+
+/* line 198, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -13351,12 +13429,12 @@ picture {
   padding: 5px 13px;
 }
 
-/* line 178, src/scss/_components/used-ingredients/_used.scss */
+/* line 209, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(2) {
   width: 105px;
 }
 
-/* line 182, src/scss/_components/used-ingredients/_used.scss */
+/* line 213, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13370,17 +13448,17 @@ picture {
   padding: 5px 13px;
 }
 
-/* line 188, src/scss/_components/used-ingredients/_used.scss */
+/* line 219, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(3) a {
   color: #999999;
 }
 
-/* line 194, src/scss/_components/used-ingredients/_used.scss */
+/* line 225, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__field {
   margin-bottom: 0;
 }
 
-/* line 199, src/scss/_components/used-ingredients/_used.scss */
+/* line 230, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-wrapper {
   height: 31px;
   -webkit-border-radius: 0;
@@ -13388,7 +13466,7 @@ picture {
   background-color: #ffffff;
 }
 
-/* line 205, src/scss/_components/used-ingredients/_used.scss */
+/* line 236, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-value {
   width: -webkit-calc(100% - 30px);
   width: calc(100% - 30px);
@@ -13396,12 +13474,12 @@ picture {
   line-height: 31px;
 }
 
-/* line 211, src/scss/_components/used-ingredients/_used.scss */
+/* line 242, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-icon {
   width: 30px;
 }
 
-/* line 219, src/scss/_components/used-ingredients/_used.scss */
+/* line 250, src/scss/_components/used-ingredients/_used.scss */
 .used__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13418,7 +13496,7 @@ picture {
   border: 1px solid rgba(235, 235, 235, 0.8);
 }
 
-/* line 226, src/scss/_components/used-ingredients/_used.scss */
+/* line 257, src/scss/_components/used-ingredients/_used.scss */
 .used__block-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13433,23 +13511,23 @@ picture {
   background-color: rgba(235, 235, 235, 0.4);
 }
 
-/* line 233, src/scss/_components/used-ingredients/_used.scss */
+/* line 264, src/scss/_components/used-ingredients/_used.scss */
 .used__block-head .used__title {
   padding: 0;
 }
 
-/* line 238, src/scss/_components/used-ingredients/_used.scss */
+/* line 269, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body {
   padding: 25px 5px;
 }
 
-/* line 241, src/scss/_components/used-ingredients/_used.scss */
+/* line 272, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body .used__title {
   padding-top: 0;
   padding-left: 20px;
 }
 
-/* line 248, src/scss/_components/used-ingredients/_used.scss */
+/* line 279, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body .used__row-3:last-of-type {
   padding-bottom: 0;
 }

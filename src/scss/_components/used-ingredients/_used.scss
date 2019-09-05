@@ -3,7 +3,7 @@
 .used {
 	&__wrapper {
 		width: 100%;
-		max-width: 770px;
+		max-width: 100%;
 	}
 
 	&__title {
@@ -31,6 +31,13 @@
 				font-size: 16px;
 				font-weight: bold;
 				@include transition(background-color, color);
+				@include adaptive(767) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+				@include adaptive(424) {
+					max-width: 100%;
+				}
 
 				&:hover {
 					background-color: rgb(105, 192, 241);
@@ -48,6 +55,9 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		> div {
 			&:nth-of-type(1) {
@@ -55,10 +65,16 @@
 				min-width: 1px;
 				max-width: 100%;
 				padding-right: 10px;
+				@include adaptive(767) {
+					padding-right: 0;
+				}
 			}
 
 			&:nth-of-type(2) {
 				width: 238px;
+				@include adaptive(767) {
+					width: 100%;
+				}
 			}
 
 			a {
@@ -97,12 +113,21 @@
 			flex-wrap: wrap;
 			width: calc(100% + 5px);
 			margin-left: -5px;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc((100% - 20px) / 4);
 				margin-left: 5px;
 				padding-bottom: 5px;
+				@include adaptive(767) {
+					max-width: calc((100% - 10px) / 2);
+				}
+				@include adaptive(424) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -154,12 +179,18 @@
 			flex-wrap: wrap;
 			width: calc(100% + 20px);
 			margin-left: -20px;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc(50% - 20px);
 				margin-left: 20px;
 				padding-bottom: 5px;
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 
