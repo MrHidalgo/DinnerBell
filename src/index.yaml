@@ -81,7 +81,7 @@ PageList:
   ready: 95
 - file: login-security-phone.html
   titleName: L&S Phone Resend Code
-  ready: 55
+  ready: 95
 - file: billing-center.html
   titleName: Billing Center
   ready: 95
