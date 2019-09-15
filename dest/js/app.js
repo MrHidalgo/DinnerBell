@@ -1747,6 +1747,15 @@ $(document).ready(function (ev) {
 			_parentNode.find('input[type="text"]').attr('disabled', 'disabled');
 		});
 	};
+
+	var initItemListCollapse = function initItemListCollapse() {
+		$('.itemList__box-head').on('click', function (ev) {
+			var _parent = $(ev.currentTarget).closest('.itemList__box'),
+			    _collapseBody = _parent.find('.itemList__box-body');
+
+			_collapseBody.slideToggle(250);
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -1790,6 +1799,7 @@ $(document).ready(function (ev) {
 		initTPVideoPreviewChooseMode();
 
 		initCompanyEditInfo();
+		initItemListCollapse();
 		// ==========================================
 	};
 	initJquery();

@@ -1261,6 +1261,16 @@ $(document).ready((ev) => {
 			_parentNode.find('input[type="text"]').attr('disabled','disabled');
 		});
 	};
+
+
+	const initItemListCollapse = () => {
+		$('.itemList__box-head').on('click', (ev) => {
+			const _parent = $(ev.currentTarget).closest('.itemList__box'),
+				_collapseBody = _parent.find('.itemList__box-body');
+
+			_collapseBody.slideToggle(250);
+		});
+	};
  	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -1306,6 +1316,7 @@ $(document).ready((ev) => {
 		initTPVideoPreviewChooseMode();
 
 		initCompanyEditInfo();
+		initItemListCollapse();
 		// ==========================================
   };
   initJquery();
