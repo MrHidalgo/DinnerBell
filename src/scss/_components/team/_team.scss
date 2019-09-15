@@ -8,7 +8,7 @@
 
 	&__table {
 		width: 100%;
-		max-width: 100%;
+		max-width: 1200px;
 		@include adaptive(767) {
 			width: calc(100% + 15px);
 			margin-right: -15px;
