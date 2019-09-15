@@ -156,8 +156,16 @@
 			padding: 5px 15px;
 			border-radius: 5px;
 			background-color: rgb(247, 247, 247);
+			@include adaptive(767) {
+				align-items: stretch;
+				padding: 15px 10px;
+			}
 
 			> div {
+				@include adaptive(767) {
+					min-height: 100%;
+				}
+
 				&:nth-of-type(1) {
 					flex: 1;
 					min-width: 1px;
@@ -167,12 +175,23 @@
 					display: flex;
 					justify-content: flex-end;
 					width: 100px;
+					@include adaptive(767) {
+						padding-left: 10px;
+					}
 				}
 
 				a {
 					margin-left: 5px;
 					margin-right: 5px;
 					color: #333333;
+					@include adaptive(767) {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 50%;
+						min-height: 100%;
+						margin: 0;
+					}
 				}
 			}
 		}
@@ -264,30 +283,68 @@
 
 			> div {
 				padding: 5px 15px;
-				@include adaptive(767) {
-					padding-top: 10px;
-					padding-bottom: 10px;
-				}
 
 				&:nth-of-type(1) {
 					display: flex;
 					justify-content: space-between;
+					@include adaptive(767) {
+                        align-items: center;
+						padding: 15px 10px 0;
+					}
 				}
 				&:nth-of-type(2) {
 					display: flex;
+					align-items: center;
 					justify-content: center;
+					@include adaptive(767) {
+						padding: 15px 10px;
+					}
 				}
 				&:nth-of-type(3) {
 					display: flex;
 					justify-content: flex-end;
+					@include adaptive(767) {
+                        align-items: center;
+						padding: 0 10px 15px;
+					}
 				}
 
 				a {
 					color: #333333;
+					@include adaptive(767) {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 30px;
+						height: 30px;
+					}
 				}
 
 				.icon-png {
 					padding-right: 10px;
+				}
+
+				.c-form__field {
+					width: 100%;
+					margin-bottom: 0;
+				}
+
+				.c-form__select {
+					&-wrapper {
+						height: 31px;
+						border: none;
+						border-radius: 0;
+					}
+
+					&-value {
+						width: 100%;
+						padding-right: 15px;
+						line-height: 31px;
+					}
+
+					&-icon {
+						display: none;
+					}
 				}
 			}
 		}

@@ -71,6 +71,9 @@
       height: 2px;
       background-color: #b19765;
       @include transition(opacity);
+      @include adaptive(767) {
+        top: calc(100% + 2px);
+      }
     }
 
     &.is-active {
@@ -583,7 +586,7 @@
             }
 
             i {
-              transform: translateX(-40px);
+              transform: translateX(-41px);
               border-color: #a0d392;
               @include transition(border-color, transform);
             }

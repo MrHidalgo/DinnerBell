@@ -53,6 +53,39 @@
 				'More action'
 			],
 			placeholderVal: "Type"
+		},
+		selectFieldCustomNumeric: {
+			classMod: "",
+			uniqueName: "select_numeric",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+				'Action',
+				'More action'
+			],
+			placeholderVal: "Numeric"
+		},
+		selectFieldCustomToggle: {
+			classMod: "",
+			uniqueName: "select_toggle",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+				'Action',
+				'More action'
+			],
+			placeholderVal: "Toggle"
+		},
+		selectFieldCustomImage: {
+			classMod: "",
+			uniqueName: "select_image",
+			labelVal: "",
+			selectClassMod: "",
+			selectOption: [
+				'Action',
+				'More action'
+			],
+			placeholderVal: "Image"
 		}
 	};
 
@@ -188,7 +221,8 @@ section#customization.customization
 								i.icon-font.icon-pencil
 						div
 							i.icon-png.i-numeric
-							p Numeric
+							//p Numeric
+							+formSelectCustom(dataFormObj.selectFieldCustomNumeric)
 						div
 							a(href="#" class="" title="")
 								i.icon-font.icon-waste-bin
@@ -200,7 +234,8 @@ section#customization.customization
 								i.icon-font.icon-pencil
 						div
 							i.icon-png.i-toggle
-							p Toggle
+							//p Toggle
+							+formSelectCustom(dataFormObj.selectFieldCustomToggle)
 						div
 							a(href="#" class="" title="")
 								i.icon-font.icon-waste-bin
@@ -212,7 +247,8 @@ section#customization.customization
 								i.icon-font.icon-pencil
 						div
 							i.icon-png.i-image
-							p Image
+							//p Image
+							+formSelectCustom(dataFormObj.selectFieldCustomImage)
 						div
 							a(href="#" class="" title="")
 								i.icon-font.icon-waste-bin
