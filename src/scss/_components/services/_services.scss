@@ -12,6 +12,11 @@
 		}
 	}
 
+	&__wrapper {
+		width: 100%;
+		max-width: 1200px;
+	}
+
 	&__box {
 		width: 100%;
 
@@ -28,12 +33,9 @@
 
 			> div {
 				width: 100%;
-				max-width: calc(100% / 4);
+				max-width: calc(100% / 3);
 				padding-left: 40px;
 				padding-bottom: 40px;
-				@include adaptive(1599) {
-					max-width: calc(100% / 3);
-				}
 				@include adaptive(1365) {
 					padding-left: 20px;
 				}

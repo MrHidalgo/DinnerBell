@@ -3,6 +3,11 @@
 .menu {
 	padding-top: 30px;
 
+	&__wrapper {
+		width: 100%;
+		max-width: 1200px;
+	}
+
 	&__header {
 		display: flex;
 		align-items: center;
@@ -100,12 +105,9 @@
 
 			> div {
 				width: 100%;
-				max-width: calc(100% / 5);
+				max-width: calc(100% / 4);
 				padding-left: 15px;
 				padding-bottom: 30px;
-				@include adaptive(1599) {
-					max-width: calc(100% / 4);
-				}
 				@include adaptive(1365) {
 					max-width: calc(100% / 3);
 				}

@@ -9999,11 +9999,17 @@ picture {
 }
 
 /* line 15, src/scss/_components/services/_services.scss */
+.services__wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* line 20, src/scss/_components/services/_services.scss */
 .services__box {
   width: 100%;
 }
 
-/* line 18, src/scss/_components/services/_services.scss */
+/* line 23, src/scss/_components/services/_services.scss */
 .services__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10019,7 +10025,7 @@ picture {
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 18, src/scss/_components/services/_services.scss */
+  /* line 23, src/scss/_components/services/_services.scss */
   .services__box-wrapper {
     width: -webkit-calc(100% + 20px);
     width: calc(100% + 20px);
@@ -10027,32 +10033,24 @@ picture {
   }
 }
 
-/* line 29, src/scss/_components/services/_services.scss */
+/* line 34, src/scss/_components/services/_services.scss */
 .services__box-wrapper > div {
   width: 100%;
-  max-width: -webkit-calc(100% / 4);
-  max-width: calc(100% / 4);
+  max-width: -webkit-calc(100% / 3);
+  max-width: calc(100% / 3);
   padding-left: 40px;
   padding-bottom: 40px;
 }
 
-@media screen and (max-width: 1599px) {
-  /* line 29, src/scss/_components/services/_services.scss */
-  .services__box-wrapper > div {
-    max-width: -webkit-calc(100% / 3);
-    max-width: calc(100% / 3);
-  }
-}
-
 @media screen and (max-width: 1365px) {
-  /* line 29, src/scss/_components/services/_services.scss */
+  /* line 34, src/scss/_components/services/_services.scss */
   .services__box-wrapper > div {
     padding-left: 20px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 29, src/scss/_components/services/_services.scss */
+  /* line 34, src/scss/_components/services/_services.scss */
   .services__box-wrapper > div {
     max-width: -webkit-calc(100% / 2);
     max-width: calc(100% / 2);
@@ -10060,13 +10058,13 @@ picture {
 }
 
 @media screen and (max-width: 575px) {
-  /* line 29, src/scss/_components/services/_services.scss */
+  /* line 34, src/scss/_components/services/_services.scss */
   .services__box-wrapper > div {
     max-width: 100%;
   }
 }
 
-/* line 49, src/scss/_components/services/_services.scss */
+/* line 51, src/scss/_components/services/_services.scss */
 .services__box-image {
   overflow: hidden;
   position: relative;
@@ -10081,13 +10079,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 49, src/scss/_components/services/_services.scss */
+  /* line 51, src/scss/_components/services/_services.scss */
   .services__box-image {
     height: 200px;
   }
 }
 
-/* line 64, src/scss/_components/services/_services.scss */
+/* line 66, src/scss/_components/services/_services.scss */
 .services__box-image:hover img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -10099,7 +10097,7 @@ picture {
   transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 
-/* line 70, src/scss/_components/services/_services.scss */
+/* line 72, src/scss/_components/services/_services.scss */
 .services__box-image img {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
@@ -10111,7 +10109,7 @@ picture {
   transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
 }
 
-/* line 77, src/scss/_components/services/_services.scss */
+/* line 79, src/scss/_components/services/_services.scss */
 .services__box-title {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -10120,26 +10118,26 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 77, src/scss/_components/services/_services.scss */
+  /* line 79, src/scss/_components/services/_services.scss */
   .services__box-title {
     padding-bottom: 20px;
     font-size: 20px;
   }
 }
 
-/* line 87, src/scss/_components/services/_services.scss */
+/* line 89, src/scss/_components/services/_services.scss */
 .services__box-title span {
   vertical-align: middle;
   padding-left: 20px;
   font-weight: 300;
 }
 
-/* line 92, src/scss/_components/services/_services.scss */
+/* line 94, src/scss/_components/services/_services.scss */
 .services__box-title span sup {
   font-size: 12px;
 }
 
-/* line 98, src/scss/_components/services/_services.scss */
+/* line 100, src/scss/_components/services/_services.scss */
 .services__box-desc {
   padding-bottom: 30px;
   font-size: 16px;
@@ -10147,19 +10145,19 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 98, src/scss/_components/services/_services.scss */
+  /* line 100, src/scss/_components/services/_services.scss */
   .services__box-desc {
     font-size: 14px;
   }
 }
 
-/* line 106, src/scss/_components/services/_services.scss */
+/* line 108, src/scss/_components/services/_services.scss */
 .services__box-desc a {
   color: #69c0f1;
   font-weight: normal;
 }
 
-/* line 112, src/scss/_components/services/_services.scss */
+/* line 114, src/scss/_components/services/_services.scss */
 .services__box-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10190,7 +10188,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 129, src/scss/_components/services/_services.scss */
+/* line 131, src/scss/_components/services/_services.scss */
 .services__box-btn:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -10205,6 +10203,12 @@ picture {
 }
 
 /* line 6, src/scss/_components/menu/_menu.scss */
+.menu__wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* line 11, src/scss/_components/menu/_menu.scss */
 .menu__header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10223,7 +10227,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 6, src/scss/_components/menu/_menu.scss */
+  /* line 11, src/scss/_components/menu/_menu.scss */
   .menu__header {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -10232,7 +10236,7 @@ picture {
   }
 }
 
-/* line 17, src/scss/_components/menu/_menu.scss */
+/* line 22, src/scss/_components/menu/_menu.scss */
 .menu__header > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10245,14 +10249,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 17, src/scss/_components/menu/_menu.scss */
+  /* line 22, src/scss/_components/menu/_menu.scss */
   .menu__header > div {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 24, src/scss/_components/menu/_menu.scss */
+  /* line 29, src/scss/_components/menu/_menu.scss */
   .menu__header > div:nth-of-type(3) {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -10261,7 +10265,7 @@ picture {
   }
 }
 
-/* line 31, src/scss/_components/menu/_menu.scss */
+/* line 36, src/scss/_components/menu/_menu.scss */
 .menu__header-setting, .menu__header-new {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10274,46 +10278,46 @@ picture {
   color: #61bdf0;
 }
 
-/* line 39, src/scss/_components/menu/_menu.scss */
+/* line 44, src/scss/_components/menu/_menu.scss */
 .menu__header-setting .icon-font {
   font-size: 16px;
   margin-right: 5px;
 }
 
-/* line 44, src/scss/_components/menu/_menu.scss */
+/* line 49, src/scss/_components/menu/_menu.scss */
 .menu__header-setting span {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-/* line 51, src/scss/_components/menu/_menu.scss */
+/* line 56, src/scss/_components/menu/_menu.scss */
 .menu__header-new {
   margin-left: 40px;
 }
 
-/* line 54, src/scss/_components/menu/_menu.scss */
+/* line 59, src/scss/_components/menu/_menu.scss */
 .menu__header-new span {
   font-size: 30px;
   font-weight: bold;
   margin-right: 5px;
 }
 
-/* line 60, src/scss/_components/menu/_menu.scss */
+/* line 65, src/scss/_components/menu/_menu.scss */
 .menu__header-new p {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-/* line 68, src/scss/_components/menu/_menu.scss */
+/* line 73, src/scss/_components/menu/_menu.scss */
 .menu__title {
   font-size: 28px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 68, src/scss/_components/menu/_menu.scss */
+  /* line 73, src/scss/_components/menu/_menu.scss */
   .menu__title {
     padding-bottom: 15px;
     font-size: 26px;
@@ -10321,31 +10325,31 @@ picture {
 }
 
 @media screen and (max-width: 575px) {
-  /* line 68, src/scss/_components/menu/_menu.scss */
+  /* line 73, src/scss/_components/menu/_menu.scss */
   .menu__title {
     font-size: 24px;
   }
 }
 
-/* line 79, src/scss/_components/menu/_menu.scss */
+/* line 84, src/scss/_components/menu/_menu.scss */
 .menu__title span {
   padding-left: 15px;
   font-weight: normal;
 }
 
-/* line 85, src/scss/_components/menu/_menu.scss */
+/* line 90, src/scss/_components/menu/_menu.scss */
 .menu__subtitle {
   padding-bottom: 30px;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* line 91, src/scss/_components/menu/_menu.scss */
+/* line 96, src/scss/_components/menu/_menu.scss */
 .menu__box {
   width: 100%;
 }
 
-/* line 94, src/scss/_components/menu/_menu.scss */
+/* line 99, src/scss/_components/menu/_menu.scss */
 .menu__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10360,25 +10364,17 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 101, src/scss/_components/menu/_menu.scss */
+/* line 106, src/scss/_components/menu/_menu.scss */
 .menu__box-wrapper > div {
   width: 100%;
-  max-width: -webkit-calc(100% / 5);
-  max-width: calc(100% / 5);
+  max-width: -webkit-calc(100% / 4);
+  max-width: calc(100% / 4);
   padding-left: 15px;
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 1599px) {
-  /* line 101, src/scss/_components/menu/_menu.scss */
-  .menu__box-wrapper > div {
-    max-width: -webkit-calc(100% / 4);
-    max-width: calc(100% / 4);
-  }
-}
-
 @media screen and (max-width: 1365px) {
-  /* line 101, src/scss/_components/menu/_menu.scss */
+  /* line 106, src/scss/_components/menu/_menu.scss */
   .menu__box-wrapper > div {
     max-width: -webkit-calc(100% / 3);
     max-width: calc(100% / 3);
@@ -10386,7 +10382,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 101, src/scss/_components/menu/_menu.scss */
+  /* line 106, src/scss/_components/menu/_menu.scss */
   .menu__box-wrapper > div {
     max-width: -webkit-calc(100% / 2);
     max-width: calc(100% / 2);
@@ -10394,13 +10390,13 @@ picture {
 }
 
 @media screen and (max-width: 575px) {
-  /* line 101, src/scss/_components/menu/_menu.scss */
+  /* line 106, src/scss/_components/menu/_menu.scss */
   .menu__box-wrapper > div {
     max-width: 100%;
   }
 }
 
-/* line 121, src/scss/_components/menu/_menu.scss */
+/* line 123, src/scss/_components/menu/_menu.scss */
 .menu__box-image {
   overflow: hidden;
   position: relative;
@@ -10422,13 +10418,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 121, src/scss/_components/menu/_menu.scss */
+  /* line 123, src/scss/_components/menu/_menu.scss */
   .menu__box-image {
     height: 150px;
   }
 }
 
-/* line 137, src/scss/_components/menu/_menu.scss */
+/* line 139, src/scss/_components/menu/_menu.scss */
 .menu__box-image--fill:hover img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -10440,7 +10436,7 @@ picture {
   transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 
-/* line 144, src/scss/_components/menu/_menu.scss */
+/* line 146, src/scss/_components/menu/_menu.scss */
 .menu__box-image img {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
@@ -10452,7 +10448,7 @@ picture {
   transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
 }
 
-/* line 151, src/scss/_components/menu/_menu.scss */
+/* line 153, src/scss/_components/menu/_menu.scss */
 .menu__box-title {
   padding-top: 20px;
   font-size: 16px;
