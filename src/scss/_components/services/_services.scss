@@ -77,17 +77,24 @@
 		}
 
 		&-title {
+			display: flex;
 			padding-top: 20px;
 			padding-bottom: 30px;
-			font-size: 22px;
-			font-weight: 800;
-			@include adaptive(767) {
-				padding-bottom: 20px;
-				font-size: 20px;
+
+			p {
+				display: flex;
+				flex-wrap: wrap;
+				font-size: 22px;
+				font-weight: 800;
+				@include adaptive(767) {
+					padding-bottom: 20px;
+					font-size: 20px;
+				}
 			}
 
 			span {
-				vertical-align: middle;
+				display: block;
+				padding-top: 5px;
 				padding-left: 20px;
 				font-weight: 300;
 

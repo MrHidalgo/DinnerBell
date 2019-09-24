@@ -27,9 +27,17 @@ section#menu.menu
 									img(src="img/img-test.jpg" alt="" title="")
 
 							if(idx % 2 === 0)
-								p.menu__box-title!= "Shelter Island Mirinated Oysters with Calamari $20"
+								.menu__box-title
+									div
+										p!= "Shelter Island Mirinated Oysters with Calamari"
+									div
+										span!= "$20"
 							else
-								p.menu__box-title!= "Grilled Fresh Calamari $20"
+								.menu__box-title
+									div
+										p!= "Grilled Fresh Calamari"
+									div
+										span!= "$20"
 
 
 // SECTION menu :: END

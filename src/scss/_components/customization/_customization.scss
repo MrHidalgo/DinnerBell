@@ -100,7 +100,7 @@
 				max-width: calc((100% - 20px) / 5);
 				@include adaptive(767) {
 					max-width: calc((100% - 10px) / 2);
-                  	padding-bottom: 5px;
+                  	padding-bottom: 10px;
 				}
 				@include adaptive(424) {
 					max-width: 100%;

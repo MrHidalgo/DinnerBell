@@ -10111,33 +10111,49 @@ picture {
 
 /* line 79, src/scss/_components/services/_services.scss */
 .services__box-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 20px;
   padding-bottom: 30px;
+}
+
+/* line 84, src/scss/_components/services/_services.scss */
+.services__box-title p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   font-size: 22px;
   font-weight: 800;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 79, src/scss/_components/services/_services.scss */
-  .services__box-title {
+  /* line 84, src/scss/_components/services/_services.scss */
+  .services__box-title p {
     padding-bottom: 20px;
     font-size: 20px;
   }
 }
 
-/* line 89, src/scss/_components/services/_services.scss */
+/* line 95, src/scss/_components/services/_services.scss */
 .services__box-title span {
-  vertical-align: middle;
+  display: block;
+  padding-top: 5px;
   padding-left: 20px;
   font-weight: 300;
 }
 
-/* line 94, src/scss/_components/services/_services.scss */
+/* line 101, src/scss/_components/services/_services.scss */
 .services__box-title span sup {
   font-size: 12px;
 }
 
-/* line 100, src/scss/_components/services/_services.scss */
+/* line 107, src/scss/_components/services/_services.scss */
 .services__box-desc {
   padding-bottom: 30px;
   font-size: 16px;
@@ -10145,19 +10161,19 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 100, src/scss/_components/services/_services.scss */
+  /* line 107, src/scss/_components/services/_services.scss */
   .services__box-desc {
     font-size: 14px;
   }
 }
 
-/* line 108, src/scss/_components/services/_services.scss */
+/* line 115, src/scss/_components/services/_services.scss */
 .services__box-desc a {
   color: #69c0f1;
   font-weight: normal;
 }
 
-/* line 114, src/scss/_components/services/_services.scss */
+/* line 121, src/scss/_components/services/_services.scss */
 .services__box-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10188,7 +10204,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 131, src/scss/_components/services/_services.scss */
+/* line 138, src/scss/_components/services/_services.scss */
 .services__box-btn:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -10450,8 +10466,29 @@ picture {
 
 /* line 153, src/scss/_components/menu/_menu.scss */
 .menu__box-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 20px;
   font-size: 16px;
+}
+
+/* line 158, src/scss/_components/menu/_menu.scss */
+.menu__box-title p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/* line 163, src/scss/_components/menu/_menu.scss */
+.menu__box-title span {
+  display: block;
+  padding-left: 10px;
 }
 
 /* line 3, src/scss/_components/item-list/_item-list.scss */
@@ -12691,10 +12728,11 @@ picture {
   /* line 225, src/scss/_components/new-category/_new-category.scss */
   .n-category__import-checkbox {
     max-width: 100%;
+    margin-bottom: 10px;
   }
 }
 
-/* line 238, src/scss/_components/new-category/_new-category.scss */
+/* line 239, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12708,7 +12746,7 @@ picture {
   margin-left: -6px;
 }
 
-/* line 245, src/scss/_components/new-category/_new-category.scss */
+/* line 246, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox input {
   opacity: 0;
   cursor: pointer;
@@ -12719,7 +12757,7 @@ picture {
   height: 100%;
 }
 
-/* line 255, src/scss/_components/new-category/_new-category.scss */
+/* line 256, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox input:checked + label {
   border-style: solid;
   border-width: 1px;
@@ -12734,12 +12772,12 @@ picture {
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 263, src/scss/_components/new-category/_new-category.scss */
+/* line 264, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox input:checked + label span {
   font-weight: bold;
 }
 
-/* line 270, src/scss/_components/new-category/_new-category.scss */
+/* line 271, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox label {
   cursor: pointer;
   display: -webkit-box;
@@ -12767,12 +12805,12 @@ picture {
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 282, src/scss/_components/new-category/_new-category.scss */
+/* line 283, src/scss/_components/new-category/_new-category.scss */
 .n-category__import-checkbox label span {
   font-size: 16px;
 }
 
-/* line 293, src/scss/_components/new-category/_new-category.scss */
+/* line 294, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__label {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
@@ -12786,12 +12824,12 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 300, src/scss/_components/new-category/_new-category.scss */
+/* line 301, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__input {
   padding-top: 15px;
 }
 
-/* line 303, src/scss/_components/new-category/_new-category.scss */
+/* line 304, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__input-wrapper {
   height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -12799,17 +12837,17 @@ picture {
   transition: height 0.3s ease-in-out;
 }
 
-/* line 309, src/scss/_components/new-category/_new-category.scss */
+/* line 310, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field.is-focus .c-form__textarea {
   padding-top: 25px;
 }
 
-/* line 316, src/scss/_components/new-category/_new-category.scss */
+/* line 317, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__field--select .c-form__label {
   position: static;
 }
 
-/* line 322, src/scss/_components/new-category/_new-category.scss */
+/* line 323, src/scss/_components/new-category/_new-category.scss */
 .n-category .c-form__label {
   z-index: 2;
   position: absolute;
@@ -13006,7 +13044,7 @@ picture {
   .customization__checkbox-wrapper > div {
     max-width: -webkit-calc((100% - 10px) / 2);
     max-width: calc((100% - 10px) / 2);
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 }
 

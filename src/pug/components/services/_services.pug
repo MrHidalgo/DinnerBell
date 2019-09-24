@@ -11,7 +11,11 @@ section#services.services
 							.services__box-image
 								img(src="img/img-test.jpg" alt="" title="")
 
-							p.services__box-title!= "Digital Menu <span>$20<sup>/mo</sup></span>"
+							.services__box-title
+								div
+									p!= "Digital Menu"
+								div
+									!= "<span>$20<sup>/mo</sup></span>"
 							p.services__box-desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. <a href='#'>Learn More ></a>"
 
 							a.services__box-btn(href="#" class="" title="")!= "Subscribe"
