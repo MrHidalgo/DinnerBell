@@ -1,6 +1,10 @@
 // SECTION team :: START
 
 .team {
+	@include adaptive(767) {
+		padding-top: 15px;
+	}
+
 	&__title {
 		padding-bottom: 30px;
 		font-size: 28px;

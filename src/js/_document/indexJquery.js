@@ -1268,6 +1268,7 @@ $(document).ready((ev) => {
 			const _parent = $(ev.currentTarget).closest('.itemList__box'),
 				_collapseBody = _parent.find('.itemList__box-body');
 
+			_parent.toggleClass('is-collapse');
 			_collapseBody.slideToggle(250);
 		});
 	};

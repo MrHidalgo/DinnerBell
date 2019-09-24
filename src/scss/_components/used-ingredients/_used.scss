@@ -1,6 +1,10 @@
 // SECTION used :: START
 
 .used {
+	@include adaptive(767) {
+		padding-top: 15px;
+	}
+
 	&__wrapper {
 		width: 100%;
 		max-width: 1200px;

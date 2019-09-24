@@ -3,6 +3,9 @@
 .trial {
 	padding-top: 30px;
 	padding-bottom: 50px;
+	@include adaptive(767) {
+		padding-top: 15px;
+	}
 
 	&__wrapper {
 		width: 100%;

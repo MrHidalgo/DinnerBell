@@ -3,6 +3,9 @@
 .itemList {
   padding-top: 30px;
   padding-bottom: 50px;
+  @include adaptive(767) {
+    padding-top: 15px;
+  }
 
   &__wrapper {
     width: 100%;
@@ -53,6 +56,9 @@
 
     &-new {
       margin-left: 40px;
+      @include adaptive(767) {
+        margin-left: 20px;
+      }
 
       span {
         font-size: 30px;
@@ -71,6 +77,9 @@
   &__title {
     font-size: 28px;
     font-weight: bold;
+    @include adaptive(767) {
+      padding-bottom: 15px;
+    }
 
     span {
       padding-left: 15px;
@@ -206,6 +215,31 @@
   }
 
   &__box {
+    &-info {
+      display: none;
+      @include adaptive(767) {
+        display: flex;
+      }
+
+      > div {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px 10px;
+
+        &:last-of-type {
+          max-width: 50px;
+        }
+      }
+
+      span {
+        display: block;
+        min-height: 25px;
+        padding-bottom: 10px;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+    }
+
     &-wrapper {
       display: none;
       @include adaptive(767) {
@@ -221,34 +255,10 @@
     &-body {
       span {
         display: block;
+        min-height: 25px;
         padding-bottom: 10px;
         font-size: 11px;
         text-transform: uppercase;
-      }
-    }
-
-    &-head {
-      cursor: pointer;
-      display: flex;
-      border-bottom: 2px solid #f6f4f4;
-
-      &:hover {
-        background-color: rgba(#f6f4f4, 0.35);
-      }
-
-      > div {
-        width: 100%;
-        max-width: calc(100% / 3);
-        padding: 5px 10px;
-      }
-
-      p {
-        font-size: 16px;
-
-        &.red {
-          color: #b10000;
-          font-weight: bold;
-        }
       }
 
       .btn {
@@ -262,11 +272,7 @@
           width: 30px;
           height: auto;
           margin-left: 5px;
-          margin-right: 15px;
-
-          &:last-of-type {
-            margin-right: 0;
-          }
+          margin-right: 5px;
 
           .icon-font {
             color: #000000;
@@ -276,17 +282,61 @@
       }
     }
 
+    &-head {
+      cursor: pointer;
+      display: flex;
+      border-bottom: 2px solid #f6f4f4;
+
+      .is-collapse & {
+        border-color: transparent;
+        background-color: rgba(#f6f4f4, 0.35);
+      }
+
+      &:hover {
+        background-color: rgba(#f6f4f4, 0.35);
+      }
+
+      > div {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+
+        &:last-of-type {
+          max-width: 50px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+
+        &.red {
+          color: #b10000;
+          font-weight: bold;
+        }
+      }
+    }
+
     &-body {
       display: none;
 
       &-cover {
         display: flex;
+        padding-top: 5px;
+        padding-bottom: 5px;
         border-bottom: 2px solid #f6f4f4;
+        background-color: rgba(#f6f4f4, 0.35);
 
         > div {
           width: 100%;
-          max-width: calc(100% / 2);
+          max-width: 100%;
           padding: 5px 10px;
+
+          &:last-of-type {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 50px;
+          }
         }
       }
 
@@ -311,7 +361,7 @@
 
         &__val {
           width: auto;
-          min-width: 60px;
+          min-width: 40px;
           padding-left: 5px;
           padding-right: 5px;
           text-align: left;
