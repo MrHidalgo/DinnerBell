@@ -11269,7 +11269,7 @@ picture {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 }
 
@@ -14061,7 +14061,14 @@ picture {
   width: 105px;
 }
 
-/* line 217, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 213, src/scss/_components/used-ingredients/_used.scss */
+  .used__box > div:nth-of-type(2) {
+    width: 90px;
+  }
+}
+
+/* line 220, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14075,17 +14082,24 @@ picture {
   padding: 5px 13px;
 }
 
-/* line 223, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 220, src/scss/_components/used-ingredients/_used.scss */
+  .used__box > div:nth-of-type(3) {
+    width: 40px;
+  }
+}
+
+/* line 229, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(3) a {
   color: #999999;
 }
 
-/* line 229, src/scss/_components/used-ingredients/_used.scss */
+/* line 235, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__field {
   margin-bottom: 0;
 }
 
-/* line 234, src/scss/_components/used-ingredients/_used.scss */
+/* line 240, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-wrapper {
   height: 31px;
   -webkit-border-radius: 0;
@@ -14093,7 +14107,7 @@ picture {
   background-color: #ffffff;
 }
 
-/* line 240, src/scss/_components/used-ingredients/_used.scss */
+/* line 246, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-value {
   width: -webkit-calc(100% - 30px);
   width: calc(100% - 30px);
@@ -14101,12 +14115,28 @@ picture {
   line-height: 31px;
 }
 
-/* line 246, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 246, src/scss/_components/used-ingredients/_used.scss */
+  .used__box > div .c-form__select-value {
+    width: -webkit-calc(100% - 25px);
+    width: calc(100% - 25px);
+  }
+}
+
+/* line 255, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-icon {
   width: 30px;
 }
 
-/* line 254, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 255, src/scss/_components/used-ingredients/_used.scss */
+  .used__box > div .c-form__select-icon {
+    width: 25px;
+    padding-right: 8px;
+  }
+}
+
+/* line 267, src/scss/_components/used-ingredients/_used.scss */
 .used__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14123,7 +14153,7 @@ picture {
   border: 1px solid rgba(235, 235, 235, 0.8);
 }
 
-/* line 261, src/scss/_components/used-ingredients/_used.scss */
+/* line 274, src/scss/_components/used-ingredients/_used.scss */
 .used__block-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14138,23 +14168,30 @@ picture {
   background-color: rgba(235, 235, 235, 0.4);
 }
 
-/* line 268, src/scss/_components/used-ingredients/_used.scss */
+@media screen and (max-width: 767px) {
+  /* line 274, src/scss/_components/used-ingredients/_used.scss */
+  .used__block-head {
+    padding-left: 17px;
+  }
+}
+
+/* line 284, src/scss/_components/used-ingredients/_used.scss */
 .used__block-head .used__title {
   padding: 0;
 }
 
-/* line 273, src/scss/_components/used-ingredients/_used.scss */
+/* line 289, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body {
   padding: 25px 5px;
 }
 
-/* line 276, src/scss/_components/used-ingredients/_used.scss */
+/* line 292, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body .used__title {
   padding-top: 0;
   padding-left: 20px;
 }
 
-/* line 283, src/scss/_components/used-ingredients/_used.scss */
+/* line 299, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body .used__row-3:last-of-type {
   padding-bottom: 0;
 }
@@ -14639,14 +14676,21 @@ picture {
   font-size: 20px;
 }
 
-/* line 57, src/scss/_components/team/_team.scss */
+@media screen and (max-width: 575px) {
+  /* line 55, src/scss/_components/team/_team.scss */
+  .team__table .table .btn a:nth-of-type(2) {
+    display: none;
+  }
+}
+
+/* line 63, src/scss/_components/team/_team.scss */
 .team__table .table tr {
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 60, src/scss/_components/team/_team.scss */
+/* line 66, src/scss/_components/team/_team.scss */
 .team__table .table tr:hover {
   background-color: rgba(246, 244, 244, 0.6);
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -14654,7 +14698,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 67, src/scss/_components/team/_team.scss */
+/* line 73, src/scss/_components/team/_team.scss */
 .team__table .table tr td:last-of-type > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14666,22 +14710,22 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 74, src/scss/_components/team/_team.scss */
+/* line 80, src/scss/_components/team/_team.scss */
 .team__table .table tr td.name p {
   font-weight: bold;
 }
 
-/* line 79, src/scss/_components/team/_team.scss */
+/* line 85, src/scss/_components/team/_team.scss */
 .team__table .table tr td.position, .team__table .table tr td.email {
   font-weight: 300;
 }
 
-/* line 85, src/scss/_components/team/_team.scss */
+/* line 91, src/scss/_components/team/_team.scss */
 .team__table .table tr td.email span {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 92, src/scss/_components/team/_team.scss */
+/* line 98, src/scss/_components/team/_team.scss */
 .team__table .table th,
 .team__table .table td {
   padding: 0.75rem 0.5rem;
@@ -14689,29 +14733,37 @@ picture {
   border-bottom: 2px solid #f6f4f4;
 }
 
-/* line 99, src/scss/_components/team/_team.scss */
+@media screen and (max-width: 575px) {
+  /* line 104, src/scss/_components/team/_team.scss */
+  .team__table .table th:nth-of-type(4),
+  .team__table .table td:nth-of-type(4) {
+    display: none;
+  }
+}
+
+/* line 111, src/scss/_components/team/_team.scss */
 .team__table .table th {
   font-weight: 300;
 }
 
-/* line 103, src/scss/_components/team/_team.scss */
+/* line 115, src/scss/_components/team/_team.scss */
 .team__table .table td {
   border-bottom: 2px solid #f6f4f4;
   font-weight: normal;
 }
 
-/* line 108, src/scss/_components/team/_team.scss */
+/* line 120, src/scss/_components/team/_team.scss */
 .team__table .table thead th {
   vertical-align: bottom;
   border-bottom-color: #f6f4f4;
 }
 
-/* line 113, src/scss/_components/team/_team.scss */
+/* line 125, src/scss/_components/team/_team.scss */
 .team__table .table tbody + tbody {
   border-top: 2px solid #f6f4f4;
 }
 
-/* line 119, src/scss/_components/team/_team.scss */
+/* line 131, src/scss/_components/team/_team.scss */
 .team__table .indication i {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14724,12 +14776,12 @@ picture {
   background-color: #ebebeb;
 }
 
-/* line 128, src/scss/_components/team/_team.scss */
+/* line 140, src/scss/_components/team/_team.scss */
 .team__table .indication--active i {
   background-color: #cbde9d;
 }
 
-/* line 135, src/scss/_components/team/_team.scss */
+/* line 147, src/scss/_components/team/_team.scss */
 .team__btn {
   cursor: pointer;
   display: -webkit-box;
@@ -14764,14 +14816,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 135, src/scss/_components/team/_team.scss */
+  /* line 147, src/scss/_components/team/_team.scss */
   .team__btn {
     width: 100%;
     max-width: 100%;
   }
 }
 
-/* line 158, src/scss/_components/team/_team.scss */
+/* line 170, src/scss/_components/team/_team.scss */
 .team__btn:hover {
   background-color: #fff;
   color: #69c0f1;
@@ -14780,7 +14832,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 164, src/scss/_components/team/_team.scss */
+/* line 176, src/scss/_components/team/_team.scss */
 .team__btn-wrapper {
   display: -webkit-box;
   display: -webkit-flex;

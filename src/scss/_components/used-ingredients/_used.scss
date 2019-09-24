@@ -212,6 +212,9 @@
 
 			&:nth-of-type(2) {
 				width: 105px;
+				@include adaptive(767) {
+					width: 90px;
+				}
 			}
 
 			&:nth-of-type(3) {
@@ -219,6 +222,9 @@
 				justify-content: flex-end;
 				width: 60px;
 				padding: 5px 13px;
+				@include adaptive(767) {
+					width: 40px;
+				}
 
 				a {
 					color: #999999;
@@ -241,10 +247,17 @@
 						width: calc(100% - 30px);
 						padding-left: 10px;
 						line-height: 31px;
+						@include adaptive(767) {
+							width: calc(100% - 25px);
+						}
 					}
 
 					&-icon {
 						width: 30px;
+						@include adaptive(767) {
+							width: 25px;
+							padding-right: 8px;
+						}
 					}
 				}
 			}
@@ -264,6 +277,9 @@
 			height: 60px;
 			padding: 5px 25px;
 			background-color: rgba(235, 235, 235, 0.4);
+			@include adaptive(767) {
+				padding-left: 17px;
+			}
 
 			.used__title {
 				padding: 0;
