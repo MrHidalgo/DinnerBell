@@ -281,7 +281,7 @@
 			border-radius: 5px;
 			background-color: rgb(247, 247, 247);
 			@include adaptive(767) {
-				height: auto;
+				flex-wrap: nowrap;
 			}
 
 			> div {
@@ -291,8 +291,12 @@
 					display: flex;
 					justify-content: space-between;
 					@include adaptive(767) {
-                        align-items: center;
-						padding: 15px 10px 0;
+						a {
+							display: none;
+						}
+					}
+					@include adaptive(374) {
+						max-width: 100px;
 					}
 				}
 				&:nth-of-type(2) {
@@ -300,27 +304,20 @@
 					align-items: center;
 					justify-content: center;
 					@include adaptive(767) {
-						padding: 15px 10px;
+						padding-left: 0;
+						padding-right: 0;
 					}
 				}
 				&:nth-of-type(3) {
 					display: flex;
 					justify-content: flex-end;
 					@include adaptive(767) {
-                        align-items: center;
-						padding: 0 10px 15px;
+						max-width: 45px;
 					}
 				}
 
 				a {
 					color: #333333;
-					@include adaptive(767) {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 30px;
-						height: 30px;
-					}
 				}
 
 				.icon-png {
@@ -340,13 +337,15 @@
 					}
 
 					&-value {
-						width: 100%;
-						padding-right: 15px;
+						width: calc(100% - 20px);
+						padding-right: 0;
+						padding-left: 5px;
 						line-height: 31px;
 					}
 
 					&-icon {
-						display: none;
+						width: 20px;
+						padding: 0;
 					}
 				}
 			}
