@@ -14051,10 +14051,18 @@ picture {
 /* line 190, src/scss/_components/used-ingredients/_used.scss */
 .used__box-wrapper > div {
   width: 100%;
-  max-width: -webkit-calc(50% - 20px);
-  max-width: calc(50% - 20px);
+  max-width: -webkit-calc((100% - 60px) / 3);
+  max-width: calc((100% - 60px) / 3);
   margin-left: 20px;
   padding-bottom: 5px;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 190, src/scss/_components/used-ingredients/_used.scss */
+  .used__box-wrapper > div {
+    max-width: -webkit-calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -14064,7 +14072,7 @@ picture {
   }
 }
 
-/* line 202, src/scss/_components/used-ingredients/_used.scss */
+/* line 205, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -14075,19 +14083,19 @@ picture {
   padding: 5px 13px;
 }
 
-/* line 213, src/scss/_components/used-ingredients/_used.scss */
+/* line 216, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(2) {
   width: 105px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 213, src/scss/_components/used-ingredients/_used.scss */
+  /* line 216, src/scss/_components/used-ingredients/_used.scss */
   .used__box > div:nth-of-type(2) {
     width: 90px;
   }
 }
 
-/* line 220, src/scss/_components/used-ingredients/_used.scss */
+/* line 223, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14102,23 +14110,23 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 220, src/scss/_components/used-ingredients/_used.scss */
+  /* line 223, src/scss/_components/used-ingredients/_used.scss */
   .used__box > div:nth-of-type(3) {
     width: 40px;
   }
 }
 
-/* line 229, src/scss/_components/used-ingredients/_used.scss */
+/* line 232, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div:nth-of-type(3) a {
   color: #999999;
 }
 
-/* line 235, src/scss/_components/used-ingredients/_used.scss */
+/* line 238, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__field {
   margin-bottom: 0;
 }
 
-/* line 240, src/scss/_components/used-ingredients/_used.scss */
+/* line 243, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-wrapper {
   height: 31px;
   -webkit-border-radius: 0;
@@ -14126,7 +14134,7 @@ picture {
   background-color: #ffffff;
 }
 
-/* line 246, src/scss/_components/used-ingredients/_used.scss */
+/* line 249, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-value {
   width: -webkit-calc(100% - 30px);
   width: calc(100% - 30px);
@@ -14135,27 +14143,27 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 246, src/scss/_components/used-ingredients/_used.scss */
+  /* line 249, src/scss/_components/used-ingredients/_used.scss */
   .used__box > div .c-form__select-value {
     width: -webkit-calc(100% - 25px);
     width: calc(100% - 25px);
   }
 }
 
-/* line 255, src/scss/_components/used-ingredients/_used.scss */
+/* line 258, src/scss/_components/used-ingredients/_used.scss */
 .used__box > div .c-form__select-icon {
   width: 30px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 255, src/scss/_components/used-ingredients/_used.scss */
+  /* line 258, src/scss/_components/used-ingredients/_used.scss */
   .used__box > div .c-form__select-icon {
     width: 25px;
     padding-right: 8px;
   }
 }
 
-/* line 267, src/scss/_components/used-ingredients/_used.scss */
+/* line 270, src/scss/_components/used-ingredients/_used.scss */
 .used__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14172,7 +14180,7 @@ picture {
   border: 1px solid rgba(235, 235, 235, 0.8);
 }
 
-/* line 274, src/scss/_components/used-ingredients/_used.scss */
+/* line 277, src/scss/_components/used-ingredients/_used.scss */
 .used__block-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14187,23 +14195,23 @@ picture {
   background-color: rgba(235, 235, 235, 0.4);
 }
 
-/* line 281, src/scss/_components/used-ingredients/_used.scss */
+/* line 284, src/scss/_components/used-ingredients/_used.scss */
 .used__block-head .used__title {
   padding: 0;
 }
 
-/* line 286, src/scss/_components/used-ingredients/_used.scss */
+/* line 289, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body {
   padding: 25px 5px;
 }
 
-/* line 289, src/scss/_components/used-ingredients/_used.scss */
+/* line 292, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body .used__title {
   padding-top: 0;
   padding-left: 13px;
 }
 
-/* line 296, src/scss/_components/used-ingredients/_used.scss */
+/* line 299, src/scss/_components/used-ingredients/_used.scss */
 .used__block-body .used__row-3:last-of-type {
   padding-bottom: 0;
 }

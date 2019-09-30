@@ -189,9 +189,12 @@
 
 			> div {
 				width: 100%;
-				max-width: calc(50% - 20px);
+				max-width: calc((100% - 60px) / 3);
 				margin-left: 20px;
 				padding-bottom: 5px;
+				@include adaptive(1279) {
+					max-width: calc(50% - 20px);
+				}
 				@include adaptive(767) {
 					max-width: 100%;
 				}
