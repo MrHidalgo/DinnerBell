@@ -13607,13 +13607,28 @@ picture {
   padding-right: 10px;
 }
 
-/* line 327, src/scss/_components/customization/_customization.scss */
+@media screen and (max-width: 767px) {
+  /* line 323, src/scss/_components/customization/_customization.scss */
+  .customization__ingredients-result > div .icon-png {
+    display: none;
+  }
+}
+
+/* line 330, src/scss/_components/customization/_customization.scss */
 .customization__ingredients-result > div .c-form__field {
   width: 100%;
   margin-bottom: 0;
 }
 
-/* line 333, src/scss/_components/customization/_customization.scss */
+@media screen and (max-width: 767px) {
+  /* line 334, src/scss/_components/customization/_customization.scss */
+  .customization__ingredients-result > div .c-form__field--select {
+    width: 60px;
+    margin-right: 15px;
+  }
+}
+
+/* line 343, src/scss/_components/customization/_customization.scss */
 .customization__ingredients-result > div .c-form__select-wrapper {
   height: 31px;
   border: none;
@@ -13621,7 +13636,33 @@ picture {
           border-radius: 0;
 }
 
-/* line 339, src/scss/_components/customization/_customization.scss */
+@media screen and (max-width: 767px) {
+  /* line 343, src/scss/_components/customization/_customization.scss */
+  .customization__ingredients-result > div .c-form__select-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/* line 352, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result > div .c-form__select-wrapper .icon-png {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 352, src/scss/_components/customization/_customization.scss */
+  .customization__ingredients-result > div .c-form__select-wrapper .icon-png {
+    display: block;
+  }
+}
+
+/* line 360, src/scss/_components/customization/_customization.scss */
 .customization__ingredients-result > div .c-form__select-value {
   width: -webkit-calc(100% - 20px);
   width: calc(100% - 20px);
@@ -13630,13 +13671,39 @@ picture {
   line-height: 31px;
 }
 
-/* line 346, src/scss/_components/customization/_customization.scss */
+@media screen and (max-width: 767px) {
+  /* line 360, src/scss/_components/customization/_customization.scss */
+  .customization__ingredients-result > div .c-form__select-value {
+    display: none;
+  }
+}
+
+/* line 370, src/scss/_components/customization/_customization.scss */
 .customization__ingredients-result > div .c-form__select-icon {
   width: 20px;
   padding: 0;
 }
 
-/* line 355, src/scss/_components/customization/_customization.scss */
+/* line 377, src/scss/_components/customization/_customization.scss */
+.customization__ingredients-result-select {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  max-width: 150px;
+  margin-left: auto;
+}
+
+/* line 388, src/scss/_components/customization/_customization.scss */
 .customization__ingredients-add a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13667,7 +13734,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 372, src/scss/_components/customization/_customization.scss */
+/* line 405, src/scss/_components/customization/_customization.scss */
 .customization__ingredients-add a:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -13676,7 +13743,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 385, src/scss/_components/customization/_customization.scss */
+/* line 418, src/scss/_components/customization/_customization.scss */
 .customization .c-form__field.is-focus .c-form__label {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
@@ -13690,12 +13757,12 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 392, src/scss/_components/customization/_customization.scss */
+/* line 425, src/scss/_components/customization/_customization.scss */
 .customization .c-form__field.is-focus .c-form__input {
   padding-top: 15px;
 }
 
-/* line 395, src/scss/_components/customization/_customization.scss */
+/* line 428, src/scss/_components/customization/_customization.scss */
 .customization .c-form__field.is-focus .c-form__input-wrapper {
   height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -13703,17 +13770,17 @@ picture {
   transition: height 0.3s ease-in-out;
 }
 
-/* line 401, src/scss/_components/customization/_customization.scss */
+/* line 434, src/scss/_components/customization/_customization.scss */
 .customization .c-form__field.is-focus .c-form__textarea {
   padding-top: 25px;
 }
 
-/* line 408, src/scss/_components/customization/_customization.scss */
+/* line 441, src/scss/_components/customization/_customization.scss */
 .customization .c-form__field--select .c-form__label {
   position: static;
 }
 
-/* line 414, src/scss/_components/customization/_customization.scss */
+/* line 447, src/scss/_components/customization/_customization.scss */
 .customization .c-form__label {
   z-index: 2;
   position: absolute;

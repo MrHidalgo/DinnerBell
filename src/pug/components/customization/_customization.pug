@@ -220,9 +220,31 @@ section#customization.customization
 							a(href="#" class="" title="")
 								i.icon-font.icon-pencil
 						div
-							i.icon-png.i-numeric
-							//p Numeric
-							+formSelectCustom(dataFormObj.selectFieldCustomNumeric)
+							.customization__ingredients-result-select
+								i.icon-png.i-numeric
+								.c-form__field.c-form__field--select(class!= dataFormObj.selectFieldCustomNumeric.classMod)
+
+									if(dataFormObj.selectFieldCustomNumeric.labelVal)
+										+formLabel(dataFormObj.selectFieldCustomNumeric.labelVal, dataFormObj.selectFieldCustomNumeric.uniqueName)
+
+									.c-form__select-wrapper
+										i.icon-png.i-numeric
+										.c-form__select-value
+
+										select.c-form__select(
+											id!= dataFormObj.selectFieldCustomNumeric.uniqueName
+											name!= dataFormObj.selectFieldCustomNumeric.uniqueName
+											class!= dataFormObj.selectFieldCustomNumeric.selectClassMod
+											select-js
+										)
+											option(value="" disabled selected hidden)!= dataFormObj.selectFieldCustomNumeric.placeholderVal
+											each val, idx in dataFormObj.selectFieldCustomNumeric.selectOption
+												option(value!= val)!= val
+
+										.c-form__select-icon
+											i
+
+									+formNotify(notifyArr)
 						div
 							a(href="#" class="" title="")
 								i.icon-font.icon-waste-bin
@@ -233,9 +255,31 @@ section#customization.customization
 							a(href="#" class="" title="")
 								i.icon-font.icon-pencil
 						div
-							i.icon-png.i-toggle
-							//p Toggle
-							+formSelectCustom(dataFormObj.selectFieldCustomToggle)
+							.customization__ingredients-result-select
+								i.icon-png.i-toggle
+								.c-form__field.c-form__field--select(class!= dataFormObj.selectFieldCustomToggle.classMod)
+
+									if(dataFormObj.selectFieldCustomToggle.labelVal)
+										+formLabel(dataFormObj.selectFieldCustomToggle.labelVal, dataFormObj.selectFieldCustomToggle.uniqueName)
+
+									.c-form__select-wrapper
+										i.icon-png.i-toggle
+										.c-form__select-value
+
+										select.c-form__select(
+											id!= dataFormObj.selectFieldCustomToggle.uniqueName
+											name!= dataFormObj.selectFieldCustomToggle.uniqueName
+											class!= dataFormObj.selectFieldCustomToggle.selectClassMod
+											select-js
+										)
+											option(value="" disabled selected hidden)!= dataFormObj.selectFieldCustomToggle.placeholderVal
+											each val, idx in dataFormObj.selectFieldCustomToggle.selectOption
+												option(value!= val)!= val
+
+										.c-form__select-icon
+											i
+
+									+formNotify(notifyArr)
 						div
 							a(href="#" class="" title="")
 								i.icon-font.icon-waste-bin
@@ -246,9 +290,31 @@ section#customization.customization
 							a(href="#" class="" title="")
 								i.icon-font.icon-pencil
 						div
-							i.icon-png.i-image
-							//p Image
-							+formSelectCustom(dataFormObj.selectFieldCustomImage)
+							.customization__ingredients-result-select
+								i.icon-png.i-image
+								.c-form__field.c-form__field--select(class!= dataFormObj.selectFieldCustomImage.classMod)
+
+									if(dataFormObj.selectFieldCustomImage.labelVal)
+										+formLabel(dataFormObj.selectFieldCustomImage.labelVal, dataFormObj.selectFieldCustomImage.uniqueName)
+
+									.c-form__select-wrapper
+										i.icon-png.i-image
+										.c-form__select-value
+
+										select.c-form__select(
+											id!= dataFormObj.selectFieldCustomImage.uniqueName
+											name!= dataFormObj.selectFieldCustomImage.uniqueName
+											class!= dataFormObj.selectFieldCustomImage.selectClassMod
+											select-js
+										)
+											option(value="" disabled selected hidden)!= dataFormObj.selectFieldCustomImage.placeholderVal
+											each val, idx in dataFormObj.selectFieldCustomImage.selectOption
+												option(value!= val)!= val
+
+										.c-form__select-icon
+											i
+
+									+formNotify(notifyArr)
 						div
 							a(href="#" class="" title="")
 								i.icon-font.icon-waste-bin
