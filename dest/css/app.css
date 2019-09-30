@@ -15269,7 +15269,16 @@ picture {
   background-color: white;
 }
 
-/* line 260, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 248, src/scss/_components/login-sacurity/_security.scss */
+  .security__box {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 263, src/scss/_components/login-sacurity/_security.scss */
 .security__box-left {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -15279,7 +15288,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 266, src/scss/_components/login-sacurity/_security.scss */
+/* line 269, src/scss/_components/login-sacurity/_security.scss */
 .security__box-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -15293,19 +15302,27 @@ picture {
   max-width: 180px;
 }
 
-/* line 273, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 269, src/scss/_components/login-sacurity/_security.scss */
+  .security__box-right {
+    max-width: 100%;
+    padding-top: 15px;
+  }
+}
+
+/* line 280, src/scss/_components/login-sacurity/_security.scss */
 .security__box-title {
   color: #bba478;
   font-size: 20px;
 }
 
-/* line 278, src/scss/_components/login-sacurity/_security.scss */
+/* line 285, src/scss/_components/login-sacurity/_security.scss */
 .security__box-text {
   color: #666666;
   font-size: 14px;
 }
 
-/* line 283, src/scss/_components/login-sacurity/_security.scss */
+/* line 290, src/scss/_components/login-sacurity/_security.scss */
 .security__box-btn {
   cursor: pointer;
   display: -webkit-box;
@@ -15332,6 +15349,8 @@ picture {
           box-shadow: none;
   background-color: #fff;
   color: #69c0f1;
+  text-align: center;
+  line-height: 1;
   font-size: 16px;
   font-weight: bold;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -15339,13 +15358,26 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 302, src/scss/_components/login-sacurity/_security.scss */
+@media screen and (max-width: 767px) {
+  /* line 290, src/scss/_components/login-sacurity/_security.scss */
+  .security__box-btn {
+    max-width: 180px;
+  }
+}
+
+/* line 314, src/scss/_components/login-sacurity/_security.scss */
 .security__box-btn:hover {
   background-color: #69c0f1;
   color: #fff;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 320, src/scss/_components/login-sacurity/_security.scss */
+.security__box-btn span {
+  position: relative;
+  top: 1px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

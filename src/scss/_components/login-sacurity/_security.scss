@@ -256,6 +256,9 @@
 		border-style: solid;
 		border-radius: 5px;
 		background-color: rgb(255, 255, 255);
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		&-left {
 			flex: 1;
@@ -268,6 +271,10 @@
 			justify-content: flex-end;
 			width: 100%;
 			max-width: 180px;
+			@include adaptive(767) {
+				max-width: 100%;
+				padding-top: 15px;
+			}
 		}
 
 		&-title {
@@ -295,14 +302,24 @@
 			box-shadow: none;
 			background-color: #fff;
 			color: rgb(105, 192, 241);
+			text-align: center;
+			line-height: 1;
 			font-size: 16px;
 			font-weight: bold;
 			@include transition(background-color, color);
+			@include adaptive(767) {
+				max-width: 180px;
+			}
 
 			&:hover {
 				background-color: rgb(105, 192, 241);
 				color: #fff;
 				@include transition(background-color, color);
+			}
+
+			span {
+				position: relative;
+				top: 1px;
 			}
 		}
 	}
