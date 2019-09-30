@@ -11140,34 +11140,35 @@ picture {
   /* line 3, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu {
     padding-top: 15px;
+    padding-bottom: 0;
   }
 }
 
-/* line 10, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 11, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu--pb0 {
   padding-bottom: 0;
 }
 
-/* line 14, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 15, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__wrapper {
   width: 100%;
   max-width: 1200px;
 }
 
-/* line 19, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 20, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__title {
   padding-bottom: 35px;
   font-size: 28px;
   font-weight: bold;
 }
 
-/* line 25, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 26, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__subtitle {
   padding-bottom: 15px;
   font-size: 20px;
 }
 
-/* line 30, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 31, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11185,24 +11186,24 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 30, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 31, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__header {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
-  /* line 39, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 40, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__header > div:nth-of-type(1) {
     padding-bottom: 15px;
   }
 }
 
-/* line 45, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 46, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__header .pf-menu__subtitle {
   padding-bottom: 0;
 }
 
-/* line 50, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 51, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs {
   position: relative;
   display: block;
@@ -11216,26 +11217,28 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 50, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 51, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__tabs {
-    margin-right: 0;
-    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    margin-bottom: 5px;
   }
 }
 
-/* line 63, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 66, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs:last-of-type {
   margin-right: 0;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 63, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 66, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__tabs:last-of-type {
-    margin-bottom: 0;
+    padding-right: 30px;
   }
 }
 
-/* line 70, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 73, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs:after {
   content: '';
   opacity: 0;
@@ -11253,19 +11256,19 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 70, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 73, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__tabs:after {
     top: -webkit-calc(100% + 2px);
     top: calc(100% + 2px);
   }
 }
 
-/* line 86, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 89, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs.is-active {
   color: #000000;
 }
 
-/* line 89, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 92, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs.is-active:after {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -11273,7 +11276,7 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 95, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 98, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs:hover {
   color: #000000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -11281,7 +11284,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 100, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 103, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__tabs-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11295,22 +11298,21 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 100, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 103, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__tabs-wrapper {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-bottom: 35px;
+    white-space: nowrap;
+    overflow-x: auto;
+    position: relative;
+    display: block;
+    width: -webkit-calc(100% + 15px);
+    width: calc(100% + 15px);
+    margin-right: -15px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 
-/* line 112, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 120, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11323,7 +11325,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 116, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 124, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11332,12 +11334,12 @@ picture {
   padding-bottom: 25px;
 }
 
-/* line 121, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 129, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-2 {
   padding-bottom: 15px;
 }
 
-/* line 125, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 133, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11347,7 +11349,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 125, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 133, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -11360,7 +11362,7 @@ picture {
   }
 }
 
-/* line 135, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 143, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-col-1 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11370,14 +11372,14 @@ picture {
   max-width: 100%;
 }
 
-/* line 141, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 149, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-col-2 {
   width: 260px;
   padding-left: 15px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 141, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 149, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-col-2 {
     padding-left: 0;
     padding-bottom: 30px;
@@ -11386,7 +11388,7 @@ picture {
   }
 }
 
-/* line 154, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 162, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11395,7 +11397,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 154, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 162, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-1 {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -11408,7 +11410,7 @@ picture {
   }
 }
 
-/* line 162, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 170, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-1 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11420,13 +11422,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 162, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 170, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-1 > div:nth-of-type(1) {
     padding-right: 0;
   }
 }
 
-/* line 172, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 180, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-1 > div:nth-of-type(2) {
   width: 100%;
   max-width: 243px;
@@ -11434,26 +11436,26 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 172, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 180, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-1 > div:nth-of-type(2) {
     max-width: 100%;
     padding-bottom: 20px;
   }
 }
 
-/* line 181, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 189, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-row .pf-menu__form-field-1 > div:nth-of-type(2) {
   max-width: 180px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 181, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 189, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-row .pf-menu__form-field-1 > div:nth-of-type(2) {
     margin-left: auto;
   }
 }
 
-/* line 191, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 199, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11462,7 +11464,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 191, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 199, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-2 {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -11470,43 +11472,43 @@ picture {
   }
 }
 
-/* line 197, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 205, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-2 > div {
   width: 50%;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 197, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 205, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-2 > div {
     width: 100%;
   }
 }
 
-/* line 203, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 211, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-2 > div:nth-of-type(1) {
   padding-right: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 203, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 211, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-2 > div:nth-of-type(1) {
     padding-right: 0;
   }
 }
 
-/* line 210, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 218, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-2 > div:nth-of-type(2) {
   padding-left: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 210, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 218, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-2 > div:nth-of-type(2) {
     padding-left: 0;
   }
 }
 
-/* line 219, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 227, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11515,7 +11517,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 219, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 227, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-6 {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -11523,7 +11525,7 @@ picture {
   }
 }
 
-/* line 226, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 234, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-6 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11535,13 +11537,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 226, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 234, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-6 > div:nth-of-type(1) {
     padding-right: 0;
   }
 }
 
-/* line 236, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 244, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-6 > div:nth-of-type(2) {
   width: 100%;
   max-width: 245px;
@@ -11549,14 +11551,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 236, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 244, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-6 > div:nth-of-type(2) {
     max-width: 100%;
     padding-left: 0;
   }
 }
 
-/* line 248, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 256, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11569,7 +11571,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 248, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 256, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-7 {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -11577,7 +11579,7 @@ picture {
   }
 }
 
-/* line 255, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 263, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-7 > div {
   width: 100%;
   max-width: -webkit-calc((100% - 40px) / 3);
@@ -11585,18 +11587,18 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 255, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 263, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-7 > div {
     max-width: 100%;
   }
 }
 
-/* line 262, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 270, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-7 > div .c-form__label {
   font-size: 20px;
 }
 
-/* line 268, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 276, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11605,7 +11607,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 268, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 276, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-8 {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -11613,7 +11615,7 @@ picture {
   }
 }
 
-/* line 275, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 283, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-8 > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11625,13 +11627,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 275, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 283, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-8 > div:nth-of-type(1) {
     padding-right: 0;
   }
 }
 
-/* line 285, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 293, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-8 > div:nth-of-type(2) {
   width: 100%;
   max-width: 155px;
@@ -11639,24 +11641,24 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 285, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 293, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-8 > div:nth-of-type(2) {
     max-width: 100%;
     padding-left: 0;
   }
 }
 
-/* line 298, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 306, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-9 .c-form__textarea {
   padding: 0 15px;
 }
 
-/* line 301, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 309, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-9 .c-form__textarea-wrapper {
   height: 85px;
 }
 
-/* line 307, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 315, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11665,7 +11667,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 307, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 315, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-10 {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -11673,43 +11675,43 @@ picture {
   }
 }
 
-/* line 313, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 321, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 > div {
   width: 50%;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 313, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 321, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-10 > div {
     width: 100%;
   }
 }
 
-/* line 319, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 327, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 > div:nth-of-type(1) {
   padding-right: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 319, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 327, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-10 > div:nth-of-type(1) {
     padding-right: 0;
   }
 }
 
-/* line 326, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 334, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__form-field-10 > div:nth-of-type(2) {
   padding-left: 10px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 326, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 334, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__form-field-10 > div:nth-of-type(2) {
     padding-left: 0;
   }
 }
 
-/* line 341, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 349, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__price {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11721,19 +11723,19 @@ picture {
           align-items: center;
 }
 
-/* line 345, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 353, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__price p {
   width: 180px;
   padding-bottom: 20px;
   font-size: 16px;
 }
 
-/* line 351, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 359, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__price > div {
   width: 180px;
 }
 
-/* line 356, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 364, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__details {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11756,20 +11758,20 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 356, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 364, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__details {
     position: relative;
   }
 }
 
-/* line 369, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 377, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__details p {
   font-size: 16px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 369, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 377, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__details p {
     overflow: hidden;
     white-space: nowrap;
@@ -11786,13 +11788,13 @@ picture {
   }
 }
 
-/* line 387, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 395, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__details a {
   color: #000000;
   font-size: 16px;
 }
 
-/* line 393, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 401, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__upload {
   cursor: pointer;
   position: relative;
@@ -11820,7 +11822,7 @@ picture {
   background-color: white;
 }
 
-/* line 408, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 416, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__upload p {
   color: #69c0f1;
   text-align: center;
@@ -11828,7 +11830,7 @@ picture {
   font-weight: bold;
 }
 
-/* line 415, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 423, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__upload input {
   cursor: pointer;
   opacity: 0;
@@ -11840,7 +11842,7 @@ picture {
   height: 100%;
 }
 
-/* line 427, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 435, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__btn {
   cursor: pointer;
   outline: none;
@@ -11874,13 +11876,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 427, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 435, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__btn {
     max-width: 100%;
   }
 }
 
-/* line 448, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 456, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__btn:hover {
   background-color: transparent;
   color: #69c0f1;
@@ -11889,7 +11891,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 455, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 463, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__add {
   cursor: pointer;
   display: -webkit-box;
@@ -11920,7 +11922,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 471, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 479, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__add:hover {
   background-color: #69c0f1;
   color: #fff;
@@ -11929,7 +11931,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 478, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 486, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11943,7 +11945,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 478, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 486, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__status {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -11952,19 +11954,19 @@ picture {
   }
 }
 
-/* line 486, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 494, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status p {
   padding-right: 20px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 492, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 500, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status > div {
   position: relative;
 }
 
-/* line 496, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 504, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn {
   cursor: pointer;
   overflow: hidden;
@@ -11976,7 +11978,7 @@ picture {
           border-radius: 16px;
 }
 
-/* line 505, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 513, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label {
   cursor: pointer;
   position: absolute;
@@ -12002,7 +12004,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 518, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 526, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p {
   position: relative;
   display: -webkit-box;
@@ -12030,7 +12032,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 533, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 541, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p span {
   position: absolute;
   top: -webkit-calc(50% + 1px);
@@ -12043,18 +12045,18 @@ picture {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 539, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 547, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p span:nth-of-type(1) {
   left: 0;
 }
 
-/* line 543, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 551, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label p span:nth-of-type(2) {
   opacity: 0;
   right: -22px;
 }
 
-/* line 550, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 558, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn label i {
   -webkit-transform: translateX(2px);
       -ms-transform: translateX(2px);
@@ -12074,7 +12076,7 @@ picture {
   transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 563, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 571, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input {
   opacity: 0;
   cursor: pointer;
@@ -12086,7 +12088,7 @@ picture {
   height: 100%;
 }
 
-/* line 574, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 582, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label {
   background-color: #a0d392;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -12094,7 +12096,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 578, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 586, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p {
   color: #ffffff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -12102,24 +12104,24 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 582, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 590, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p span {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 585, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 593, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p span:nth-of-type(1) {
   opacity: 0;
 }
 
-/* line 589, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 597, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label p span:nth-of-type(2) {
   opacity: 1;
 }
 
-/* line 595, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 603, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__status-btn input:checked + label i {
   -webkit-transform: translateX(-41px);
       -ms-transform: translateX(-41px);
@@ -12132,7 +12134,7 @@ picture {
   transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 606, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 614, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__checkbox {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12150,24 +12152,24 @@ picture {
   background-color: #f7f7f7;
 }
 
-/* line 615, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 623, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__checkbox span {
   padding-left: 20px;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* line 623, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 631, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-row {
   margin-bottom: 20px;
 }
 
-/* line 626, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 634, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-row:last-of-type {
   margin-bottom: 40px;
 }
 
-/* line 631, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 639, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12184,7 +12186,7 @@ picture {
   background-color: #f7f7f7;
 }
 
-/* line 639, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 647, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result > div {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -12196,14 +12198,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 639, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 647, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-result > div {
     padding-right: 0;
     text-align: center;
   }
 }
 
-/* line 649, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 657, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result > div:first-of-type {
   -webkit-box-flex: unset;
   -webkit-flex: unset;
@@ -12214,14 +12216,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 649, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 657, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-result > div:first-of-type {
     max-width: 100px;
     text-align: left;
   }
 }
 
-/* line 659, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 667, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result > div:last-of-type {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12241,44 +12243,44 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 659, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 667, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-result > div:last-of-type {
     max-width: 20px;
   }
 }
 
-/* line 671, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 679, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result > div p {
   font-size: 16px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 424px) {
-  /* line 671, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 679, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-result > div p {
     font-size: 14px;
   }
 }
 
-/* line 679, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 687, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result > div span {
   white-space: nowrap;
   color: #666666;
 }
 
 @media screen and (max-width: 424px) {
-  /* line 679, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 687, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-result > div span {
     font-size: 12px;
   }
 }
 
-/* line 687, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 695, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-result > div a {
   color: #000000;
 }
 
-/* line 693, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 701, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12288,7 +12290,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 693, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 701, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-add {
     height: auto;
     -webkit-box-orient: vertical;
@@ -12299,7 +12301,7 @@ picture {
   }
 }
 
-/* line 701, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 709, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add > div {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -12311,13 +12313,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 701, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 709, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-add > div {
     padding-right: 0;
   }
 }
 
-/* line 710, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 718, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add > div:first-of-type {
   -webkit-box-flex: unset;
   -webkit-flex: unset;
@@ -12328,13 +12330,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 710, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 718, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-add > div:first-of-type {
     max-width: 100%;
   }
 }
 
-/* line 719, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 727, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add > div:last-of-type {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12354,13 +12356,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 719, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 727, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-add > div:last-of-type {
     max-width: 100%;
   }
 }
 
-/* line 731, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 739, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add > div a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12391,7 +12393,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 748, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 756, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add > div a:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -12400,12 +12402,12 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 755, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 763, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-add > div .c-form__select-wrapper {
   margin-bottom: 0;
 }
 
-/* line 761, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 769, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12437,13 +12439,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 761, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+  /* line 769, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
   .pf-menu__portion-btn {
     max-width: 100%;
   }
 }
 
-/* line 781, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 789, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu__portion-btn:hover {
   background-color: #69c0f1;
   color: #ffffff;
@@ -12452,7 +12454,7 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 793, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 801, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu .c-form__field.is-focus .c-form__label {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
@@ -12466,12 +12468,12 @@ picture {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 800, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 808, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu .c-form__field.is-focus .c-form__input {
   padding-top: 15px;
 }
 
-/* line 803, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 811, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu .c-form__field.is-focus .c-form__input-wrapper {
   height: 57px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -12479,17 +12481,17 @@ picture {
   transition: height 0.3s ease-in-out;
 }
 
-/* line 809, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 817, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu .c-form__field.is-focus .c-form__textarea {
   padding-top: 25px;
 }
 
-/* line 816, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 824, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu .c-form__field--select .c-form__label {
   position: static;
 }
 
-/* line 822, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
+/* line 830, src/scss/_components/prix-fixe-menu/_prix-fixe.scss */
 .pf-menu .c-form__label {
   z-index: 2;
   position: absolute;
