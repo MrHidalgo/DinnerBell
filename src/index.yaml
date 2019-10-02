@@ -3,85 +3,85 @@ ProjectTitle: DinnerBell
 PageList:
 - file: menu-design-setting.html
   titleName: MDS - Base theme
-  ready: 95
+  ready: 100
 - file: menu-design-setting-1.html
   titleName: MDS - Base setting
-  ready: 95
+  ready: 100
 - file: menu-design-setting-2.html
   titleName: MDS - Intro screen
-  ready: 95
+  ready: 100
 - file: menu-design-setting-3.html
   titleName: MDS - Main menu
-  ready: 95
+  ready: 100
 - file: menu-design-setting-4.html
   titleName: MDS - Menu items
-  ready: 95
+  ready: 100
 - file: menu-design-setting-5.html
   titleName: MDS - Item details
-  ready: 95
+  ready: 100
 - file: menu-design-setting-6.html
   titleName: MDS - Feedback
-  ready: 95
+  ready: 100
 - file: menu-design-setting-7.html
   titleName: MDS - My order
-  ready: 95
+  ready: 100
 - file: menu-design-setting-8.html
   titleName: MDS - Log Out
-  ready: 95
+  ready: 100
 - titleName: ==========
 - file: trial.html
   titleName: Trial Period
-  ready: 95
+  ready: 100
 - file: services.html
   titleName: Services
-  ready: 95
+  ready: 100
 - file: menu.html
   titleName: Menu
-  ready: 95
+  ready: 100
 - file: menu-fixe.html
   titleName: Menu Prix-fixe
-  ready: 95
+  ready: 100
 - file: item-list.html
   titleName: Item list
-  ready: 95
+  ready: 100
 - file: regular-menu.html
   titleName: Regular Menu
-  ready: 95
+  ready: 100
 - file: prix-fixe-menu.html
   titleName: Prix-fixe Menu
-  ready: 95
+  ready: 100
 - file: new-category.html
   titleName: New Category
-  ready: 95
+  ready: 100
 - file: new-item.html
   titleName: New Item
-  ready: 95
+  ready: 100
 - titleName: ==========
 - file: add-new-item.html
   titleName: Add New Item
-  ready: 95
+  ready: 100
 - file: used-ingredients.html
   titleName: Used Ingredients
-  ready: 95
+  ready: 100
 - file: customization.html
   titleName: Customization
-  ready: 95
+  ready: 100
 - titleName: ==========
 - file: company-profile.html
   titleName: Company Profile
-  ready: 95
+  ready: 100
 - file: team-add.html
   titleName: Team Add
-  ready: 95
+  ready: 100
 - file: team.html
   titleName: Team
-  ready: 95
+  ready: 100
 - file: login-security.html
   titleName: Login & Security (L&S)
-  ready: 95
+  ready: 100
 - file: login-security-phone.html
   titleName: L&S Phone Resend Code
-  ready: 95
+  ready: 100
 - file: billing-center.html
   titleName: Billing Center
-  ready: 95
+  ready: 100

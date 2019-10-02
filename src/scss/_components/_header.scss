@@ -55,8 +55,16 @@
 				width: auto;
 				padding-right: 0;
 
+				.woPreview & {
+					justify-content: space-between;
+				}
+
 				.header__title {
 					display: none;
+
+					.woPreview & {
+						display: block;
+					}
 				}
 			}
 
@@ -97,14 +105,19 @@
 		font-weight: 500;
 		@include adaptive(1279) {
 			padding-left: 20px;
+			font-size: 18px;
 		}
 		@include adaptive(767) {
 			text-transform: uppercase;
 			font-size: 16px;
+
+			.woPreview & {
+				text-align: right;
+			}
 		}
 		@include adaptive(575) {
 			text-transform: uppercase;
-			font-size: 14px;
+			font-size: 12px;
 		}
 	}
 
